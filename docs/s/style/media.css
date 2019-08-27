@@ -1,0 +1,20 @@
+/***MEDIA***/
+.glyph {
+  height: 1rem;
+  width: 1rem;
+  color: currentColor;
+  fill: currentColor;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+}
+
+picture source,
+picture img {
+  filter: contrast(180%);
+}

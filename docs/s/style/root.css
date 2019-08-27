@@ -1,0 +1,73 @@
+/*** ROOT***/
+:root {
+  /* breakpoints */
+  --bp-small: 24.15;
+  --bp-medium: 43.75;
+  --bp-large: 60.25;
+  --bp-xlarge: 75;
+
+  /* colors */
+  --col-primary: #7a0019;
+  --col-primary-light: #900021;
+  --col-primary-dark: #5b0013;
+
+  --col-secondary: #fc3;
+  --col-secondary-light: #ffde7a;
+  --col-secondary-dark: #ffc20d;
+  --col-secondary-hint: #fefefb;
+
+  --col-link: #0053b0;
+  /* originally selected, only 1.5 highlight contrast
+  --col-link-light: #bdd5f5;
+  --col-link-dark: #003d81;*/
+  --col-link-light: #5699dc;
+  --col-link-dark: #002d61;
+
+  --col-text: #333;
+  --col-text-light: #5a5a5a;
+
+  --col-bg-light: #fafafa;
+  --col-bg-medium: #f0efee;
+  --col-bg-med-dark: #767676;
+
+/* colors for messages */
+  --col-mes-info-bg: #edf1f6;
+  --col-mes-info-dark: #006298;
+  --col-mes-info-text: #134a71;
+
+  --col-mes-success-bg: #eaf3e8;
+  --col-mes-success-dark: #008a28;
+  --col-mes-success-text: #16521d;
+
+  --col-mes-warn-bg: #ffeecd;
+  --col-mes-warn-dark: #f5bb17;
+  --col-mes-warn-text: #584416;
+
+  --col-mes-danger-bg: #ffece5;
+  --col-mes-danger-dark: #df3603;
+  --col-mes-danger-text: #82270d;
+
+  /* spacing - bottom oriented */
+  --m-norm: 2;
+  --m-min: 1;
+  --m-max: 5;
+
+  /* headings */
+  --h1-min: 3;
+  --h1-max: 5;
+
+  /* typographic variables */
+  --base-size: 1rem;
+  --type-scale: 1.33;
+  --h3: calc(var(--base-size) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+  --text-sm: calc(var(--base-size) / var(--type-scale));
+  --header-margin: 0 0 1rem 2rem;
+
+}
+
+/* browser adjusts height/width values to account for border/padding added */
+*, *::before, *::after {
+  box-sizing: border-box;
+}

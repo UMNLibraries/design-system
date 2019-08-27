@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background-color: var(--col-secondary-hint);
+  background: url(/img/draft.svg);
+  background-size: contain;
+}
+main, body > footer {
+  padding: 1rem;
+}
+
+@media (max-width: 50rem) {
+  main, header, footer, body > nav {
+    display: block;
+    min-width: 100%;
+  }
+}
+
+header {
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+/*** BLOCK STYLING ***/
+main > article, section > article {
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+article {
+  position: relative;
+}
+
+
+/*** LEFT NAV ***/
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+header, body > footer, main > h1, main > h2 {
+  width: 100%;
+}
+
+body > nav, aside {
+  flex-basis: 20rem;
+  flex: 1 0 0;
+}
+
+nav + main {
+  min-width: 50%;
+  flex: 3 0px;
+  /*flex-grow: 100;*/
+}
+
+article {
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
+@media (max-width:50rem) {
+  main {
+    order: 1;
+    flex: 1 0 0;
+  }
+  body > nav {
+    order: 2;
+  }
+}

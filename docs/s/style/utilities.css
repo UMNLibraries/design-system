@@ -1,0 +1,236 @@
+/***UTILITIES***/
+
+/* FLEX BASICS */
+.flex {
+  margin: 0 auto;
+  display: flex;
+}
+
+.flex > * {
+  margin: 1rem;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.flex:nth-of-type(5) > *:first-of-type {
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 2rem;
+}
+
+.flex:nth-of-type(6) > *:nth-of-type(2) {
+  flex-grow: 4;
+  flex-shrink: 4;
+  flex-basis: 3rem;
+}
+
+
+/* FLEX OPTIONS */
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+
+
+
+.nowrap, .nowrap-md {
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 50rem) {
+  .nowrap-md {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-square {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.flex-square > li {
+  padding: 1rem;
+  margin: 0 1rem 1rem 0;
+}
+
+.square li {
+  min-width: 5rem;
+  max-width: 15rem;
+}
+
+.square-sm li {
+  width: 10rem;
+  height: 10rem;
+}
+
+.square-md li {
+  width: 15rem;
+  height: 15rem;
+  background-color: var(--col-bg-light);
+}
+
+.flex-square svg.glyph {
+  height: 5vw;
+  width: 5vw;
+  display: block;
+  margin: auto;
+}
+
+.flex-square h3 {
+  min-height: 2rem;
+}
+
+.flex-square code {
+  display: block;
+  background-color: transparent;
+}
+
+/* WIDTH */
+.w-50 {
+  display: block;
+  width: calc(50% - (var(--m-norm) * 1rem - 0.5rem));
+  float: left;
+  margin-right: 1rem;
+}
+
+.w-50:last-child {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+.w-100 {
+  display: block;
+  width: 100%;
+}
+
+/* SIZE */
+.svg-2x {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* BORDER */
+.b {
+  border: 1px solid var(--col-text-light);
+}
+.b-0 {
+  border: 0;
+}
+
+/* COLOR */
+.c-primary {
+  background-color: var(--col-primary);
+  color: #fff;
+}
+
+.c-primary-text {
+  color: var(--col-primary);
+}
+
+.c-primary-light {
+  background-color: var(--col-primary-light);
+  color: #fff;
+}
+
+.c-primary-light-text {
+  color: var(--col-primary-light);
+}
+
+.c-primary-dark {
+  background-color: var(--col-primary-dark);
+  color: #fff;
+}
+
+.c-primary-dark-text {
+  color: var(--col-primary-dark);
+}
+
+.c-secondary {
+  background-color: var(--col-secondary);
+  color: var(--col-text);
+}
+
+.c-secondary-text {
+  color: var(--col-secondary);
+}
+
+.c-secondary-light {
+  background-color: var(--col-secondary-light);
+  color: var(--col-text);
+}
+
+.c-secondary-light-text {
+  color: var(--col-secondary-light);
+}
+
+.c-secondary-dark {
+  background-color: var(--col-secondary-dark);
+  color: var(--col-text);
+}
+
+.c-secondary-dark-text {
+  color: var(--col-secondary-dark);
+}
+
+.c-link {
+  background-color: var(--col-link);
+  color: #fff;
+}
+
+.c-link-text {
+  color: var(--col-link);
+}
+
+.c-link-light {
+  background-color: var(--col-link-light);
+  color: #fff;
+}
+
+.c-link-light-text {
+  color: var(--col-link-light);
+}
+
+.c-link-dark {
+  background-color: var(--col-link-dark);
+  color: #fff;
+}
+
+.c-link-dark-text {
+  color: var(--col-link-dark);
+}
+
+.c-text {
+  color: var(--col-text);
+}
+
+.c-text-light {
+  color: var(--col-text-light);
+}
+
+.c-bg-light {
+  background-color: var(--col-bg-light);
+}
+
+.c-bg-medium {
+  background-color: var(--col-bg-medium);
+}
+
+/* borders */
+/* For defining services or terms as cards using definition list */
+.bt-md {
+  border-top: 0.25rem solid var(--col-text);
+  padding-top: 0.5rem;
+}
+
+.b-1 {
+  border: 1px solid;
+}
+
+/* margins */
+.mb-1 {
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}

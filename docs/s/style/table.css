@@ -1,0 +1,104 @@
+/* round of applause to Chris Coyer: https://css-tricks.com/responsive-data-tables/
+and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
+*/
+
+
+table, thead, tbody, th, tr {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 1.3rem;
+}
+
+th {
+  text-align: left;
+  vertical-align: bottom;
+  font-size: var(--h3);
+}
+
+tbody tr {
+  border-bottom:1px solid rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+thead th, tfoot tr {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
+thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+tr {
+  border: 1px solid var(--col-bg-med-dark);
+}
+
+td {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+tbody td, tbody th {
+  padding: 0.5rem;
+}
+
+td::before {
+  font-weight: bold;
+  flex-basis: 50%;
+  margin-right: 2rem;
+}
+
+caption {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: var(--h2);
+  padding: 0.5rem;
+  display: block;
+}
+
+@media (min-width: 800px) {
+
+  table tbody td:nth-of-type(n)::before,
+  table tbody td:nth-of-type(n)::after {
+    content: "";
+    margin-right: 0;
+  }
+
+  thead tr {
+      position: static;
+  }
+
+  thead, tbody {
+    display: table-row-group;
+  }
+
+  th, td {
+    display: table-cell;
+    padding: 1rem;
+    vertical-align: text-top;
+    font-size: var(--base-size);
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  table {
+    display: table;
+    border: 1px solid rgba(0,0,0,0.2);
+  }
+
+  caption {
+    display: table-caption;
+  }
+}

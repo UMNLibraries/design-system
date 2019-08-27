@@ -1,0 +1,113 @@
+/* list styling options */
+
+article ol,
+article ul,
+article dl {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* for checklists? */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #5a5a5a33;
+}
+
+.list li:hover, .list li:focus {
+  background-color: var(--col-bg-medium);
+}
+
+/* for list groups */
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.list-group li {
+  position: relative;
+  display: block;
+  padding: 0.8rem 1rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid var(--col-bg-medium);
+}
+
+.list-group li:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.list-group li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.list-group.list-inline:first-child li:first-child {
+  border-top: 0;
+}
+
+.list-group.list-inline li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.list-group.list-inline li {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.list-group.list-links li {
+  padding: 0;
+}
+
+.list-group.list-links a {
+  display: block;
+  padding: 0.8rem 1rem;
+  border-radius: 0;
+}
+
+/* nested ul */
+.list-group.list-links ul {
+  padding: 0;
+}
+
+.list-group.list-links ul li {
+  border-top: 0;
+}
+
+.list-group.list-links ul li a {
+  padding: 0.1rem 0.3rem 0.1rem 2rem;
+}
+
+/* faux check list */
+.list-check li {
+  padding-left: 2.5rem;
+}
+.list-check li::before {
+  content: ' ';
+  display: inline-block;
+  border: 1px solid var(--col-bg-med-dark);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  margin-left: -2rem;
+}
+
+
+li[aria-current] {
+  background-color: var(--col-link);
+  color: #fff;
+}
+
+li[disabled] {
+  color: var(--col-bg-med-dark);
+  pointer-events: none;
+}

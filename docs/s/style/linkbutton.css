@@ -1,0 +1,59 @@
+/***LINKS AND BUTTONS***/
+a {
+  color: var(--col-link);
+  transition: all ease 0.25s;
+  padding: 0;
+}
+
+a:hover, a:focus {
+  background-color: var(--col-link);
+  color: white;
+  text-decoration: none;
+}
+
+[aria-describedby="ext-site"]::after {
+    content: ' \21D7';
+    /*content: ' \21F1';*/
+}
+
+button,
+.btn-primary {
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  min-height: 48px;
+  background-color: var(--col-primary);
+  border: 1px solid var(--col-primary-dark);
+  transition: all ease 0.3s;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--col-primary-dark);
+}
+
+.btn-secondary {
+  color: var(--col-text);
+  background-color: var(--col-secondary);
+  border: 1px solid var(--col-secondary-dark);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: var(--col-secondary-dark);
+}
+
+.btn-exit {
+  color: var(--col-text);
+  background-color: var(--col-bg-medium);
+  border: 1px solid var(--col-bg-med-dark);
+}
+
+.btn-exit:hover,
+.btn-exit:focus,
+.btn-exit:active {
+  color: #fff;
+  background-color: var(--col-bg-med-dark);
+}

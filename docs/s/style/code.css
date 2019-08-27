@@ -1,0 +1,175 @@
+code {
+  font-size: 1.2rem;
+  background-color: var(--col-bg-medium);
+  display: inline-block;
+  padding: 0 0.1rem;
+}
+
+pre.code {
+  background-color: var(--col-bg-light);
+  border: 1px solid var(--col-bg-medium);
+  padding: 0 1rem;
+  overflow: auto;
+  text-shadow: none;
+  white-space: pre-wrap;
+  margin: 0 0 calc( var(--m-norm) * 1rem);
+  position: relative;
+}
+
+pre.code code {
+  background-color: transparent;
+}
+
+pre[rel]::before {
+  color: var(--col-mes-success-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  content: attr(rel);
+  position: absolute;
+  top: 0.3rem;
+  left: 0.5rem;
+  padding: 0;
+}
+
+/* code example blocks */
+.example {
+  border: 1px solid var(--col-bg-medium);
+  padding: 1rem;
+}
+
+
+/* new tag */
+code .nt {
+  color: #905;
+}
+
+/* new attribute */
+code .na {
+  color: #690;
+}
+
+/* source */
+code .s {
+  color: #07a;
+}
+
+/* comments */
+code .c {
+  color: #999;
+}
+
+/* css selector */
+code .cs {
+  color :#a6e22e;
+}
+
+/* code punctuation */
+code .p {
+  color: #f8f8f2;
+}
+
+/* selector type, class/id */
+code .ct {
+  color: #960050;
+}
+
+/* selector property */
+code .cp {
+  color: #f8f8f2;
+}
+
+/* css property value */
+code .cv {
+  color: #ae81ff;
+}
+
+/* js keyword, key method */
+.kd, .k {
+  color: #66d9ef;
+}
+
+/* js key/selector */
+.nx {
+  color: #a6e22e;
+}
+
+/* js parameter */
+.px {
+  color: #e6db74;
+}
+
+/* js operator */
+.o {
+  color: #f92672;
+}
+
+/* dark theme */
+code.dark {
+  background-color: #030406;
+  color: var(--col-bg-light);
+}
+
+/* new tag */
+code.dark .nt {
+  color: #f92672;
+}
+
+/* new attribute */
+code.dark .na {
+  color: #a6e22e;
+}
+
+/* source */
+code.dark .s {
+  color: #e6db74;
+}
+
+/* comments */
+code.dark .c {
+  color: #86816b;
+}
+
+/* css selector */
+code.dark .cs {
+  color :#a6e22e;
+}
+
+/* code punctuation */
+code.dark .p {
+  color: #f8f8f2;
+}
+
+/* selector type, class/id */
+code.dark .ct {
+  color: #960050;
+}
+
+/* selector property */
+code.dark .cp {
+  color: #f8f8f2;
+}
+
+/* css property value */
+code.dark .cv {
+  color: #ae81ff;
+}
+
+/* js keyword, key method */
+code.dark .kd, code.dark .k {
+  color: #66d9ef;
+}
+
+/* js key/selector */
+code.dark .nx {
+  color: #a6e22e;
+}
+
+/* js parameter */
+code.dark .px {
+  color: #e6db74;
+}
+
+/* js operator */
+code.dark .o {
+  color: #f92672;
+}

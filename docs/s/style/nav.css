@@ -1,0 +1,159 @@
+/***NAV***/
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#logo svg {
+  width: 15rem;
+  min-width: 10rem;
+}
+
+#logo path {
+  fill: var(--col-primary);
+}
+
+#logo .svg-m path, #logo polygon.svg-m {
+  fill: var(--col-primary);
+}
+
+#logo:hover .svg-m path,
+#logo:focus .svg-m path,
+#logo:hover polygon.svg-m,
+#logo:focus polygon.svg-m {
+  fill: var(--col-secondary-light);
+}
+
+#logo:hover .svg-text path, #logo:focus .svg-text path {
+  fill: var(--col-secondary-light);
+}
+
+nav > a {
+  padding: 1rem 1.25rem;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+nav > a:hover, nav > a:focus {
+  text-decoration: underline;
+}
+
+nav[aria-label="Main"], .nav-hor {
+  display: flex;
+}
+
+@media screen and (max-width: 50em) {
+  nav[aria-label="Main"] {
+    flex-direction: column;
+  }
+
+  nav[aria-label="Main"] > a {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+nav[aria-label="Main"] > a {
+  border-radius: 0;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--col-primary);
+}
+
+nav[aria-label="Main"] > a:hover,
+nav[aria-label="Main"] > a:focus {
+  color: #fff;
+  background-color: var(--col-primary);
+}
+
+nav[aria-label="Main"] > a:hover::after,
+nav[aria-label="Main"] > a:focus::after,
+.nav-hor > a:hover::after,
+.nav-hor > a:focus::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--col-secondary-dark);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav[aria-label="Main"] > a[aria-current="page"]:not(#logo)::after,
+nav[aria-label="Main"] > a[aria-current="page"]:not(#logo):hover::after,
+nav[aria-label="Main"] > a[aria-current="page"]:not(#logo):focus::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--col-secondary-dark);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*** Breadcrumb nav ***/
+nav[aria-label="Breadcrumb"] {
+  flex-basis: 100%;
+  padding: 1rem;
+  border-bottom:1px solid var(--col-bg-medium);
+}
+
+nav[aria-label="Breadcrumb"] ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav[aria-label="Breadcrumb"] li {
+  display: inline-block;
+}
+
+nav[aria-label="Breadcrumb"] li:before {
+  content: "\2000";
+  position: absolute;
+}
+
+nav[aria-label="Breadcrumb"] li:not(:last-child):after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.75ch;
+  margin-right: 0.5ch;
+  border-top: 0.75ch solid transparent;
+  border-bottom: 0.75ch solid transparent;
+  border-left: 0.75ch solid var(--col-text);
+}
+
+/* Content navigation, or submenu */
+nav[aria-label="Content"] {
+  padding: 0 1rem;
+}
+
+nav[aria-label="Content"] ul {
+  width: 100%;
+}
+
+nav[aria-label="Content"] li {
+  line-height: 2;
+}
+
+nav[aria-label="Content"] li > a {
+  display: block;
+}
+
+nav[aria-label="Content"] li > a[aria-current] {
+  background-color: var(--col-link);
+  color: white;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+@media (min-width: 80em) { /* flex-basis shouldn't require this...*/
+  nav[aria-label="Content"] {
+    max-width: 20rem;
+  }
+}

@@ -1,0 +1,9 @@
+# CODEOWNERS provides information on primary developers/contacts for a project.
+#
+# For syntax and options, see https://help.github.com/articles/about-codeowners/
+#
+# We recommend using e-mail addresses for individuals to avoid issues when
+# moving between github instances (github.umn.edu vs github.com)
+#
+# The first set lists the default owners for everything in the repo.
+*       adrayer@umn.edu @Libraries/web-development

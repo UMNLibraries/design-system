@@ -1,0 +1,39 @@
+{
+  "name": "umnlib-site",
+  "version": "0.1.0",
+  "description": "Process website content and templates for University of Minnesota Libraries",
+  "author": "Amy M. Drayer <adrayer@umn.edu>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=7.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.umn.edu/Libraries/umnlib-site"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "dotenv": "^5.0.1",
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.0",
+    "gulp-accessibility": "^3.1.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-file-include": "^1.2.0",
+    "gulp-git": "^2.8.0",
+    "gulp-haml": "^1.0.1",
+    "gulp-htmltidy": "^0.2.4",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-noop": "^1.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-phplint": "^0.8.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-haml": "0.0.9",
+    "gulp-string-replace": "^0.4.0",
+    "fancy-log": "^1.3.0",
+    "psi": "^3.1.0",
+    "shipit-captain": "^0.4.4",
+    "shipit-roles": "^1.0.3",
+    "through2": "^2.0.3"
+  }
+}

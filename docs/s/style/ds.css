@@ -1,0 +1,18 @@
+.hero {
+  margin:0 -1rem;
+  padding: calc( var(--m-norm) * 1rem);
+  box-shadow: none;
+  text-align: center;
+  background: url(/img/forest.svg) top center no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+  max-width: calc(100% + 2rem);
+}
+
+.hero blockquote {
+  border-left: 0;
+}
+
+#logo {
+  text-decoration: none;
+}

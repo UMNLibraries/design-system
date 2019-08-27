@@ -1,0 +1,55 @@
+/***RIVET ALERTS***/
+/***https://rivet.iu.edu/components/overlays/alerts/***/
+.alert {
+  border-left: 0.25rem solid #aaa;
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.alert h2 {
+  margin: 0 0 0.25rem 0;
+}
+
+.alert p {
+  margin-top: 0;
+}
+
+.alert svg {
+  margin-right: 0.5rem;
+}
+
+.alert-inline {
+  padding:0.5rem;
+  margin: 0 0 0.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.alert-info {
+  background-color: var(--col-mes-info-bg);
+  border-left-color: var(--col-mes-info-dark);
+  color: var(--col-mes-info-text);
+}
+
+.alert-success {
+  background-color: var(--col-mes-success-bg);
+  border-left-color: var(--col-mes-success-dark);
+  color: var(--col-mes-success-text);
+}
+
+.alert-warning {
+  background-color: var(--col-mes-warn-bg);
+  border-left-color: var(--col-mes-warn-dark);
+  color: var(--col-mes-warn-text);
+}
+
+.alert-danger {
+  background-color: var(--col-mes-danger-bg);
+  border-left-color: var(--col-mes-danger-dark);
+  color: var(--col-mes-danger-text);
+}
+
+.alert-danger a {
+  color: inherit;
+}

@@ -1,0 +1,194 @@
+/*** TYPOGRAPHY ***/
+body {
+  /*font: 400 calc(1em + 1vw)/1.7 Tahoma, Verdana, sans-serif;*/
+  font: 400 1rem/1.5 Tahoma, Verdana, sans-serif;
+  text-rendering: optimizeLegibility;
+  color: var(--col-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Lucida Bright, serif;
+  text-shadow: 0.07em 0.07em 0 rgba(0,0,0,0.1);
+  margin: 0 0 1rem;
+  line-height: 1;
+}
+
+article > h2, article > .h2 {
+  border-bottom: 1px solid;
+}
+
+main > section > h2 {
+  margin-bottom: calc(var(--m-norm) * 1rem);
+}
+
+h1, .h1 {
+  /*font-size: calc(( var(--h1-min) * 0.5em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.5em)) / (var(--bp-xlarge) - var(--bp-small))));*/
+  /*font-size: 3rem;*/
+  font-size: var(--h1);
+}
+
+h2, .h2 {
+  /*font-size: calc(( var(--h1-min) * 0.3em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.3em)) / (var(--bp-xlarge) - var(--bp-small))));*/
+  /*font-size: 2rem;*/
+  font-size: var(--h2);
+}
+
+h3, .h3 {
+  /*font-size: calc(( var(--h1-min) * 0.1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.1em)) / (var(--bp-xlarge) - var(--bp-small))));*/
+  /*font-size: 1.5rem;*/
+  font-size: var(--h3);
+}
+
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
+h5, .h5, h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: var(--base-size);
+  margin-bottom: calc(var(--m-norm) * 1rem);
+}
+
+p + ul, p + ol {
+  margin-top: -1rem;
+}
+
+small, .text-small {
+  font-size: var(--text-sm);
+}
+
+blockquote {
+  font-family: Georgia, Lucida Bright, serif;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: calc( var(--m-norm) * 1rem);
+  border-left: 2px solid var(--col-bg-medium);
+}
+
+blockquote p:first-child::before, blockquote p:last-of-type::after {
+  font-size: 3rem;
+  position: absolute;
+  color: var(--col-text-light);
+}
+
+blockquote p:first-child::before {
+  content: '\201C';
+  margin-left: -1.5rem;
+  top: -0.6rem;
+}
+
+blockquote p:last-of-type::after {
+  content: '\201D';
+  bottom: 1.2rem;
+}
+
+.lead blockquote p:last-of-type::after {
+  bottom: 2.4rem;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--col-secondary-dark);
+  margin: calc( var(--m-norm) * 1rem) 0;
+}
+
+.lead {
+  font-size: 140%;
+  background-color: var(--col-bg-light);
+  padding: 0.5rem;
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
+
+/* DEFINITION LISTS */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 0.3rem 0;
+}
+
+dt:not(:first-child) {
+  margin-top: 1rem;
+}
+
+/* FOOTNOTES */
+footer.footnote {
+  margin-top: 5rem;
+  border-top: 1px solid silver;
+  font-size: 0.9rem;
+}
+
+.footnote ol {
+  padding-left: 1rem;
+}
+
+article {
+  counter-reset: f-1;
+}
+
+/**
+ * Inline footnotes references
+ * 1. Increment the counter at each new reference
+ * 2. Reset link styles to make it appear like regular text
+ */
+[aria-describedby="f-label"] {
+  counter-increment: f-1; /* 1 */
+  text-decoration: none; /* 2 */
+  color: inherit; /* 2 */
+  cursor: default; /* 2 */
+  outline: none; /* 2 */
+}
+
+/**
+ * Actual numbered references
+ * 1. Display the current state of the counter (e.g. `[1]`)
+ * 2. Align text as superscript
+ * 3. Make the number smaller (since it's superscript)
+ * 4. Slightly offset the number from the text
+ * 5. Reset link styles on the number to show it's usable
+ */
+[aria-describedby="f-label"]::after {
+  content: '[' counter(f-1) ']'; /* 1 */
+  vertical-align: super; /* 2 */
+  font-size: 0.5rem; /* 3 */
+  margin-left: 2px; /* 4 */
+  color: var(--col-link); /* 5 */
+  text-decoration: underline; /* 5 */
+  cursor: pointer; /* 5 */
+}
+
+[aria-describedby="f-label"]:focus::after,
+[aria-describedby="f-label"]:hover::after {
+  color: white;
+}
+
+/**
+ * Resetting the default focused styles on the number
+ */
+[aria-describedby="f-label"]:focus::after,
+[aria-describedby="f-label"]:hover::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+}
+
+[aria-label="Back to content"] {
+  font-size: 0.8em;
+}
+
+/**
+ * Highlight target note
+ */
+.footnote :target {
+  background: var(--col-secondary-light);
+}
+
+/* highlight selection */
+::selection {
+  color: #fff;
+  background-color: var(--col-primary);
+}
