@@ -1,0 +1,24 @@
+@media print {
+  div, section, article {
+    --m-norm: 0.3;
+  }
+
+  * {
+    background: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav[aria-label="Breadcrumb"] {
+    display: flex;
+  }
+
+}

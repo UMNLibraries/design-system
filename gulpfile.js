@@ -1,22 +1,16 @@
 //*********** Gulp file for v4
 // Task management with Gulp
 // Available CLI main tasks:
-//   gulp dev   - default build process for dev testing ('dev' task)
 //   gulp stage  - build for stage deployment ('stage' task)
 //   gulp prod   - build for production including git flow ('prod' task)
-//   gulp local  - similar build process to dev, targeting local web server development ('local' task)
 
 //Available CLI individual tasks:
-//   gulp git - runs git flow for production release
 //   gulp icons - compiles all svg files into a single icon files
-//   gulp lint - reviews js code for standard formatting errors
 //   gulp minify:css - concatenates and minifies css code
 //   gulp minify:js  - concatenates and minifies js code
-//   gulp new  - runs git flow to begin a new release
 //   gulp optimize:img - image optimization for all gif, jpeg, png, and svg files in /img
-//   gulp sass - processes sass files into css
 //   gulp test - runs full testing suite for final checks pre prod build
-//   gulp test:acessibility - runs accessibility testing
+//   gulp test:accessibility - runs accessibility testing
 //   gulp test:load - performs load performance testing against stage server
 //   gulp test:accessibility - runs accessibility tests
 //   gulp watch - watches and updates js and css file saves for dev and stage builds
@@ -25,30 +19,25 @@
 const gulp       = require('gulp'),
       access     = require('gulp-accessibility'), //accessibility auditing
       del        = require('del'), //removes files and folders
-      //dotenv    = require('dotenv'), //defined later - set environmental variables from .env files
       ext        = require('gulp-ext-replace'), //modifies file extensions
       htmltidy   = require('gulp-htmltidy'), //makes code readable
       fs         = require('fs'), //file syncing to read package.json version parameter
       git         = require('gulp-git'), // Git support for build repository publishing
-      //gitflow   = require('gulp-release'), //gitflow for releasing production code
       haml       = require('gulp-ruby-haml'),
       imagemin   = require('gulp-imagemin'), //image optimization
       includes   = require('gulp-file-include'), //process includes
       log        = require('fancy-log'), // makes gulp log output available instead of console.log()
       notify     = require('gulp-notify'), //to write messages into CLI
       noop       = require('gulp-noop'), //for its ternary loop ability
-      phplint    = require('gulp-phplint'), //checks for valid well formed php
       plumber    = require('gulp-plumber'),
       psi        = require('psi'), //PageSpeed Insights for web performance ranking
       replace    = require('gulp-string-replace'), //to write in asset URLs
-      shipit     = require('./shipit-config'),
-      shipitCaptain = require('shipit-captain'),
       through    = require('through2'),
       utimes     = require('fs').utimes; //to force files to update modify date when partials are edited
 
 // GLOBAL VARIABLES
 // defaults to a list of available environments
-var globals = {environments: ['dev','stage','prod','local'], git: {currentCommit: null, currentBranch: null}},
+var globals = {environments: ['stage','prod'], git: {currentCommit: null, currentBranch: null}},
     _onError = function(err) {log(err);};
 
 // Define an env task for each defined environment
@@ -94,16 +83,6 @@ function setVariables(env) {
       config: JSON.parse(JSON.stringify(shipit.config))
     },
     html: {
-      haml: [
-        './src/*.haml',
-        './src/templates/**/*.haml',
-        '!./src/templates/**/_*.haml',
-        '!./src/glyph/*.haml'
-      ],
-      hamltemplates: [
-        './build/' + env + '/templates/page--*.tpl.php'
-      ],
-      php: ['./src/**/*.php'],
       all: './build/' + env + '/**/*.php',
       dest: './build/' + env + '/templates'
     },
@@ -117,13 +96,7 @@ function setVariables(env) {
     },
     misc: {
       source: [
-        './src/favicon.ico',
-        './src/robots.txt',
-        './src/humans.txt',
-        './src/screenshot.png',
-        './src/umnlib.info',
-        './src/manifest.json',
-        './src/service-worker.js'
+        './src/favicon.ico'
       ]
     }
   }
@@ -150,8 +123,8 @@ gulp.task('clean:pre-build', function(done) {
 
 //HAML => HTML
 //file names like _file.haml, not _file.html.haml
-gulp.task('write:haml', function() {
-  log('Process HAML');
+gulp.task('write:html', function() {
+  log('Process HTML');
   return gulp.src(globals.html.haml)
     .pipe(plumber({
       errorHandler: _onError
@@ -163,26 +136,11 @@ gulp.task('write:haml', function() {
       indent:true
     }))
     // process haml into html
-    .pipe(haml({
-      noEscapeAttrs:true,
-      cdata: false,
-      outExtension: '.php'
-    }))
     // force indents for non-production versions for legibility - temporary extra element replacement cannot work with this
     .pipe(globals.env === 'dev' || globals.env === 'local' ? htmltidy({indent:true, 'drop-empty-elements':false}) : noop())
     .pipe(gulp.dest(globals.html.dest))
     //update file modified date
     .pipe(touch);
-});
-
-//PHP copy
-gulp.task('copy:php', function() {
-  log('Copy php files');
-  return gulp.src(globals.html.php)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
-    .pipe(gulp.dest(globals.dir));
 });
 
 //Other files copy
@@ -226,33 +184,6 @@ gulp.task('write:replace-strings', function() {
       }
     )) //Google Analytics URL
     .pipe(gulp.dest(globals.dir));
-    //.pipe(notify({
-    //  message: 'URL destinations complete'
-    //}));
-});
-
-
-gulp.task('write:replace-extra-elems', function() {
-  log('Build asset paths');
-  return gulp.src(globals.html.hamltemplates)
-    .pipe(plumber({
-      errorHandler: _onError
-    }))
-    .pipe(replace('<!DOCTYPE html><html><head><title></title></head><body>', '',
-      {
-        logs: {
-          enabled: false
-        }
-      }
-    )) //Assets path
-    .pipe(replace('</body></html>', '',
-      {
-        logs: {
-          enabled: false
-        }
-      }
-    )) //Google Analytics URL
-    .pipe(gulp.dest(globals.html.dest));
     //.pipe(notify({
     //  message: 'URL destinations complete'
     //}));
@@ -304,14 +235,6 @@ gulp.task('watch', function() {
   gulp.watch(options.images.files, ['optimize:img']);
 });
 
-// lint php files
-gulp.task('clean:php', function() {
-  return gulp.src(globals.html.all)
-    //.pipe(phplint())
-    // Log all problems that were found
-    .pipe(phplint.reporter('fail'));
-});
-
 //Run code against WCAGAA for accessibility
 gulp.task('test:accessibility', function() {
   return gulp.src(globals.html.all)
@@ -334,7 +257,6 @@ gulp.task('test:accessibility', function() {
     .pipe(ext('txt'))
     .pipe(gulp.dest('reports/txt'));
 });
-
 
 // Performance and accessibility auditing
 gulp.task('test:performance-desktop', function () {
@@ -376,95 +298,11 @@ gulp.task('test:performance-mobile', function () {
     //.pipe(plumber({errorHandler: _onError}));
 });
 
-gulp.task('buildrepo:clone', function(done) {
-  var doCheckout = function() {
-    // Checkout the env branch or create it if it does not exist
-    git.fetch(globals.deploy.remote, '', {cwd: globals.deploy.repoDir}, function(err) {
-      git.checkout(globals.env, {cwd: globals.deploy.repoDir}, function(err) {
-        if (err) {
-          console.error('Could not switch to branch ' + globals.env + '. Make sure the branch exists in the remote build repo.');
-          throw err;
-        }
-        git.pull(globals.deploy.remote, globals.env, {cwd: globals.deploy.repoDir}, function(err) {
-          if (err) throw err;
-          git.merge('master', {cwd: globals.deploy.repoDir}, function(err) {
-            log('master merged')
-            if (err) throw err;
-            done();
-          });
-        });
-      });
-    });
-  };
-  if (!fs.existsSync(globals.deploy.repoDir)) {
-    git.clone((globals.deploy.buildRepo), {args: globals.deploy.repoDir}, function(err) {
-      if (err) throw err;
-      doCheckout();
-    });
-  }
-  else {
-    doCheckout();
-  }
-});
-
-gulp.task('buildrepo:commit', function(done) {
-  // git add doesn't work with a stream outside the repo, so actually change working dir
-  var lastDir = process.cwd();
-  process.chdir(globals.deploy.repoDir);
-
-  // Recursively copy the build into the buildrepo to stage changes
-  var copySrc = [
-        fs.realpathSync(lastDir + '/' + globals.dir) + '/**/*',
-      ],
-      addSrc = [
-        globals.deploy.repoDir + '/**/*',
-      ];
-  return gulp.src(copySrc)
-    .pipe(gulp.dest(globals.deploy.repoDir))
-    .pipe(gulp.src(addSrc, {passthrough: true}))
-    .pipe(git.add())
-    .pipe(git.commit('Gulp build env:' + globals.env + '|umnlib-drupal-theme|rev:' + globals.git.currentCommit + '|branch:' + globals.git.currentBranch + ' Build: ' + (new Date()).toString()), {cwd: globals.deploy.repoDir})
-    .on('end', function() {
-      // Return to the original working directory (gulp root)
-      process.chdir(lastDir);
-      done();
-    });
-});
-
-gulp.task('buildrepo:push', function(done) {
-  // Push the HEAD revison to the build's branch
-  git.push(globals.deploy.remote, globals.env, {cwd: globals.deploy.repoDir}, function(err) {
-    done();
-  });
-});
-
-function doShipit(config, action, cb) {
-  var options = {
-    init: shipit.init,
-    // Run the requested action, and then clear the cache
-    // which is necessary for any changes to the theme
-    run: [action, 'drush:cacheclear'],
-    targetEnv: globals.env,
-    confirm: false
-  };
-  shipitCaptain(config, options, cb)
-}
-gulp.task('deploy:head', function(done) {
-  // Deploy the HEAD revision of the environment branch
-  process.env.THEME_REVISION = globals.env;
-  doShipit(globals.deploy.config, 'deploy', done);
-});
-gulp.task('rollback', function(done) {
-  doShipit(globals.deploy.config, 'rollback', done);
-});
-
 //*********** Primary tasks
-gulp.task('write', gulp.series('clean:pre-build', 'write:haml', gulp.parallel('copy:php', 'write:svg', 'copy:misc'), 'write:replace-strings', 'write:replace-extra-elems'));
+gulp.task('write', gulp.series('clean:pre-build', 'write:html', gulp.parallel('write:svg', 'copy:misc'), 'write:replace-strings', 'write:replace-extra-elems'));
 
-gulp.task('build:dev', gulp.series('env:dev', 'write', gulp.parallel('clean:php', 'optimize:img')));
 gulp.task('build:stage', gulp.series('env:stage', 'write', 'optimize:img'));
 gulp.task('build:prod', gulp.series('env:prod', 'write', 'optimize:img'));
-gulp.task('build:local', gulp.series('env:local', 'write', 'clean:php', 'optimize:img'));
 
 //only run against stage
 gulp.task('qa', gulp.series('env:stage', 'test:performance-mobile', 'test:performance-desktop', 'test:accessibility'));
@@ -473,8 +311,7 @@ gulp.task('qa', gulp.series('env:stage', 'test:performance-mobile', 'test:perfor
 globals.environments.forEach(function(env) {
   gulp.task('deploy:' + env, gulp.series('env:' + env, 'deploy:head'));
   gulp.task('rollback:' + env, gulp.series('env:' + env, 'rollback'));
-  gulp.task('build:freeze:' + env, gulp.series('env:' + env, 'buildrepo:clone', 'buildrepo:commit', 'buildrepo:push'));
-  gulp.task('publish:' + env, gulp.series('env:' + env, 'build:freeze:' + env, 'deploy:head'))
+  gulp.task('publish:' + env, gulp.series('env:' + env, 'deploy:head'))
 });
 
 //*********** EOF

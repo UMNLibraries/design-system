@@ -22,15 +22,19 @@ nav {
 #logo:focus .svg-m path,
 #logo:hover polygon.svg-m,
 #logo:focus polygon.svg-m {
-  fill: var(--col-secondary-light);
+  fill: white;
 }
 
 #logo:hover .svg-text path, #logo:focus .svg-text path {
   fill: var(--col-secondary-light);
 }
 
+nav > a:first-child {
+  padding:0.95rem 1.25rem;
+}
+
 nav > a {
-  padding: 1rem 1.25rem;
+  padding: 1.25rem;
   display: inline-block;
   text-decoration: none;
   position: relative;
