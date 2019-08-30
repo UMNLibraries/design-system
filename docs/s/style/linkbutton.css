@@ -57,3 +57,28 @@ button:active {
   color: #fff;
   background-color: var(--col-bg-med-dark);
 }
+
+/* stand alone link */
+.link-simple {
+  background-color: white;
+  padding: 0.3rem;
+  display: block;
+  margin-bottom: calc(var(--m-min) * 1rem);
+  text-decoration: none;
+  outline: 0;
+}
+
+.link-simple:hover, .link-simple:focus {
+  box-shadow:inset 0 0 0 0.3rem var(--col-link);
+}
+
+.link-simple > span {
+  display: block;
+}
+
+.link-simple .link-title {
+  line-height: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: calc(var(--m-min) * 1rem);
+}

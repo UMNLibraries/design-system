@@ -207,69 +207,112 @@
   <main id="main">
     <h1>Hyperlinks</h1>
 
-    <article>
-      <h2>Link syntax</h2>
-      <p>Links take the person to another page, it goes somewhere. If the page is external, the link must be identified thusly. Other website have different code structures that cause keyboard and screen reader navigators effort to learn. If the href is empty, consider making the anchor a <code>&lt;button&gt;</code>.</p>
+    <section>
+      <h2>General</h2>
 
-      <h3>Basic link example</h3>
-      <div class="example">
-        <a href="https://www.lib.umn.edu">University Libraries</a>
-      </div>
+      <article>
+        <h3>Link syntax</h3>
+        <p>Links take the person to another page, it goes somewhere. If the page is external, the link must be identified thusly. Other website have different code structures that cause keyboard and screen reader navigators effort to learn. If the href is empty, consider making the anchor a <code>&lt;button&gt;</code>.</p>
+
+        <h4>Basic link example</h4>
+        <div class="example">
+          <a href="https://www.lib.umn.edu">University Libraries</a>
+        </div>
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.lib.umn.edu"</span><span class="nt">&gt;</span>University Libraries<span class="nt">&lt;/a&gt;</span>
 </code>
 </pre>
 
-      <h3>External link example</h3>
-      <p>External links have additional content applied to them to provide visual and screen reader cues that the behavior is different from internal links. The <code>ext-site</code> class adds a graphic icon after the text as well as add the described by language that it opens a different site.</p>
+        <h4>External link example</h4>
+        <p>External links have additional content applied to them to provide visual and screen reader cues that the behavior is different from internal links. The <code>ext-site</code> class adds a graphic icon after the text as well as add the described by language that it opens a different site.</p>
 
-      <div class="example">
-        <a href="https://w3c.org" aria-describedby="ext-site">World Wide Web Consortium</a>
-      </div>
+        <div class="example">
+          <a href="https://w3c.org" aria-describedby="ext-site">World Wide Web Consortium</a>
+        </div>
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://w3c.org"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>World Wide Web Consortium<span class="nt">&lt;/a&gt;</span>
 </code>
 </pre>
-    </article>
+      </article>
 
-    <article>
-      <h2>Valid href attribute values</h2>
-      <dl>
-        <dt><code>https://</code></dt>
-        <dd>absolute path fully qualified (avoid linking to http sites, browsers may prevent people from accessing them)</dd>
+      <article>
+        <h3>Valid href attribute values</h3>
+        <dl>
+          <dt><code>https://</code></dt>
+          <dd>absolute path fully qualified (avoid linking to http sites, browsers may prevent people from accessing them)</dd>
 
-        <dt><code>//www</code></dt>
-        <dd>protocol relative (resolves to either https or http) at the beginning of the URL string</dd>
+          <dt><code>//www</code></dt>
+          <dd>protocol relative (resolves to either https or http) at the beginning of the URL string</dd>
 
-        <dt><code>/</code></dt>
-        <dd>relative path to domain (implies https://www.url.com)</dd>
+          <dt><code>/</code></dt>
+          <dd>relative path to domain (implies https://www.url.com)</dd>
 
-        <dt><code>../../</code></dt>
-        <dd>relative path to specific file (not preferred)</dd>
+          <dt><code>../../</code></dt>
+          <dd>relative path to specific file (not preferred)</dd>
 
-        <dt><code>tel:</code></dt>
-        <dd>for telephone numbers, use syntax +16126260000 with international code</dd>
+          <dt><code>tel:</code></dt>
+          <dd>for telephone numbers, use syntax +16126260000 with international code</dd>
 
-        <dt><code>mailto:</code></dt>
-        <dd>for email addresses (prefer web forms over exposing email addresses)</dd>
-      </dl>
+          <dt><code>mailto:</code></dt>
+          <dd>for email addresses (prefer web forms over exposing email addresses)</dd>
+        </dl>
 
-      <p>Keep the underline to clearly indicate where the interactive area and avoid using color only to indicate interactiveness. Ensure it&rsquo;s visibly distinguishable from the surrounding content.</p>
+        <p>Keep the underline to clearly indicate where the interactive area and avoid using color only to indicate interactiveness. Ensure it&rsquo;s visibly distinguishable from the surrounding content.</p>
 
-      <p>If a link is to a file that the browser will need to download, include the <code>download</code> attribute. The value of this attribute is the name the file will be called on that person&rsquo; local device, regardless of the file name on the server.</p>
+        <p>If a link is to a file that the browser will need to download, include the <code>download</code> attribute. The value of this attribute is the name the file will be called on that person&rsquo; local device, regardless of the file name on the server.</p>
 
-      <h3>Download example</h3>
-      <div class="example">
-        <a href="/docs/marketing-flyer-v131.pdf" download="university-libraries-welcome">Welcome brochure</a>
-      </div>
+        <h4>Download example</h4>
+        <div class="example">
+          <a href="/docs/marketing-flyer-v131.pdf" download="university-libraries-welcome">Welcome brochure</a>
+        </div>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/docs/marketing-flyer-v131.pdf"</span> <span class="na">download=</span><span class="s">"university-libraries-welcome"</span><span class="nt">&gt;</span>Welcome brochure<span class="nt">&lt;/a&gt;</span>
 </code></pre>
 
-    </article>
+      </article>
+    </section>
 
+    <section>
+      <h2>Patterns</h2>
+
+      <article>
+        <h3>Link list</h3>
+        <p>See <a href="/code/list.html#listgroup">list groups</a>.</p>
+
+      <article>
+        <h3>Stand alone links</h3>
+
+        <h4>Stand alone link example</h4>
+        <div class="example">
+          <p><a href="//lib.umn.edu">Welcome brochure</a></p>
+        </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/docs/marketing-flyer-v131.pdf"</span> <span class="na">download=</span><span class="s">"university-libraries-welcome"</span><span class="nt">&gt;</span>Welcome brochure<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+
+        <h4>Stand alone link group example</h4>
+        <div class="example">
+          <a href="//lib.umn.edu/apps/ac" class="link-simple">
+            <span class="link-title">Assignment Calculator</span>
+            <span class="link-description">Enter your due dates to get the steps of the research and writing process of your project.</span>
+          </a>
+          <a href="//lib.umn.edu/pim/citation" class="link-simple">
+            <span class="link-title">Citation managers</span>
+            <span class="link-description">Citation managers are software that keeps track of your citations, and formats them for your papers and bibliographies.</span>
+          </a>
+          <a href="//lib.umn.edu/interlibraryloan" class="link-simple">
+            <span class="link-title">Interlibrary Loan</span>
+            <span class="link-description">Request materials not owned by the Libraries from other libraries for free.</span>
+          </a>
+        </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/docs/marketing-flyer-v131.pdf"</span> <span class="na">download=</span><span class="s">"university-libraries-welcome"</span><span class="nt">&gt;</span>Welcome brochure<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+
+      </article>
+    </section>
 
   </main>
 

@@ -16,6 +16,7 @@
 @import "style/ds.css";
 
 @import "style/print.css";
+
 * {
   box-sizing: border-box;
 }
