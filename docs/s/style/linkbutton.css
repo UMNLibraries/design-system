@@ -61,7 +61,7 @@ button:active {
 /* stand alone link */
 .link-simple {
   background-color: white;
-  padding: 0.3rem;
+  padding: 1rem;
   display: block;
   margin-bottom: calc(var(--m-min) * 1rem);
   text-decoration: none;
@@ -70,6 +70,8 @@ button:active {
 
 .link-simple:hover, .link-simple:focus {
   box-shadow:inset 0 0 0 0.3rem var(--col-link);
+  background-color: white;
+  color: var(--col-link);
 }
 
 .link-simple > span {
@@ -80,5 +82,13 @@ button:active {
   line-height: 1.3rem;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: calc(var(--m-min) * 1rem);
+  margin-bottom: 0.3rem;
+}
+
+.link-simple .link-description {
+  color: var(--col-text);
+}
+
+.link-simple .link-title:hover, .link-simple .link-title:focus {
+  text-decoration: underline;
 }
