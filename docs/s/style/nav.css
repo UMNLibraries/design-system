@@ -25,8 +25,9 @@ nav {
   fill: white;
 }
 
-#logo:hover .svg-text path, #logo:focus .svg-text path {
-  fill: var(--col-secondary-light);
+#logo:hover .svg-text path,
+#logo:focus .svg-text path {
+  fill: white;
 }
 
 nav > a:first-child {
