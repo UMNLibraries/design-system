@@ -19,16 +19,16 @@ th {
 }
 
 tbody tr {
-  border-bottom:1px solid rgba(0,0,0,0.2);
+  border-bottom:1px solid var(--col-bg-medium);
   margin-bottom: 1rem;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--col-bg-medium);
 }
 
 thead th, tfoot tr {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--col-secondary-light);
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -95,7 +95,7 @@ caption {
 
   table {
     display: table;
-    border: 1px solid rgba(0,0,0,0.2);
+    border: 1px solid var(--col-bg-med-dark);
   }
 
   caption {
