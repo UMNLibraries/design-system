@@ -480,6 +480,12 @@ ol[role="progressbar"] li[aria-current="step"] ~ li::before {
     flex-wrap: wrap;
   }
 
+  [role="progressbar"] li[aria-current] {
+    background: none;
+    color: inherit;
+  }
+
+
   ol[role="progressbar"] li {
     width: calc(100% / 4);
     position: relative;
