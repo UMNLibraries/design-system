@@ -59,12 +59,30 @@ button:active {
 }
 
 /* linked image */
+.link-img {
+  position: relative;
+}
 
 .link-img:hover,
 .link-img:focus {
   background-color: transparent;
   color: var(--col-link);
   text-decoration: underline;
+}
+
+.link-img picture:hover::before,
+.link-img picture:focus::before {
+  display: block;
+  background-color: var(--col-link);
+  opacity: 0.5;
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 0;
 }
 
 /* stand alone link */
