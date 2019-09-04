@@ -47,7 +47,8 @@ code .cs {
 /* new HTML attribute, new CSS property */
 code .na,
 code .cp {
-  color: #690;
+  /*color: #690;*/
+  color: #3e5c03;
 }
 
 /* source */
@@ -55,14 +56,10 @@ code .s {
   color: #07a;
 }
 
-/* comments */
-code .c {
-  color: #666;
-}
-
-/* code punctuation */
+/* comments, punctuation */
+code .c,
 code .p {
-  color: #f8f8f2;
+  color: #666;
 }
 
 /* selector type, class/id */
