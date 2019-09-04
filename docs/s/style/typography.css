@@ -102,6 +102,9 @@ hr {
   margin-bottom: calc( var(--m-norm) * 1rem);
 }
 
+.lead p {
+  font-size: inherit;
+}
 
 /* DEFINITION LISTS */
 dt {
