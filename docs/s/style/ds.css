@@ -13,7 +13,8 @@
   border-left: 0;
 }
 
-.hero p {
+.hero p,
+.lead p {
   font-size: 140%;
 }
 
