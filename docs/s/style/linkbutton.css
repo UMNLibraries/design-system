@@ -58,6 +58,15 @@ button:active {
   background-color: var(--col-bg-med-dark);
 }
 
+/* linked image */
+
+.link-img:hover,
+.link-img:focus {
+  background-color: transparent;
+  color: var(--col-link);
+  text-decoration: underline;
+}
+
 /* stand alone link */
 .link-simple {
   background-color: white;
