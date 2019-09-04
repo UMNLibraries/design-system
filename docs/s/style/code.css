@@ -38,13 +38,15 @@ pre[rel]::before {
 }
 
 
-/* new tag */
-code .nt {
+/* new HTML tag, new CSS selector */
+code .nt,
+code .cs {
   color: #905;
 }
 
-/* new attribute */
-code .na {
+/* new HTML attribute, new CSS property */
+code .na,
+code .cp {
   color: #690;
 }
 
@@ -55,12 +57,7 @@ code .s {
 
 /* comments */
 code .c {
-  color: #999;
-}
-
-/* css selector */
-code .cs {
-  color :#a6e22e;
+  color: #666;
 }
 
 /* code punctuation */
@@ -73,14 +70,9 @@ code .ct {
   color: #960050;
 }
 
-/* selector property */
-code .cp {
-  color: #f8f8f2;
-}
-
 /* css property value */
 code .cv {
-  color: #ae81ff;
+  color: #5f4490;
 }
 
 /* js keyword, key method */
