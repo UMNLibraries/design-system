@@ -45,8 +45,8 @@
 }
 
 .card h3 {
-  background-color: var(--col-secondary-light);
-  border-bottom: 1px solid var(--col-secondary);
+  background-color: var(--col-secondary-hint);
+  border-bottom: 1px solid var(--col-secondary-light);
   margin: 0 0 0.3rem;
   padding: 1rem;
 }
