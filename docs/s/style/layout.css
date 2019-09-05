@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  background-color: var(--col-secondary-hint);
-  background: url(/img/draft.svg);
+  background-color: var(--col-bg-light);
   background-size: contain;
 }
 main, body > footer {
@@ -31,7 +30,8 @@ header {
 main > article, section > article {
   padding: 1rem;
   background: white;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  /*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);*/
+  border: 1px solid var(--col-bg-medium);
 }
 
 article {
@@ -45,6 +45,10 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+
+header {
+  background-color: white;
 }
 
 header, body > footer, main > h1, main > h2 {

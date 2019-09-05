@@ -93,6 +93,7 @@ button:active {
   margin-bottom: calc(var(--m-min) * 1rem);
   text-decoration: none;
   outline: 0;
+  border: 1px solid var(--col-bg-medium);
 }
 
 .link-simple:hover, .link-simple:focus {
