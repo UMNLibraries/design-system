@@ -47,6 +47,8 @@
 /* card - job posting */
 .card {
   border: 1px solid var(--col-bg-medium);
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
@@ -54,6 +56,7 @@
   border-bottom: 1px solid var(--col-secondary-light);
   margin: 0 0 0.3rem;
   padding: 1rem;
+  display: flex;
 }
 
 .card-job-detail {
