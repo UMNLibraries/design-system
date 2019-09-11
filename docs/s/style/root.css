@@ -14,6 +14,7 @@
   --col-secondary: #fc3;
   --col-secondary-light: #ffde7a;
   --col-secondary-dark: #ffc20d;
+  --col-secondary-darkest: #b88a00; /* use for borders to make WCAG 2.1 compliant for 1.4.11 */
   --col-secondary-hint: #fefefb;
 
   --col-link: #0053b0;
@@ -29,6 +30,7 @@
   --col-bg-light: #fafafa;
   --col-bg-medium: #f0efee;
   --col-bg-med-dark: #767676;
+  --col-bg-border: #919191; /* for white or bg-light to meet 1.4.11 */
 
 /* colors for messages */
   --col-mes-info-bg: #edf1f6;

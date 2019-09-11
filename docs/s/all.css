@@ -35,12 +35,16 @@
     page-break-after: avoid;
   }
 
-  nav {
-    display: none;
+  nav, footer {
+    display: none !important;
   }
 
   nav[aria-label="Breadcrumb"] {
-    display: flex;
+    display: flex !important;
+  }
+
+  a::after {
+    content: "(" attr(href) ")";
   }
 
 }

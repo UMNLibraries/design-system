@@ -36,7 +36,7 @@ button:active {
 .btn-secondary {
   color: var(--col-text);
   background-color: var(--col-secondary);
-  border: 1px solid var(--col-secondary-dark);
+  border: 1px solid var(--col-secondary-darkest);
 }
 
 .btn-secondary:hover,
