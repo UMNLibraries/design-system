@@ -32,6 +32,10 @@
     box-shadow: none !important;
   }
 
+  body {
+    font-size: var(--base-size);
+  }
+
   h2, h3 {
     page-break-after: avoid;
   }
@@ -42,10 +46,6 @@
 
   h2 {
     font-size: var(--h3);
-  }
-
-  body {
-    font-size: 1rem !important;
   }
 
   nav, footer {
