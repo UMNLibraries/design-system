@@ -23,6 +23,7 @@
 @media print {
   div, section, article {
     --m-norm: 0.3;
+    --base-size: 0.8rem;
   }
 
   * {
@@ -33,6 +34,18 @@
 
   h2, h3 {
     page-break-after: avoid;
+  }
+
+  h1 {
+    font-size: var(--h2);
+  }
+
+  h2 {
+    font-size: var(--h3);
+  }
+
+  body {
+    font-size: 1rem !important;
   }
 
   nav, footer {
