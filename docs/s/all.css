@@ -21,7 +21,7 @@
 
 
 @media print {
-  div, section, article {
+  div, section, article, header, main {
     --m-norm: 0.3;
   }
 
@@ -57,7 +57,7 @@
   }
 
   a::after {
-    content: "(" attr(href) ")";
+    content: " (" attr(href) ")";
   }
 
 }
