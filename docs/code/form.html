@@ -949,6 +949,22 @@
           <input type="search" />
           <button type="submit">Search</button>
         </form>
+
+
+
+        <form action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search">
+          <label class="h3" for="form-input-text">Search</label>
+          <label class="sr-only" for="footer-select">Resource</label>
+          <select id="footer-select" name="target">
+            <option value="Primo">Libraries search</option>
+            <option value="PubMed">PubMed</option>
+            <option value="WorldCat">WorldCat</option>
+            <option value="UMedia">UMedia</option>
+            <option value="GoogleCustomSearch">Libraries website only</option>
+          </select>
+          <input id="footer-input-text" name="search" required="required" type="text" />
+          <button class="btn-primary" type="submit">Search</button>
+        </form>
       </article>
 
       <article>
