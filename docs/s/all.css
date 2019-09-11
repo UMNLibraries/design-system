@@ -23,7 +23,6 @@
 @media print {
   div, section, article {
     --m-norm: 0.3;
-    --base-size: 0.8rem;
   }
 
   * {
@@ -33,7 +32,8 @@
   }
 
   body {
-    font-size: var(--base-size);
+    --base-size: 0.8rem;
+    font: 400 var(--base-size)/1.1 Tahoma, Verdana, sans-serif !important;
   }
 
   h2, h3 {
