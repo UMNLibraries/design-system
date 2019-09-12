@@ -893,36 +893,81 @@
           <thead>
            <tr>
              <td>&nbsp;</td>
-             <th id="tc1">Disagree</th>
-             <th id="tc2">No opinion</th>
-             <th id="tc3">Agree</th>
+             <th>Disagree</th>
+             <th>No opinion</th>
+             <th>Agree</th>
            </tr>
           </thead>
           <tbody>
-           <tr role="group" aria-labelledby="tr1">
-             <th id="tr1">Trees are awesome</th>
+           <tr>
+             <th>Trees are awesome</th>
              <td>
-               <input type="radio" name="trees" aria-labelledby="tc1" />
+               <input type="radio" name="trees" id="r20" />
+               <label for="r20"><span>Trees are awesome</span> <span>Disagree</span></label>
              </td>
              <td>
-               <input type="radio" name="trees" aria-labelledby="tc2" />
+               <input type="radio" name="trees" id="r21" />
+               <label for="r21"><span>Trees are awesome</span> <span>No opinion</span></label>
              </td>
              <td>
-               <input type="radio" name="trees" aria-labelledby="tc3" />
+               <input type="radio" name="trees" id="r22" />
+               <label for="r22"><span>Trees are awesome</span> <span>Agree</span></label>
              </td>
             </tr>
-           <tr role="group" aria-labelledby="tr2">
-             <th id="tr2">Water is good</th>
+           <tr>
+               <th>Water is good</th>
              <td>
-               <input type="radio" name="water" aria-labelledby="tc1" />
+               <input type="radio" name="water" id="r23" />
+               <label for="r23"><span>Water is good</span> <span>Disagree</span></label>
              </td>
              <td>
-               <input type="radio" name="water" aria-labelledby="tc2" />
+               <input type="radio" name="water" id="r24" />
+               <label for="r24"><span>Water is good</span> <span>No opinion</span></label>
              </td>
              <td>
-               <input type="radio" name="water" aria-labelledby="tc3" />
+               <input type="radio" name="water" id="r25" />
+               <label for="r25"><span>Water is good</span> <span>Agree</span></label>
              </td>
            </tr>
+           </tbody>
+         </table>
+       </div>
+
+       <div class="example">
+         <table role="presentation">
+           <thead>
+             <tr>
+               <td><span class="visuallyhidden">Options are:</span></td>
+               <th id="agree">Disagree</th>
+               <th id="noOpinion">No opinion</th>
+               <th id="disagree">Agree</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr role="group" aria-labelledby="trees">
+               <th id="trees">Trees are awesome</th>
+               <td>
+                 <input type="radio" name="trees" aria-labelledby="disagree">
+               </td>
+               <td>
+                 <input type="radio" name="trees" aria-labelledby="noOpinion">
+               </td>
+               <td>
+                 <input type="radio" name="trees" aria-labelledby="agree">
+               </td>
+             </tr>
+             <tr role="group" aria-labelledby="water">
+               <th id="water">Water is good</th>
+               <td>
+                 <input type="radio" name="water" aria-labelledby="disagree">
+               </td>
+               <td>
+                 <input type="radio" name="water" aria-labelledby="noOpinion">
+               </td>
+               <td>
+                 <input type="radio" name="water" aria-labelledby="agree">
+               </td>
+             </tr>
            </tbody>
          </table>
        </div>
