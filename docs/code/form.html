@@ -899,7 +899,7 @@
            </tr>
           </thead>
           <tbody>
-           <tr>
+           <tr role="group">
              <th>Trees are awesome</th>
              <td>
                <input type="radio" name="trees" id="r20" />
@@ -914,7 +914,7 @@
                <label for="r22"><span>Trees are awesome</span> <span>Agree</span></label>
              </td>
             </tr>
-           <tr>
+           <tr role="group">
                <th>Water is good</th>
              <td>
                <input type="radio" name="water" id="r23" />
@@ -933,44 +933,6 @@
          </table>
        </div>
 
-       <div class="example">
-         <table role="presentation">
-           <thead>
-             <tr>
-               <td><span class="visuallyhidden">Options are:</span></td>
-               <th id="agree">Disagree</th>
-               <th id="noOpinion">No opinion</th>
-               <th id="disagree">Agree</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr role="group" aria-labelledby="trees">
-               <th id="trees">Trees are awesome</th>
-               <td>
-                 <input type="radio" name="trees" aria-labelledby="disagree">
-               </td>
-               <td>
-                 <input type="radio" name="trees" aria-labelledby="noOpinion">
-               </td>
-               <td>
-                 <input type="radio" name="trees" aria-labelledby="agree">
-               </td>
-             </tr>
-             <tr role="group" aria-labelledby="water">
-               <th id="water">Water is good</th>
-               <td>
-                 <input type="radio" name="water" aria-labelledby="disagree">
-               </td>
-               <td>
-                 <input type="radio" name="water" aria-labelledby="noOpinion">
-               </td>
-               <td>
-                 <input type="radio" name="water" aria-labelledby="agree">
-               </td>
-             </tr>
-           </tbody>
-         </table>
-       </div>
 
      </article>
    </section>
