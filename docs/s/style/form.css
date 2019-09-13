@@ -425,6 +425,22 @@ select + input[type="search"] {
   }
 }
 
+/* horizontal date fields */
+.form-date { /*this cannot be on a fieldset, flexbox doesn't work on them yet */
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-date label {
+  width: 4rem;
+  margin-right: 0.3rem;
+}
+
+.form-date label:last-of-type {
+  width: 6rem;
+  margin-right: 0;
+}
+
 /* Progress indicator */
 /* https://codepen.io/chopfitzroy/pen/mVeKRN */
 ol[role="progressbar"] {

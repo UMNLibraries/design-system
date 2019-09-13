@@ -1004,18 +1004,20 @@
         <form>
           <fieldset class="form-date">
             <legend>Request date</legend>
-            <label>
-              Month
-              <input type="text" name="month" minlength="1" maxlength="2" size="4" />
-            </label>
-            <label>
-              Day
-              <input type="text" name="day" minlength="1" maxlength="2" size="4" />
-            </label>
-            <label>
-              Year
-              <input type="text" name="month" minlength="2" maxlength="4" size="6" />
-            </label>
+            <div class="form-date">
+              <label>
+                Month
+                <input type="text" name="month" pattern="[0-9]" minlength="1" maxlength="2" size="4" />
+              </label>
+              <label>
+                Day
+                <input type="text" name="day" pattern="[0-9]" minlength="1" maxlength="2" size="4" />
+              </label>
+              <label>
+                Year
+                <input type="text" name="month" pattern="[0-9]" minlength="2" maxlength="4" size="6" />
+              </label>
+            </div>
           </fieldset>
         </form>
       </article>
