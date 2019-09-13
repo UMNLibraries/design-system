@@ -19,7 +19,6 @@ th {
 }
 
 tbody tr {
-  border-bottom:1px solid var(--col-bg-medium);
   margin-bottom: 1rem;
 }
 
@@ -40,10 +39,6 @@ thead tr {
 
 tr {
   border: 1px solid var(--col-bg-med-dark);
-}
-
-tr:last-of-type {
-  border-bottom: 0;
 }
 
 td {
@@ -95,6 +90,10 @@ caption {
 
   tr {
     display: table-row;
+  }
+
+  tr:last-of-type {
+    border-bottom: 0;
   }
 
   table {
