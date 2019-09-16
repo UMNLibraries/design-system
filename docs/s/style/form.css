@@ -67,7 +67,21 @@ input[disabled] + label::before {
 [type="radio"]:hover + label::before,
 [type="checkbox"]:focus + label::before,
 [type="radio"]:focus + label::before {
-  border: 2px solid var(--col-primary);
+  border: 2px solid var(--col-link);
+}
+
+[type="checkbox"][aria-invald="false"]:hover + label::before,
+[type="radio"][aria-invald="false"]:hover + label::before,
+[type="checkbox"][aria-invald="false"]:focus + label::before,
+[type="radio"][aria-invald="false"]:focus + label::before {
+  border: 2px solid var(--col-mes-success-dark);
+}
+
+[type="checkbox"][aria-invald="true"]:hover + label::before,
+[type="radio"][aria-invald="true"]:hover + label::before,
+[type="checkbox"][aria-invald="true"]:focus + label::before,
+[type="radio"][aria-invald="false"]:focus + label::before {
+  border: 2px solid var(--col-mes-danger-dark);
 }
 
 [type="radio"] + label::before {
@@ -88,7 +102,7 @@ input[disabled] + label::before {
   top: 5px;
   width: 13px;
   height: 13px;
-  border: 7px solid var(--col-primary);
+  border: 7px solid var(--col-text);
   border-radius: 50%;
   content: none;
 }
