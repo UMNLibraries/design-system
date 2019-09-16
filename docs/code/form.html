@@ -478,7 +478,7 @@
           <dd>When number does not need to be exact, range can be used to provide a &ldquo;slider&rdquo; interface with <code>min</code> and <code>max</code> values.</dd>
 
           <dt><code>search</code></dt>
-          <dd>Styled similarly to the <code>text</code> type. May be used to target search input fields for styling or behavior modifications.</dd>
+          <dd>Styled similarly to the <code>text</code> type. May be used to target search input fields for styling or behavior modifications. Has benefits such as changing mobile keyboard &ldquo;Go&rdquo; to &ldquo;Search&rdquo;, some browsers allow <code>Esc</code> to clear text, and some offer an &ldquo;x&rdquo; to clear the field. <a href="https://scottaohara.github.io/a11y_styled_form_controls/src/search/" aria=describedby="ext-site">More about styled search component</a>.</dd>
 
           <dt><code>submit</code></dt>
           <dd>Associate input and submit buttons with a form.</dd>
@@ -993,7 +993,7 @@
             <option value="UMedia">UMedia</option>
             <option value="GoogleCustomSearch">Libraries website only</option>
           </select>
-          <input id="footer-input-text" name="search" required="required" type="text" />
+          <input id="footer-input-text" name="search" required="required" type="search" />
           <button type="submit">Search</button>
         </form>
       </article>

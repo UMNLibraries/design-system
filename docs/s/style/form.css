@@ -107,7 +107,7 @@ input[disabled] + label::before {
 [type="checkbox"]:focus + label::before,
 [type="radio"]:focus + label::before {
   /*outline: var(--col-primary) solid 1px;*/
-  box-shadow: 0 0px 8px var(--col-primary);
+  /*box-shadow: 0 0px 8px var(--col-primary);*/
 }
 
 /* matrix */
@@ -173,7 +173,6 @@ table[role="presentation"] input[type="checkbox"] + label > span {
   max-width: 100%;
   padding: 0.75rem;
   margin: 8px -2px 20px;
-  border-radius: 4px;
   border: 1px solid var(--col-bg-med-dark);
   font-size: 1rem;
   min-height: 49px;
@@ -194,7 +193,6 @@ select {
   padding: 0.8rem 1rem;
   margin: 0;
   max-width: 100%;
-  border-radius: 4px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -210,19 +208,21 @@ select::-ms-expand {
 	display: none;
 }
 
-select:hover {
-	border-color: var(--col-bg-med-dark);
-}
-
-select:focus {
-	border-color: var(--col-bg-med-dark);
-	box-shadow: 0 0 0.5rem var(--col-text);
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
-	outline: none;
-}
-
 select option {
 	font-weight: normal;
+}
+
+[type="text"]:hover, [type="text"]:focus,
+[type="search"]:hover, [type="search"]:focus,
+[type="email"]:hover, [type="email"]:focus,
+[type="number"]:hover, [type="number"]:focus,
+[type="password"]:hover, [type="password"]:focus,
+[type="tel"]:hover, [type="tel"]:focus,
+[type="url"]:hover, [type="url"]:focus,
+textarea:hover, textarea:focus,
+select:hover, select:focus {
+  outline: 0.2rem solid var(--col-link);
+  outline-offset: 0.1rem;
 }
 
 /* Support for rtl text, explicit support for Arabic and Hebrew */
