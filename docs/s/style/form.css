@@ -271,14 +271,9 @@ select[aria-disabled="true"] {
 
 .search > * {
   display: block;
-  border-radius: 4px;
   flex: 1 1 auto;
   width: 1%;
   margin: 0;
-}
-
-.search > *:first-child) {
-  margin-right: -1px;
 }
 
 .search > input[type="text"],
@@ -290,20 +285,6 @@ select[aria-disabled="true"] {
 .search > button[type="submit"],
 .search > select {
   flex: 1 0 auto;
-}
-
-.search > *:not(:first-child) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.search > *:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-select + input[type="search"] {
-  margin-right: -4px;
 }
 
 /* toggles */
