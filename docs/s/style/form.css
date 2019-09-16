@@ -233,6 +233,11 @@ textarea[aria-invalid='true']:hover, textarea[aria-invalid='true']:focus {
   outline-color: var(--col-mes-danger-dark);
 }
 
+input[aria-invalid='false']:hover, input[aria-invalid='false']:focus,
+textarea[aria-invalid='false']:hover, textarea[aria-invalid='false']:focus {
+  outline-color: var(--col-mes-success-dark);
+}
+
 /* Support for rtl text, explicit support for Arabic and Hebrew */
 *[dir="rtl"] select,
 :root:lang(ar) select,
