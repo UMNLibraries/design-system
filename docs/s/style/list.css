@@ -128,6 +128,9 @@ li[disabled] {
 .dl-horizontal dt {
   flex: 0 1 25%;
   padding: 1rem 1rem 1rem 0;
+}
+
+.dl-horizontal dt:not(:first-child) {
   margin-top: 0;
 }
 
