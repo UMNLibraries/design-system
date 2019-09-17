@@ -197,13 +197,13 @@ table[role="presentation"] input[type="checkbox"] + label > span {
   border: 1px solid var(--col-bg-med-dark);
   font-size: 1rem;
   min-height: 49px;
-  transition: 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 textarea {
   min-height: 8rem;
   overflow: auto;
-  transition: 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 /* select */
@@ -216,7 +216,7 @@ select {
   padding: 0.8rem 1rem;
   margin: 0;
   border-radius: 0;
-  transition: 0.15s ease;
+  transition: all 0.15s ease;
   max-width: 100%;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -318,6 +318,7 @@ select[aria-disabled="true"] {
   padding: 0.5rem;
   padding-left: 4rem;
   max-width: calc(100% - 2rem);
+  transition: all 0.25s ease;
 }
 
 .toggle[type="checkbox"] + label::before,
@@ -325,7 +326,6 @@ select[aria-disabled="true"] {
   content: "";
   position: absolute;
   height: 1.5rem;
-  transition: all 0.25s ease;
 }
 
 .toggle[type="checkbox"] + label::before {
