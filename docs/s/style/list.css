@@ -149,3 +149,15 @@ li[disabled] {
 .dl-horizontal dd + dt + dd {
   border-top: 0.1rem solid var(--col-bg-medium);
 }
+
+dt:nth-child(odd),
+dt:nth-child(odd) + dd,
+dt:nth-child(odd) + dd ~ dd {
+  background-color: var(--col-bg-light);
+}
+
+dt:nth-child(even),
+dt:nth-child(even) + dd,
+dt:nth-child(even) + dd ~ dd {
+  background-color: var(--col-secondary-hint);
+}
