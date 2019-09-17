@@ -226,6 +226,11 @@
   padding-top: 0.5rem;
 }
 
+.bt-sm {
+  border-top: 0.1rem solid var(--col-text);
+  padding-top: 0.3rem;
+}
+
 .b-1 {
   border: 1px solid;
 }
