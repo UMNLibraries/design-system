@@ -116,3 +116,27 @@ li[disabled] {
   color: var(--col-bg-med-dark);
   pointer-events: none;
 }
+
+
+/* definition list */
+.dl-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.dl-horizontal dt {
+  flex: 0 1 25%;
+  padding: 1.6rem 1.6rem 1.6rem 0;
+}
+
+.dl-horizontal dd {
+  flex: 1 1 51%;
+  padding: 1.6rem 0;
+}
+
+.dl-horizontal dd + dd {
+  flex: 1 1 100%;
+  margin-left: 25%;
+  padding: 1.6rem 0;
+}
