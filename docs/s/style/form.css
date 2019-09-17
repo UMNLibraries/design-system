@@ -67,21 +67,21 @@ input[disabled] + label::before {
 [type="radio"]:hover + label::before,
 [type="checkbox"]:focus + label::before,
 [type="radio"]:focus + label::before {
-  border: 2px solid var(--col-link);
+  border: 0.2rem solid var(--col-link);
 }
 
 [type="checkbox"][aria-invald="false"]:hover + label::before,
 [type="radio"][aria-invald="false"]:hover + label::before,
 [type="checkbox"][aria-invald="false"]:focus + label::before,
 [type="radio"][aria-invald="false"]:focus + label::before {
-  border: 2px solid var(--col-mes-success-dark);
+  border: 0.2rem solid var(--col-mes-success-dark);
 }
 
 [type="checkbox"][aria-invald="true"]:hover + label::before,
 [type="radio"][aria-invald="true"]:hover + label::before,
 [type="checkbox"][aria-invald="true"]:focus + label::before,
 [type="radio"][aria-invald="false"]:focus + label::before {
-  border: 2px solid var(--col-mes-danger-dark);
+  border: 0.2rem solid var(--col-mes-danger-dark);
 }
 
 [type="radio"] + label::before {
@@ -360,8 +360,7 @@ select[aria-disabled="true"] {
 
 .toggle[type="checkbox"]:focus + label::before,
 .toggle[type="checkbox"]:hover + label::before {
-  /*box-shadow: 0 0 0.5rem var(--col-text);*/
-  border: 2px solid var(--col-link);
+  border: 0.2rem solid var(--col-link);
 }
 
 .toggle[type="checkbox"]:focus + label::after,
