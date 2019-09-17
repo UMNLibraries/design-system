@@ -112,7 +112,7 @@ input[disabled] + label::before {
 }
 
 [type="checkbox"]:checked + label::before {
-  background-color: var(--col-primary);
+  background-color: var(--col-text);
 }
 
 [type="checkbox"]:checked + label::after {
@@ -360,7 +360,8 @@ select[aria-disabled="true"] {
 
 .toggle[type="checkbox"]:focus + label::before,
 .toggle[type="checkbox"]:hover + label::before {
-  box-shadow: 0 0 0.5rem var(--col-text);
+  /*box-shadow: 0 0 0.5rem var(--col-text);*/
+  border: 2px solid var(--col-link);
 }
 
 .toggle[type="checkbox"]:focus + label::after,
