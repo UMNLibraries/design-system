@@ -44,7 +44,7 @@
 }
 
 .cards > * footer {
-  margin: auto -0.5rem 0 -0.5rem;
+  margin: auto -0.5rem -0.5rem -0.5rem;
   background-color: var(--col-bg-light);
   padding: 0.5rem;
 }
