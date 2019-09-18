@@ -47,12 +47,10 @@
 .cards > * footer {
   margin-top: auto;
   background-color: var(--col-bg-light);
+  padding: 0.3rem;
 }
 
 /* list-group in cards */
-.cards .list-group {
-  margin: 0 -0.5rem;
-}
 
 .cards .list-group li {
   border-left: 0;
