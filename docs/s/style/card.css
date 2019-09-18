@@ -45,24 +45,39 @@
 
 
 /* card - job posting */
-.card {
+.job-card {
   border: 1px solid var(--col-bg-medium);
   display: flex;
   flex-direction: column;
 }
 
-.card h3 {
+.card .job-card-title {
   background-color: var(--col-secondary-hint);
   border-bottom: 1px solid var(--col-secondary-light);
   margin: 0 0 0.3rem;
   padding: 1rem;
-  display: flex;
+  flex: 1 1 100%;
+  order: 1;
+}
+
+.card .job-card-detail {
+  flex: 0 1 25%;
+  padding: 0.3rem 0.3rem 0.3rem 0;
+  order: 3;
+}
+
+.card .job-card-body {
+  flex: 1 1 51%;
+  padding: 0.3rem 0;
+  margin: 0;
+  order: 2;
 }
 
 .card footer {
   border-top: 1px solid var(--col-bg-medium);
   background-color:  var(--col-bg-light);
   padding: 0.3rem 1rem;
+  flex: 1 1 100%;
 }
 
 .card footer * {
