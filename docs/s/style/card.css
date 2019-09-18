@@ -18,10 +18,9 @@
 .cards > * {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
   border: 1px solid var(--col-bg-medium);
-  border-top: 0.25rem solid var(--col-text);
-  padding-top: 0.5rem;
+  /*border-top: 0.25rem solid var(--col-text);
+  padding-top: 0.5rem;*/
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
 }
 
@@ -67,7 +66,7 @@
 }
 
 .card .card-job-detail {
-  flex: 0 1 25%;
+  flex: 0 1 18rem;
   padding: 0.3rem 0.3rem 0.3rem 0;
   order: 2;
 }
