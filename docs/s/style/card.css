@@ -47,8 +47,6 @@
 /* card - job posting */
 .job-card {
   border: 1px solid var(--col-bg-medium);
-  display: flex;
-  flex-direction: column;
 }
 
 .card .card-job-title {
@@ -56,14 +54,15 @@
   border-bottom: 1px solid var(--col-secondary-light);
   margin: 0 0 0.3rem;
   padding: 1rem;
-  flex: 1 1 100%;
-  order: 1;
+}
+
+.card .card-job-body {
+  display: flex;
 }
 
 .card .card-job-detail {
   flex: 0 1 25%;
   padding: 0.3rem 0.3rem 0.3rem 0;
-  order: 3;
 }
 
 table.card-job-detail tr {
@@ -71,11 +70,10 @@ table.card-job-detail tr {
   border-bottom: 1px solid;
 }
 
-.card .card-job-body {
+.card .card-job-description {
   flex: 1 1 51%;
   padding: 0.3rem 0;
   margin: 0;
-  order: 2;
 }
 
 .card footer {
