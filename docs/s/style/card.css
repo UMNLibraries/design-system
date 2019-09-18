@@ -58,6 +58,7 @@
 
 .card .card-job-body {
   display: flex;
+  padding: 0.3rem 1rem;
 }
 
 .card .card-job-detail {
@@ -66,7 +67,11 @@
   order: 2;
 }
 
-table.card-job-detail tr {
+.card-job-detail th {
+  white-space: nowrap;
+}
+
+.card-job-detail tr {
   border: 0;
   border-bottom: 1px solid;
 }
