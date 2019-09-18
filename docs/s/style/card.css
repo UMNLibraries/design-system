@@ -51,7 +51,7 @@
   flex-direction: column;
 }
 
-.card .job-card-title {
+.card .card-job-title {
   background-color: var(--col-secondary-hint);
   border-bottom: 1px solid var(--col-secondary-light);
   margin: 0 0 0.3rem;
@@ -60,13 +60,18 @@
   order: 1;
 }
 
-.card .job-card-detail {
+.card .card-job-detail {
   flex: 0 1 25%;
   padding: 0.3rem 0.3rem 0.3rem 0;
   order: 3;
 }
 
-.card .job-card-body {
+table.card-job-detail tr {
+  border: 0;
+  border-bottom: 1px solid;
+}
+
+.card .card-job-body {
   flex: 1 1 51%;
   padding: 0.3rem 0;
   margin: 0;

@@ -231,6 +231,14 @@
   padding-top: 0.3rem;
 }
 
+.bb-sm {
+  border-bottom: 0.1rem solid var(--col-text);
+}
+
+.b-0 {
+  border: none;
+}
+
 .b-1 {
   border: 1px solid;
 }
