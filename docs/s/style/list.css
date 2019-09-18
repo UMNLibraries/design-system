@@ -150,13 +150,3 @@ li[disabled] {
 .dl-horizontal dd + dt + dd {
   border-top: 0.1rem solid var(--col-bg-medium);
 }
-
-.dl-striped dt:nth-child(odd),
-.dl-striped dt:nth-child(odd) ~ dd {
-  background-color: var(--col-bg-light);
-}
-
-.dl-striped dt:nth-child(even),
-.dl-striped dt:nth-child(even) ~ dd {
-  background-color: var(--col-secondary);
-}

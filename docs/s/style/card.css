@@ -59,10 +59,6 @@
   display: flex;
 }
 
-.card-job-detail {
-  list-style: none;
-}
-
 .card footer {
   border-top: 1px solid var(--col-bg-medium);
   background-color:  var(--col-bg-light);
