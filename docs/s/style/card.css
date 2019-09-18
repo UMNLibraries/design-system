@@ -45,7 +45,7 @@
 
 
 /* card - job posting */
-.job-card {
+.card-job {
   border: 1px solid var(--col-bg-medium);
 }
 
@@ -63,6 +63,7 @@
 .card .card-job-detail {
   flex: 0 1 25%;
   padding: 0.3rem 0.3rem 0.3rem 0;
+  order: 2;
 }
 
 table.card-job-detail tr {
