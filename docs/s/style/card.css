@@ -1,48 +1,53 @@
 /***CARD***/
 .cards {
   list-style: none;
+  padding: 0;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.cards > li {
+@supports (display: grid) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+.cards > * {
   display: flex;
-  flex: 0 1 30%;
   flex-direction: column;
   padding: 0.5rem;
-  margin: 0 1.25ch 4ch;
   border: 1px solid var(--col-bg-medium);
   border-top: 0.25rem solid var(--col-text);
   padding-top: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
 }
 
-.cards > li h2,
-.cards > li h3 {
+.cards > * h2,
+.cards > * h3 {
   margin: 0;
 }
 
-.cards > li img {
+.cards > * img {
   display: block;
   width: calc(100% + 1rem);
   margin: -0.5rem;
   margin-bottom: 0;
 }
 
-.card > li p {
+.card > * p {
   margin-bottom: auto;
 }
 
-.cards > li p:last-child {
+.cards > * p:last-child {
   margin-top: auto;
 }
 
-.cards > li footer {
+.cards > * footer {
   margin-top: auto;
 }
-
 
 /* card - job posting */
 .card-job {
@@ -86,7 +91,6 @@
   border-top: 1px solid var(--col-bg-medium);
   background-color:  var(--col-bg-light);
   padding: 0.3rem 1rem;
-  flex: 1 1 100%;
 }
 
 .card footer * {
