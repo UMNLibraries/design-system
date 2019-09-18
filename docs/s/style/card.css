@@ -19,8 +19,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid var(--col-bg-medium);
-  /*border-top: 0.25rem solid var(--col-text);*/
-  padding-top: 0.5rem;
+  padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
 }
 
@@ -33,7 +32,7 @@
   display: block;
   width: calc(100% + 1rem);
   margin: -0.5rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .card > * p {
@@ -45,12 +44,16 @@
 }
 
 .cards > * footer {
-  margin-top: auto;
+  margin: auto -0.5rem 0 -0.5rem;
   background-color: var(--col-bg-light);
-  padding: 0.3rem;
+  padding: 0.5rem;
 }
 
 /* list-group in cards */
+.cards .list-group {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
 
 .cards .list-group li {
   border-left: 0;
