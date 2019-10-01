@@ -443,20 +443,10 @@ select[aria-disabled="true"] {
 }
 
 /* horizontal date fields */
-.form-date { /*this cannot be on a fieldset, flexbox doesn't work on them yet */
+.form-inline { /*this cannot be on a fieldset, flexbox doesn't work on them yet */
   display: flex;
   align-items: flex-start;
 }
-
-/*.form-date label {
-  width: 4rem;
-  margin-right: 0.3rem;
-}
-
-.form-date label:last-of-type {
-  width: 6rem;
-  margin-right: 0;
-}*/
 
 input[maxlength="2"] {
   width: calc(2ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
@@ -541,7 +531,6 @@ ol[role="progressbar"] li[aria-current="step"] ~ li::before {
     background: none;
     color: inherit;
   }
-
 
   ol[role="progressbar"] li {
     width: calc(100% / 4);

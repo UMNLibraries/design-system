@@ -79,3 +79,32 @@ article {
     order: 2;
   }
 }
+
+/* Content columns */
+.col {
+  columns: auto auto; /*width and count*/
+}
+
+.col-1 {
+  columns: 1;
+}
+
+.col-2 {
+  columns: 2;
+}
+
+.col-3 {
+  columns: 3;
+}
+
+.col-25 {
+  columns: 25%;
+}
+
+.col-30 {
+  columns: 30%;
+}
+
+.col-50 {
+  columns: 50%;
+}

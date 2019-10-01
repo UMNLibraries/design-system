@@ -88,9 +88,9 @@ nav[aria-label="Main"] > a:focus::after,
   left: 0;
 }
 
-nav[aria-label="Main"] > a[aria-current="page"]:not(#logo)::after,
-nav[aria-label="Main"] > a[aria-current="page"]:not(#logo):hover::after,
-nav[aria-label="Main"] > a[aria-current="page"]:not(#logo):focus::after {
+header > a[aria-current="location"]:not(#logo)::after,
+header > a[aria-current="location"]:not(#logo):hover::after,
+header > a[aria-current="location"]:not(#logo):focus::after {
   content: "";
   display: block;
   width: 100%;
