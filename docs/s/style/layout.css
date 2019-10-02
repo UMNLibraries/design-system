@@ -80,16 +80,6 @@ article {
   margin-bottom: calc( var(--m-norm) * 1rem);
 }
 
-@media (max-width:50rem) {
-  main {
-    order: 1;
-    flex: 1 0 0;
-  }
-  body > nav {
-    order: 2;
-  }
-}
-
 /* Content columns */
 .col {
   columns: auto auto; /*width and count*/
@@ -109,4 +99,24 @@ article {
 
 .col-4 {
   columns: 4;
+}
+
+@media (max-width:50rem) {
+  main {
+    order: 1;
+    flex: 1 0 0;
+  }
+  body > nav {
+    order: 2;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3 {
+    columns: 1;
+  }
+
+  .col-4 {
+    columns: 2;
+  }
 }
