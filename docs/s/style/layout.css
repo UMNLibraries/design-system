@@ -16,6 +16,16 @@ main, body > footer {
 
 header {
   margin-bottom: calc( var(--m-norm) * 1rem);
+  background-color: white;
+}
+
+footer {
+  background-color: var(--col-text);
+  color: var(--col-bg-light);
+}
+
+footer a {
+  color: var(--col-bg-light);
 }
 
 .column {

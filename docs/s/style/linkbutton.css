@@ -16,6 +16,10 @@ a:hover, a:focus {
     /*content: ' \21F1';*/
 }
 
+.icons [aria-describedby="ext-site"]::after {
+    content: '';
+}
+
 button,
 .btn-primary {
   font-size: 1rem;

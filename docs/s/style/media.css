@@ -34,3 +34,14 @@ picture img {
   stroke: var(--col-secondary);
   stroke-width: 0.1;
 }
+
+/* SVG sizes */
+.glyph-2 {
+  height: 2rem;
+  width: 2rem;
+}
+
+.glyph-3 {
+  height: 3rem;
+  width: 3rem;
+}

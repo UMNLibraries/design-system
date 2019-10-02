@@ -244,6 +244,14 @@
 }
 
 /* margins */
+.m-1 {
+  margin: calc( var(--m-norm) * 1rem);
+}
+
 .mb-1 {
   margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
+.mt-1 {
+  margin-top: calc( var(--m-norm) * 1rem);
 }
