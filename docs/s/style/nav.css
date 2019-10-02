@@ -84,6 +84,14 @@ nav[aria-label="Main"] > a {
   color: var(--col-primary);
 }
 
+nav[aria-label="University"] > a:hover,
+nav[aria-label="University"] > a:focus,
+nav[aria-label="Libraries"] > a:hover,
+nav[aria-label="Libraries"] > a:focus {
+  color: var(--col-text);
+  background-color: var(--col-secondary);
+}
+
 nav[aria-label="Main"] > a:hover,
 nav[aria-label="Main"] > a:focus {
   color: #fff;
