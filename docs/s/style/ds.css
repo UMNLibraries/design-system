@@ -21,3 +21,7 @@
 #logo {
   text-decoration: none;
 }
+
+nav > a:first-child {
+  padding:0.95rem 1.25rem;
+}
