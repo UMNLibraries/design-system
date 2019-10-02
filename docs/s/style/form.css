@@ -282,6 +282,10 @@ select[aria-disabled="true"] {
   max-width: 60rem;
 }
 
+nav > .search {
+  margin: 0 1.25rem;
+}
+
 .search > * {
   display: block;
   flex: 1 1 auto;

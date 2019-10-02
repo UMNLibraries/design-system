@@ -97,14 +97,6 @@ article {
   columns: 3;
 }
 
-.col-25 {
-  columns: 25%;
-}
-
-.col-30 {
-  columns: 30%;
-}
-
-.col-50 {
-  columns: 50%;
+.col-4 {
+  columns: 4;
 }
