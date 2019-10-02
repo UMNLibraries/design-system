@@ -15,11 +15,6 @@
 @import "style/utilities.css";
 @import "style/ds.css";
 
-* {
-  box-sizing: border-box;
-}
-
-
 @media print {
   div, section, article, header, main {
     --m-norm: 0.3;

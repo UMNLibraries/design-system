@@ -19,3 +19,18 @@ picture img {
   filter: contrast(180%);
   width: 100%;
 }
+
+/* SVG colors */
+.maroon-fill {
+  fill: var(--col-primary);
+}
+
+.white-stroke {
+  stroke: white;
+  stroke-width: 0.1;
+}
+
+.gold-stroke {
+  stroke: var(--col-secondary);
+  stroke-width: 0.1;
+}
