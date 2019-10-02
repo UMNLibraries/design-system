@@ -31,6 +31,8 @@ button:hover,
 button:focus,
 button:active {
   background-color: var(--col-primary-dark);
+  outline: 0.2rem solid var(--col-link);
+  outline-offset: 0.1rem;
 }
 
 .btn-secondary {

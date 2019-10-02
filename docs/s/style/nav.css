@@ -36,6 +36,14 @@ nav {
 
 nav[aria-label="Main"] > a:first-child {
   padding:0.95rem 1.25rem;
+  color: var(--col-text);
+  font-weight: bold;
+  font-size: var(--h2);
+}
+
+nav[aria-label="Main"] > a:first-child:hover,
+nav[aria-label="Main"] > a:first-child:focus {
+  color: white;
 }
 
 nav > a:first-child {
