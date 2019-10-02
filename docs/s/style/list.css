@@ -8,7 +8,7 @@ article dl {
 }
 
 /* for checklists? */
-.list {
+.unlist {
   list-style: none;
   padding: 0;
 }
