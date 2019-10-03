@@ -21,7 +21,8 @@ a:hover, a:focus {
 }
 
 button,
-.btn-primary {
+.btn-primary,
+input[type="submit"] {
   font-size: 1rem;
   padding: 0.8rem 1rem;
   color: #fff;

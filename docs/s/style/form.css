@@ -279,7 +279,7 @@ select[aria-disabled="true"] {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  min-width: 30rem;
+  /*min-width: 30rem; - conflicts with mobile size, think about it more */
   max-width: 60rem;
 }
 
