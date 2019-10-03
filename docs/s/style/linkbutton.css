@@ -34,7 +34,9 @@ input[type="submit"] {
 
 button:hover,
 button:focus,
-button:active {
+button:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
   background-color: var(--col-primary-dark);
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
