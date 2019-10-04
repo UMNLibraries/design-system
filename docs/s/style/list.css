@@ -95,10 +95,10 @@ article dl {
 }
 
 
-.list-links li[aria-current] {
+/*.list-links li[aria-current] {
   background-color: var(--col-link);
   color: #fff;
-}
+} - redundant?? */ 
 
 li[disabled] {
   color: var(--col-bg-med-dark);
