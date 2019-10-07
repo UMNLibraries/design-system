@@ -19,7 +19,7 @@ header {
   background-color: white;
 }
 
-footer {
+main > footer {
   background-color: var(--col-text);
   color: var(--col-bg-light);
 }
