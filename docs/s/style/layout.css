@@ -24,16 +24,6 @@ main > footer {
   color: var(--col-bg-light);
 }
 
-footer a {
-  color: var(--col-bg-light);
-}
-
-footer a:hover,
-footer a:focus {
-  background-color: var(--col-secondary-light);
-  color: var(--col-text);
-}
-
 .column {
   flex-direction: column;
 }

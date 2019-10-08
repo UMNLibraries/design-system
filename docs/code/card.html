@@ -274,8 +274,7 @@
           <article class="card card-news">
             <a href="/article-2" class="link-img">
               <picture aria-hidden="true">
-                <source type="image/webp" srcset="map.webp" />
-                <img src="map.jpg" alt="" />
+                <img src="http://placekitten.com/g/300/175" alt="">
               </picture>
               <h3>Story heading</h3>
             </a>
@@ -367,11 +366,92 @@
 
     <article>
       <h2>Card decks</h2>
-      <p>To create a card deck, determine the best element to describe the content. In most cases, the cards represent a list of items, so use <code>&lt;ul&gt;</code>. To affect a card layout, add a class cards to the list.</p>
+      <p>To create a card deck, determine the best element to describe the content. In most cases, cards are best represented as <code>&lt;article&gt;</code>s, and the card deck layout called with the <code>cards</code> class on the parent element. In some cases, the cards represent a list of items, so use <code>&lt;ul&gt;</code>. To affect a card layout, add a class cards to the list.</p>
+      <h3>Standard deck</h3>
+      <div class="example">
+        <section class="cards">
+         <article>
+            <h3>
+              <picture>
+                <img src="http://placekitten.com/g/300/175" alt="">
+              </picture>
+              Kitten overload
+            </h3>
+            <p>They may look adorable, but inside they are waiting for the right moment to pounce and sink their claws in.</p>
+            <footer>
+              <a href="https://placekitten.com" aria-describedby="ext-site">More kitten photos</a>
+            </footer>
+          </article>
 
+         <article>
+            <h3>
+              <a href="http://placekitten.com/g/300/175">
+                <picture>
+                  <img src="http://placekitten.com/g/300/175" alt="" />
+                </picture>
+                Web Content Kitty
+              </a>
+            </h3>
+            <p>About the web content kitty.</p>
+            <p>It likes to eats <code>div</code>s for breakfast.</p>
+            <footer>
+              <a href="https://placekitten.com">More kitten photos</a>
+            </footer>
+          </article>
+
+          <article>
+            <h3>
+              <a href="https://placekitten.com">Kitten buttons</a>
+           </h3>
+           <p>We don&rsquo;t mean those things you click on the interwebs, we mean for realz physical buttons.</p>
+           <footer>
+             <a href="/" class="btn btn-primary">Purchase a button</a>
+           </footer>
+          </article>
+
+          <article>
+            <h3>
+              <a href="https://placekitten.com">Kitten buttons</a>
+            </h3>
+            <p>We don&rsquo;t mean those things you click on the interwebs, we mean for realz physical buttons.</p>
+            <ul>
+              <li>Round buttons</li>
+              <li>Square buttons</li>
+              <li>Micro buttons</li>
+            </ul>
+            <footer>
+              <a href="/">Purchase a button</a>
+            </footer>
+          </article>
+          <article>
+            <h3>
+             <a href="https://placekitten.com">Kitten buttons</a>
+           </h3>
+           <p>We don&rsquo;t mean those things you click on the interwebs, we mean for realz physical buttons.</p>
+           <footer>
+             <a href="/">Purchase a button</a>
+           </footer>
+         </article>
+         <article>
+           <h3>
+             <a href="https://image-placeholder.com/images/actual-size/300x250.png">Kitten buttons</a>
+           </h3>
+           <p>We don&rsquo;t mean those things you click on the interwebs, we mean for realz physical buttons.</p>
+           <ul class="list-group">
+             <li>Round buttons</li>
+             <li>Square buttons</li>
+             <li>Micro buttons</li>
+           </ul>
+           <footer>
+             <a href="/">Purchase a button</a>
+           </footer>
+         </article>
+       </section>
+      </div>
+
+      <h3>As a list</h3>
       <div class="example">
         <ul class="cards">
-
          <li>
           <h3>
             <picture>
