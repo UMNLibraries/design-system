@@ -109,6 +109,19 @@
 }
 
 .card-action {
-  min-height: 3rem;
-  min-width: 3rem;
+  min-height: 5rem;
+  width: 15rem;
+}
+
+.card-glyph {
+  display: block;
+  margin: auto;
+}
+
+.card-action footer {
+  display: inline-block;
+  width: auto;
+  margin-right: 1rem;
+  padding: 1rem;
+  text-align: right;
 }

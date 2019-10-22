@@ -19,45 +19,18 @@
 const gulp       = require('gulp'),
       access     = require('gulp-accessibility'), //accessibility auditing
       del        = require('del'), //removes files and folders
-      ext        = require('gulp-ext-replace'), //modifies file extensions
       htmltidy   = require('gulp-htmltidy'), //makes code readable
       fs         = require('fs'), //file syncing to read package.json version parameter
       git         = require('gulp-git'), // Git support for build repository publishing
-      haml       = require('gulp-ruby-haml'),
       imagemin   = require('gulp-imagemin'), //image optimization
       includes   = require('gulp-file-include'), //process includes
       log        = require('fancy-log'), // makes gulp log output available instead of console.log()
       notify     = require('gulp-notify'), //to write messages into CLI
       noop       = require('gulp-noop'), //for its ternary loop ability
-      plumber    = require('gulp-plumber'),
-      psi        = require('psi'), //PageSpeed Insights for web performance ranking
       replace    = require('gulp-string-replace'), //to write in asset URLs
       through    = require('through2'),
       utimes     = require('fs').utimes; //to force files to update modify date when partials are edited
 
-// GLOBAL VARIABLES
-// defaults to a list of available environments
-var globals = {environments: ['stage','prod'], git: {currentCommit: null, currentBranch: null}},
-    _onError = function(err) {log(err);};
-
-// Define an env task for each defined environment
-// The loop can be unrolled if differences are needed for env tasks
-globals.environments.forEach(function(env) {
-  gulp.task('env:' + env, function(done) {
-    require('dotenv').config({path: '.env.' + env});
-    // Merge globals defaults
-    globals = Object.assign(globals, setVariables(process.env.NODE_ENV));
-    // Load the current umnlib-drupal-theme commit into a variable
-    // to be used later by build commits to the frozen build repo
-    git.exec({args: 'log -n1 --pretty=format:%h'}, function(err, rev) {
-      globals.git.currentCommit = rev;
-      git.revParse({args: '--abbrev-ref HEAD'}, function(err, branch) {
-        globals.git.currentBranch = branch;
-        done();
-      });
-    })
-  });
-});
 
 //temporary solution to force file modify date to update since partials editing doesn't trigger it
 var touch = through.obj(function(file, enc, done) {
@@ -135,9 +108,8 @@ gulp.task('write:html', function() {
       basepath:'./',
       indent:true
     }))
-    // process haml into html
     // force indents for non-production versions for legibility - temporary extra element replacement cannot work with this
-    .pipe(globals.env === 'dev' || globals.env === 'local' ? htmltidy({indent:true, 'drop-empty-elements':false}) : noop())
+    .pipe(htmltidy({indent:true, 'drop-empty-elements':false}) : noop())
     .pipe(gulp.dest(globals.html.dest))
     //update file modified date
     .pipe(touch);
@@ -176,17 +148,7 @@ gulp.task('write:replace-strings', function() {
         }
       }
     )) //Assets path
-    .pipe(replace('ga/account/', globals.deploy.ga,
-      {
-        logs: {
-          enabled: false
-        }
-      }
-    )) //Google Analytics URL
     .pipe(gulp.dest(globals.dir));
-    //.pipe(notify({
-    //  message: 'URL destinations complete'
-    //}));
 });
 
 //Basic image optimization
@@ -301,17 +263,9 @@ gulp.task('test:performance-mobile', function () {
 //*********** Primary tasks
 gulp.task('write', gulp.series('clean:pre-build', 'write:html', gulp.parallel('write:svg', 'copy:misc'), 'write:replace-strings', 'write:replace-extra-elems'));
 
-gulp.task('build:stage', gulp.series('env:stage', 'write', 'optimize:img'));
-gulp.task('build:prod', gulp.series('env:prod', 'write', 'optimize:img'));
+gulp.task('build', gulp.series('env:prod', 'write', 'optimize:img'));
 
 //only run against stage
 gulp.task('qa', gulp.series('env:stage', 'test:performance-mobile', 'test:performance-desktop', 'test:accessibility'));
-
-// Commit build (defines a task to load env and make release for each valid stage)
-globals.environments.forEach(function(env) {
-  gulp.task('deploy:' + env, gulp.series('env:' + env, 'deploy:head'));
-  gulp.task('rollback:' + env, gulp.series('env:' + env, 'rollback'));
-  gulp.task('publish:' + env, gulp.series('env:' + env, 'deploy:head'))
-});
 
 //*********** EOF

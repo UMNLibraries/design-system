@@ -18,6 +18,7 @@ picture source,
 picture img {
   filter: contrast(180%);
   width: 100%;
+  max-width: 750px;
 }
 
 /* SVG colors */
