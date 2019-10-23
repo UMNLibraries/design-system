@@ -67,13 +67,17 @@
   align-items: flex-start;
 }
 
-.cards-x > * picture {
+.cards-x picture {
   width: 10rem;
   margin-right: 1rem;
 }
 
 .cards-x .card-body {
   flex: 1;
+}
+
+.cards-x p {
+  margin-bottom: 0;
 }
 
 /* card - job posting */
