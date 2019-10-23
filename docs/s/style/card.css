@@ -111,6 +111,7 @@
 .card-action {
   min-height: 5rem;
   width: 15rem;
+  padding-bottom: 2rem;
 }
 
 .card-glyph {
@@ -118,10 +119,11 @@
   margin: auto;
 }
 
-.card-action footer {
-  display: inline-block;
+.card-action-button {
   width: auto;
-  margin-right: 1rem;
   padding: 1rem;
-  text-align: right;
+  position: absolute;
+  margin-bottom: 0;
+  bottom: -1.5rem;
+  right: 0.5rem;
 }
