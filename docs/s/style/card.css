@@ -119,11 +119,14 @@
   margin: auto;
 }
 
+.card-action p {
+  margin-bottom: 0;
+}
+
 .card-action-button {
   width: auto;
   padding: 1rem;
   position: absolute;
-  margin-bottom: 0;
   bottom: -1.5rem;
   right: 0.5rem;
 }
