@@ -33,6 +33,7 @@ main > footer a:focus {
 
 button,
 .btn-primary,
+.btn-secondary,
 input[type="submit"] {
   font-size: 1rem;
   padding: 0.8rem 1rem;
@@ -46,6 +47,9 @@ input[type="submit"] {
 button:hover,
 button:focus,
 button:active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: var(--col-primary-dark);
