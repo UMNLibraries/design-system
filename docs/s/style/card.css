@@ -15,6 +15,10 @@
   }
 }
 
+.cards-x .card {
+  flex-direction: row;
+}
+
 .cards > * {
   display: flex;
   flex-direction: column;
@@ -106,6 +110,10 @@
 
 .card footer * {
   margin: 0 0.1rem;
+}
+
+.card footer a {
+  display: inline-block;
 }
 
 .card-action {

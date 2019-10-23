@@ -375,7 +375,7 @@
 
 
     <article>
-      <h2>Card decks</h2>
+      <h2>Card decks (default)</h2>
       <p>To create a card deck, determine the best element to describe the content. In most cases, cards are best represented as <code>&lt;article&gt;</code>s, and the card deck layout called with the <code>cards</code> class on the parent element. In some cases, the cards represent a list of items, so use <code>&lt;ul&gt;</code>. To affect a card layout, add a class cards to the list.</p>
       <h3>Standard deck</h3>
       <div class="example">
@@ -542,7 +542,43 @@
 
     </article>
 
+    <article>
+      <h2>Horizontal card deck</h2>
+      <p>These look less like cards and are long rather than tall.</p>
+      <div class="example">
+        <section class="cards">
+         <article>
+            <h3>
+              <picture>
+                <img src="https://placekitten.com/g/300/175" alt="">
+              </picture>
+              Kitten overload
+            </h3>
+            <p>They may look adorable, but inside they are waiting for the right moment to pounce and sink their claws in.</p>
+            <footer>
+              <a href="https://placekitten.com" aria-describedby="ext-site">More kitten photos</a>
+            </footer>
+          </article>
 
+         <article>
+            <h3>
+              <a href="https://placekitten.com/g/300/175">
+                <picture>
+                  <img src="https://placekitten.com/g/300/175" alt="" />
+                </picture>
+                Web Content Kitty
+              </a>
+            </h3>
+            <p>About the web content kitty.</p>
+            <p>It likes to eats <code>div</code>s for breakfast.</p>
+            <footer>
+              <a href="https://placekitten.com">More kitten photos</a>
+            </footer>
+          </article>
+        </section>
+      </div>
+
+    </article>
 
   </main>
 
