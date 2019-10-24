@@ -67,7 +67,8 @@
   align-items: flex-start;
 }
 
-.cards-x > *:first-child {
+.cards-x > * > picture,
+.cards-x > * > a {
   flex-shrink: 0;
 }
 
