@@ -31,6 +31,12 @@ main > footer a:focus {
     content: '';
 }
 
+a:hover code,
+a:focus code,
+a:active code {
+  color: var(--col-link);
+}
+
 button,
 .btn-primary,
 .btn-secondary,
