@@ -74,8 +74,10 @@
   flex-shrink: 0;
 }
 
-.cards-x .card-body {
+.card-x-body {
   flex: 1;
+  flex-wrap: wrap;
+  min-width: 15rem;
 }
 
 .cards-x p {
@@ -97,6 +99,7 @@
 .card .card-job-body {
   display: flex;
   padding: 0.3rem 1rem;
+  flex-wrap: wrap;
 }
 
 .card .card-job-detail {
@@ -112,6 +115,7 @@
 .card-job-detail tr {
   border: 0;
   border-bottom: 1px solid;
+  margin-bottom: 0;
 }
 
 .card .card-job-description {
