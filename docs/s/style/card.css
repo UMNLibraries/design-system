@@ -67,14 +67,11 @@
   align-items: flex-start;
 }
 
-.cards-x > * > picture,
+.cards-x picture,
 .cards-x > * > a {
-  flex-shrink: 0;
-}
-
-.cards-x picture {
   width: 10rem;
   margin-right: 1rem;
+  flex-shrink: 0;
 }
 
 .cards-x .card-body {
