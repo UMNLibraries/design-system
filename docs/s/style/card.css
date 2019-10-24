@@ -67,6 +67,10 @@
   align-items: flex-start;
 }
 
+.cards-x > *:first-child {
+  flex-shrink: 0;
+}
+
 .cards-x picture {
   width: 10rem;
   margin-right: 1rem;
