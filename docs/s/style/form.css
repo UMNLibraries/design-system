@@ -52,6 +52,7 @@ input[aria-invalid='false'], textarea[aria-invalid='false'] {
 input[disabled] + label::before {
   border: 0;
   cursor: not-allowed;
+  outline: none;
 }
 
 [type="checkbox"] + label::before,
@@ -239,6 +240,7 @@ select option {
 
 select[disabled] {
   cursor: not-allowed;
+  outline: none;
 }
 
 [type="text"]:hover, [type="text"]:focus,
