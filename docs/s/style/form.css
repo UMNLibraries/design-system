@@ -51,6 +51,7 @@ input[aria-invalid='false'], textarea[aria-invalid='false'] {
 
 input[disabled] + label::before {
   border: 0;
+  cursor: not-allowed;
 }
 
 [type="checkbox"] + label::before,
@@ -234,6 +235,10 @@ select::-ms-expand {
 
 select option {
 	font-weight: normal;
+}
+
+select[disabled] {
+  cursor: not-allowed;
 }
 
 [type="text"]:hover, [type="text"]:focus,
