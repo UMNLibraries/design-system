@@ -64,17 +64,19 @@
 .cards-x > * {
   display: flex;
   align-items: flex-start;
+  padding: 0;
 }
 
 .cards-x picture,
 .cards-x > * > a {
-  width: 10rem;
+  width: 18rem;
   margin-right: 1rem;
   flex-shrink: 0;
 }
 
 .card-x-body {
   flex: 1;
+  padding: 1rem;
   flex-wrap: wrap;
   min-width: 15rem;
 }
@@ -139,7 +141,7 @@
 
 .card-action {
   min-height: 5rem;
-  width: 15rem;
+  /*width: 15rem;*/
   padding-bottom: 2rem;
 }
 
