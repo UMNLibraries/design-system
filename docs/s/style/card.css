@@ -45,7 +45,7 @@
 
 .cards > * footer {
   margin: auto -0.5rem -0.5rem -0.5rem;
-  background-color: var(--col-bg-light);
+  background-color: var(--col-bg-medium);
   padding: 0.5rem;
 }
 
@@ -87,7 +87,7 @@
 
 /* card - job posting */
 .card-job {
-  border: 1px solid var(--col-bg-medium);
+  border: 1px solid var(--col-bg-med-dark);
 }
 
 .card .card-job-title {
@@ -158,8 +158,9 @@
   width: auto;
   padding: 1rem;
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -2.5rem;
   right: 0.5rem;
+  white-space: nowrap;
 }
 
 
