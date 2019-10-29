@@ -15,6 +15,26 @@
   }
 }
 
+@media (max-width:50rem) {
+  @supports (display: grid) {
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+  }
+  .cards-x > * {
+    flex-direction: column;
+  }
+
+  .cards-x picture,
+  .cards-x > * > a {
+    width: 100%;
+  }
+
+  .card-x-body {
+    min-width: 100%;
+  }
+}
+
 .cards > * {
   display: flex;
   flex-direction: column;
