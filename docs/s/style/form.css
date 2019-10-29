@@ -474,6 +474,12 @@ nav > .search {
   margin-right: 1rem;
 }
 
+@media (min-width: 768px) {
+  .form-date label {
+    margin-right: 0;
+  }
+}
+
 input[maxlength="2"] {
   width: calc(2ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
