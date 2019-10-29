@@ -47,9 +47,9 @@ nav[aria-label="Main"] > a:first-child:focus {
   color: white;
 }
 
-/* nav > a:first-child { why was this here?
+nav[aria-label="Main"] > a:first-child {
   padding:0.3rem 1.25rem 0;
-}*/
+}
 
 nav > a {
   padding: 1.25rem;
