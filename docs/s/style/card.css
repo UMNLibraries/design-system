@@ -18,7 +18,7 @@
 .cards > * {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--col-bg-medium);
+  border: 1px solid var(--col-bg-med-dark);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
 }
@@ -64,19 +64,19 @@
 .cards-x > * {
   display: flex;
   align-items: flex-start;
+  border: 1px solid var(--col-bg-med-dark);
   padding: 0;
 }
 
 .cards-x picture,
 .cards-x > * > a {
   width: 18rem;
-  margin-right: 1rem;
   flex-shrink: 0;
 }
 
 .card-x-body {
   flex: 1;
-  padding: 1rem;
+  padding: 0.5rem;
   flex-wrap: wrap;
   min-width: 15rem;
 }
