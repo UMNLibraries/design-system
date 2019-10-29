@@ -49,7 +49,15 @@ input[aria-invalid='false'], textarea[aria-invalid='false'] {
   font-weight: normal;
 }
 
-input[disabled] + label::before {
+input[disabled] + label::before,
+input[type="checkbox"][disabled] + label::before,
+input[type="radio"][disabled] + label::before,
+input[disabled]:hover + label::before,
+input[type="checkbox"][disabled]:hover + label::before,
+input[type="radio"][disabled]:hover + label::before,
+input[disabled]:focus + label::before,
+input[type="checkbox"][disabled]:focus + label::before,
+input[type="radio"][disabled]:focus + label::before {
   border: 0;
   cursor: not-allowed;
   outline: none;
@@ -137,6 +145,7 @@ input[disabled] + label::before {
 table[role="presentation"] [type="checkbox"] + label,
 table[role="presentation"] [type="radio"] + label {
   position: absolute;
+  top: 0.5rem;
 }
 
 table[role="presentation"] [type="checkbox"],
@@ -166,6 +175,7 @@ table[role="presentation"] input[type="checkbox"] + label > span {
 @media (max-width: 768px) {
   table[role="presentation"] thead {
     display: none;
+    top: 0;
   }
 
   table[role="presentation"] tbody {
@@ -456,6 +466,12 @@ nav > .search {
 .form-inline { /*this cannot be on a fieldset, flexbox doesn't work on them yet */
   display: flex;
   align-items: flex-start;
+}
+
+.form-date label {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
 }
 
 input[maxlength="2"] {
