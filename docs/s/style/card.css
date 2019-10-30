@@ -92,6 +92,11 @@
   content: "";
 }
 
+.card-x-body > *:not(h3) {
+  position: relative;
+  z-index: 1;
+}
+
 .cards-x p {
   margin-bottom: 0;
 }
