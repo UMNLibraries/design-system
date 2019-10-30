@@ -311,7 +311,7 @@ nav > .search {
   margin: 0;
 }
 
-.search > *:not(:first-child) {
+.search > :not(:first-child) {
   border-left: 0;
 }
 
