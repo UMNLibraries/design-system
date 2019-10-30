@@ -311,15 +311,24 @@ nav > .search {
   margin: 0;
 }
 
+.search > *:not(:first-child) {
+  border-left: 0;
+}
+
 .search > input[type="text"],
 .search > input[type="search"] {
   flex: 2 0 auto;
 }
 
-.search > input[type="submit"],
+/*.search > input[type="submit"],
 .search > button[type="submit"],
 .search > select {
   flex: 1 0 auto;
+}*/
+
+.search button,
+.search input[type="submit"] {
+  max-width: 10rem;
 }
 
 /* toggles */
