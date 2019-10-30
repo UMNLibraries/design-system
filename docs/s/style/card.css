@@ -50,10 +50,8 @@
   min-width: 15rem;
 }
 
-.cards > * h2 a::before,
-.cards > * h3 a::before,
-.cards-x > * h2 a::before,
-.cards-x > * h3 a::before {
+.card-body > * h2 a::before,
+.card-body > * h3 a::before, {
   z-index: 1;
   position: absolute;
   top: 0;
