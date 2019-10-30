@@ -35,13 +35,13 @@
   margin-bottom: 0;
 }
 
-/*.card > * p {
+.card > * p {
   margin-bottom: auto;
 }
 
 .cards > * p:last-child {
   margin-top: auto;
-}*/
+}
 
 .card-body {
   flex: 1;
@@ -51,7 +51,7 @@
 }
 
 .card-body > * h2 a::before,
-.card-body > * h3 a::before, {
+.card-body > * h3 a::before {
   z-index: 1;
   position: absolute;
   top: 0;
