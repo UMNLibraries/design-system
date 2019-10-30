@@ -85,9 +85,9 @@ input[type="submit"]:focus {
   color: var(--col-text);
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary:active {
+.btn-ghost:hover,
+.btn-ghost:focus,
+.btn-ghost:active {
   background-color: var(--col-bg-medium);
   color: var(--col-text);
 }

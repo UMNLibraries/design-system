@@ -81,6 +81,17 @@
   min-width: 15rem;
 }
 
+.card-x-body h3 a::before {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "";
+}
+
 .cards-x p {
   margin-bottom: 0;
 }
