@@ -32,15 +32,41 @@
   display: block;
   width: calc(100% + 1rem);
   margin: -0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
-.card > * p {
+/*.card > * p {
   margin-bottom: auto;
 }
 
 .cards > * p:last-child {
   margin-top: auto;
+}*/
+
+.card-body {
+  flex: 1;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  min-width: 15rem;
+}
+
+.card-body h2 a::before,
+.card-body h3 a::before {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "";
+}
+
+.card-body > *:not(h2),
+.card-body > *:not(h3)
+ {
+  position: relative;
+  z-index: 1;
 }
 
 .cards > * footer {
@@ -74,29 +100,6 @@
 .cards-x > * > a {
   width: 18rem;
   flex-shrink: 0;
-}
-
-.card-x-body {
-  flex: 1;
-  padding: 0.5rem;
-  flex-wrap: wrap;
-  min-width: 15rem;
-}
-
-.card-x-body h3 a::before {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  content: "";
-}
-
-.card-x-body > *:not(h3) {
-  position: relative;
-  z-index: 1;
 }
 
 .cards-x p {
