@@ -474,7 +474,7 @@ nav > .search {
   margin-right: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .form-date label {
     margin-right: 0;
   }
