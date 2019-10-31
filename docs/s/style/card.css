@@ -100,6 +100,7 @@
 .cards-x > * > a {
   width: 18rem;
   flex-shrink: 0;
+  display: inherit;
 }
 
 .cards-x p {
@@ -185,7 +186,7 @@
 }
 
 
-@media (max-width:50rem) {
+@media (max-width:40rem) {
   .cards {
     display: block;
   }
