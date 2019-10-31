@@ -21,6 +21,7 @@
   border: 1px solid var(--col-bg-med-dark);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
+  position: relative;
 }
 
 .cards > * h2,
@@ -64,8 +65,8 @@
   content: "";
 }
 
-.card-body > :not(h2),
-.card-body > :not(h3)
+.card-body :not(h2),
+.card-body :not(h3)
  {
   position: relative;
   z-index: 1;
