@@ -65,8 +65,8 @@
   content: "";
 }
 
-.card-body :not(h2),
-.card-body :not(h3)
+.card-body > :not(h2),
+.card-body > :not(h3)
  {
   position: relative;
   z-index: 1;
