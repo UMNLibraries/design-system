@@ -53,8 +53,7 @@
   min-width: 15rem;
 }
 
-.card-body h2 a::before,
-.card-body h3 a::before {
+.card-body .h3 a::before {
   z-index: 1;
   position: absolute;
   top: 0;
@@ -65,9 +64,7 @@
   content: "";
 }
 
-.card-body > :not(h2),
-.card-body > :not(h3)
- {
+.card-body > :not(.h3) {
   position: relative;
   z-index: 1;
 }
