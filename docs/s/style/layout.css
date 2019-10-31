@@ -97,13 +97,13 @@ article {
   columns: 4;
 }
 
-@media (max-width:50rem) {
+@media (max-width: 40rem) {
   main {
-    order: 1;
-    flex: 1 0 0;
+    /*order: 1;
+    flex: 1 0 0;*/
   }
   body > nav {
-    order: 2;
+    /*order: 2;*/
   }
 
   .col-1,
