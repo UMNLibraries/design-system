@@ -200,7 +200,8 @@
     width: 100%;
   }
 
-  .card-x-body {
+  .card-body {
     min-width: 100%;
+    margin: auto;
   }
 }
