@@ -219,10 +219,10 @@
       <p>Example table with column and row headings.</p>
       <div class="example">
         <style>
-          tbody td:nth-of-type(1)::before { content: "Author: "; }
-          tbody td:nth-of-type(2)::before { content: "Page count: "; }
+          #table-1 tbody td:nth-of-type(1)::before { content: "Author: "; }
+          #table-1 tbody td:nth-of-type(2)::before { content: "Page count: "; }
         </style>
-        <table>
+        <table id="table-1">
          <caption>Books Read in 2019</caption>
          <thead>
           <tr>
@@ -272,7 +272,11 @@
 
       <p>Example table with column headings only.</p>
       <div class="example">
-        <table>
+        <style>
+          #table-2 tbody td:nth-of-type(1)::before { content: "Title: "; }
+          #table-2 tbody td:nth-of-type(2)::before { content: "Author: "; }
+        </style>
+        <table id="table-2">
          <caption>New York Times Best Sellers 5 May 2019</caption>
          <thead>
           <tr>
