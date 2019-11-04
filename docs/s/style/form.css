@@ -133,7 +133,6 @@ input[type="radio"][disabled]:focus + label::before {
   border: solid #fff;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  background-color: var(--col-mes-success-dark);
 }
 
 [type="checkbox"]:focus + label::before,
@@ -393,11 +392,14 @@ select.btn-ghost {
 .toggle[type="checkbox"] + label::after {
   left: 0;
   top: 0.25rem;
-  background-color: #fff;
   background-position: center center;
   border-radius: 50%;
   width: 1.5rem;
   border: 0.15rem solid var(--col-bg-med-dark);
+}
+
+.toggle[type="checkbox"]:not(:checked) + label::after {
+  background-color: #fff;
 }
 
 .toggle[type="checkbox"]:checked + label::before {
@@ -409,6 +411,7 @@ select.btn-ghost {
   left: 1.6rem;
   border-color: var(--col-mes-success-dark);
   color: var(--col-mes-success-bg);
+  background-color: var(--col-mes-success-dark);
 }
 
 .toggle[type="checkbox"]:focus + label::before,
