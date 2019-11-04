@@ -392,7 +392,7 @@ select.btn-ghost {
 .toggle[type="checkbox"] + label::after {
   left: 0;
   top: 0.25rem;
-  background-color: #fff;
+  background-color: var(--col-bg-med-dark);
   background-position: center center;
   border-radius: 50%;
   width: 1.5rem;
