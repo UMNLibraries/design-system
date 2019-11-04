@@ -128,7 +128,6 @@
 .card .card-job-detail {
   flex: 0 1 18rem;
   padding: 0.3rem 0.3rem 0.3rem 0;
-  order: 2;
 }
 
 .card-job-detail th {
@@ -163,7 +162,6 @@
 
 .card-action {
   min-height: 5rem;
-  /*width: 15rem;*/
   padding-bottom: 2rem;
 }
 
