@@ -219,6 +219,12 @@
   background-color: var(--col-bg-medium);
 }
 
+/* color variations */
+.striped > *:nth-of-type(odd),
+.striped tbody tr:nth-of-type(odd) {
+  background-color: var(--col-bg-medium);
+}
+
 /* borders */
 /* For defining services or terms as cards using definition list */
 .bt-md {
