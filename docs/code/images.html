@@ -282,9 +282,6 @@
       <article>
         <h3>Manual SVG optimization</h3>
         <p>
-          <picture aria-hidden="true" class="float-left">
-            <img src="https://placekitten.com/g/100/300" alt="">
-          </picture>
           Read more about optimization tricks in <a href="https://css-tricks.com/understanding-and-manually-improving-svg-optimization/" aria-describedby="ext-site">understanding and manually improving <abbr>SVG</abbr> optimization</a>.
         </p>
         <ol>
@@ -501,7 +498,11 @@
 </pre>
 
         <h2>Available icons</h2>
-        <p>Use these icons to present a consistent style. Icons avoid thin or outline styles so they are clearly visible.</p>
+        <p>
+          <picture aria-hidden="true" class="float-left">
+            <img src="https://placekitten.com/g/100/300" alt="">
+          </picture>
+          Use these icons to present a consistent style. Icons avoid thin or outline styles so they are clearly visible.</p>
         <p>Icons are written to be decorative only, which requires meaningful text to be provided next to each icon.</p>
         <p>If the icon is not used as decoration or is intended to stand alone (not recommended), remove <code>focusable</code> and <code>aria-hidden</code> element attributes from the <code>&lt;svg&gt;</code> element, then insert a <code>&lt;title&gt;</code> element inside the <code>&lt;svg&gt;</code> element with a brief description similar to alt text.</p>
         <p>Icons identified with an asterisk (*) have a specific purpose. If intending to use an icon that deviates in meaning from the intended purpose, contact Web Development for an exception or to get a consultation on what to use in the specific situation.</p>
