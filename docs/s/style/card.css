@@ -107,6 +107,15 @@
   margin-bottom: 0;
 }
 
+/* card - promotions */
+.cards-promo > * picture {
+  margin-top: 0.3rem;
+}
+
+.cards-promo > .card-action-button {
+  bottom: -4.5rem;
+}
+
 /* card - job posting */
 .card-job {
   border: 1px solid var(--col-bg-med-dark);

@@ -281,10 +281,13 @@
 .float-left {
   display: inline-block;
   float: left;
-  margin: 1rem 0 1rem 1rem;
+  margin: 1rem 1rem 1rem 0;
 }
 
-.float-right::after,
+.float-right::after {
+  clear: right;
+}
+
 .float-left::after {
-  clear: both;
+  clear: left;
 }
