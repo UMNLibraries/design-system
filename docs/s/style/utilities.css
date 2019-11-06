@@ -97,17 +97,24 @@
   margin-right: 1rem;
 }
 
+.w-25 {
+  display: block;
+  width: calc(33% - (var(--m-norm) * 1rem - 0.5rem));
+  /*float: left;
+  margin-right: 1rem;*/
+}
+
 .w-50 {
   display: block;
   width: calc(50% - (var(--m-norm) * 1rem - 0.5rem));
-  float: left;
-  margin-right: 1rem;
+  /*float: left;
+  margin-right: 1rem;*/
 }
 
 .w-25:last-child,
 .w-50:last-child {
   margin-right: 0;
-  margin-left: 0.5rem;
+  /*margin-left: 0.5rem;*/
 }
 
 .w-100 {
