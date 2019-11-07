@@ -91,30 +91,18 @@
 
 /* WIDTH */
 .w-25 {
-  display: block;
-  width: calc(25% - (var(--m-norm) * 1rem - 0.5rem));
-  float: left;
-  margin-right: 1rem;
+  display: inline-block;
+  width: 25%;
 }
 
-.w-25 {
-  display: block;
-  width: calc(33% - (var(--m-norm) * 1rem - 0.5rem));
-  /*float: left;
-  margin-right: 1rem;*/
+.w-33 {
+  display: inline-block;
+  width: 33%;
 }
 
 .w-50 {
-  display: block;
-  width: calc(50% - (var(--m-norm) * 1rem - 0.5rem));
-  /*float: left;
-  margin-right: 1rem;*/
-}
-
-.w-25:last-child,
-.w-50:last-child {
-  margin-right: 0;
-  /*margin-left: 0.5rem;*/
+  display: inline-block;
+  width: 50%;
 }
 
 .w-100 {
@@ -280,12 +268,12 @@
 /* floats */
 .float-right {
   float: right;
-  margin: 1rem 0 1rem 1rem;
+  margin: 0 0 1rem 1rem;
 }
 
 .float-left {
   float: left;
-  margin: 1rem 1rem 1rem 0;
+  margin: 0 1rem 1rem 0;
 }
 
 .float-right::after {
