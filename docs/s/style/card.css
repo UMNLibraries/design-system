@@ -48,8 +48,8 @@
 }
 
 .card-body {
-  flex: 1;
   flex-grow: 1;
+  order: 2;
   padding: 0.5rem;
   flex-wrap: wrap;
   max-width: 60ch;
@@ -65,7 +65,8 @@
 
 /* card as link-type work */
 
-.card-as-link:focus-within {
+.card-as-link:focus-within,
+.card-as-link:hover {
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
 }
@@ -81,10 +82,10 @@
   content: "";
 }
 
-.card-body:focus .h3 a::before {
+/*.card-body:focus .h3 a::before {
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
-}
+}*/
 
 .card-body > :not(.h3) {
   position: relative;
