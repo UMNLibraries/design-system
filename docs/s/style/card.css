@@ -81,7 +81,7 @@
   content: "";
 }
 
-.card-body:focus-within .h3 a::before {
+.card-body:focus .h3 a::before {
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
 }
