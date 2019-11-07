@@ -31,8 +31,8 @@
 
 .cards > * picture {
   /*display: block;
-  width: calc(100% + 1rem);
-  margin: -0.5rem;*/
+  width: calc(100% + 1rem);*/
+  margin: -0.5rem;
   height: 8rem;
 
   margin-bottom: 0;
@@ -79,6 +79,9 @@
   left: 0;
   display: block;
   content: "";
+}
+
+.card-body:focus-within .h3 a::before {
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
 }
