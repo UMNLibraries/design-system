@@ -34,7 +34,7 @@ article dl {
   position: relative;
   display: block;
   padding: 0.8rem 1rem;
-  margin-bottom: -1px;
+  margin: 0 -0.5rem -1px -0.5rem;
   background-color: #fff;
   border: 1px solid var(--col-bg-medium);
 }
@@ -98,7 +98,7 @@ article dl {
 /*.list-links li[aria-current] {
   background-color: var(--col-link);
   color: #fff;
-} - redundant?? */ 
+} - redundant?? */
 
 li[disabled] {
   color: var(--col-bg-med-dark);
