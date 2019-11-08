@@ -55,7 +55,7 @@
   max-width: 60ch;
 }
 
-.card-body :last-child {
+.card-body > :last-child {
   margin-top: auto;
 }
 
