@@ -394,6 +394,34 @@
     <article>
       <h2>Card decks (default)</h2>
       <p>To create a card deck, determine the best element to describe the content. In most cases, cards are best represented as <code>&lt;article&gt;</code>s, and the card deck layout called with the <code>cards</code> class on the parent element. In some cases, the cards represent a list of items, so use <code>&lt;ul&gt;</code>. To affect a card layout, add a class cards to the list.</p>
+
+      <h3>Card anatomy</h3>
+      <p>Cards have several pieces that can come together to suit the content. They are presented in the visual order the card presents.</p>
+      <dl class="dl-horizontal">
+        <dt>Subsection heading</dt>
+        <dd>Optional</dd>
+        <dd>Use sparingly. When a card represents an entire section of content, the subsection heading may be included.</dd>
+
+        <dt>Image</dt>
+        <dd>Optional</dd>
+        <dd>Use if it helps understand the content of the card. Prefer the most optimized level with grayscale.</dd>
+
+        <dt>Content heading</dt>
+        <dd>Required</dd>
+        <dd>The heading summarizes the content in the card.</dd>
+
+        <dt>Card body</dt>
+        <dd>Required</dd>
+        <dd>The card body holds the primary content of the card. It may consist of paragraphs, lists, or list groups. List groups are different than lists by providing more visual separation from each bullet. Use it if the bullets are more separate ideas than a visual breakdown of a composite sentence.</dd>
+
+        <dt>Related content footer</dt>
+        <dd>Optional, cannot be paired with the action link</dd>
+        <dd>Content that is related but separate enough from the primary card content. The content in the footer is not the same, including links, to the content in the card body.</dd>
+
+        <dt>Action link</dt>
+        <dd>Optional, cannot be paired with the related content footer</dd>
+        <dd>The card on the content has an immediate action, such as requesting or reserving the service. The link is not the same as the card body link.</dd>
+      </dl>
       <h3>Standard deck</h3>
       <div class="example">
         <section class="cards">
