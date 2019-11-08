@@ -59,7 +59,7 @@
   margin-top: auto;
 }
 
-.card-body :nth-last-child(2) {
+.card-body > :nth-last-child(2) {
   margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
