@@ -216,6 +216,7 @@
   bottom: -2.5rem;
   right: 0.5rem;
   white-space: nowrap;
+  z-index: 1;
 }
 
 
