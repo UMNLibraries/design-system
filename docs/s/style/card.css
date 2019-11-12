@@ -15,13 +15,19 @@
   }
 }
 
-.cards > * {
+.cards > *,
+.cards .cards > * {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--col-bg-med-dark);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
   position: relative;
+}
+
+.cards .cards {
+  border: 0;
+  padding: 0;
 }
 
 .cards > * h2,

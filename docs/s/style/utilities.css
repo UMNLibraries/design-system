@@ -124,6 +124,15 @@
   border: 0;
 }
 
+/* PADDING */
+.p {
+  padding: calc(var(--p-norm) * 1rem);
+}
+
+.p-0 {
+  padding: 0;
+}
+
 /* COLOR */
 .c-primary {
   background-color: var(--col-primary);

@@ -54,6 +54,10 @@
   --m-min: 1;
   --m-max: 5;
 
+  --p-min: 0.3;
+  --p-norm: 0.5;
+  --p-max: 1;
+
   /* headings */
   --h1-min: 3;
   --h1-max: 5;
