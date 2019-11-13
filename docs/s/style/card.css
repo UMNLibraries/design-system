@@ -19,6 +19,7 @@
 .cards .cards > * {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   border: 1px solid var(--col-bg-med-dark);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
@@ -58,7 +59,7 @@
   order: 2;
   padding: 0.5rem;
   flex-wrap: wrap;
-  max-width: 60ch;
+  /*max-width: 60ch;*/
 }
 
 .card-body > :last-child {
