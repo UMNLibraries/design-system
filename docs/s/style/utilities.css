@@ -120,6 +120,11 @@
 .b {
   border: 1px solid var(--col-text-light);
 }
+
+.bm-1 {
+  border-bottom: 1px solid var(--col-text-light);
+}
+
 .b-0 {
   border: 0;
 }
