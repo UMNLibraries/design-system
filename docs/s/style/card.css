@@ -226,6 +226,20 @@
   z-index: 1;
 }
 
+/* SVG conditional formatting madness */
+.list-w-svg li,
+.card-w-svg {
+  padding-left: 2rem;
+}
+
+.list-w-svg li > svg.
+.card-body .h3 svg {
+  position: absolute;
+  left: 0.5rem;
+  width: 1em;
+  height: 1em;
+}
+
 
 @media (max-width:40rem) {
   .cards {
