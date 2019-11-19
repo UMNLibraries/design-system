@@ -245,6 +245,7 @@
 .card-w-svg a svg:hover,
 .card-w-svg a svg:focus {
   color: var(--col-link);
+  fill: var(--col-link);
 }
 
 
