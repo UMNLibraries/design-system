@@ -233,11 +233,18 @@
 }
 
 .list-w-svg li > svg,
-.card-body .h3 svg {
+.card-w-svg .h3 svg {
   position: absolute;
   left: 0.5rem;
   width: 1em;
   height: 1em;
+}
+
+.list-w-svg a svg:hover,
+.list-w-svg a svg:focus,
+.card-w-svg a svg:hover,
+.card-w-svg a svg:focus {
+  color: var(--col-link);
 }
 
 

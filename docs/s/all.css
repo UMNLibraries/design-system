@@ -1,12 +1,12 @@
 @import "style/root.css";
 @import "style/a11y.css";
 @import "style/alert.css";
-@import "style/card.css";
 @import "style/code.css";
 @import "style/form.css";
 @import "style/layout.css";
 @import "style/linkbutton.css";
 @import "style/list.css";
+@import "style/card.css";
 @import "style/media.css";
 @import "style/nav.css";
 @import "style/table.css";
