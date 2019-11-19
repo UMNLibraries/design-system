@@ -232,7 +232,7 @@
   padding-left: 2rem;
 }
 
-.list-w-svg li > svg.
+.list-w-svg li > svg,
 .card-body .h3 svg {
   position: absolute;
   left: 0.5rem;
