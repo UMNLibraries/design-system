@@ -105,17 +105,16 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 0 10%;
+  margin: 0 5%;
   width: 100%;
 }
 
 #section-primary {
-  min-width: 50%;
-  flex: 1 0 40rem;
+  flex: 1 0 60%;
 }
 
 .section-secondary {
-  flex: 1 1 20%;
+  flex: 1 1 30%;
 }
 
 
