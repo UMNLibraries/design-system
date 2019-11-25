@@ -36,7 +36,7 @@ nav {
 }
 
 nav[aria-label="Main"] > a:first-child {
-  padding:0.95rem 1.25rem;
+  padding: 0.95rem 1.25rem;
   color: var(--col-text);
   font-weight: bold;
   font-size: var(--h2);
@@ -47,9 +47,9 @@ nav[aria-label="Main"] > a:first-child:focus {
   color: white;
 }
 
-nav[aria-label="Main"] > a:first-child {
-  padding:0.3rem 1.25rem 0;
-}
+/*nav[aria-label="Main"] > a:first-child {
+  padding: 0.3rem 1.25rem 0;
+}*/
 
 nav > a {
   padding: 1.25rem;
@@ -83,6 +83,14 @@ nav[aria-label="Main"] > a {
   font-size: 1.3rem;
   text-decoration: none;
   color: var(--col-primary);
+}
+
+nav[aria-label="University"] > a:first-child {
+  padding: 0.5rem;
+}
+
+nav[aria-label="Libraries"] > a:first-child {
+  padding: 0 0.5rem;
 }
 
 nav[aria-label="University"] > a:hover,
