@@ -97,6 +97,23 @@ article {
   columns: 4;
 }
 
+/* primary template layout */
+#main {
+  display: flex;
+  margin: 0 10%;
+}
+
+#section-primary {
+  min-width: 50%;
+  flex-grow: 100;
+}
+
+.section-secondary {
+  flex-basis: 40rem;
+  flex-grow: 1;
+}
+
+
 @media (max-width: 40rem) {
   main {
     order: 1;
