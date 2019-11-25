@@ -74,6 +74,11 @@ article {
   margin-bottom: calc( var(--m-norm) * 1rem);
 }
 
+body > footer {
+  color: var(--col-bg-light);
+  background-color: var(--col-text);
+}
+
 /* Content columns */
 .col {
   columns: auto auto; /*width and count*/

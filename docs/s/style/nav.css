@@ -84,7 +84,6 @@ nav[aria-label="Main"], .nav-hor {
 }
 
 nav[aria-label="Main"] > a {
-  border-radius: 0;
   font-size: 1.3rem;
   text-decoration: none;
   color: var(--col-primary);

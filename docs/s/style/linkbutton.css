@@ -21,6 +21,10 @@ main > footer a:focus {
   color: var(--col-text);
 }
 
+body > footer a {
+  color: var(--col-bg-light);
+}
+
 
 [aria-describedby="ext-site"]::after {
     content: ' \21D7';
