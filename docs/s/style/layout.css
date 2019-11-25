@@ -118,10 +118,13 @@ main {
   main {
     order: 1;
     flex: 1 0 0;
+    margin: 0;
   }
+
   body > nav {
     order: 2;
   }
+
   body > footer {
     order: 3;
   }
@@ -134,8 +137,5 @@ main {
 
   .col-4 {
     columns: 2;
-  }
-  .flex-main {
-    margin: 0;
   }
 }

@@ -12,7 +12,12 @@ nav {
 }
 
 #umn-logo {
-  width: 17rem;
+  min-width: 170px;
+  max-width: 220px;
+}
+
+#umn-logo svg {
+  width: 100%;
 }
 
 #logo path {
@@ -35,6 +40,10 @@ nav {
   fill: white;
 }
 
+nav[aria-label="University"] {
+  flex-wrap: nowrap;
+}
+
 nav[aria-label="Main"] > a:first-child {
   padding: 0.95rem 1.25rem;
   color: var(--col-text);
@@ -46,10 +55,6 @@ nav[aria-label="Main"] > a:first-child:hover,
 nav[aria-label="Main"] > a:first-child:focus {
   color: white;
 }
-
-/*nav[aria-label="Main"] > a:first-child {
-  padding: 0.3rem 1.25rem 0;
-}*/
 
 nav > a {
   padding: 1.25rem;
