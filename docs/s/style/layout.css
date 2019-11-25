@@ -101,6 +101,7 @@ article {
 .flex-main {
   display: flex;
   margin: 0 10%;
+  width: 100%;
 }
 
 #section-primary {
@@ -109,7 +110,7 @@ article {
 }
 
 .section-secondary {
-  flex-basis: 40rem;
+  flex-basis: 20%;
   flex-grow: 1;
 }
 
