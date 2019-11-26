@@ -134,6 +134,10 @@
   padding: calc(var(--p-norm) * 1rem);
 }
 
+.p-1 {
+  padding: calc(var(--p-max) * 1rem);
+}
+
 .p-0 {
   padding: 0;
 }

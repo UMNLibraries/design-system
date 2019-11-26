@@ -37,12 +37,14 @@ main > footer hr {
 }
 
 /*** BLOCK STYLING ***/
-main > article, section > article {
+main > article,
+section > article {
   padding: 1rem;
   background: white;
   border: 1px solid var(--col-bg-medium);
 }
 
+section,
 article {
   position: relative;
   width: 100%;
