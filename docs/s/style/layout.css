@@ -24,7 +24,7 @@ main > footer {
   color: var(--col-bg-light);
 }
 
-main > footer hr {
+body > footer hr {
   border-color: var(--col-bg-light);
 }
 

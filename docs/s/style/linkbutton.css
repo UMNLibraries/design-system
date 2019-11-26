@@ -26,6 +26,11 @@ body > footer a:focus svg {
   fill: var(--col-secondary-light);
 }
 
+.link-svg:hover,
+.link-svg:focus {
+  background: none;
+}
+
 body > footer a {
   color: var(--col-bg-light);
 }
