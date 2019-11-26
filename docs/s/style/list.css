@@ -68,6 +68,9 @@ article dl {
 }
 
 /* nested ul */
+.list-group ul li {
+  margin: 0 -1px -1px -0.5rem;
+}
 .list-group.list-links ul {
   padding: 0;
 }
