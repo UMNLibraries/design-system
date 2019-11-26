@@ -86,6 +86,12 @@ body > footer {
   background-color: var(--col-text);
 }
 
+.color-block {
+  margin: 1rem -5%;
+  padding: 1rem 5%;
+  width: 100%;
+}
+
 /* Content columns */
 .col {
   columns: auto auto; /*width and count*/

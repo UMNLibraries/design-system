@@ -26,6 +26,7 @@ body > footer a:focus svg {
   fill: var(--col-secondary-light);
 }
 
+.link-svg,
 .link-svg:hover,
 .link-svg:focus {
   background: none;
