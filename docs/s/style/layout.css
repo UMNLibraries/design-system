@@ -45,6 +45,7 @@ main > article, section > article {
 
 article {
   position: relative;
+  width: 100%;
 }
 
 

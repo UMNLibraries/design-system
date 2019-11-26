@@ -21,6 +21,11 @@ main > footer a:focus {
   color: var(--col-text);
 }
 
+body > footer a:hover svg,
+body > footer a:focus svg {
+  fill: var(--col-secondary-light);
+}
+
 body > footer a {
   color: var(--col-bg-light);
 }
