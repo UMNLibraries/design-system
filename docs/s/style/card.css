@@ -248,6 +248,10 @@
   fill: var(--col-link);
 }
 
+.card-w-svg footer {
+  margin-left: -2rem;
+}
+
 
 @media (max-width:40rem) {
   .cards {

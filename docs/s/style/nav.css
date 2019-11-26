@@ -45,7 +45,7 @@ nav[aria-label="University"] {
 }
 
 nav[aria-label="Main"] > a:first-child {
-  padding: 0.95rem 1.25rem 0.95rem 0.5rem;
+  padding: 0.9rem 1.25rem 0.9rem 0.5rem;
   color: var(--col-text);
   font-weight: bold;
   font-size: var(--h2);
@@ -84,7 +84,7 @@ nav[aria-label="Main"], .nav-hor {
 }
 
 nav[aria-label="Main"] > a {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: var(--col-primary);
 }
