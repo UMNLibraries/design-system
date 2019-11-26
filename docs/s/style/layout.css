@@ -4,7 +4,7 @@ body {
   background-size: contain;
 }
 main, body > footer {
-  padding: 1rem;
+  padding: 1rem 5%;
 }
 
 @media (max-width: 50rem) {
@@ -22,6 +22,10 @@ header {
 main > footer {
   background-color: var(--col-text);
   color: var(--col-bg-light);
+}
+
+main > footer hr {
+  border-color: var(--col-bg-light);
 }
 
 .column {
@@ -105,7 +109,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 0 5%;
   width: 100%;
 }
 
@@ -123,7 +126,6 @@ main {
   main {
     order: 1;
     flex: 1 0 0;
-    margin: 0;
   }
 
   body > nav {
