@@ -52,6 +52,11 @@ a:active code {
   color: var(--col-link);
 }
 
+button {
+  border-radius: 0;
+  -webkit-appearance: none; /* for older Safari browsers */
+}
+
 button,
 .btn-primary,
 .btn-secondary,

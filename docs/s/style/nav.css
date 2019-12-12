@@ -6,17 +6,26 @@ nav {
   flex-wrap: wrap;
 }
 
-#logo svg {
-  width: 15rem;
-  min-width: 10rem;
-}
-
-#umn-logo {
+#umn-logo,
+#logo {
   min-width: 170px;
   max-width: 220px;
 }
 
-#umn-logo svg {
+@media (max-width: 50rem) {
+  #umn-logo,
+  #logo {
+    width: 170px;
+  }
+
+  #logo svg {
+    height: 35px;
+    padding-top: 5px;
+  }
+}
+
+#umn-logo svg,
+#logo svg {
   width: 100%;
 }
 
@@ -51,6 +60,13 @@ nav[aria-label="Main"] > a:first-child {
   font-size: var(--h2);
 }
 
+@media (max-width: 50rem) {
+  nav[aria-label="Main"] > a:first-child {
+    margin: 0 0.5rem;
+    padding: 0;
+  }
+}
+
 nav[aria-label="Main"] > a:first-child:hover,
 nav[aria-label="Main"] > a:first-child:focus {
   color: white;
@@ -63,30 +79,50 @@ nav > a {
   position: relative;
 }
 
+@media (max-width: 50rem) {
+  nav > a {
+    padding: 0.5rem;
+  }
+}
+
 nav > a:hover, nav > a:focus {
   text-decoration: underline;
 }
 
-nav[aria-label="Main"], .nav-hor {
+nav[aria-label="Main"],
+.nav-hor {
   display: flex;
-}
-
-@media screen and (max-width: 50em) {
-  nav[aria-label="Main"] {
-    flex-direction: column;
-  }
-
-  nav[aria-label="Main"] > a {
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-  }
 }
 
 nav[aria-label="Main"] > a {
   font-size: 1.2rem;
   text-decoration: none;
   color: var(--col-primary);
+}
+
+nav[aria-label="Libraries"] > a {
+  color: var(--col-primary);
+}
+
+@media screen and (max-width: 50em) {
+  nav[aria-label="Main"] > a {
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  nav[aria-label="Main"] > a:first-child {
+    width: 100%;
+    white-space: nowrap;
+    font-size: var(--h3);
+  }
+
+  nav[aria-label="Main"] > a:not(:first-child) {
+    text-align: center;
+    background-color: var(--col-secondary-light);
+    flex-basis: 25%;
+    max-width: 25%;
+  }
 }
 
 nav[aria-label="University"] > a:first-child {
@@ -111,18 +147,24 @@ nav[aria-label="Main"] > a:focus {
   background-color: var(--col-primary);
 }
 
-nav[aria-label="Main"] > a:hover::after,
-nav[aria-label="Main"] > a:focus::after,
-.nav-hor > a:hover::after,
-.nav-hor > a:focus::after {
+nav[aria-label="Main"] > a::after,
+.nav-hor > a::after {
   content: "";
   display: block;
   width: 100%;
   height: 0.2rem;
-  background-color: var(--col-secondary-dark);
+  background-color: var(--col-bg-med);
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+
+nav[aria-label="Main"] > a:hover::after,
+nav[aria-label="Main"] > a:focus::after,
+.nav-hor > a:hover::after,
+.nav-hor > a:focus::after {
+  background-color: var(--col-secondary-dark);
 }
 
 header > a[aria-current="location"]:not(#logo)::after,
@@ -143,6 +185,12 @@ nav[aria-label="Breadcrumb"] {
   flex-basis: 100%;
   padding: 1rem;
   border-bottom:1px solid var(--col-bg-medium);
+}
+
+@media (max-width: 50rem) {
+  nav[aria-label="Breadcrumb"] {
+    padding: 0.5rem;
+  }
 }
 
 nav[aria-label="Breadcrumb"] ol {

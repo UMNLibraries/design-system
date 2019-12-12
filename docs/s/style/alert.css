@@ -5,6 +5,7 @@
   padding: 1rem;
   position: relative;
   margin-bottom: 1rem;
+  width: 100%; /*this is for page-level alerts to span primary and secondary spaces*/
 }
 
 .alert h2 {

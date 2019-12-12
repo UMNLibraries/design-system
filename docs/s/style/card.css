@@ -7,11 +7,14 @@
   flex-wrap: wrap;
 }
 
-@supports (display: grid) {
+@supports (grid-area: auto) { /* check on grid-area so autoprefixing tool works */
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-gap: 1rem;
+  }
+  body > footer .cards {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
 }
 

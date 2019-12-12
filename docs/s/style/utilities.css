@@ -110,6 +110,23 @@
   width: 100%;
 }
 
+@media (max-width: 50rem) {
+  .w-25 {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .w-33 {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .w-50 {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 /* SIZE */
 .svg-2x {
   height: 2rem;

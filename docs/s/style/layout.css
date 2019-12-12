@@ -7,17 +7,22 @@ main, body > footer {
   padding: 1rem 5%;
 }
 
+header {
+  margin-bottom: calc( var(--m-norm) * 1rem);
+  background-color: white;
+}
+
 @media (max-width: 50rem) {
   main, header, footer, body > nav {
     display: block;
     min-width: 100%;
   }
+
+  header {
+    margin-bottom: calc( var(--m-min) * 1rem);
+  }
 }
 
-header {
-  margin-bottom: calc( var(--m-norm) * 1rem);
-  background-color: white;
-}
 
 main > footer {
   background-color: var(--col-text);
@@ -86,10 +91,11 @@ body > footer {
   background-color: var(--col-text);
 }
 
+#section-primary > section,
 .color-block {
   margin: 1rem -5%;
   padding: 1rem 5%;
-  width: 100%;
+  width: 110%;
 }
 
 /* Content columns */
@@ -130,8 +136,16 @@ main {
   min-width: 20rem;
 }
 
+.visible-desktop {
+  display: inline-block;
+}
 
-@media (max-width: 40rem) {
+.visible-mobile {
+  display: none;
+}
+
+
+@media (max-width: 50rem) {
   main {
     order: 1;
     flex: 1 0 0;
@@ -153,5 +167,13 @@ main {
 
   .col-4 {
     columns: 2;
+  }
+
+  .visible-mobile {
+    display: inline-block;
+  }
+
+  .visible-desktop {
+    display: none;
   }
 }

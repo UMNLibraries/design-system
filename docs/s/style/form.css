@@ -135,12 +135,6 @@ input[type="radio"][disabled]:focus + label::before {
   transform: rotate(45deg);
 }
 
-[type="checkbox"]:focus + label::before,
-[type="radio"]:focus + label::before {
-  /*outline: var(--col-primary) solid 1px;*/
-  /*box-shadow: 0 0px 8px var(--col-primary);*/
-}
-
 /* matrix */
 table[role="presentation"] [type="checkbox"] + label,
 table[role="presentation"] [type="radio"] + label {
@@ -172,7 +166,7 @@ table[role="presentation"] input[type="checkbox"] + label > span {
   border: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 50rem) {
   table[role="presentation"] thead {
     display: none;
     top: 0;
@@ -201,12 +195,21 @@ table[role="presentation"] input[type="checkbox"] + label > span {
 }
 
 /* textareas and text inputs */
-[type="text"], [type="search"], [type="email"], [type="number"], [type="password"], [type="tel"], [type="url"], textarea {
+[type="text"],
+[type="search"],
+[type="email"],
+[type="number"],
+[type="password"],
+[type="tel"],
+[type="url"],
+textarea {
   width: 100%;
   max-width: 100%;
   padding: 0.75rem 1ch;
   margin: 0.3rem 0;
   border: 1px solid var(--col-bg-med-dark);
+  border-radius: 0; /* for browsers that default to round inputs */
+  -webkit-appearance: none; /* for older Safari browsers */
   font-size: 1rem;
   transition: all 0.15s ease;
 }
@@ -304,6 +307,12 @@ nav > .search {
   margin: 0 1.25rem;
 }
 
+@media (max-width: 50rem) {
+  nav > .search {
+    margin: 0 0.5rem;
+  }
+}
+
 .search > * {
   display: block;
   flex: 1 1 auto;
@@ -327,12 +336,6 @@ select.btn-secondary {
 select.btn-ghost {
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, white 0%,white 100%);
 }
-
-/*.search > input[type="submit"],
-.search > button[type="submit"],
-.search > select {
-  flex: 1 0 auto;
-}*/
 
 .search button,
 .search input[type="submit"] {
