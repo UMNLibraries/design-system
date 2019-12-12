@@ -1,4 +1,4 @@
-@import "style/root.css";
+/*@import "style/root.css";*/
 @import "style/a11y.css";
 @import "style/alert.css";
 @import "style/code.css";
@@ -33,11 +33,11 @@
   }
 
   h1 {
-    font-size: var(--h2);
+    font-size: 1.7689rem;
   }
 
   h2 {
-    font-size: var(--h3);
+    font-size: 1.33rem;
   }
 
   nav, footer {

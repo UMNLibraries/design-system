@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: var(--col-bg-light);
+  background-color: #fafafa;
   background-size: contain;
 }
 main, body > footer {
@@ -8,7 +8,7 @@ main, body > footer {
 }
 
 header {
-  margin-bottom: calc( var(--m-norm) * 1rem);
+  margin-bottom: calc( 2 * 1rem);
   background-color: white;
 }
 
@@ -19,18 +19,18 @@ header {
   }
 
   header {
-    margin-bottom: calc( var(--m-min) * 1rem);
+    margin-bottom: calc( 1 * 1rem);
   }
 }
 
 
 main > footer {
-  background-color: var(--col-text);
-  color: var(--col-bg-light);
+  background-color: #333;
+  color: #fafafa;
 }
 
 body > footer hr {
-  border-color: var(--col-bg-light);
+  border-color: #fafafa;
 }
 
 .column {
@@ -46,7 +46,7 @@ main > article,
 section > article {
   padding: 1rem;
   background: white;
-  border: 1px solid var(--col-bg-medium);
+  border: 1px solid #f0efee;
 }
 
 section,
@@ -83,12 +83,12 @@ nav + main {
 }
 
 article {
-  margin-bottom: calc( var(--m-norm) * 1rem);
+  margin-bottom: calc( 2 * 1rem);
 }
 
 body > footer {
-  color: var(--col-bg-light);
-  background-color: var(--col-text);
+  color: #fafafa;
+  background-color: #333;
 }
 
 #section-primary > section,

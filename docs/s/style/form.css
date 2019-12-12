@@ -1,8 +1,8 @@
 fieldset {
   padding: 0 1rem 1rem;
-  border: 2px solid var(--col-bg-medium);
+  border: 2px solid #f0efee;
   position: relative;
-  margin-bottom: calc(var(--m-norm) * 1rem);
+  margin-bottom: calc(2 * 1rem);
 }
 
 fieldset > legend {
@@ -25,16 +25,16 @@ label {
 
 .input:focus + label,
 .input:hover + label {
-  color: var(--col-link);
+  color: #0053b0;
 }
 
 /* invalid, error, other feedback styles */
 input[aria-invalid='true'], textarea[aria-invalid='true'] {
-  border-color: var(--col-mes-danger-dark);
+  border-color: #df3603;
 }
 
 input[aria-invalid='false'], textarea[aria-invalid='false'] {
-  border-color: var(--col-mes-success-dark);
+  border-color: #008a28;
 }
 
 /* checkboxes and radio buttons */
@@ -69,29 +69,29 @@ input[type="radio"][disabled]:focus + label::before {
   width: 22px;
   left: 0;
   top: 1px;
-  background: var(--col-bg-medium);
-  border: 1px solid var(--col-bg-med-dark);
+  background: #f0efee;
+  border: 1px solid #767676;
 }
 
 [type="checkbox"]:hover + label::before,
 [type="radio"]:hover + label::before,
 [type="checkbox"]:focus + label::before,
 [type="radio"]:focus + label::before {
-  border: 0.2rem solid var(--col-link);
+  border: 0.2rem solid #0053b0;
 }
 
 [type="checkbox"][aria-invald="false"]:hover + label::before,
 [type="radio"][aria-invald="false"]:hover + label::before,
 [type="checkbox"][aria-invald="false"]:focus + label::before,
 [type="radio"][aria-invald="false"]:focus + label::before {
-  border: 0.2rem solid var(--col-mes-success-dark);
+  border: 0.2rem solid #008a28;
 }
 
 [type="checkbox"][aria-invald="true"]:hover + label::before,
 [type="radio"][aria-invald="true"]:hover + label::before,
 [type="checkbox"][aria-invald="true"]:focus + label::before,
 [type="radio"][aria-invald="false"]:focus + label::before {
-  border: 0.2rem solid var(--col-mes-danger-dark);
+  border: 0.2rem solid #df3603;
 }
 
 [type="radio"] + label::before {
@@ -112,7 +112,7 @@ input[type="radio"][disabled]:focus + label::before {
   top: 5px;
   width: 13px;
   height: 13px;
-  border: 7px solid var(--col-text);
+  border: 7px solid #333;
   border-radius: 50%;
   content: none;
 }
@@ -122,7 +122,7 @@ input[type="radio"][disabled]:focus + label::before {
 }
 
 [type="checkbox"]:checked + label::before {
-  background-color: var(--col-text);
+  background-color: #333;
 }
 
 [type="checkbox"]:checked + label::after {
@@ -207,7 +207,7 @@ textarea {
   max-width: 100%;
   padding: 0.75rem 1ch;
   margin: 0.3rem 0;
-  border: 1px solid var(--col-bg-med-dark);
+  border: 1px solid #767676;
   border-radius: 0; /* for browsers that default to round inputs */
   -webkit-appearance: none; /* for older Safari browsers */
   font-size: 1rem;
@@ -235,9 +235,9 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-	background-color: var(--col-bg-medium);
+	background-color: #f0efee;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-	  linear-gradient(to bottom, var(--col-bg-medium) 0%,var(--col-bg-medium) 100%);
+	  linear-gradient(to bottom, #f0efee 0%,#f0efee 100%);
 	background-repeat: no-repeat, repeat;
 	background-position: right 0.7rem top 50%, 0 0;
 	background-size: 0.65rem auto, 100%;
@@ -265,18 +265,18 @@ select[disabled] {
 [type="url"]:hover, [type="url"]:focus,
 textarea:hover, textarea:focus,
 select:hover, select:focus {
-  outline: 0.2rem solid var(--col-link);
+  outline: 0.2rem solid #0053b0;
   outline-offset: 0.1rem;
 }
 
 input[aria-invalid='true']:hover, input[aria-invalid='true']:focus,
 textarea[aria-invalid='true']:hover, textarea[aria-invalid='true']:focus {
-  outline-color: var(--col-mes-danger-dark);
+  outline-color: #df3603;
 }
 
 input[aria-invalid='false']:hover, input[aria-invalid='false']:focus,
 textarea[aria-invalid='false']:hover, textarea[aria-invalid='false']:focus {
-  outline-color: var(--col-mes-success-dark);
+  outline-color: #008a28;
 }
 
 /* Support for rtl text, explicit support for Arabic and Hebrew */
@@ -289,9 +289,9 @@ textarea[aria-invalid='false']:hover, textarea[aria-invalid='false']:focus {
 /* Disabled styles */
 select:disabled,
 select[aria-disabled="true"] {
-	color: var(--col-bg-med-dark);
+	color: #767676;
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-	  linear-gradient(to bottom, var(--col-bg-medium) 0%,var(--col-bg-medium) 100%);
+	  linear-gradient(to bottom, #f0efee 0%,#f0efee 100%);
 }
 
 /* Search group */
@@ -330,7 +330,7 @@ nav > .search {
 }
 
 select.btn-secondary {
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, var(--col-secondary) 0%,var(--col-secondary) 100%);
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #fc3 0%,#fc3 100%);
 }
 
 select.btn-ghost {
@@ -387,8 +387,8 @@ select.btn-ghost {
   left: 0;
   top: 0.25rem;
   width: 3rem;
-  border: 0.2rem solid var(--col-bg-med-dark);
-  background: var(--col-bg-med-dark);
+  border: 0.2rem solid #767676;
+  background: #767676;
   border-radius: 1.1rem;
 }
 
@@ -398,7 +398,7 @@ select.btn-ghost {
   background-position: center center;
   border-radius: 50%;
   width: 1.5rem;
-  border: 0.15rem solid var(--col-bg-med-dark);
+  border: 0.15rem solid #767676;
 }
 
 .toggle[type="checkbox"]:not(:checked) + label::after {
@@ -406,20 +406,20 @@ select.btn-ghost {
 }
 
 .toggle[type="checkbox"]:checked + label::before {
-  border-color: var(--col-mes-success-dark);
-  background: var(--col-mes-success-bg);
+  border-color: #008a28;
+  background: #eaf3e8;
 }
 
 .toggle[type="checkbox"]:checked + label::after {
   left: 1.6rem;
-  border-color: var(--col-mes-success-dark);
-  color: var(--col-mes-success-bg);
-  background-color: var(--col-mes-success-dark);
+  border-color: #008a28;
+  color: #eaf3e8;
+  background-color: #008a28;
 }
 
 .toggle[type="checkbox"]:focus + label::before,
 .toggle[type="checkbox"]:hover + label::before {
-  border: 0.2rem solid var(--col-link);
+  border: 0.2rem solid #0053b0;
 }
 
 .toggle[type="checkbox"]:focus + label::after,
@@ -432,15 +432,15 @@ select.btn-ghost {
 
 .toggle[type="checkbox"][disabled] + label::before {
   background-color: transparent;
-  border-color: var(--col-bg-medium);
+  border-color: #f0efee;
 }
 
 .toggle[type="checkbox"][disabled] + label::after {
-  border-color: var(--col-bg-medium);
+  border-color: #f0efee;
 }
 
 .toggle[disabled]:hover + label {
-  color: var(--col-bg-medium);
+  color: #f0efee;
 }
 
 .toggle[type="checkbox"][disabled]:hover + label::before {
@@ -456,7 +456,7 @@ select.btn-ghost {
 }
 
 .toggle[type="checkbox"]:indeterminate + label::before {
-  background-color: var(--col-bg-medium);
+  background-color: #f0efee;
 }
 
 /* if text goes before toggle */
@@ -545,7 +545,7 @@ input[maxlength="12"] {
 /* Progress indicator */
 /* https://codepen.io/chopfitzroy/pen/mVeKRN */
 ol[role="progressbar"] {
-  margin: 0 0 calc(var(--m-norm) * 1rem);
+  margin: 0 0 calc(2 * 1rem);
   padding: 0;
   counter-reset: counter;
   list-style: none; /* find the accessible alternative */
@@ -569,7 +569,7 @@ ol[role="progressbar"] li::before {
   font-size: 1.3rem;
   line-height: 1.3;
   padding: 0.6rem 0;
-  background-color: var(--col-mes-success-dark);
+  background-color: #008a28;
 }
 
 ol[role="progressbar"] li a,
@@ -580,15 +580,15 @@ ol[role="progressbar"] li span {
 }
 
 ol[role="progressbar"] li[aria-current="step"]::before {
-  background-color: var(--col-mes-info-dark);
+  background-color: #006298;
 }
 
 ol[role="progressbar"] li[aria-current="step"]::after {
-  background-color: var(--col-bg-medium);
+  background-color: #f0efee;
 }
 
 ol[role="progressbar"] li[aria-current="step"] ~ li::before {
-  background-color: var(--col-bg-med-dark);
+  background-color: #767676;
 }
 
 @media (min-width: 768px) {
@@ -622,7 +622,7 @@ ol[role="progressbar"] li[aria-current="step"] ~ li::before {
     height: 15px;
     width: calc(100% - 40px);
     margin-left: 5px;
-    background-color: var(--col-bg-medium);
+    background-color: #f0efee;
   }
 
   ol[role="progressbar"] li:last-of-type::after {

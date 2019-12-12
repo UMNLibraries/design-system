@@ -1,18 +1,18 @@
 code {
   font-size: 1.2rem;
-  background-color: var(--col-bg-medium);
+  background-color: #f0efee;
   display: inline-block;
   padding: 0 0.1rem;
 }
 
 pre.code {
-  background-color: var(--col-bg-light);
-  border: 1px solid var(--col-bg-medium);
+  background-color: #fafafa;
+  border: 1px solid #f0efee;
   padding: 0 1rem;
   overflow: auto;
   text-shadow: none;
   white-space: pre-wrap;
-  margin: 0 0 calc( var(--m-norm) * 1rem);
+  margin: 0 0 calc( 2 * 1rem);
   position: relative;
 }
 
@@ -21,7 +21,7 @@ pre.code code {
 }
 
 pre[rel]::before {
-  color: var(--col-mes-success-dark);
+  color: #008a28;
   font-weight: 700;
   font-size: 0.9rem;
   content: attr(rel);
@@ -33,7 +33,7 @@ pre[rel]::before {
 
 /* code example blocks */
 .example {
-  border: 1px solid var(--col-bg-medium);
+  border: 1px solid #f0efee;
   padding: 1rem;
 }
 
@@ -95,7 +95,7 @@ code .cv {
 /* dark theme */
 code.dark {
   background-color: #030406;
-  color: var(--col-bg-light);
+  color: #fafafa;
 }
 
 /* new tag */

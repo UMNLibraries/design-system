@@ -1,6 +1,6 @@
 .hero {
   margin:0 -1rem;
-  padding: calc( var(--m-norm) * 1rem);
+  padding: calc( 2 * 1rem);
   text-align: center;
   background: url(/img/forest.svg) top center no-repeat;
   background-size: cover;

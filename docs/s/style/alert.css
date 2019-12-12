@@ -28,27 +28,27 @@
 }
 
 .alert-info {
-  background-color: var(--col-mes-info-bg);
-  border-left-color: var(--col-mes-info-dark);
-  color: var(--col-mes-info-text);
+  background-color: #edf1f6;
+  border-left-color: #006298;
+  color: #134a71;
 }
 
 .alert-success {
-  background-color: var(--col-mes-success-bg);
-  border-left-color: var(--col-mes-success-dark);
-  color: var(--col-mes-success-text);
+  background-color: #eaf3e8;
+  border-left-color: #008a28;
+  color: #16521d;
 }
 
 .alert-warning {
-  background-color: var(--col-mes-warn-bg);
-  border-left-color: var(--col-mes-warn-dark);
-  color: var(--col-mes-warn-text);
+  background-color: #ffeecd;
+  border-left-color: #f5bb17;
+  color: #584416;
 }
 
 .alert-danger {
-  background-color: var(--col-mes-danger-bg);
-  border-left-color: var(--col-mes-danger-dark);
-  color: var(--col-mes-danger-text);
+  background-color: #ffece5;
+  border-left-color: #df3603;
+  color: #82270d;
 }
 
 .alert-danger a {
