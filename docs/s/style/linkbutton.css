@@ -65,11 +65,14 @@ input[type="submit"] {
   padding: 0.8rem 1rem;
   color: #fff;
   display: inline-block;
-  min-height: 48px;
   background-color: #7a0019;
   border: 1px solid #5b0013;
   transition: all ease 0.3s;
 }
+
+/*input[type="submit"] {
+  min-height: 48px;
+}*/
 
 button:hover,
 button:focus,
