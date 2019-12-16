@@ -65,10 +65,10 @@
   /* typographic variables */
   --base-size: 1rem;
   --type-scale: 1.33;
-  --h3: calc(1rem * var(--type-scale)); /* 1.33rem */
-  --h2: calc(var(--h3) * var(--type-scale)); /* 1.7689rem */
-  --h1: calc(var(--h2) * var(--type-scale)); /* 2.3526rem */
-  --text-sm: calc(1rem / var(--type-scale)); /* 0.7519rem */
+  --h3: calc(var(--base-size) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+  --text-sm: calc(var(--base-size) / var(--type-scale));
   --header-margin: 0 0 1rem 2rem;
 
 }

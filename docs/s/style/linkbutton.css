@@ -1,29 +1,29 @@
 /***LINKS AND BUTTONS***/
 a {
-  color: #0053b0;
+  color: var(--col-link);
   transition: all ease 0.25s;
   padding: 0;
 }
 
 a:hover, a:focus {
-  background-color: #0053b0;
+  background-color: var(--col-link);
   color: white;
   text-decoration: none;
 }
 
 main > footer a {
-  color: #fafafa;
+  color: var(--col-bg-light);
 }
 
 main > footer a:hover,
 main > footer a:focus {
-  background-color: #ffde7a;
-  color: #333;
+  background-color: var(--col-secondary-light);
+  color: var(--col-text);
 }
 
 body > footer a:hover svg,
 body > footer a:focus svg {
-  fill: #ffde7a;
+  fill: var(--col-secondary-light);
 }
 
 .link-svg,
@@ -33,7 +33,7 @@ body > footer a:focus svg {
 }
 
 body > footer a {
-  color: #fafafa;
+  color: var(--col-bg-light);
 }
 
 
@@ -49,7 +49,7 @@ body > footer a {
 a:hover code,
 a:focus code,
 a:active code {
-  color: #0053b0;
+  color: var(--col-link);
 }
 
 button {
@@ -65,14 +65,11 @@ input[type="submit"] {
   padding: 0.8rem 1rem;
   color: #fff;
   display: inline-block;
-  background-color: #7a0019;
-  border: 1px solid #5b0013;
+  min-height: 48px;
+  background-color: var(--col-primary);
+  border: 1px solid var(--col-primary-dark);
   transition: all ease 0.3s;
 }
-
-/*input[type="submit"] {
-  min-height: 48px;
-}*/
 
 button:hover,
 button:focus,
@@ -85,47 +82,47 @@ button:active,
 .btn-secondary:active,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #5b0013;
-  outline: 0.2rem solid #0053b0;
+  background-color: var(--col-primary-dark);
+  outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
 }
 
 .btn-secondary {
-  color: #333;
-  background-color: #fc3;
-  border: 1px solid #b88a00;
+  color: var(--col-text);
+  background-color: var(--col-secondary);
+  border: 1px solid var(--col-secondary-darkest);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn-secondary:active {
-  background-color: #ffc20d;
-  color: #333;
+  background-color: var(--col-secondary-dark);
+  color: var(--col-text);
 }
 
 .btn-ghost {
   background-color: white;
-  color: #333;
+  color: var(--col-text);
 }
 
 .btn-ghost:hover,
 .btn-ghost:focus,
 .btn-ghost:active {
-  background-color: #f0efee;
-  color: #333;
+  background-color: var(--col-bg-medium);
+  color: var(--col-text);
 }
 
 .btn-exit {
-  color: #333;
-  background-color: #f0efee;
-  border: 1px solid #767676;
+  color: var(--col-text);
+  background-color: var(--col-bg-medium);
+  border: 1px solid var(--col-bg-med-dark);
 }
 
 .btn-exit:hover,
 .btn-exit:focus,
 .btn-exit:active {
   color: #fff;
-  background-color: #767676;
+  background-color: var(--col-bg-med-dark);
 }
 
 /* linked image */
@@ -136,14 +133,14 @@ input[type="submit"]:focus {
 .link-img:hover,
 .link-img:focus {
   background-color: transparent;
-  color: #0053b0;
+  color: var(--col-link);
   text-decoration: underline;
 }
 
 .link-img picture:hover::before,
 .link-img picture:focus::before {
   display: block;
-  background-color: #0053b0;
+  background-color: var(--col-link);
   opacity: 0.5;
   position: absolute;
   content: " ";
@@ -160,16 +157,16 @@ input[type="submit"]:focus {
   background-color: white;
   padding: 1rem;
   display: block;
-  margin-bottom: calc(1 * 1rem);
+  margin-bottom: calc(var(--m-min) * 1rem);
   text-decoration: none;
   outline: 0;
-  border: 1px solid #f0efee;
+  border: 1px solid var(--col-bg-medium);
 }
 
 .link-simple:hover, .link-simple:focus {
-  box-shadow:inset 0 0 0 0.3rem #0053b0;
+  box-shadow:inset 0 0 0 0.3rem var(--col-link);
   background-color: white;
-  color: #0053b0;
+  color: var(--col-link);
 }
 
 .link-simple > span {
@@ -184,7 +181,7 @@ input[type="submit"]:focus {
 }
 
 .link-simple .link-description {
-  color: #333;
+  color: var(--col-text);
 }
 
 .link-simple .link-title:hover, .link-simple .link-title:focus {

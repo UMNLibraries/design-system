@@ -19,7 +19,7 @@ article dl {
 }
 
 .list li:hover, .list li:focus {
-  background-color: #f0efee;
+  background-color: var(--col-bg-medium);
 }
 
 /* for list groups */
@@ -36,7 +36,7 @@ article dl {
   padding: 0.8rem 1rem;
   margin: 0 -0.5rem -1px -0.5rem;
   background-color: #fff;
-  border: 1px solid #f0efee;
+  border: 1px solid var(--col-bg-medium);
 }
 
 .list-group li > ul {
@@ -90,7 +90,7 @@ article dl {
 .list-check li::before {
   content: ' ';
   display: inline-block;
-  border: 1px solid #767676;
+  border: 1px solid var(--col-bg-med-dark);
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
@@ -99,12 +99,12 @@ article dl {
 
 
 /*.list-links li[aria-current] {
-  background-color: #0053b0;
+  background-color: var(--col-link);
   color: #fff;
 } - redundant?? */
 
 li[disabled] {
-  color: #767676;
+  color: var(--col-bg-med-dark);
   pointer-events: none;
 }
 
@@ -139,5 +139,5 @@ li[disabled] {
 
 .dl-horizontal dd + dt,
 .dl-horizontal dd + dt + dd {
-  border-top: 0.1rem solid #f0efee;
+  border-top: 0.1rem solid var(--col-bg-medium);
 }

@@ -15,7 +15,7 @@ table {
 th {
   text-align: left;
   vertical-align: bottom;
-  font-size: 1.33rem;
+  font-size: var(--h3);
 }
 
 tbody tr {
@@ -23,11 +23,11 @@ tbody tr {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #f0efee;
+  background-color: var(--col-bg-medium);
 }
 
 thead th, tfoot tr {
-  background-color: #ffde7a;
+  background-color: var(--col-secondary-light);
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -38,7 +38,7 @@ thead tr {
 }
 
 tr {
-  border: 1px solid #767676;
+  border: 1px solid var(--col-bg-med-dark);
 }
 
 td {
@@ -60,7 +60,7 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: 1.7689rem;
+  font-size: var(--h2);
   padding: 0.5rem;
   display: block;
 }
@@ -85,7 +85,7 @@ caption {
     display: table-cell;
     padding: 1rem;
     vertical-align: text-top;
-    font-size: 1rem;
+    font-size: var(--base-size);
   }
 
   tr {
@@ -98,7 +98,7 @@ caption {
 
   table {
     display: table;
-    border: 1px solid #767676;
+    border: 1px solid var(--col-bg-med-dark);
   }
 
   caption {

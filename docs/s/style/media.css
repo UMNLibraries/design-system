@@ -24,7 +24,7 @@ picture img {
 
 /* SVG colors */
 .maroon-fill {
-  fill: #7a0019;
+  fill: var(--col-primary);
 }
 
 .white-stroke {
@@ -33,7 +33,7 @@ picture img {
 }
 
 .gold-stroke {
-  stroke: #fc3;
+  stroke: var(--col-secondary);
   stroke-width: 0.1;
 }
 
