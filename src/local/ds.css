@@ -34,3 +34,7 @@
 #logo {
   text-decoration: none;
 }
+
+nav[aria-label="Main"]>a:first-child {
+  padding: 0.25rem 0.5rem;
+}
