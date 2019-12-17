@@ -1,0 +1,36 @@
+@import "../css/root.css";
+@import "../css/a11y.css";
+@import "../css/alert.css";
+@import "../css/card.css";
+@import "../css/form.css";
+@import "../css/layout.css";
+@import "../css/linkbutton.css";
+@import "../css/list.css";
+@import "../css/media.css";
+@import "../css/nav.css";
+@import "../css/table.css";
+@import "../css/typography.css";
+@import "../css/utilities.css";
+@import "../css/print.css";
+
+.hero {
+  margin:0 -1rem;
+  padding: calc( 2 * 1rem);
+  text-align: center;
+  background: url(/img/forest.svg) top center no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+  width: calc(100% + 2rem);
+}
+
+.hero blockquote {
+  border-left: 0;
+}
+
+.hero p {
+  font-size: 140%;
+}
+
+#logo {
+  text-decoration: none;
+}

@@ -1,0 +1,38 @@
+@media print {
+  div, section, article, header, main {
+    --m-norm: 0.3;
+  }
+
+  * {
+    background: none !important;
+  }
+
+  body {
+    font: 400 0.8rem/1.1 Tahoma, Verdana, sans-serif !important;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  h1 {
+    font-size: 1.7689rem;
+  }
+
+  h2 {
+    font-size: 1.33rem;
+  }
+
+  nav, footer {
+    display: none !important;
+  }
+
+  nav[aria-label="Breadcrumb"] {
+    display: flex !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+  }
+
+}

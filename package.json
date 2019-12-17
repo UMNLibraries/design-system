@@ -1,7 +1,7 @@
 {
-  "name": "umnlib-site",
+  "name": "design-system",
   "version": "0.1.0",
-  "description": "Process website content and templates for University of Minnesota Libraries",
+  "description": "University of Minnesota Libraries design system",
   "author": "Amy M. Drayer <adrayer@umn.edu>",
   "license": "MIT",
   "engines": {
@@ -9,27 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.umn.edu/Libraries/umnlib-site"
+    "url": "https://github.com/UMNLibraries/design-system"
   },
   "devDependencies": {
-    "del": "^3.0.0",
-    "dotenv": "^5.0.1",
-    "fs": "0.0.1-security",
-    "gulp": "^4.0.0",
-    "gulp-accessibility": "^3.1.1",
-    "gulp-ext-replace": "^0.3.0",
-    "gulp-file-include": "^1.2.0",
-    "gulp-git": "^2.8.0",
-    "gulp-haml": "^1.0.1",
-    "gulp-htmltidy": "^0.2.4",
-    "gulp-imagemin": "^4.0.0",
-    "gulp-noop": "^1.0.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-string-replace": "^0.4.0",
-    "fancy-log": "^1.3.0",
-    "psi": "^3.1.0",
-    "through2": "^2.0.3"
+    "del": "^5.1.0",
+    "fancy-log": "^1.3.3",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-uglifycss": "^1.1.0",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-preset-env": "^6.7.0"
   }
 }
