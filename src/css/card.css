@@ -8,14 +8,14 @@
 }
 
 /* for IE */
-.cards {
-  display: -ms-grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-row: auto;
+.cards::after {
+  clear: both;
 }
 
 .cards > * {
+  float: left;
   width: 18rem;
+  margin-right: 1rem;
 }
 
 @supports (grid-area: auto) { /* check on grid-area so autoprefixing tool works */
@@ -24,6 +24,12 @@
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     grid-gap: 1rem;
   }
+  .cards > * {
+    margin-right: 0;
+    float: none;
+    width: auto;
+  }
+
   body > footer .cards {
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
