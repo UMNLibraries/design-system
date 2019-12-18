@@ -49,23 +49,18 @@
   margin-right: 1rem;
 }*/
 
-@supports (grid-area: auto) { /* check on grid-area so autoprefixing tool works */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-template-rows: auto auto;
-    grid-gap: 1rem;
-  }
-  .cards > * {
-    margin-right: 0;
-    float: none;
-    width: auto;
-  }
-
-  body > footer .cards {
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  }
+/*@supports (grid-area: auto) {*/ /* check on grid-area so autoprefixing tool works */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-rows: auto auto;
+  grid-gap: 1rem;
 }
+
+body > footer .cards {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+/*}*/
 
 .cards > *,
 .cards .cards > * {
