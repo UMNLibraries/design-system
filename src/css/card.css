@@ -10,12 +10,14 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
   grid-template-rows: auto auto;
   grid-gap: 1rem;
 }
 
 body > footer .cards {
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
 }
 
 /* for IE */
