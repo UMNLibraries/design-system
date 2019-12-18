@@ -108,6 +108,7 @@ body > footer .cards {
 .cards .cards {
   border: 0;
   padding: 0;
+  -ms-grid-columns: 1fr;
 }
 
 .cards > * h2,
