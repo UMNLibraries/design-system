@@ -11,6 +11,7 @@
 .cards {
   display: -ms-grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-row: auto;
 }
 
 .cards > * {
