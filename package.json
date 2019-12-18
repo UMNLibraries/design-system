@@ -12,6 +12,7 @@
     "url": "https://github.com/UMNLibraries/design-system"
   },
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
     "del": "^5.1.0",
     "fancy-log": "^1.3.3",
     "gulp": "^4.0.2",

@@ -3,6 +3,7 @@
 
 //*********** Gulp variables & plugins
 const gulp        = require('gulp'),
+      autoprefixer = require('autoprefixer'), //in case it helps postcss-preset-env
       cssbrief    = require('gulp-shorthand'), //shorthands css code where possible
       del         = require('del'), //removes files and folders
       log         = require('fancy-log'), //log output like gulp's
@@ -37,10 +38,11 @@ gulp.task('postcss', function() {
     .pipe(postcss([
       postcsspre({
         importFrom: './src/css/root.css',
-        browsers: '> 0.1%'
-        /*autoprefixer: {
+        browsers: '> 0.1%',
+        autoprefixer: {
           grid: true,
-        }*/
+          browsers: ['> 0.1%']
+        }
       })
     ]))
     .pipe(gulp.dest('./docs/s/'));

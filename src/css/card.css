@@ -8,7 +8,7 @@
 }
 
 /* for IE */
-.cards {
+/*.cards {
   display: -ms-grid;
   -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
 }
@@ -47,12 +47,13 @@
   float: left;
   width: 18rem;
   margin-right: 1rem;
-}
+}*/
 
 @supports (grid-area: auto) { /* check on grid-area so autoprefixing tool works */
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-rows: auto auto;
     grid-gap: 1rem;
   }
   .cards > * {
