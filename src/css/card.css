@@ -13,12 +13,8 @@
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
 }
 
-.cards::after {
-  clear: both;
-}
-
 .cards > * {
-  max-width: 18rem;
+  width: 18rem;
 }
 
 @supports (grid-area: auto) { /* check on grid-area so autoprefixing tool works */
@@ -41,7 +37,7 @@
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
   position: relative;
-  max-width: none;
+  width: auto;
 }
 
 .cards .cards {
