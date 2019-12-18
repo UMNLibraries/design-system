@@ -12,6 +12,11 @@
   display: -ms-grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
 }
+
+.cards::after {
+  clear: both;
+}
+
 .cards > * {
   max-width: 18rem;
 }
