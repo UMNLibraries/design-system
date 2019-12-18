@@ -88,8 +88,8 @@ body > footer .cards {
 }
 
 .cards > * picture {
-  /*display: block;
-  width: calc(100% + 1rem);*/
+  display: block;
+  width: calc(100% + 1rem);
   margin: -0.5rem;
   height: 8rem;
 
@@ -100,8 +100,8 @@ body > footer .cards {
 
 .cards > * picture source,
 .cards > * picture img {
-  object-fit: cover;
-  height: 100%;
+  /*object-fit: cover;
+  height: 100%;*/
   width: 100%;
 }
 
