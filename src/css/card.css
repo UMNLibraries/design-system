@@ -7,6 +7,15 @@
   flex-wrap: wrap;
 }
 
+/* for IE */
+.cards {
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+}
+.cards > * {
+  max-width: 18rem;
+}
+
 @supports (grid-area: auto) { /* check on grid-area so autoprefixing tool works */
   .cards {
     display: grid;
@@ -27,6 +36,7 @@
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
   position: relative;
+  max-width: none;
 }
 
 .cards .cards {

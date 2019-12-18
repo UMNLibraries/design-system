@@ -37,10 +37,10 @@ gulp.task('postcss', function() {
     .pipe(postcss([
       postcsspre({
         importFrom: './src/css/root.css',
-        browsers: '> 0.1%',
-        autoprefixer: {
+        browsers: '> 0.1%'
+        /*autoprefixer: {
           grid: true,
-        }
+        }*/
       })
     ]))
     .pipe(gulp.dest('./docs/s/'));

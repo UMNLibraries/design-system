@@ -80,17 +80,17 @@ input[type="radio"][disabled]:focus + label::before {
   border: 0.2rem solid var(--col-link);
 }
 
-[type="checkbox"][aria-invald="false"]:hover + label::before,
-[type="radio"][aria-invald="false"]:hover + label::before,
-[type="checkbox"][aria-invald="false"]:focus + label::before,
-[type="radio"][aria-invald="false"]:focus + label::before {
+[type="checkbox"][aria-invalid="false"]:hover + label::before,
+[type="radio"][aria-invalid="false"]:hover + label::before,
+[type="checkbox"][aria-invalid="false"]:focus + label::before,
+[type="radio"][aria-invalid="false"]:focus + label::before {
   border: 0.2rem solid var(--col-mes-success-dark);
 }
 
-[type="checkbox"][aria-invald="true"]:hover + label::before,
-[type="radio"][aria-invald="true"]:hover + label::before,
-[type="checkbox"][aria-invald="true"]:focus + label::before,
-[type="radio"][aria-invald="false"]:focus + label::before {
+[type="checkbox"][aria-invalid="true"]:hover + label::before,
+[type="radio"][aria-invalid="true"]:hover + label::before,
+[type="checkbox"][aria-invalid="true"]:focus + label::before,
+[type="radio"][aria-invalid="false"]:focus + label::before {
   border: 0.2rem solid var(--col-mes-danger-dark);
 }
 
