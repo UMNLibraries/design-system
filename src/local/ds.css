@@ -1,7 +1,6 @@
 @import "../css/root.css";
 @import "../css/a11y.css";
 @import "../css/alert.css";
-@import "../css/card.css";
 @import "../css/form.css";
 @import "../css/layout.css";
 @import "../css/linkbutton.css";
@@ -10,6 +9,7 @@
 @import "../css/nav.css";
 @import "../css/table.css";
 @import "../css/typography.css";
+@import "../css/card.css";
 @import "../css/utilities.css";
 @import "../css/print.css";
 
