@@ -299,10 +299,13 @@ body > footer .cards {
 .card-action-button {
   width: auto;
   padding: 1rem;
+  white-space: nowrap;
+}
+
+.cards article .card-action-button {
   position: absolute;
   bottom: -1.5rem;
   right: 0.5rem;
-  white-space: nowrap;
   z-index: 1;
 }
 

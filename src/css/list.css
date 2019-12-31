@@ -18,6 +18,10 @@ article dl {
   border-bottom: 1px solid #5a5a5a33;
 }
 
+.list li p {
+  margin-bottom: 0;
+}
+
 .list li:hover, .list li:focus {
   background-color: var(--col-bg-medium);
 }
