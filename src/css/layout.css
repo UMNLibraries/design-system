@@ -3,12 +3,17 @@ body {
   background-color: var(--col-bg-light);
   background-size: contain;
 }
-main, body > footer {
+
+main {
+  padding: 0 5%;
+}
+
+body > footer {
   padding: 1rem 5%;
 }
 
 header {
-  margin-bottom: calc( var(--m-norm) * 1rem);
+  margin-bottom: calc( var(--m-min) * 1rem);
   background-color: white;
 }
 
