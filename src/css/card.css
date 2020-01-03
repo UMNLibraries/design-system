@@ -98,11 +98,15 @@ body > footer .cards {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid var(--col-bg-med-dark);
   padding: 0.5rem;
   transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
   position: relative;
   width: auto;
+}
+
+.cards > article,
+.cards .cards > article {
+  border: 1px solid var(--col-bg-med-dark);
 }
 
 .cards .cards {
@@ -212,6 +216,8 @@ body > footer .cards {
   width: 18rem;
   flex-shrink: 0;
   display: inherit;
+  height: 100%;
+  margin: 0;
 }
 
 .cards-x p {

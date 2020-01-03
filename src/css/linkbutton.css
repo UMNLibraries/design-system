@@ -70,7 +70,7 @@ input[type="submit"] {
   padding: 0.8rem 1rem;
   color: #fff;
   display: inline-block;
-  min-height: 48px;
+  min-height: 44px;
   background-color: var(--col-primary);
   border: 1px solid var(--col-primary-dark);
   transition: all ease 0.3s;
