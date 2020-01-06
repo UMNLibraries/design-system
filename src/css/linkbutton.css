@@ -159,19 +159,20 @@ input[type="submit"]:focus {
 
 /* stand alone link */
 .link-simple {
-  /*background-color: white;*/
   padding: 1rem;
-  display: block;
+  display: inline-block;
   margin-bottom: calc(var(--m-min) * 1rem);
   text-decoration: none;
-  /*outline: 0;*/
   border: 1px solid var(--col-bg-medium);
 }
 
-.link-simple:hover, .link-simple:focus {
-  /*box-shadow:inset 0 0 0 0.3rem var(--col-link);
-  background-color: white;
-  color: var(--col-link);*/
+.cards .link-simple {
+  display: block;
+}
+
+.link-simple:hover .link-description,
+.link-simple:focus .link-description {
+  color: var(--col-bg-light);
 }
 
 .link-simple > span {
