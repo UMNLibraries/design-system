@@ -9,7 +9,7 @@
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
   grid-template-rows: auto auto;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 }
 
 body > footer .cards {
@@ -118,6 +118,10 @@ body > footer .cards {
 .cards > * h2,
 .cards > * h3 {
   margin: 0;
+}
+
+.cards article > .h3 {
+  padding-bottom: 1rem;
 }
 
 .cards > * picture {
