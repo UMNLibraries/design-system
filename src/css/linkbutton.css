@@ -168,11 +168,15 @@ input[type="submit"]:focus {
 
 .cards .link-simple {
   display: block;
+  padding: 1rem;
 }
 
-.link-simple:hover .link-description,
-.link-simple:focus .link-description {
-  color: var(--col-bg-light);
+.link-simple.btn-secondary {
+  border-color: var(--col-secondary-darkest);
+}
+
+.link-simple.btn-primary {
+  border-color: var(--col-primary-dark);
 }
 
 .link-simple > span {

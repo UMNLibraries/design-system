@@ -209,19 +209,38 @@ body > footer .cards {
 
 /* horizontal card */
 .cards-x > * {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 180px repeat(3, 1fr);
+  grid-template-rows: auto auto;
   border: 1px solid var(--col-bg-med-dark);
   padding: 0;
 }
 
-.cards-x picture,
-.cards-x > * > a {
+
+/*.cards-x > * > a {
   width: 18rem;
   flex-shrink: 0;
   display: inherit;
   height: 100%;
-  margin: 0;
+  margin: 0;*/
+.cards-x picture {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  margin: 0 1rem 0 0;
+  width: auto;
+  height: auto;
+}
+
+.cards-x > * picture source,
+.cards-x > * picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-x .card-body {
+  grid-column: 2 / 6;
+  grid-row: 1;
 }
 
 .cards-x p {

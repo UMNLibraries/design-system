@@ -1,0 +1,13 @@
+footer .chat {
+  display: none;
+}
+
+@media (min-width: 50rem) {
+  footer .chat {
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    z-index: 20;
+  }
+}
