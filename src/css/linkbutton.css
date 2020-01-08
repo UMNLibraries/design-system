@@ -166,7 +166,7 @@ input[type="submit"]:focus {
   border: 1px solid var(--col-bg-medium);
 }
 
-.cards .link-simple {
+.cards a.link-simple {
   display: block;
   padding: 1rem;
 }
