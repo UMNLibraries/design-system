@@ -90,7 +90,7 @@
         <form class="search" action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" >
           <div class="input-group">
             <div class="input-group-prepend">
-              <select class="custom-select" aria-label="Resource">
+              <select class="custom-select btn-ghost" name="target" aria-label="Resource">
                 <option value="PubMed" selected>PubMed</option>
                 <option value="Primo">Libraries search</option>
                 <option value="WorldCat">WorldCat</option>
@@ -100,11 +100,11 @@
             </div>
             <input type="search" name="search" class="form-control form-control-lg" aria-label="Search words" required />
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary form-control-lg" type="submit">
+              <button class="btn btn-dark form-control-lg" type="submit">
                 <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
                   <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
                 </svg>
-                Search
+                <span class="visible-desktop">Search</span>
               </button>
             </div>
           </div>
@@ -331,7 +331,7 @@
         </section>
         </section>
 
-        <section id="spaces">
+        <section id="spaces" class="color-block">
           <h2>Spaces</h2>
           <section class="cards">
             <section class="cards">
@@ -686,7 +686,7 @@
               </h3>
                <p>Request readings and other course materials for access by students in Canvas.</p>
              </div>
-             <a href="/services/materials-request" class="btn btn-secondary card-action-button">Request course page</a>
+             <a href="https://www.lib.umn.edu/services/materialsrequest" class="btn btn-secondary card-action-button">Place reserves</a>
             </article>
 
             <article class="card-as-link">
@@ -701,7 +701,7 @@
         </section>
       </section>
 
-        <section id="news">
+        <section id="news" class="color-block">
           <h2>News</h2>
           <section class="cards">
             <section class="cards">

@@ -70,6 +70,8 @@ button {
 button,
 .btn-primary,
 .btn-secondary,
+.btn-ghost,
+.btn-dark,
 input[type="submit"] {
   font-size: 1rem;
   padding: 0.8rem 1rem;
@@ -90,6 +92,10 @@ button:active,
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn-secondary:active,
+.btn-ghost:focus,
+.btn-ghost:active,
+.btn-dark:focus,
+.btn-dark:active,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: var(--col-primary-dark);
@@ -111,7 +117,7 @@ input[type="submit"]:focus {
 }
 
 .btn-ghost {
-  background-color: white;
+  background-color: var(--col-bg-light);
   color: var(--col-text);
 }
 
@@ -120,6 +126,17 @@ input[type="submit"]:focus {
 .btn-ghost:active {
   background-color: var(--col-bg-medium);
   color: var(--col-text);
+}
+
+.btn-dark {
+  background-color: var(--col-text);
+  color: var(--col-bg-light);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+  color: var(--col-secondary-light);
 }
 
 .btn-exit {

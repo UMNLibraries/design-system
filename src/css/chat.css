@@ -2,6 +2,11 @@ footer .chat {
   display: none;
 }
 
+footer .chat a:hover,
+footer .chat a:focus {
+  var(--col-secondary-light);
+}
+
 @media (min-width: 50rem) {
   footer .chat {
     display: inline-block;
