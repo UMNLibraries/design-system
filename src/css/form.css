@@ -10,12 +10,16 @@ fieldset > legend {
   padding: 0;
 }
 
-input, button {
+button, input {
   overflow: visible;
 }
 
 button, input, optgroup, select, textarea {
-  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 label {
@@ -222,25 +226,18 @@ textarea {
 
 /* select */
 select {
-  display: block;
-  font-weight: 700;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
+  background-size: 12px 14px;
+  height: calc(2.875rem + 2px);
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #444;
-  line-height: 1.3;
-  padding: 0.8rem 1rem;
-  margin: 0;
-  border-radius: 0;
-  transition: all 0.15s ease;
-  max-width: 100%;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  border: 1px solid #333;
+  appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
-	background-color: var(--col-bg-medium);
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-	  linear-gradient(to bottom, var(--col-bg-medium) 0%,var(--col-bg-medium) 100%);
-	background-repeat: no-repeat, repeat;
-	background-position: right 0.7rem top 50%, 0 0;
-	background-size: 0.65rem auto, 100%;
 }
 
 select::-ms-expand {
@@ -290,17 +287,54 @@ textarea[aria-invalid='false']:hover, textarea[aria-invalid='false']:focus {
 select:disabled,
 select[aria-disabled="true"] {
 	color: var(--col-bg-med-dark);
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
-	  linear-gradient(to bottom, var(--col-bg-medium) 0%,var(--col-bg-medium) 100%);
+	background-color: var(--col-bg-med-dark);
 }
 
 /* Search group */
 .search {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.input-group {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  /*min-width: 30rem; - conflicts with mobile size, think about it more */
-  max-width: 60rem;
+  align-items: stretch;
+  width: 100%;
+}
+
+.input-group-prepend {
+  margin-right: -1px;
+}
+
+.input-group-append,
+.input-group-prepend {
+  display: flex;
+}
+
+.input-group > .form-control {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.form-control {
+  display: block;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #333;
+  height: calc(2.875rem + 2px);
+  padding: 0.5rem 1rem;
+}
+
+.input-group-append {
+  margin-left: -1px;
+}
+
+.search-form button {
+  height: calc(2.875rem + 2px);
+  padding: 0.5rem 1rem;
 }
 
 nav > .search {
@@ -313,34 +347,13 @@ nav > .search {
   }
 }
 
-.search > * {
-  display: block;
-  flex: 1 1 auto;
-  width: 1%;
-  margin: 0;
-}
+/*select.btn-secondary {
+  background-color: var(--col-secondary);
+}*/
 
-.search > :not(:first-child) {
-  border-left: 0;
-}
-
-.search > input[type="text"],
-.search > input[type="search"] {
-  flex: 2 0 auto;
-}
-
-select.btn-secondary {
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, var(--col-secondary) 0%,var(--col-secondary) 100%);
-}
-
-select.btn-ghost {
-  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, white 0%,white 100%);
-}
-
-.search button,
-.search input[type="submit"] {
-  max-width: 10rem;
-}
+/*select.btn-ghost {
+  background-image: white;
+}*/
 
 @media (max-width: 40rem) {
   .visuallyhidden-mobile {
@@ -518,27 +531,33 @@ select.btn-ghost {
   }
 }
 
-input[maxlength="2"] {
+input[maxlength="2"],
+input[size="2"] {
   width: calc(2ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 
-input[maxlength="3"] {
+input[maxlength="3"],
+input[size="3"] {
   width: calc(3ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 
-input[maxlength="4"] {
+input[maxlength="4"],
+input[size="4"] {
   width: calc(4ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 
-input[maxlength="5"] {
+input[maxlength="5"],
+input[size="5"] {
   width: calc(5ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 
-input[maxlength="10"] {
+input[maxlength="10"],
+input[size="10"] {
   width: calc(10ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 
-input[maxlength="12"] {
+input[maxlength="12"],
+input[size="12"] {
   width: calc(12ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 

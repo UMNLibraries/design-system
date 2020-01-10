@@ -87,15 +87,26 @@
           </svg>
         </a>
         <a href="https://www.lib.umn.edu/myaccount" class="visible-mobile">My Library Account</a>
-        <form action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" class="search">
-          <select name="target" aria-label="Resource">
-            <option value="Primo">Libraries search</option>
-            <option value="WorldCat">WorldCat</option>
-            <option value="PubMed">PubMed</option>
-            <option value="GoogleCustomSearch">Libraries website only</option>
-          </select>
-          <input name="search" required="required" type="search" aria-label="Search words">
-          <button type="submit">Search</button>
+        <form class="search" action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" >
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <select class="custom-select" aria-label="Resource">
+                <option value="Primo">Libraries search</option>
+                <option value="WorldCat">WorldCat</option>
+                <option value="PubMed">PubMed</option>
+                <option value="GoogleCustomSearch">Libraries website only</option>
+              </select>
+            </div>
+            <input type="search" name="search" class="form-control form-control-lg" aria-label="Search words" required />
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary form-control-lg" type="submit">
+                <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
+                  <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
+                </svg>
+                Search
+              </button>
+            </div>
+          </div>
         </form>
       </nav>
       <nav aria-label="Main">
@@ -275,7 +286,7 @@
                    <a href="https://libguides.umn.edu/c.php?g=822230">Veterinary medicine</a>
                  </li>
                  <li>
-                   <a href="/">Board exams (does not exist)</a>
+                   <a href="https://libguides.umn.edu/c.php?g=988082">Board exams</a>
                  </li>
                  <li>
                    <a href="https://libguides.umn.edu/vetapps">Mobile apps for veterinary medicine</a>
