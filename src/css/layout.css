@@ -139,6 +139,7 @@ main {
 .section-secondary {
   flex: 1 1 20%;
   min-width: 20rem;
+  margin-left: 1rem;
 }
 
 .visible-desktop {
@@ -172,6 +173,10 @@ main {
 
   .col-4 {
     columns: 2;
+  }
+
+  .section-secondary {
+    margin-left: 0;
   }
 
   .visible-mobile {

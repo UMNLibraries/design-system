@@ -16,14 +16,23 @@ main a:focus svg {
   fill: var(--col-link);
 }
 
-main > footer a {
+body > footer a {
   color: var(--col-bg-light);
 }
 
-main > footer a:hover,
-main > footer a:focus {
+body > footer a:hover,
+body > footer a:focus {
   background-color: var(--col-secondary-light);
   color: var(--col-text);
+}
+
+body > footer li a {
+  display: block;
+  padding: 0.5rem;
+}
+
+body > footer .icons a {
+  display: inline-block;
 }
 
 body > footer a:hover svg,
@@ -35,10 +44,6 @@ body > footer a:focus svg {
 .link-svg:hover,
 .link-svg:focus {
   background: none;
-}
-
-body > footer a {
-  color: var(--col-bg-light);
 }
 
 

@@ -119,6 +119,10 @@ dt:not(:first-child) {
   margin-top: 1rem;
 }
 
+address {
+  font-style: normal;
+}
+
 /* FOOTNOTES */
 footer.footnote {
   margin-top: 5rem;
