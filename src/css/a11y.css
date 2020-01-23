@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   right: 100%;
-  transition: top 1s ease-out,background 0.25s linear;
+  /*transition: top 1s ease-out,background 0.25s linear;*/
   color: white;
   z-index: 50;
 }

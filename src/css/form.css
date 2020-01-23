@@ -1,3 +1,7 @@
+main form {
+  margin-bottom: calc(var(--m-norm) * 1rem);
+}
+
 fieldset {
   padding: 0 1rem 1rem;
   border: 2px solid var(--col-bg-medium);
@@ -215,13 +219,13 @@ textarea {
   border-radius: 0; /* for browsers that default to round inputs */
   -webkit-appearance: none; /* for older Safari browsers */
   font-size: 1rem;
-  transition: all 0.15s ease;
+  /*transition: all 0.15s ease;*/
 }
 
 textarea {
   min-height: 8rem;
   overflow: auto;
-  transition: all 0.15s ease;
+  /*transition: all 0.15s ease;*/
 }
 
 /* select */
@@ -229,7 +233,7 @@ select {
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
   background-size: 12px 14px;
   height: calc(2.875rem + 2px);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
   font-size: 1rem;
   display: inline-block;
   width: 100%;
@@ -239,6 +243,30 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
+
+main select {
+  margin: 0 0 calc(var(--m-norm) * 1rem) 0;
+}
+
+select.btn-ghost {
+  /* need this because gulp compresses background-color to background and kills the image */
+  background: var(--col-bg-medium) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
+  padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
+}
+
+select.btn-ghost:active,
+select.btn-ghost:hover,
+select.btn-ghost:focus {
+  /* need this because gulp compresses background-color to background and kills the image */
+  background: var(--col-bg-light) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
+}
+
+select.btn-secondary {
+  /* need this because gulp compresses background-color to background and kills the image */
+  background: var(--col-secondary-light) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
+  padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
+}
+
 
 select::-ms-expand {
 	display: none;
@@ -331,7 +359,7 @@ select[aria-disabled="true"] {
   border: 1px solid var(--col-text);
   height: calc(2.875rem + 2px);
   padding: 0.5rem 1rem;
-  width: auto;
+  width:auto;
 }
 
 .input-group-append {
@@ -392,7 +420,7 @@ nav > .search {
   padding: 0.5rem;
   padding-left: 4rem;
   max-width: calc(100% - 2rem);
-  transition: all 0.25s ease;
+  /*transition: all 0.25s ease;*/
 }
 
 .toggle[type="checkbox"] + label::before,

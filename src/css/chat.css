@@ -2,9 +2,9 @@ footer .chat {
   display: none;
 }
 
-footer .chat a:hover,
-footer .chat a:focus {
-  var(--col-secondary-light);
+footer a.chat:hover,
+footer a.chat:focus {
+  color: var(--col-secondary-light);
 }
 
 @media (min-width: 50rem) {

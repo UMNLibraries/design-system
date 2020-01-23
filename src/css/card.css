@@ -8,8 +8,20 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   grid-gap: 2rem;
+}
+
+.cards.cards-portrait {
+  grid-template-columns: repeat(auto-fit,30ch));
+}
+
+.cards.cards-portrait > article, .cards .cards.cards-portrait > article {
+  max-width: 30ch;
+}
+
+.cards.cards-portrait > * picture {
+  max-height: 100%;
 }
 
 body > footer .cards {
@@ -99,7 +111,8 @@ body > footer .cards {
   flex-direction: column;
   justify-content: flex-start;
   padding: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);
+  /*-webkit-transform: translate3d(0, 0, 0);
+  transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);*/
   position: relative;
   width: auto;
 }
@@ -107,6 +120,7 @@ body > footer .cards {
 .cards > article,
 .cards .cards > article {
   border: 1px solid var(--col-bg-med-dark);
+  max-width: 66ch;
 }
 
 .cards .cards {
@@ -121,15 +135,15 @@ body > footer .cards {
 }
 
 .cards article > .h3 {
-  padding-bottom: 1rem;
+  padding: 0.3rem 0 1rem 0;
 }
 
 .cards > * picture {
   display: block;
   width: calc(100% + 1rem);
   margin: -0.5rem;
-  height: 8rem;
-
+  min-height: 8rem;
+  max-height: 29ch;
   margin-bottom: 0;
   position: relative;
   overflow: hidden;
@@ -153,10 +167,6 @@ body > footer .cards {
 .card-body > :last-child {
   margin-top: auto;
 }
-
-/*.card-body > :nth-last-child(2) {
-  margin-bottom: calc(var(--m-norm) * 1rem);
-}*/
 
 /* card as link-type work */
 
@@ -221,7 +231,8 @@ body > footer .cards {
   grid-row: 1 / 3;
   margin: 0 1rem 0 0;
   width: 100%;
-  height: 100%;
+  min-height: 8rem;
+  max-height: 29ch;
 }
 
 .cards-x > * picture source,

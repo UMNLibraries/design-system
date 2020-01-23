@@ -1,7 +1,7 @@
 /***LINKS AND BUTTONS***/
 a {
   color: var(--col-link);
-  transition: all ease 0.25s;
+  /*transition: all ease 0.25s;*/
   padding: 0;
 }
 
@@ -80,7 +80,7 @@ input[type="submit"] {
   min-height: 44px;
   background-color: var(--col-primary);
   border: 1px solid var(--col-primary-dark);
-  transition: all ease 0.3s;
+  /*transition: all ease 0.3s;*/
 }
 
 button:hover,
@@ -136,6 +136,7 @@ input[type="submit"]:focus {
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
+  background-color: var(--col-text);
   color: var(--col-secondary-light);
 }
 
