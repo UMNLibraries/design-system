@@ -217,6 +217,11 @@ input[type="submit"]:focus {
   color: var(--col-text);
 }
 
+.link-simple .link-description:hover,
+.link-simple .link-description:focus {
+  color: var(--col-bg-light);
+}
+
 .link-simple .link-title:hover, .link-simple .link-title:focus {
   text-decoration: underline;
 }
