@@ -217,8 +217,8 @@ input[type="submit"]:focus {
   color: var(--col-text);
 }
 
-.link-simple .link-description:hover,
-.link-simple .link-description:focus {
+.link-simple:hover .link-description,
+.link-simple:focus .link-description {
   color: var(--col-bg-light);
 }
 
