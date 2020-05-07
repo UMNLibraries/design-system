@@ -89,6 +89,14 @@ blockquote p:last-of-type::after {
   bottom: 2.4rem;
 }
 
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 hr {
   border: 0;
   border-bottom: 1px solid var(--col-secondary-dark);

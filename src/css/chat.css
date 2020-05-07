@@ -4,7 +4,13 @@ footer .chat {
 
 footer a.chat:hover,
 footer a.chat:focus {
-  color: var(--col-secondary-light);
+  color: var(--col-bg-light);
+}
+
+body > footer a.chat svg,
+body > footer a.chat:hover svg,
+body > footer a.chat:focus svg {
+  fill: var(--col-bg-light);
 }
 
 @media (min-width: 50rem) {

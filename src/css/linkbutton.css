@@ -70,6 +70,7 @@ button {
 button,
 .btn-primary,
 .btn-secondary,
+.btn-avail,
 .btn-ghost,
 .btn-dark,
 input[type="submit"] {
@@ -92,8 +93,13 @@ button:active,
 .btn-secondary:hover,
 .btn-secondary:focus,
 .btn-secondary:active,
+.btn-avail:hover,
+.btn-avail:focus,
+.btn-avail:active,
+.btn-ghost:hover,
 .btn-ghost:focus,
 .btn-ghost:active,
+.btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active,
 input[type="submit"]:hover,
@@ -114,6 +120,19 @@ input[type="submit"]:focus {
 .btn-secondary:active {
   background-color: var(--col-secondary-dark);
   color: var(--col-text);
+}
+
+.btn-avail {
+  background-color: var(--col-avail);
+  border: 1px solid var(--col-avail-dark);
+  color: var(--col-bg-light);
+}
+
+.btn-avail:hover,
+.btn-avail:focus,
+.btn-ghost:active {
+  background-color: var(--col-avail-dark);
+  color: var(--col-bg-light);
 }
 
 .btn-ghost {
@@ -185,7 +204,7 @@ input[type="submit"]:focus {
   padding: 1rem;
   display: inline-block;
   margin-bottom: calc(var(--m-min) * 1rem);
-  text-decoration: none;
+  /*text-decoration: none;*/
   border: 1px solid var(--col-bg-medium);
 }
 
@@ -215,11 +234,6 @@ input[type="submit"]:focus {
 
 .link-simple .link-description {
   color: var(--col-text);
-}
-
-.link-simple:hover .link-description,
-.link-simple:focus .link-description {
-  color: var(--col-bg-light);
 }
 
 .link-simple .link-title:hover, .link-simple .link-title:focus {

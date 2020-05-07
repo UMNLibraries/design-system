@@ -17,6 +17,9 @@
   --col-secondary-darkest: #b88a00; /* use for borders to make WCAG 2.1 compliant for 1.4.11 */
   --col-secondary-hint: #fefefb;
 
+  --col-avail: #34610f;
+  --col-avail-dark: #284b0c;
+
   --col-link: #0053b0;
   /* originally selected, only 1.5 highlight contrast
   --col-link-light: #bdd5f5;

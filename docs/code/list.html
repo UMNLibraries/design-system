@@ -312,7 +312,7 @@
 
     <article id="definition">
       <h2>Definition lists</h2>
-      <p>Definition lists are appropriate for a list of terms and their corresponding definitions, or a key-value style pairing.</p>
+      <p>Definition lists are appropriate for a list of terms and their corresponding definitions, or a key-value style pairing. A definition term may have more than one definition. Definition lists are used sparingly.</p>
 
       <div class="example">
         <dl>
@@ -367,6 +367,10 @@
 
     <article id="listgroup">
       <h2>List group</h2>
+      <p>List groups style a list with extra padding and borders.</p>
+
+      <h3>Default group</h3>
+      <p>When any type of content may be in a group, the default stylings are recommended. If used similar to a menu, adding <code>aria-current="list-item"</code> to the active item is also recommended.</p>
 
       <div class="example">
         <ul class="list-group">
@@ -383,6 +387,10 @@
 <span class="nt">&lt;/ul&gt;</span>
 </code></pre>
 
+      <h3>Embedded list groups</h3>
+      <p>Additional option to be used in conjunction with <code>list-group</code>.</p>
+      <p>When a list group is within another component, primarily cards, using <code>list-inline</code> will remove the left, right, and bottom borders, as well as bottom margin and padding, so the list group fits snuggly within the encompassing component.</p>
+
       <div class="example">
         <ul class="list-group list-inline">
           <li>Database 1</li>
@@ -398,6 +406,9 @@
 <span class="nt">&lt;/ul&gt;</span>
 </code></pre>
 
+      <h3>Groups of links</h3>
+      <p>Additional option to be used in conjunction with <code>list-group</code>.</p>
+      <p>Often, a list group is used to present a list of links alone, without mixed content such as paragraph text. Adding <code>list-links</code> expands the anchor element to fill the entire padded space of a list item to provide a more convenient interactive zone.</p>
 
       <div class="example">
         <ul class="list-group list-links">
