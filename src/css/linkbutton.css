@@ -199,8 +199,10 @@ input[type="submit"]:focus {
   z-index: 0;
 }
 
-/* stand alone link */
-.link-simple {
+/* stand alone links */
+.link-simple, /*deprecated*/
+.link-action,
+.link-described {
   padding: 1rem;
   display: inline-block;
   margin-bottom: calc(var(--m-min) * 1rem);
@@ -208,40 +210,51 @@ input[type="submit"]:focus {
   border: 1px solid var(--col-bg-medium);
 }
 
-.cards a.link-simple {
+.cards a.link-simple, /*deprecated*/
+.cards a.link-action {
   display: block;
   padding: 1rem;
 }
 
-.link-simple.btn-secondary {
+.link-simple.btn-secondary, /*deprecated*/
+.link-action.btn-secondary {
   border-color: var(--col-secondary-darkest);
 }
 
-.link-simple.btn-primary {
+.link-simple.btn-primary,
+.link-action.btn-primary {
   border-color: var(--col-primary-dark);
 }
 
-.link-simple > span {
+.link-simple > span, /*deprecated*/
+.link-described > span {
   display: block;
 }
 
-.link-simple .link-title {
+.link-simple .link-title, /*deprecated*/
+.link-described .link-title {
   line-height: 1.3rem;
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
 
-.link-simple .link-description {
+.link-simple .link-description, /*deprecated*/
+.link-described .link-description {
   color: var(--col-text);
 }
 
-.link-simple .link-title:hover, .link-simple .link-title:focus {
+.link-simple .link-title:hover, /*deprecated*/
+.link-simple .link-title:focus, /*deprecated*/
+.link-described .link-title:hover,
+.link-described .link-title:focus {
   text-decoration: underline;
 }
 
-.link-simple:hover,
-.link-simple:focus {
+.link-simple:hover, /*deprecated*/
+.link-simple:focus, /*deprecated*/
+.link-described:hover,
+.link-described:focus {
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
 }
