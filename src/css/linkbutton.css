@@ -206,8 +206,12 @@ input[type="submit"]:focus {
   padding: 1rem;
   display: inline-block;
   margin-bottom: calc(var(--m-min) * 1rem);
-  /*text-decoration: none;*/
+
   border: 1px solid var(--col-bg-medium);
+}
+
+.link-described {
+  text-decoration: none;
 }
 
 .cards a.link-simple, /*deprecated*/
