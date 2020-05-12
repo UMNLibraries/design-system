@@ -263,7 +263,7 @@ input[type="submit"]:focus {
   color: var(--col-text);
 }
 
-.link-description:hover,
-.link-description:focus {
+.link-described:hover .link-description,
+.link-described:focus .link-description {
   color: var(--col-bg-light);
 }
