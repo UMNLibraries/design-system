@@ -209,10 +209,6 @@ input[type="submit"]:focus {
   border: 1px solid var(--col-bg-med-dark);
 }
 
-.link-described {
-  text-decoration: none;
-}
-
 .cards a.link-simple, /*deprecated*/
 .cards a.link-action {
   display: block;
@@ -229,6 +225,19 @@ input[type="submit"]:focus {
   border-color: var(--col-primary-dark);
 }
 
+
+.link-described {
+  text-decoration: none;
+}
+
+.link-simple:hover, /*deprecated*/
+.link-simple:focus, /*deprecated*/
+.link-described:hover,
+.link-described:focus {
+  outline: 0.2rem solid var(--col-link);
+  outline-offset: 0.1rem;
+}
+
 .link-simple > span, /*deprecated*/
 .link-described > span {
   display: block;
@@ -242,22 +251,19 @@ input[type="submit"]:focus {
   margin-bottom: 0.3rem;
 }
 
-.link-simple .link-description, /*deprecated*/
-.link-described .link-description {
-  color: var(--col-text);
-}
-
 .link-simple .link-title:hover, /*deprecated*/
 .link-simple .link-title:focus, /*deprecated*/
-.link-described .link-title:hover,
-.link-described .link-title:focus {
+.link-title:hover,
+.link-title:focus {
   text-decoration: underline;
 }
 
-.link-simple:hover, /*deprecated*/
-.link-simple:focus, /*deprecated*/
-.link-described:hover,
-.link-described:focus {
-  outline: 0.2rem solid var(--col-link);
-  outline-offset: 0.1rem;
+.link-simple .link-description, /*deprecated*/
+.link-description {
+  color: var(--col-text);
+}
+
+.link-description:hover,
+.link-description:focus {
+  color: var(--col-bg-light);
 }
