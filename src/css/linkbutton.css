@@ -206,8 +206,7 @@ input[type="submit"]:focus {
   padding: 1rem;
   display: inline-block;
   margin-bottom: calc(var(--m-min) * 1rem);
-
-  border: 1px solid var(--col-bg-medium);
+  border: 1px solid var(--col-bg-med-dark);
 }
 
 .link-described {

@@ -310,7 +310,7 @@ Request review
         <h3>Described link</h3>
         <p>When highlighting content that stands alone on the page, use the described link style. For instance, a page highlighting all the services within a particular library may want to provide a brief additional explanation for each one before linking to the detailed service page.</p>
 
-        <p>To make the described link fit the full width of a space, use the <code>w-100</code> utility class.</p> 
+        <p>To make the described link fit the full width of a space, use the <code>.w-100</code> utility class. To create a landing page over list, consider using <code>.col-2</code> or <code>.col-3</code> classes to make columns.</p>
 
         <h4>Described link example</h4>
         <div class="example">
@@ -326,36 +326,69 @@ Request review
 <span class="nt">&lt;/a&gt;</span>
 </code></pre>
 
-        <h4>Stand alone link group example</h4>
+        <h4>Described link group example</h4>
         <div class="example">
-          <a href="//lib.umn.edu/apps/ac" class="link-simple">
+          <a href="//lib.umn.edu/apps/ac" class="link-described w-100">
             <span class="link-title">Assignment Calculator</span>
             <span class="link-description">Enter your due dates to get the steps of the research and writing process of your project.</span>
           </a>
-          <a href="//lib.umn.edu/pim/citation" class="link-simple">
+          <a href="//lib.umn.edu/pim/citation" class="link-described w-100">
             <span class="link-title">Citation managers</span>
             <span class="link-description">Citation managers are software that keeps track of your citations, and formats them for your papers and bibliographies.</span>
           </a>
-          <a href="//lib.umn.edu/interlibraryloan" class="link-simple">
+          <a href="//lib.umn.edu/interlibraryloan" class="link-described w-100">
             <span class="link-title">Interlibrary Loan</span>
             <span class="link-description">Request materials not owned by the Libraries from other libraries for free.</span>
           </a>
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/apps/ac"</span> <span class="na">class=</span><span class="s">"link-simple"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/apps/ac"</span> <span class="na">class=</span><span class="s">"link-described w-100"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-title"</span><span class="nt">&gt;</span>Assignment Calculator<span class="nt">&lt;/span&gt;</span>
  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-description"</span><span class="nt">&gt;</span>Enter your due dates to get the steps of the research and writing process of your project.<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/pim/citation"</span> <span class="na">class=</span><span class="s">"link-simple"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/pim/citation"</span> <span class="na">class=</span><span class="s">"link-described w-100"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-title"</span><span class="nt">&gt;</span>Citation managers<span class="nt">&lt;/span&gt;</span>
  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-description"</span><span class="nt">&gt;</span>Citation managers are software that keeps track of your citations, and formats them for your papers and bibliographies.<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/interlibraryloan"</span> <span class="na">class=</span><span class="s">"link-simple"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/interlibraryloan"</span> <span class="na">class=</span><span class="s">"link-described w-100"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-title"</span><span class="nt">&gt;</span>Interlibrary Loan<span class="nt">&lt;/span&gt;</span>
  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-description"</span><span class="nt">&gt;</span>Request materials not owned by the Libraries from other libraries for free.<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/a&gt;</span>
 </code></pre>
 
+      <h4>Column link described group example</h4>
+      <div class="example">
+        <p class="col-2">
+          <a href="//lib.umn.edu/apps/ac" class="link-described w-100">
+            <span class="link-title">Assignment Calculator</span>
+            <span class="link-description">Enter your due dates to get the steps of the research and writing process of your project.</span>
+          </a>
+          <a href="//lib.umn.edu/pim/citation" class="link-described w-100">
+            <span class="link-title">Citation managers</span>
+            <span class="link-description">Citation managers are software that keeps track of your citations, and formats them for your papers and bibliographies.</span>
+          </a>
+          <a href="//lib.umn.edu/interlibraryloan" class="link-described w-100">
+            <span class="link-title">Interlibrary Loan</span>
+            <span class="link-description">Request materials not owned by the Libraries from other libraries for free.</span>
+          </a>
+        </p>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;</span> <span class="na">class=</span><span class="s">"col-2"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/apps/ac"</span> <span class="na">class=</span><span class="s">"link-described w-100"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-title"</span><span class="nt">&gt;</span>Assignment Calculator<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-description"</span><span class="nt">&gt;</span>Enter your due dates to get the steps of the research and writing process of your project.<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/pim/citation"</span> <span class="na">class=</span><span class="s">"link-described w-100"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-title"</span><span class="nt">&gt;</span>Citation managers<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-description"</span><span class="nt">&gt;</span>Citation managers are software that keeps track of your citations, and formats them for your papers and bibliographies.<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//lib.umn.edu/interlibraryloan"</span> <span class="na">class=</span><span class="s">"link-described w-100"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-title"</span><span class="nt">&gt;</span>Interlibrary Loan<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"link-description"</span><span class="nt">&gt;</span>Request materials not owned by the Libraries from other libraries for free.<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+</code></pre>
       </article>
     </section>
 
