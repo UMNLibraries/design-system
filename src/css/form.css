@@ -267,6 +267,14 @@ select.btn-secondary {
   padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
 }
 
+@media (max-width: 50rem) {
+  select.btn-ghost,
+  select.btn-primary,
+  select.btn-secondary {
+    padding-left: 0.5rem;
+    padding-right: calc(0.5rem + 15px);
+  }
+}
 
 select::-ms-expand {
 	display: none;
