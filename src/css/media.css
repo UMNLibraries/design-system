@@ -17,7 +17,7 @@ figcaption {
 
 picture source,
 picture img {
-  filter: contrast(130%);
+  /*filter: contrast(130%);*/
   width: 100%;
   max-width: 750px;
 }
