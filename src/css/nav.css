@@ -1,152 +1,265 @@
-/* list styling options */
-
-article ol,
-article ul,
-article dl {
-  margin-top: 0;
-  /* margin-bottom: 0.5rem; */
-  margin-bottom: calc(var(--m-norm) * 1rem);
-}
-
-/* for checklists? */
-.unlist {
-  list-style: none;
-  padding: 0;
-}
-
-.list li {
-  padding: 0.5rem;
-  border-bottom: 1px solid #5a5a5a33;
-}
-
-.list li p {
-  margin-bottom: 0;
-}
-
-.list li:hover, .list li:focus {
-  background-color: var(--col-bg-medium);
-}
-
-/* for list groups */
-.list-group {
+/***NAV***/
+nav {
   display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  /* margin-bottom: 0; */
-}
-
-.list-group li {
-  position: relative;
-  display: block;
-  padding: 0.8rem 1rem;
-  margin: 0 -0.5rem -1px -0.5rem;
-  background-color: #fff;
-  border: 1px solid var(--col-bg-medium);
-}
-
-.list-group li > ul {
-  border-top: 1px solid white;
-  margin-top: -1px;
-}
-
-.list-group.list-inline:first-child li:first-child {
-  border-top: 0;
-}
-
-.list-group.list-inline li:last-child {
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-
-.list-group.list-inline li {
-  border-right: 0;
-  border-left: 0;
-}
-
-.list-group.list-links li {
-  padding: 0;
-}
-
-.list-group.list-links a {
-  display: block;
-  padding: 0.8rem 1rem;
-}
-
-.list-group li p {
-  margin-bottom: 0;
-}
-
-/* nested ul */
-.list-group ul li {
-  margin: 0 -1px -1px -0.5rem;
-}
-.list-group.list-links ul {
-  padding: 0;
-}
-
-.list-group.list-links ul li {
-  border-top: 0;
-}
-
-.list-group.list-links ul li a {
-  padding: 0.1rem 0.3rem 0.1rem 2rem;
-}
-
-/* faux check list */
-.list-check li {
-  padding-left: 2.5rem;
-}
-.list-check li::before {
-  content: ' ';
-  display: inline-block;
-  border: 1px solid var(--col-bg-med-dark);
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.5rem;
-  margin-left: -2rem;
-}
-
-
-/*.list-links li[aria-current] {
-  background-color: var(--col-link);
-  color: #fff;
-} - redundant?? */
-
-li[disabled] {
-  color: var(--col-bg-med-dark);
-  pointer-events: none;
-}
-
-
-/* horizontal definition lists */
-.dl-horizontal {
-  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  align-items: flex-start;
 }
 
-.dl-horizontal dt {
-  flex: 0 1 25%;
-  padding: 0.3rem 0.3rem 0.3rem 0;
+#umn-logo,
+#logo {
+  min-width: 170px;
+  max-width: 220px;
+  min-width: calc(170px + 1rem);
+  max-width: calc(220px + 1rem);
 }
 
-.dl-horizontal dt:not(:first-child) {
-  margin-top: 0;
+#umn-logo svg {
+  height: 38px;
 }
 
-.dl-horizontal dd {
-  flex: 1 1 51%;
-  padding: 0.3rem 0;
+#logo svg {
+  height: 50px;
+}
+
+@media (max-width: 50rem) {
+  #umn-logo,
+  #logo {
+    width: 170px;
+    width: calc(170px + 1rem);
+  }
+
+  #umn-logo svg {
+    height: 37px;
+  }
+
+  #logo svg {
+    height: 35px;
+    height: 31px;
+    padding-top: 5px;
+  }
+}
+
+#umn-logo svg,
+#logo svg {
+  width: 100%;
+}
+
+#logo path {
+  fill: var(--col-primary);
+}
+
+#logo .svg-m path, #logo polygon.svg-m {
+  fill: var(--col-primary);
+}
+
+#logo:hover .svg-m path,
+#logo:focus .svg-m path,
+#logo:hover polygon.svg-m,
+#logo:focus polygon.svg-m {
+  fill: white;
+}
+
+#logo:hover .svg-text path,
+#logo:focus .svg-text path {
+  fill: white;
+}
+
+nav[aria-label="University"] {
+  flex-wrap: nowrap;
+}
+
+nav[aria-label="Main"] > a:first-child {
+  padding: 0.9rem 1.25rem 0.9rem 0.5rem;
+  color: var(--col-text);
+  font-weight: bold;
+  font-size: var(--h2);
+}
+
+@media (max-width: 50rem) {
+  nav[aria-label="Main"] > a:first-child {
+    margin: 0 0.5rem;
+    padding: 0;
+  }
+}
+
+nav[aria-label="Main"] > a:first-child:hover,
+nav[aria-label="Main"] > a:first-child:focus {
+  color: white;
+}
+
+nav > a {
+  padding: 1.25rem;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+@media (max-width: 50rem) {
+  nav > a {
+    padding: 0.5rem;
+  }
+}
+
+nav > a:hover, nav > a:focus {
+  text-decoration: underline;
+}
+
+nav[aria-label="Main"],
+.nav-hor {
+  display: flex;
+}
+
+nav[aria-label="Main"] > a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: var(--col-primary);
+}
+
+nav[aria-label="Libraries"] > a {
+  color: var(--col-primary);
+}
+
+@media screen and (max-width: 50em) {
+  nav[aria-label="Main"] > a {
+    text-align: left;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  nav[aria-label="Main"] > a:first-child {
+    width: 100%;
+    white-space: nowrap;
+    font-size: var(--h3);
+  }
+
+  nav[aria-label="Main"] > a:not(:first-child) {
+    text-align: center;
+    background-color: var(--col-secondary-light);
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+nav[aria-label="University"] > a:first-child {
+  padding: 0.5rem;
+}
+
+nav[aria-label="Libraries"] > a:first-child {
+  padding: 0 0.5rem;
+}
+
+nav[aria-label="University"] > a:hover,
+nav[aria-label="University"] > a:focus,
+nav[aria-label="Libraries"] > a:hover,
+nav[aria-label="Libraries"] > a:focus {
+  color: var(--col-text);
+  background-color: var(--col-secondary);
+}
+
+nav[aria-label="Main"] > a:hover,
+nav[aria-label="Main"] > a:focus {
+  color: #fff;
+  background-color: var(--col-primary);
+}
+
+nav[aria-label="Main"] > a::after,
+.nav-hor > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--col-bg-med);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+nav[aria-label="Main"] > a:hover::after,
+nav[aria-label="Main"] > a:focus::after,
+.nav-hor > a:hover::after,
+.nav-hor > a:focus::after {
+  background-color: var(--col-secondary-dark);
+}
+
+header > a[aria-current="location"]:not(#logo)::after,
+header > a[aria-current="location"]:not(#logo):hover::after,
+header > a[aria-current="location"]:not(#logo):focus::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--col-secondary-dark);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*** Breadcrumb nav ***/
+nav[aria-label="Breadcrumb"] {
+  flex-basis: 100%;
+  padding: 1rem;
+  border-bottom:1px solid var(--col-bg-medium);
+}
+
+@media (max-width: 50rem) {
+  nav[aria-label="Breadcrumb"] {
+    padding: 0.5rem;
+  }
+}
+
+nav[aria-label="Breadcrumb"] ol {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.dl-horizontal dd + dd {
-  flex: 1 1 100%;
-  margin-left: 25%;
-  padding: 0 0.3rem 0.3rem 0;
+nav[aria-label="Breadcrumb"] li {
+  display: inline-block;
 }
 
-.dl-horizontal dd + dt,
-.dl-horizontal dd + dt + dd {
-  border-top: 0.1rem solid var(--col-bg-medium);
+nav[aria-label="Breadcrumb"] li:before {
+  content: "\2000";
+  position: absolute;
+}
+
+nav[aria-label="Breadcrumb"] li:not(:last-child):after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.75ch;
+  margin-right: 0.5ch;
+  border-top: 0.75ch solid transparent;
+  border-bottom: 0.75ch solid transparent;
+  border-left: 0.75ch solid var(--col-text);
+}
+
+/* Content navigation, or submenu */
+nav[aria-label="Content"] {
+  padding: 0 1rem;
+}
+
+nav[aria-label="Content"] ul {
+  width: 100%;
+}
+
+nav[aria-label="Content"] li {
+  line-height: 2;
+}
+
+nav[aria-label="Content"] li > a {
+  display: block;
+}
+
+nav[aria-label="Content"] li > a[aria-current] {
+  background-color: var(--col-link);
+  color: white;
+  border-radius: 0;
+  text-decoration: none;
+}
+
+@media (min-width: 80em) { /* flex-basis shouldn't require this...*/
+  nav[aria-label="Content"] {
+    max-width: 20rem;
+  }
 }
