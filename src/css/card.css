@@ -13,7 +13,7 @@
 }
 
 .cards.cards-portrait {
-  grid-template-columns: repeat(auto-fit,30ch));
+  grid-template-columns: repeat(auto-fit,30ch);
 }
 
 .cards.cards-portrait > article, .cards .cards.cards-portrait > article {
