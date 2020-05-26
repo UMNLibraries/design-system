@@ -36,8 +36,9 @@ ul > ol {
 
 /* for list groups */
 .list-group {
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
+  list-style: none;
   padding-left: 0;
   /* margin-bottom: 0; */
 }
