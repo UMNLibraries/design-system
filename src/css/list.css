@@ -8,13 +8,20 @@ article dl {
   margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
+ol > ol,
+ul > ul,
+ol > ul,
+ul > ol {
+  margin-bottom: 0;
+}
+
 /* for checklists? */
 .unlist {
   list-style: none;
   padding: 0;
 }
 
-.list li {
+/*.list li {
   padding: 0.5rem;
   border-bottom: 1px solid #5a5a5a33;
 }
@@ -25,7 +32,7 @@ article dl {
 
 .list li:hover, .list li:focus {
   background-color: var(--col-bg-medium);
-}
+}*/
 
 /* for list groups */
 .list-group {
