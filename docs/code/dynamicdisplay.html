@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Code | Libraries Design System</title>
+  <title>Dynamic content | Code | Libraries Design System</title>
   <meta name="description" content="University of Minnesota Libraries Design System">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -208,6 +208,7 @@
           <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
           <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
           <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
         </ul>
       </li>
       <li><a href="/design-system/code/code.html">Code snippets</a></li>
@@ -217,7 +218,7 @@
 
   <main id="main" class="m-0">
     <h1>Dynamic content components</h1>
-    <article>
+    <article id="general">
       <h2>General</h2>
       <p>The Libraries design system does not support dynamic content components. Hiding content with non-semantic HTML that requires inconsistently support ARIA is contradictory to the design system&rsquo;s principles.</p>
       <p>This decision will be continually revisited as more content is introduced to the Libraries&rsquo;s web assets and as the web evolves and matures.</p>
@@ -240,13 +241,19 @@
     <article id="accordions">
       <h2>Accordions</h2>
       <p>The Libraries design system does not support accordions.</p>
-      <p>The <code>&lt;details&gt;</code> element may be considered once browsers more fully support. The <code>&lt;details&gt;</code> element generates a simple no-javascript widget to show and hide element contents. Current support as of July 2020 is 87.2% on the main Libraries website.</p>
+      <p>The <code>&lt;details&gt;</code> element may be considered once browsers more fully support. The <code>&lt;details&gt;</code> element generates a simple no-javascript widget to show and hide element contents. Support for <code>&lt;details&gt;</code> as of July 2020 is 87.2% on the main Libraries website, so it cannot be used.</p>
     </article>
 
     <article id="carousels">
       <h2>Carousels</h2>
       <p><a href="http://shouldiuseacarousel.com/" aria-describedby="ext-site">Do not use carousels</a>.</p>
       <p>The Libraries design system does not support carousels.</p>
+    </article>
+
+    <article id="tooltips">
+      <h2>Tooltips</h2>
+      <p>The Libraries design system does not support tooltips.</p>
+      <p>Tooltips hide potentially critical information that people may not be able to access. They may also provide on demand clarification for acronyms located farther down the page, so this is a pattern that may be available once an accessible javascript free solution is found.</p>
     </article>
 
   </main>
