@@ -16,6 +16,11 @@ article > h2, article > .h2 {
   border-bottom: 1px solid;
 }
 
+main * {
+  word-spacing: 0.1ch;
+  line-height: calc(1ex / 0.32);
+}
+
 main > section > h2 {
   margin-bottom: calc(var(--m-norm) * 1rem);
 }
@@ -49,7 +54,8 @@ h5, .h5, h6, .h6 {
 p {
   font-size: var(--base-size);
   margin-top: 0;
-  margin-bottom: calc(var(--m-norm) * 1rem);
+  /*margin-bottom: calc(var(--m-norm) * 1rem);*/
+  margin-bottom: calc(1ex / 0.32);
 }
 
 p + ul, p + ol {
