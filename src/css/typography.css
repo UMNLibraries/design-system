@@ -69,29 +69,39 @@ small, .text-small {
 blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: calc( var(--m-norm) * 1rem);
+  padding: 1rem;
+  margin: 1rem;
   border-left: 2px solid var(--col-bg-medium);
 }
 
-blockquote p:first-child::before, blockquote p:last-of-type::after {
-  font-size: 3rem;
-  position: absolute;
-  color: var(--col-text-light);
-}
-
-blockquote p:first-child::before {
+blockquote:before {
   content: '\201C';
-  margin-left: -1.5rem;
-  top: -0.6rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 3rem;
+  height: 2rem;
+  font-size: 5rem;
+  color: #999;
+  text-align: center;
 }
 
-blockquote p:last-of-type::after {
-  content: '\201D';
-  bottom: 1.2rem;
+blockquote > p:first-child::before,
+blockquote > p:last-of-type::after {
+
 }
 
-.lead blockquote p:last-of-type::after {
+blockquote > p:first-child::before {
+  content: open-quote;
+}
+
+blockquote > p:last-of-type::after {
+  content: close-quote;
+}
+
+.lead blockquote > p:last-of-type::after {
   bottom: 2.4rem;
 }
 
