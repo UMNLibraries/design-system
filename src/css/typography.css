@@ -70,7 +70,7 @@ blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;
   padding-left: 2rem;
-  border-left: 5px solid var(--col-bg-med-dark);
+  border-left: 5px solid var(--col-bg-medium);
    margin-bottom:calc(var(--m-norm) * 1rem);
 }
 
