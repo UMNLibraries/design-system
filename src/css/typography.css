@@ -69,29 +69,8 @@ small, .text-small {
 blockquote {
   font-family: Georgia, Lucida Bright, serif;
   position: relative;
-  padding: 1rem;
-  margin: 1rem;
-  border-top: 2px solid var(--col-bg-med-dark);
-  border-bottom: 2px solid var(--col-bg-med-dark);
-}
-
-blockquote::before {
-  content: '\201C';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  width: 3rem;
-  height: 2rem;
-  font-size: 5rem;
-  color: #999;
-  text-align: center;
-  line-height: 1;
-}
-
-blockquote > p:first-child {
-  margin-top: 1rem;
+  padding-left: 2rem;
+  border-left: 5px solid var(--col-bg-med-dark);
 }
 
 blockquote > p:last-of-type {
