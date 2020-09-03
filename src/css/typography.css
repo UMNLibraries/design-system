@@ -90,9 +90,12 @@ blockquote::before {
   line-height: 1;
 }
 
-blockquote > p:first-child::before,
-blockquote > p:last-of-type::after {
+blockquote > p:first-child {
+  margin-top: 1rem;
+}
 
+blockquote > p:last-of-type {
+  margin-bottom: 1rem;
 }
 
 blockquote > p:first-child::before {
