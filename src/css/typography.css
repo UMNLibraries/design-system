@@ -71,7 +71,7 @@ blockquote {
   position: relative;
   padding: 1rem;
   margin: 1rem;
-  border-left: 2px solid var(--col-bg-medium);
+  border: 2px solid var(--col-text);
 }
 
 blockquote:before {
