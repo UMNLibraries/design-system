@@ -71,10 +71,11 @@ blockquote {
   position: relative;
   padding: 1rem;
   margin: 1rem;
-  border: 2px solid var(--col-text);
+  border-top: 2px solid var(--col-bg-med-dark);
+  border-bottom: 2px solid var(--col-bg-med-dark);
 }
 
-blockquote:before {
+blockquote::before {
   content: '\201C';
   position: absolute;
   top: 0;
@@ -86,6 +87,7 @@ blockquote:before {
   font-size: 5rem;
   color: #999;
   text-align: center;
+  line-height: 1;
 }
 
 blockquote > p:first-child::before,
