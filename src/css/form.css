@@ -303,6 +303,8 @@ select::-ms-expand {
 
 select option {
 	font-weight: normal;
+  color: var(--col-text);
+  background-color: var(--col-bg-light);
 }
 
 select[disabled] {
