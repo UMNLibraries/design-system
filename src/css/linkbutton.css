@@ -76,12 +76,16 @@ button,
 input[type="submit"] {
   font-size: 1rem;
   padding: 0.8rem 1rem;
-  color: #fff;
   display: inline-block;
   min-height: 44px;
+}
+
+button,
+.btn-primary,
+input[type="submit"] {
   background-color: var(--col-primary);
   border: 1px solid var(--col-primary-dark);
-  /*transition: all ease 0.3s;*/
+  color: white;
 }
 
 button:hover,
@@ -103,10 +107,22 @@ button:active,
 .btn-dark:focus,
 .btn-dark:active,
 input[type="submit"]:hover,
-input[type="submit"]:focus {
-  background-color: var(--col-primary-dark);
+input[type="submit"]:focus,
+input[type="submit"]:active {
   outline: 0.2rem solid var(--col-link);
   outline-offset: 0.1rem;
+}
+
+button:hover,
+button:focus,
+button:active,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active {
+  background-color: var(--col-primary-dark);
 }
 
 .btn-secondary {
@@ -137,6 +153,7 @@ input[type="submit"]:focus {
 
 .btn-ghost {
   background-color: var(--col-bg-light);
+  border: 1px solid var(--col-text);
   color: var(--col-text);
 }
 
