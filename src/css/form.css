@@ -256,28 +256,36 @@ select.btn-ghost {
 
 select.btn-ghost:active,
 select.btn-ghost:hover,
-select.btn-ghost:focus,
-select.btn-primary:active,
-select.btn-primary:hover,
-select.btn-primary:focus,
-select.btn-secondary:active,
-select.btn-secondary:hover,
-select.btn-secondary:focus {
+select.btn-ghost:focus {
   /* need this because gulp compresses background-color to background and kills the image */
   background: var(--col-bg-light) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
 }
 
 select.btn-primary {
   /* need this because gulp compresses background-color to background and kills the image */
-  background: var(--col-primary) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
+  background: var(--col-primary) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23fafafa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
   padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
   color: white;
+}
+
+select.btn-primary:active,
+select.btn-primary:hover,
+select.btn-primary:focus {
+  /* need this because gulp compresses background-color to background and kills the image */
+  background: var(--col-primary-dark) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23fafafa' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
 }
 
 select.btn-secondary {
   /* need this because gulp compresses background-color to background and kills the image */
   background: var(--col-secondary-light) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
   padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
+}
+
+select.btn-secondary:active,
+select.btn-secondary:hover,
+select.btn-secondary:focus {
+  /* need this because gulp compresses background-color to background and kills the image */
+  background: var(--col-secondary-light) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
 }
 
 @media (max-width: 50rem) {
@@ -390,6 +398,7 @@ select[aria-disabled="true"] {
 .search button {
   height: calc(2.875rem + 2px);
   padding: 0.5rem 1rem;
+  white-space: nowrap;
 }
 
 nav > .search {
