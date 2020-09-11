@@ -58,7 +58,8 @@ gulp.task('webserver', function() {
       directoryListing: false,
       open: '/design-system',
       liveReload: true,
-      path: '/design-system'
+      path: '/design-system',
+      port: process.env.GULP_PORT || '8000'
     }));
 });
 

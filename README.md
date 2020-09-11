@@ -32,3 +32,11 @@ the environment variable `GULP_LIVERELOAD` to `false`
 ```shell
 $ GULP_LIVERELOAD=false gulp webserver
 ```
+
+Change the default port `8000` with `GULP_PORT`
+
+
+```shell
+# Start on port 9999
+$ GULP_PORT=9999 gulp webserver
+```
