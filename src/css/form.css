@@ -340,6 +340,12 @@ textarea[aria-invalid='false']:hover, textarea[aria-invalid='false']:focus {
 	background-position: left 0.7rem top 50%, 0 0;
 }
 
+/* required styles */
+/* add to label */
+.form-required::after {
+  content: ' (required)';
+}
+
 /* Disabled styles */
 select:disabled,
 select[aria-disabled="true"] {
