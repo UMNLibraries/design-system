@@ -12,6 +12,7 @@ const gulp        = require('gulp'),
       postcsspart = require('postcss-partial-import'),
       postcsspre  = require('postcss-preset-env'), //polyfills the snot out of the code
       uglifycss   = require('gulp-uglifycss'); //squash css code so it isn't human readable
+      webserver   = require('gulp-webserver');
 
 //*********** Gulp individual tasks
 
@@ -46,7 +47,21 @@ gulp.task('postcss', function() {
       })
     ]))
     .pipe(gulp.dest('./docs/s/'));
-})
+});
+
+// Local development via `gulp webserver`
+gulp.task('webserver', function() {
+  gulp.src('./docs')
+    .pipe(webserver({
+      // GULP_LIVERELOAD env var set false to turn off, or true (default)
+      livereload: (typeof process.env.GULP_LIVERELOAD == 'undefined' || String(process.env.GULP_LIVERELOAD).toLowerCase() === 'true'),
+      directoryListing: false,
+      open: '/design-system',
+      liveReload: true,
+      path: '/design-system',
+      port: process.env.GULP_PORT || '8000'
+    }));
+});
 
 //*********** Primary tasks
 
