@@ -634,11 +634,11 @@ input[size="12"] {
 }
 
 /* date range layout */
-form.cards fieldset {
+form .cards fieldset {
   margin-bottom: 0;
 }
 
-form.cards > button {
+form .cards > button {
   height: 1rem;
   align-self: center;
 }
