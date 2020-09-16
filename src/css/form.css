@@ -633,6 +633,16 @@ input[size="12"] {
   width: calc(12ch + 2ch + 1ch + 2px); /* maxlength + padding + breathing space + border */
 }
 
+/* date range layout */
+form.cards fieldset {
+  margin-bottom: 0;
+}
+
+form.cards > button {
+  height: 1rem;
+  align-self: center;
+}
+
 /* Progress indicator */
 /* https://codepen.io/chopfitzroy/pen/mVeKRN */
 ol[role="progressbar"] {
