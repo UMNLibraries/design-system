@@ -138,6 +138,7 @@ nav[aria-label="Libraries"] > a {
     background-color: var(--col-secondary-light);
     flex-basis: 25%;
     max-width: 25%;
+    border-right: 1px solid white;
   }
 }
 

@@ -117,7 +117,7 @@
         	</g>
         </svg>
         Code</a>
-      <a href="/design-system/templates/">
+      <!--<a href="/design-system/templates/">
         <svg aria-hidden="true" class="glyph" focusable="false" viewBox="0 0 92 85" width="92" height="85">
           <g>
             <path d="M40.31,33.5c-0.57,1.09-1,2.26-1.29,3.49l-21.83-8.07c0.57-0.8,0.97-1.75,1.17-2.78 c0.03-0.23,0.09-0.46,0.11-0.72L40.31,33.5z"></path>
@@ -131,7 +131,7 @@
             <path d="M79.55,14.18c-1.43,1.43-3.29,2.15-5.18,2.15c-0.83,0-1.66-0.14-2.46-0.43c-1-0.34-1.92-0.92-2.72-1.72 c-0.11-0.11-0.23-0.26-0.34-0.37c-2.52-2.86-2.38-7.24,0.34-9.99c2.86-2.86,7.53-2.83,10.36,0C82.41,6.68,82.41,11.35,79.55,14.18z"></path>
           </g>
         </svg>
-        Templates</a>
+        Templates</a>-->
     </nav>
 
     <nav aria-label="Breadcrumb">
@@ -337,55 +337,55 @@
     </article>
 
     <article id="definition">
-      <h2>Definition lists</h2>
-      <p>Definition lists are appropriate for a list of terms and their corresponding definitions, or a key-value style pairing. A definition term may have more than one definition. Definition lists are used sparingly.</p>
+      <h2>Description lists</h2>
+      <p>Description lists are appropriate for a list of terms and their corresponding definitions, or a key-value style pairing. A definition term may have more than one definition. Definition lists are used sparingly.</p>
 
       <div class="example">
         <dl>
-          <dt><code>article</code></dt>
-          <dd>Defines an article in a document</dd>
+          <dt>Position</dt>
+          <dd>Business analyst</dd>
 
-          <dt><code>aside</code></dt>
-          <dd>Defines content aside from the page content</dd>
+          <dt>Location</dt>
+          <dd>Building 1, Room 3</dd>
 
-          <dt><code>figure</code></dt>
-          <dd>Defines self-contained content</dd>
+          <dt>Hours</dt>
+          <dd>Available daily during business hours</dd>
         </dl>
       </div>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;dl&gt;</span>
- <span class="nt">&lt;dt&gt;</span><span class="nt">&lt;code&gt;</span>article<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;/dt&gt;</span>
- <span class="nt">&lt;dd&gt;</span>Defines an article in a document<span class="nt">&lt;/dd&gt;</span>
- <span class="nt">&lt;dt&gt;</span><span class="nt">&lt;code&gt;</span>aside<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;/dt&gt;</span>
- <span class="nt">&lt;dd&gt;</span>Defines content aside from the page content<span class="nt">&lt;/dd&gt;</span>
- <span class="nt">&lt;dt&gt;</span><span class="nt">&lt;code&gt;</span>figure<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;/dt&gt;</span>
- <span class="nt">&lt;dd&gt;</span>Defines self-contained content<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Position<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Business analyst<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Location<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Building 1, Room 3<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Hours<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Available daily during business hours<span class="nt">&lt;/dd&gt;</span>
 <span class="nt">&lt;/dl&gt;</span>
 </code></pre>
 
       <h3>Horizontal definition list</h3>
       <div class="example">
         <dl class="dl-horizontal">
-          <dt><code>article</code></dt>
-          <dd>Defines an article in a document</dd>
+          <dt>Position</dt>
+          <dd>Business analyst</dd>
 
-          <dt><code>aside</code></dt>
-          <dd>Defines content aside from the page content</dd>
-          <dd>It is an HTML5 element</dd>
+          <dt>Location</dt>
+          <dd>Building 1</dd>
+          <dd>Room 3</dd>
 
-          <dt><code>figure</code></dt>
-          <dd>Defines self-contained content</dd>
+          <dt>Hours</dt>
+          <dd>Available daily during business hours</dd>
         </dl>
       </div>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
- <span class="nt">&lt;dt&gt;</span><span class="nt">&lt;code&gt;</span>article<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;/dt&gt;</span>
- <span class="nt">&lt;dd&gt;</span>Defines an article in a document<span class="nt">&lt;/dd&gt;</span>
- <span class="nt">&lt;dt&gt;</span><span class="nt">&lt;code&gt;</span>aside<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;/dt&gt;</span>
- <span class="nt">&lt;dd&gt;</span>Defines content aside from the page content<span class="nt">&lt;/dd&gt;</span>
- <span class="nt">&lt;dd&gt;</span>It is an HTML5 element<span class="nt">&lt;/dd&gt;</span>
- <span class="nt">&lt;dt&gt;</span><span class="nt">&lt;code&gt;</span>figure<span class="nt">&lt;/code&gt;</span><span class="nt">&lt;/dt&gt;</span>
- <span class="nt">&lt;dd&gt;</span>Defines self-contained content<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Position<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Business analyst<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Location<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Building 1<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Room 3<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Hours<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Available daily during business hours<span class="nt">&lt;/dd&gt;</span>
 <span class="nt">&lt;/dl&gt;</span>
 </code></pre>
 

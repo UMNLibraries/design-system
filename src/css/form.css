@@ -634,8 +634,9 @@ input[size="12"] {
 }
 
 /* date range layout */
-form .cards fieldset {
-  margin-bottom: 0;
+form .cards {
+  grid-template-columns: repeat(auto-fit,minmax(14rem,1fr));
+  grid-gap: 1rem;
 }
 
 form .cards > button {
