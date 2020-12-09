@@ -44,7 +44,8 @@ nav[aria-label="Main"]>a:first-child {
 /* EXPERIMENTAL */
 article > p,
 article > ul,
-article > ol {
+article > ol,
+article > blockquote {
   width: 70ch;
   margin-left: auto;
   margin-right: auto;
