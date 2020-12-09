@@ -213,15 +213,16 @@
 
     <article id="header">
       <h2>Header</h2>
-      <dl>
+      <dl class="dl-horizontal">
         <dt>Required</dt>
         <dd>M favicon where technically feasible</dd>
         <dd>University wordmark with Driven to Discover tagline</dd>
         <dd>M Libraries unaltered logo</dd>
         <dd>University global navigation</dd>
       </dl>
-      <p>Summary: The University and Libraries logos must be in the correct place with minimal sizes as well as the University global navigation in the upper right.</p>
-      <p>The header comprises of 2 rows. The top row focuses on University of Minnesota branding, which includes the wordmark and University global navigation, and the second row is University Libraries branding, which includes the logo.</p>
+      <h3>Summary</h3>
+      <p>The header comprises of two rows. The University navigation (University of Minnesota logo on the left with 3 links on the right) must be the first item, followed by the Libraries logo, with required minimum logo sizes.</p>
+
       <h3>Favicon</h3>
       <p>The favicon must have the M in either maroon or gold and passing contrast ratio requirements of 3:1 (7.5:1 or greater is preferred) for websites on the umn.edu domain.</p>
 
@@ -232,7 +233,7 @@
         <li>220px and 12px margin around it for desktop sizes, and</li>
         <li>170px with 9px margin around it for smaller (mobile) sizes.</li>
       </ul>
-      <p>Though not explicitly stated, the University logo is recommended to have an official University color as the background, either maroon or gold.</p>
+      <p>The University logo is recommended to have an official University color as the background, either maroon or gold.</p>
 
       <h3>UMN global navigation</h3>
       <p>The University of Minnesota links in the upper right corner:</p>
@@ -250,7 +251,7 @@
         <li>130px with 5px margin around it for smaller (mobile) sizes.</li>
       </ul>
 
-      <h3>Example placement</h3>
+      <h3>Example wireframe placement</h3>
       <code class="example">
         <header>
           <nav>
@@ -265,11 +266,27 @@
         </header>
       </code>
 
+      <h3>Search-oriented site example wireframe</h3>
+      <p>If the website's primary task is to search, such as the main site searching the library catalog, or the Health Sciences Library website searching PubMed, the &ldquo;Search&rdquo; link may be removed if the search box is placed within the Libraries navigation row.</p>
+      <code class="example">
+        <header>
+          <nav>
+            <a href="/design-system/">wordmark</a>
+            <a href="/design-system/">OneStop</a>
+            <a href="/design-system/">MyU</a>
+          </nav>
+          <nav>
+            <a href="/design-system/">logo</a>
+            <span>[search box]</span>
+          </nav>
+        </header>
+      </code>
+
     </article>
 
     <article id="footer">
       <h2>Footer</h2>
-      <dl>
+      <dl class="dl-horizontal">
         <dt>Required</dt>
         <dd>Copyright statement displaying the current year</dd>
         <dd>Privacy Statement link</dd>
@@ -283,6 +300,39 @@
 
       <h3>Contact information</h3>
       <p>Use this contact block unless the contact information obfuscates better communication channels:</p>
+      <div class="example">
+        <h3><a href="https://www.lib.umn.edu">University of Minnesota Libraries</a></h3>
+        <address><strong>Libraries Central Administration Office</strong><br />
+        499 Wilson Library<br />
+        309 19<sup>th</sup> Avenue South<br />
+        Minneapolis, MN 55455
+        </address>
+        <p>
+          <strong>Phone</strong>
+          <a href="tel:+16126243321">612-624-3321</a>(Wilson Library front desk)
+          <br />
+          <strong>Email</strong>
+          <a href="/about/contact">contact form</a>
+          <br />
+          <a href="/about/collections">all library hours & locations</a>
+        </p>
+
+        <h3><a href="https://www.lib.umn.edu">University of Minnesota Libraries</a></h3>
+        <address><strong>Libraries Central Administration Office</strong><br />
+        499 Wilson Library<br />
+        309 19<sup>th</sup> Avenue South<br />
+        Minneapolis, MN 55455
+        </address>
+        <dl class="dl-horizontal">
+          <dt>Phone</dt>
+          <dd><a href="tel:+16126243321">612-624-3321</a>(Wilson Library front desk)</dd>
+          <dt>Email</dt>
+          <dd><a href="/about/contact">contact form</a></dd>
+        </dl>
+        <p>
+          <a href="/about/collections">all library hours &amp; locations</a>
+        </p>
+      </div>
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;h3&gt;&lt;a </span><span class="na">href=</span><span class="s">"https://www.lib.umn.edu"</span><span class="nt">&gt;</span>University of Minnesota Libraries<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
@@ -306,7 +356,9 @@
       <h3>Copyright and privacy statements</h3>
       <p>Copyright statement is required with current year. The privacy statement must be accurate; if the web asset does not meet University Libraries&rsquo; statement, contact Web Development to determine best course of action.</p>
       <p>Use the following language for copyright statement:</p>
-      <p>&copy; 2019 Regents of the University of Minnesota. All rights reserved. The University of Minnesota is an equal opportunity educator and employer.</p>
+      <div class="example">
+        <p>&copy; 2020 Regents of the University of Minnesota. All rights reserved. The University of Minnesota is an equal opportunity educator and employer.</p>
+      </div>
     </article>
 
   </main>

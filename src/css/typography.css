@@ -29,12 +29,14 @@ h1, .h1 {
   /*font-size: calc(( var(--h1-min) * 0.5em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.5em)) / (var(--bp-xlarge) - var(--bp-small))));*/
   /*font-size: 3rem;*/
   font-size: var(--h1);
+  letter-spacing: -0.05rem;
 }
 
 h2, .h2 {
   /*font-size: calc(( var(--h1-min) * 0.3em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.3em)) / (var(--bp-xlarge) - var(--bp-small))));*/
   /*font-size: 2rem;*/
   font-size: var(--h2);
+  letter-spacing: -0.03rem;
 }
 
 h3, .h3 {
