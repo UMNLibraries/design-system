@@ -181,29 +181,28 @@
         <p>For development purposes, it is best to use relative units (such as percentages or ems) to specify font sizes rather than absolute units (such as pixels or points). This provides much flexibility in modifying the visual presentation using CSS.</p>
         <footer>&ndash;<cite>WebAIM</cite></footer>
       </blockquote>
-      <p>For accessibility, because modern browsers adequately resize text regardless of how the size has been defined, it is not vital that text sizes be defined in relative sizes.</p>
       <p>Typesetting controls the readability of a text with the size, style, and spacing of its type. Text with poor readability turns off readers and can make it challenging for them to stay focused.</p>
     </div>
-    <p>Adapted from the <a href="https://v2.designsystem.digital.gov/code/typography/" aria-describedby="ext-site">United States Web Design System</a>.</p>
+    <p>Adapted from the <a href="https://designsystem.digital.gov/components/typography/" aria-describedby="ext-site">United States Web Design System</a>.</p>
 
     <article id="face">
       <h2>Typeface</h2>
-      <p>The two typefaces were chosen because they are native so do not require additional resource requests nor external dependencies. The font sets have a superlative count for glyph support and are highly readable. They are available to everyone.</p>
+      <p>Two typefaces were chosen because they are native so do not require additional resource requests nor external dependencies. The font sets have a superlative count for glyph support and are highly readable. They are available to everyone.</p>
 
-      <h3><a href="https://designroast.org/font-series-georgia/" aria-describedby="ext-site">Georgia</a></h3>
-      <p>Use for headings and blockquotes.</p>
+      <h3>Headings and blockquotes</h3>
+      <p><strong><a href="https://designroast.org/font-series-georgia/" aria-describedby="ext-site">Georgia</a></strong> is the primary typeface.</p>
       <p><strong>Lucida Bright</strong> is the secondary fallback and is never listed as the primary.</p>
 
 <pre rel="CSS" class="code" translate="no">
 <code>
-<span class="cs">h1</span><span class="p">,</span> <span class="cs">h2</span><span class="p">,</span> <span class="cs">h3</span><span class="p">,</span> <span class="cs">h4</span><span class="p">,</span> <span class="cs">h5</span><span class="p">,</span> <span class="cs">h6</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h1</span><span class="p">,</span> <span class="p">.</p><span class="cs">h2</span><span class="p">,</span> <span class="cs">.</span><span class="cs">h3</span><span class="p">,</p> <span class="p">.</span><span class="cs">h4</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h5</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h6</span><span class="p">,</span> <span class="cs">blockquote</span> <span class="p">{</span>
+<span class="cs">h1</span><span class="p">,</span> <span class="cs">h2</span><span class="p">,</span> <span class="cs">h3</span><span class="p">,</span> <span class="cs">h4</span><span class="p">,</span> <span class="cs">h5</span><span class="p">,</span> <span class="cs">h6</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h1</span><span class="p">,</span> <span class="p">.</span><span class="cs">h2</span><span class="p">,</span> <span class="cs">.</span><span class="cs">h3</span><span class="p">,</span> <span class="p">.</span><span class="cs">h4</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h5</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h6</span><span class="p">,</span> <span class="cs">blockquote</span> <span class="p">{</span>
   <span class="cp">font-family</span><span class="p">:</span> <span class="cv">Georgia, Lucida Bright, serif</span><span class="p">;</span>
 <span class="p">}</span>
 </code>
 </pre>
 
-      <h3><a href="https://designroast.org/font-series-tahoma/" aria-describedby="ext-site">Tahoma</a></h3>
-      <p>Use for body text, links, and buttons</p>
+      <h3>Body text, links, and buttons</h3>
+      <p>Use <strong><a href="https://designroast.org/font-series-tahoma/" aria-describedby="ext-site">Tahoma</a></strong> are the primary typeface.</h3>
       <p><strong>Verdana</strong> is the secondary fallback and is never listed as the primary.</p>
 
 <pre rel="CSS" class="code" translate="no">
@@ -219,7 +218,7 @@
       <h2>Font size</h2>
       <p>Use a comfortable reading size for body text.</p>
       <p>Body text uses a minimum effective size of <code>19px</code> for large screens and <code>16px</code> on small screens. Smaller and larger text are used sparingly via semantic HTML elements (headings, captions, footnotes).</p>
-      <p>Smaller text is used for captions and footnotes. The text may not be smaller than effectively <code>16px</code> on large screens and <code>14px</code> on small screens.</p>
+      <p>Smaller text may be used for captions and footnotes. The text may not be smaller than effectively <code>16px</code> on large screens and <code>14px</code> on small screens.</p>
     </article>
 
     <article id="style">
@@ -277,7 +276,7 @@
       </ul>
 
       <h3>Paragraphs</h3>
-      <p>Paragraphs follow content guidelines for writing.</p>
+      <p>Paragraphs follow <a href="/design-system/content/">content guidelines</a> for writing.</p>
       <p>All text maintains default colors unless it is modified by components or elements. Do not manually modify colors or sizes.</p>
     </article>
 
@@ -290,7 +289,7 @@
     <article id="align">
       <h2>Text alignment</h2>
       <p>Left align all content unless the component automatically modifies alignment. Do not manually change text alignment.</p>
-      <p>The rag (the uneven edge the text creates) on the right of a left-aligned content block is important for a person for ease of reading. If longer words (16+ characters) may possibly cause extreme gaps in the rag, add a soft hyphen (<code>&amp;shy;</code>) in the <abbr>HTML</abbr> code to encourage an appropriate breakpoint in the word. Use the soft hyphen sparingly.</p>
+      <p>The rag (the uneven edge the text creates) on the right of a left-aligned content block is importantfor ease of reading. If longer words (16+ characters) may possibly cause extreme gaps in the rag, add a soft hyphen (<code>&amp;shy;</code>) in the <abbr>HTML</abbr> code to encourage an appropriate breakpoint in the word. Use the soft hyphen sparingly.</p>
       <p>Avoid centered and justified text. Only use right aligned text for languages that read from right to left and are properly coded using the <code>lang</code> attribute to identify the correct language.</p>
     </article>
 
@@ -298,13 +297,14 @@
       <h2>Measure</h2>
       <p>Controlling the length of lines of text (measure), helps readers&rsquo; attention flow easily from one line to the next, making reading more natural and comfortable.</p>
       <p>Lines of text are 45-90 characters are broadly considered to be a readable line length, with enough line spacing for the eye to easily track and travel from one end to the other. Target 66 characters wide for comfortable reading of longer text.</p>
+      <p>Utilize the <code>ch</code> measuring unit to adhere closely. For instance, the CSS <code>p {width: 66ch;}</ch> will strictly enforce good line length.</p>
     </article>
 
     <article id="height">
       <h2>Line height</h2>
       <p>Line height controls the vertical rhythm and density of a text block. Its measure is written as a unitless multiplier of the text&rsquo;s font size.</p>
       <p>Longer text and longer lines require more line height. The eye struggles to distinguish between lines of text when it has to travel from the end of one long line to the beginning of the next.</p>
-      <p>For text that is <code>1rem</code> (approximately <code>16px</code>)and <code>66ch</code> wide, aim for a <code>line-height</code> of <code>1.6</code>.</p>
+      <p>For text that is <code>1rem</code> (approximately <code>16px</code>) and <code>66ch</code> wide, aim for a <code>line-height</code> of <code>1.6</code>.</p>
     </article>
 
   </main>

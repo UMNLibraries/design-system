@@ -40,3 +40,12 @@
 nav[aria-label="Main"]>a:first-child {
   padding: 0.25rem 0.5rem;
 }
+
+/* EXPERIMENTAL */
+article > p,
+article > ul,
+article > ol {
+  width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
