@@ -219,7 +219,7 @@
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            console.log('responseText:' + xmlhttp.responseText);
+            //console.log('responseText:' + xmlhttp.responseText);
             try {
                 var data = JSON.parse(xmlhttp.responseText);
             } catch(err) {
@@ -237,10 +237,9 @@
       ajax_get('https://stacks.lib.umn.edu/lg/az/names.json', function(data) {
         var html;
         for (var i=0; i < data.length; i++) {
-          html += '<option label="' + data[i] + '" value="' + data[i] + '" />"';
+          html += '<option label="' + data[i] + '" value="' + data[i] + '" />';
         }
         document.getElementById("dbnames-list").innerHTML = html;
-        console.log(html);
       });
       </script>
 
