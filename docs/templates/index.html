@@ -237,7 +237,7 @@
       ajax_get('https://stacks.lib.umn.edu/lg/az/names.json', function(data) {
         var html = "";
         for (var i=0; i < data.length; i++) {
-          html += '<option label="' + data[i] + '" value="' + data[i] + '" />';
+          html += '<option label="' + data[i].replace(/"/g, '\\"') + '" value="' + data[i].replace(/"/g, '\\"') + '" />';
         }
         document.getElementById("dbnames-list").innerHTML = html;
       });
