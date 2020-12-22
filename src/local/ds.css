@@ -45,7 +45,8 @@ nav[aria-label="Main"]>a:first-child {
 article > p,
 article > ul,
 article > ol,
-article > blockquote {
+article > blockquote,
+article > dl {
   width: 100%;
   max-width: 70ch;
   margin-left: auto;
