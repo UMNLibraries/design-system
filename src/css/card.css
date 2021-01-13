@@ -217,6 +217,10 @@ body > footer .cards {
   border-right: 0;
 }
 
+.card-w-svg > .list-w-svg {
+  margin-left: -2rem;
+}
+
 /* horizontal card */
 .cards-x > * {
   display: grid;
