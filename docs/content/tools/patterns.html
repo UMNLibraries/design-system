@@ -138,7 +138,7 @@
       <ol>
         <li><a href="/design-system/">Home</a></li>
         <li><a href="/design-system/content/">Content</a></li>
-        <li><a href="/design-system/content/index.html" aria-current="page">Overview</a></li>
+        <li><a href="/design-system/content/tools/patterns.html" aria-current="page">Content patterns</a></li>
       </ol>
     </nav>
 
@@ -182,86 +182,83 @@
   </nav>
   <main id="main" class="m-0">
 
-    <h1>Content overview</h1>
+    <h1>Drupal content layout patterns</h1>
     <p class="lead">Thoughtful, consistent interface content is a core element of a well-designed experience.</p>
 
-    <section class="cards">
+    <section id="overview">
       <article>
-        <h2>Who should use this guide</h2>
-        <p>All people who write for the University Libraries.</p>
-        <p>If you create or maintain any content on the web, you are a designer of experiences. It is in your hands to take on the responsibility that carries.</p>
-      </article>
-
-      <article>
-        <h2>Selected platforms and layouts</h2>
+        <h2>Recommended layouts by content type</h2>
         <ul>
-          <li><a href="/tools/platform.html">Drupal or LibGuides</a></li>
-          <li><a href="/tools/patterns.com">Drupal content layouts</a></li>
-          <li>Choosing LibGuide types</li>
+          <li>Services</li>
+          <li>Spaces</li>
+          <li>Collections</li>
         </ul>
       </article>
     </section>
 
-    <article>
-      <p>The content guidelines help understand how to think strategically about the language used to convey messages. They provide clear, tactical suggestions designed to help use language to craft better experiences.</p>
-      <p><a href="/design-system/intro/editors.html" class="btn-primary">Content checklist</a></p>
-      <ul class="cards">
-        <li class="bt-md">
-          <h2>Voice and tone</h2>
-          <p>University Libraries voice is:</p>
-          <ul>
-            <li>authoritative, not arrogant;</li>
-            <li>transparent, not blunt;</li>
-            <li>succinct, not complex; and</li>
-            <li>welcoming, but not overly-friendly or too much personality.</li>
-          </ul>
-        </li>
+    <section id="services">
+      <article>
+        <h2>Services</h2>
+        <p>The services content type describes things the library <em>does</em>, offerings that require some sort of interaction by or contact with Libraries staff. Offerings described as services must include an action facilitating that contact point. The focus of offerings using the services content type must be on the service itself, even if aspects of the offering might also include resource, space, or guide components.</p>
+      </article>
 
-        <li class="bt-md">
-          <h2>Writing content</h2>
-          <p>Guidance for writing plain English that reflects University tone and principles.</p>
-          <footer><a href="/design-system/content/writing.html">Writing content</a></footer>
-        </li>
+      <article>
+        <h2>Services Drupal fields</h2>
+        <dl>
+          <dt>Name of service</dt>
+          <dd>Drupal &ldquo;Title&rdquo; field</dd>
+          <dd>Required</dd>
 
-        <li class="bt-md">
-          <h2>Terms and phrases</h2>
-          <p>What words to use and what ones to avoid.</p>
-          <footer><a href="/design-system/content/phrases.html">Terms and phrases</a></footer>
-        </li>
+          <dt>Brief summary</dt>
+          <dd>Drupal &ldquo;Article&rdquo; type</dd>
+          <dd>Required</dd>
+          <dd>
+            <p>1 to 2 sentences</p>
+            <ul>
+              <li>Briefly describe the service using plain language</li>
+              <li>List who has access to the service</li>
+              <li>List any specific access details around the service (for example, if users must be logged into submit a form)</li>
+            </ul>
+          <p>Example: Our librarians teach individuals and small groups to search databases and optimize search strategies. This service is available to U of M health sciences faculty, staff, and students.</p>
+        </dd>
 
-        <li class="bt-md">
-          <h2>Images</h2>
-          <p>How to selectimages, write alternative text for them, and properly process them for web consumption.</p>
-          <footer><a href="/design-system/content/images.html">Images</a></footer>
-        </li>
+        <dt>Benefits/examples</dt>
+        <dd>Drupal open paragraphs</dd>
+        <dd>List benefits or examples of how the service can be used, focusing on user needs.</dd>
 
-        <li class="bt-md">
-          <h2>Files</h2>
-          <p>What file formats to use for what purpose in a web environment. Where to store eligible files.</p>
-          <footer><a href="/design-system/content/files.html">Files</a></footer>
-        </li>
+        <dt>Service action</dt>
+        <dd>Drupal &ldquo;Action link&rdquo; field</dd>
+        <dd>Required</dd>
+        <dd>
+          <p>A call to action button, with language describing the interaction</p>
+          <p>Example: &ldquo;Request a consultation&rdquo; or &ldquo;Make a purchase request&rdquo;</p>
+        </dd>
+        <dd>A form on the other end of the button, initiating contact with a staff person or unit</dd>
 
-        <li class="bt-md">
-          <h2>Glossary</h2>
-          <p>Alphabetical listing of Library-specific words, what is no longer in use and what words to use to describe Library services and features.</p>
-          <footer><a href="/design-system/content/glossary.html">Glossary</a></footer>
-        </li>
-      </ul>
+        <dt>Related policies and/or information</dt>
+        <dd>Drupal related content type</dd>
+        <dd>If applicable, list complementary or related policies, or informational pieces, such as strategic planning, principles, missions, etc</dd>
 
-    </article>
+        <dt>Associated staff</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable/appropriate, list the staff that are the primary and/or auxiliary contact points for the service</dd>
 
-    <article>
-      <h2>Further reading</h2>
-      <blockquote>
-        <p>The University of Minnesota Libraries&rsquo; website prioritizes the support of users new to our site and services, and by doing so, supports all users in their goal to find and access our resources and apply them to their work, and our goal to engage and inspire our diverse community of users.</p>
-        <footer>-<cite>Web Content Management Committee</cite>, core content strategy statement</footer>
-      </blockquote>
+        <dt>Related services</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related services</dd>
 
-      <blockquote>
-        <p>The University of Minnesota Health Sciences Libraries website, as part of the University Library system, seeks to provide low-barrier access to health sciences information in order to support 1) discipline-specific information needs of AHC faculty, students, and researchers; and 2) effective and meaningful engagement with library staff, services, and tools.</p>
-        <footer>-<cite>Health Sciences Libraries</cite>, core content strategy statement</footer>
-      </blockquote>
-    </article>
+        <dt>Related collections, guides, or research support</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related resources</dd>
+        <dd>If applicable, list guides that support this service</dd>
+
+        <dt>Related spaces</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related spaces</dd>
+      </dl>
+
+      </article>
+    </section>
 
   </main>
 
