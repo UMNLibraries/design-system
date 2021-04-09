@@ -33,6 +33,13 @@
   font-size: 140%;
 }
 
+.lead {
+  font-size: 140%;
+  background-color: var(--col-bg-light);
+  padding: 0.5rem;
+  margin-bottom: calc( var(--m-norm) * 1rem);
+}
+
 #logo {
   text-decoration: none;
 }
