@@ -138,7 +138,7 @@
       <ol>
         <li><a href="/design-system/">Home</a></li>
         <li><a href="/design-system/principles/">Principles</a></li>
-        <li><a href="/design-system/principles/ethical.html" aria-current="page">Ethical</a></li>
+        <li><a href="/design-system/principles/private.html" aria-current="page">Private</a></li>
       </ol>
     </nav>
 
@@ -147,39 +147,51 @@
   <nav aria-label="Content">
     <ul class="list-group list-links">
       <li><a href="/design-system/principles/index.html">Overview</a></li>
-      <li><a href="/design-system/principles/universal.html">Universal</a></li>
       <li>
-        <a href="/design-system/principles/accessible.html">Accessible</a>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
         <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
           <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
           <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
           <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/ethical.html" aria-current="page">Ethical</a>
-        <ul>
-          <li><a href="/design-system/principles/ethical.html#attention">Value attention</a></li>
-          <li><a href="/design-system/principles/ethical.html#patterns">Avoid dark patterns</a></li>
-          <li><a href="/design-system/principles/ethical.html#humanity">Respect humanity</a></li>
-          <li><a href="/design-system/principles/ethical.html#privacy">Personal privacy</a></li>
-          <li><a href="/design-system/principles/ethical.html#security">Data security</a></li>
-        </ul>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <!--<ul>
+        </ul>-->
       </li>
       <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
       <li>
         <a href="/design-system/principles/mindful.html">Mindful</a>
         <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
           <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
           <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/responsible.html">Responsible</a>
+        <a href="/design-system/principles/private.html" aria-current="page">Private</a>
         <ul>
-          <li><a href="/design-system/principles/responsible.html#optimization">Optimization</a></li>
-          <li><a href="/design-system/principles/responsible.html#performance">Web performance</a></li>
-          <li><a href="/design-system/principles/responsible.html#sustainable">Sustainable practices</a></li>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
         </ul>
       </li>
     </ul>
@@ -188,84 +200,12 @@
 
   <main id="main" class="m-0">
 
-    <h1>Ethical design</h1>
+    <h1>Private</h1>
 
-    <p class="lead">Design for well being; do not abuse people&rsquo;s attention by using dark techniques to the detriment of our health or interferes with the person&rsquo;s goal. Respect all aspects of a person&rsquo;s right to privacy. security, and safety.</p>
+  <div class="lead">
+    <p>Promote and ensure privacy through security and personal data ownership. Provide these tenets in systems and services to the best of our ability and be transparent where we cannot.</p>
+  </div>
 
-    <p>Adapted from the <a href="https://calmtech.com/" aria-describedby="ext-site">principles of calm technology</a> and <a href="https://www.designingmindfulness.com/#home/designing-mindfulness" aria-describedby="ext-site">designing mindfulness</a>.</p>
-
-    <article id="attention">
-      <h2>Value attention</h2>
-      <dl>
-        <dt>Value human attention</dt>
-        <dd>Recognize that any attention-based product impacts wellbeing.</dd>
-        <dd>Human attention is too often peripheral in the drive to educate and inform. Recognize that content design impacts the human mind and mental wellbeing. Hold a deep-rooted respect for human attention and examine the impact of the design decisions made through a user-centred process to build attentional content that prioritizes meaningful engagement between a person and the content.</dd>
-
-        <dt>Require the smallest possible amount of attention</dt>
-        <dd>Technology can communicate, but doesn&rsquo;t need to speak.</dd>
-        <dd>Create awareness through different senses.</dd>
-        <dd>Communicate information without taking people out of their environment or task.</dd>
-
-        <dt>Make use of the periphery</dt>
-        <dd>A calm technology will move easily from the periphery of our attention, to the center, and back.</dd>
-        <dd>The periphery is informing without overburdening.</dd>
-
-        <dt>Use the minimum needed to solve the problem</dt>
-        <dd>What is the minimum amount of technology or content needed to solve the problem?</dd>
-        <dd>Slim features down so that the content does what it needs to do and no more.</dd>
-
-        <dt>Respect information zones</dt>
-        <dd>Develop sustainable modes of communication between web assets and people.</dd>
-      </dl>
-    </article>
-
-
-    <article id="patterns">
-      <h2>Avoid dark patterns</h2>
-      <dl>
-        <dt>Avoid dark patterns</dt>
-        <dd>Stop tricking people, and make it easier for them to make their own choices.</dd>
-        <dd><q>A Dark Pattern is a user interface that has been carefully crafted to trick users into doing things, such as buying insurance with their purchase or signing up for recurring bills.</q> (Brignull, 2010)</dd>
-        <dd>Dark patterns are used to boost profits, and trick people into completing actions they didn&rsquo;t notice or mean to. Be aware of the interactions built into web assets, talk openly about their ethics, and reduce dependencies on deception.</dd>
-
-        <dt>Technology should work even when it fails</dt>
-        <dd>Think about what happens if the technology fails.</dd>
-        <dd>Does it default to a usable state or does it break down completely?</dd>
-
-        <dt>Prioritize quality</dt>
-        <dd>Focus on producing and encouraging high quality, distraction-free content.</dd>
-
-        <dt>Provide exit points</dt>
-        <dd>Promote a calm experience by providing a sense of completion and giving people an option to disengage.</dd>
-
-        <dt>Establish holistic measures</dt>
-        <dd>Create ways of measuring success which incorporate more than just the bottom line.</dd>
-
-      </dl>
-    </article>
-
-    <article id="humanity">
-      <h2>Respect humanity</h2>
-      <dl>
-        <dt>Amplify the best of technology and the best of humanity</dt>
-        <dd>Design for people first.</dd>
-        <dd>Machines shouldn&rsquo;t act like humans.</dd>
-        <dd>Humans shouldn&rsquo;t act like machines.</dd>
-        <dd>Amplify the best part of each.</dd>
-
-        <dt>Discourage addictive usage</dt>
-        <dd>Don't use &ldquo;Fear of Missing Out&rdquo; (FOMO) as a way to establish and maintain unhealthy addictions.</dd>
-        <dd>Since addictive feedback systems are perceived as being good for business, they are deliberately designed into everyday products. While these systems are often useful in the short-term, they do not foster a positive relationship between the person and product in the long-term. Addictions are often cultivated by unpredictability &mdash; a common technique known as variable reward &mdash; where something different happens with every click. While variability and mystery can be authentic and integral parts of some products, they are capable of actively creating unhealthy and unsustainable addictions. Instead, create more manageable and predictable experiences to mitigate this problem.</dd>
-
-        <dt>Respect social norms</dt>
-        <dd>Technology takes time to introduce to humanity.</dd>
-        <dd>What social norms exist that the technology or content might violate or stress?</dd>
-        <dd>Slowly introduce features so that people have time to get accustomed to the product.</dd>
-
-        <dt>Minimize social anxiety</dt>
-        <dd>Fix the design decisions that make people feel bad about themselves.</dd>
-      </dl>
-    </article>
 
     <article id="privacy">
       <h2>Personal privacy</h2>
@@ -290,7 +230,7 @@
 
       <dl>
         <dt>Confidentiality</dt>
-        <dd>Only allow access to data for which the person ir system is permitted</dd>
+        <dd>Only allow access to data for which the person or system is permitted</dd>
 
         <dt>Integrity</dt>
         <dd>Ensure data is not tampered or altered by unauthorized persons or systems</dd>
@@ -301,46 +241,6 @@
 
       <p><a href="https://www.owasp.org/index.php/Security_by_Design_Principles#Security_principles" aria-describedby="ext-site">Read the complete list of security principles</a>.</p>
 
-
-    </article>
-
-    <article id="design">
-      <h2>Design</h2>
-      <p>Adapted from Mike Monteiro&rsquo;s <a href="https://github.com/mmmonteiro/designethics/blob/master/en_US.md" aria-describedby="ext-site">designer&rsquo;s code of ethics</a>.</p>
-      <dl>
-        <dt>A designer is first and foremost a human being.</dt>
-        <dd>As a human being, designers are part of the social contract. Work done by a designer impacts other people and can either help or hurt them.</dd>
-        <dd>Every human being on this planet is obligated to do our best to leave this planet in better shape than we found it. Designers don&rsquo;t get to opt out.</dd>
-
-        <dt>A designer is responsible for the work they put into the world</dt>
-        <dd>The work designers bring into the world is their legacy. It will outlive them. And it will speak for them.</dd>
-        <dd>When designers knowingly produce work that is intended to harm, they are abdicating our responsibility. When they ignorantly produce work that harms others because they didn&rsquo;t consider the full ramifications of that work, they are doubly guilty.</dd>
-
-        <dt>A designer values impact over form</dt>
-        <dd>Fear the consequences of the work more than love the cleverness of the ideas.</dd>
-
-        <dt>A designer owes the people who hire them not just their labor, but their counsel</dt>
-        <dd>The designer&rsquo; job is not just to produce that work but to evaluate the impact of that work; to relay the impact of that work to the employer. And should that impact be negative, relay that to the client along with a way, if possible, to eliminate the negative impact of the work.</dd>
-
-        <dt>A designer welcomes criticism</dt>
-        <dd>Encourage criticism in order to create better work in the future.</dd>
-
-        <dt>A designer strives to know their audience</dt>
-        <dd>Design is the intentional solution to a problem within a set of constraints. To know whether designers are properly solving those problems, meet the people who are having them.</dd>
-        <dd> Empathy is a pretty word for exclusion. To know how women would use something being designed, get a woman on the team that&rsquo;s designing it.</dd>
-
-        <dt>A designer does not believe in edge cases</dt>
-        <dd>For years people who weren&rsquo;t crucial to a products&rsquo; success were &ldquo;edge cases&rdquo;. Designers were marginalizing people, making a decision that there were people in the world whose problems weren&rsquo;t worth solving.</dd>
-
-        <dt>A designer is part of a professional community</dt>
-        <dd>Designers are part of a professional community and the way they do their job and handle themselves professionally affects everyone in that community.</dd>
-
-        <dt>A designer welcomes a diverse and competitive field</dt>
-        <dd>A designer keeps their ego in check, knows when to shut up and listen, is aware of their own biases and welcomes having them checked, and fights to make room for those who have been silenced.</dd>
-
-        <dt>A designer takes time for self-reflection</dt>
-        <dd>Take the time for self-reflection every few months. Evaluate recent decisions. Are you staying true to who you are? Have you veered off course? Correct it.</dd>
-      </dl>
     </article>
 
     <article>

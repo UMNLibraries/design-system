@@ -138,7 +138,7 @@
       <ol>
         <li><a href="/design-system/">Home</a></li>
         <li><a href="/design-system/principles/">Principles</a></li>
-        <li><a href="/design-system/principles/ethical.html" aria-current="page">Ethical</a></li>
+        <li><a href="/design-system/principles/mindful.html" aria-current="page">Mindful</a></li>
       </ol>
     </nav>
 
@@ -147,39 +147,51 @@
   <nav aria-label="Content">
     <ul class="list-group list-links">
       <li><a href="/design-system/principles/index.html">Overview</a></li>
-      <li><a href="/design-system/principles/universal.html">Universal</a></li>
       <li>
-        <a href="/design-system/principles/accessible.html">Accessible</a>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
         <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
           <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
           <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
           <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/ethical.html">Ethical</a>
-        <ul>
-          <li><a href="/design-system/principles/ethical.html#attention">Value attention</a></li>
-          <li><a href="/design-system/principles/ethical.html#patterns">Avoid dark patterns</a></li>
-          <li><a href="/design-system/principles/ethical.html#humanity">Respect humanity</a></li>
-          <li><a href="/design-system/principles/ethical.html#privacy">Personal privacy</a></li>
-          <li><a href="/design-system/principles/ethical.html#security">Data security</a></li>
-        </ul>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <!--<ul>
+        </ul>-->
       </li>
       <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
       <li>
         <a href="/design-system/principles/mindful.html" aria-current="page">Mindful</a>
         <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
           <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
           <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/responsible.html">Responsible</a>
+        <a href="/design-system/principles/private.html">Private</a>
         <ul>
-          <li><a href="/design-system/principles/responsible.html#optimization">Optimization</a></li>
-          <li><a href="/design-system/principles/responsible.html#performance">Web performance</a></li>
-          <li><a href="/design-system/principles/responsible.html#sustainable">Sustainable practices</a></li>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
         </ul>
       </li>
     </ul>
@@ -188,46 +200,123 @@
 
   <main id="main" class="m-0">
 
-    <h1>Mindful design</h1>
+    <h1>Mindful</h1>
     <div class="lead">
-      <p>Be aware, realize we are not our users, and recognize when we base decisions on assumptions. Be intentional. We have a responsibility to create a better future.</p>
+      <p>Make decisions that prioritize user well-being, don’t build to steal attention, and avoid dark and anti-patterns.</p>
     </div>
 
-    <article id="intentional">
-      <h2>Intentional design</h2>
+    <section>
+      <p>Adapted from the <a href="https://calmtech.com/" aria-describedby="ext-site">principles of calm technology</a> and <a href="https://www.designingmindfulness.com/#home/designing-mindfulness" aria-describedby="ext-site">designing mindfulness</a>.</p>
 
-      <dl>
-        <dt>Radical simplification</dt>
-        <dd>Develop content and web assets for a specific purpose, for the benefit of and written for others. <q>Radical simplification is the first manifestation of intent and intentional design</q> -<a href="https://developer.apple.com/videos/play/wwdc2018/802/" aria-describedby="ext-site">Doug LeMoine</a>.</dd>
+      <article id="humanity">
+        <h2>Respect humanity</h2>
+        <dl>
+          <dt>Amplify the best of technology and the best of humanity</dt>
+          <dd>Design for people first.</dd>
+          <dd>Machines shouldn&rsquo;t act like humans.</dd>
+          <dd>Humans shouldn&rsquo;t act like machines.</dd>
+          <dd>Amplify the best part of each.</dd>
 
-        <dt>Deep understanding</dt>
-        <dd><q>The first needs that you see when you start kind of looking at people and the users that you might want to serve are superficial and you need to dig past those.</q> <cite>Doug LeMoine</cite></dd>
+          <dt>Discourage addictive usage</dt>
+          <dd>Don't use &ldquo;Fear of Missing Out&rdquo; (FOMO) as a way to establish and maintain unhealthy addictions.</dd>
+          <dd>Since addictive feedback systems are perceived as being good for business, they are deliberately designed into everyday products. While these systems are often useful in the short-term, they do not foster a positive relationship between the person and product in the long-term. Addictions are often cultivated by unpredictability &mdash; a common technique known as variable reward &mdash; where something different happens with every click. While variability and mystery can be authentic and integral parts of some products, they are capable of actively creating unhealthy and unsustainable addictions. Instead, create more manageable and predictable experiences to mitigate this problem.</dd>
 
-        <dt>Extreme focus</dt>
+          <dt>Respect social norms</dt>
+          <dd>Technology takes time to introduce to humanity.</dd>
+          <dd>What social norms exist that the technology or content might violate or stress?</dd>
+          <dd>Slowly introduce features so that people have time to get accustomed to the product.</dd>
 
-        <dt>Personal connection</dt>
+          <dt>Minimize social anxiety</dt>
+          <dd>Fix the design decisions that make people feel bad about themselves.</dd>
+        </dl>
+      </article>
 
-        <dt>Direct communication</dt>
+      <article id="intentional">
+        <h2>Intentional design</h2>
 
-      </dl>
+        <dl>
+          <dt>Radical simplification</dt>
+          <dd>Develop content and web assets for a specific purpose, for the benefit of and written for others. <q>Radical simplification is the first manifestation of intent and intentional design</q> -<a href="https://developer.apple.com/videos/play/wwdc2018/802/" aria-describedby="ext-site">Doug LeMoine</a>.</dd>
 
-    </article>
+          <dt>Deep understanding</dt>
+          <dd><q>The first needs that you see when you start kind of looking at people and the users that you might want to serve are superficial and you need to dig past those.</q> <cite>Doug LeMoine</cite></dd>
 
-    <article id="person-first">
-      <h2>Person-first design</h2>
-      <dl>
-        <dt><q>You are not the user</q></dt>
-        <dd><a href="https://www.nngroup.com/articles/false-consensus/" aria-describedby="ext-site">Raluca Budiu wrote</a> this in describing the False-Consensus Effect, in which <q>designers, developers, and [stakeholders]... project their behaviors and reactions onto users.</q></dd>
+          <dt>Extreme focus</dt>
 
-        <dt>Avoid &ldquo;average&rdquo; and assumptions</dt>
-        <dd>The &ldquo;average&rdquo; user does not exist.</dd>
-        <dd><q>[...] the moment you need to make a decision about any individual—the average is useless. Worse than useless, in fact, because it creates the illusion of knowledge, when in fact the average disguises what is most important about an individual.</q> <cite>Todd Rose</cite>, The End of Average: How We Succeed in a World That Values Sameness</dd>
+          <dt>Personal connection</dt>
 
-        <dt>Avoid single story narratives</dt>
-        <dd><q>The single story creates stereotypes, and the problem with stereotypes is not that they&rsquo;re <em>untrue</em>, but that they&rsquo;re incomplete.</q> -<cite>Chmamanda Ngozi Adichie</cite></dd>
-        <dd>Do not assume that because a person falls into a stereotype that the stereotype is true for them, or that it is the <em>only</em> truth for them.</dd>
-      </dl>
-    </article>
+          <dt>Direct communication</dt>
+        </dl>
+      </article>
+
+      <article id="person-first">
+        <h2>Person-first design</h2>
+        <dl>
+          <dt><q>You are not the user</q></dt>
+          <dd><a href="https://www.nngroup.com/articles/false-consensus/" aria-describedby="ext-site">Raluca Budiu wrote</a> this in describing the False-Consensus Effect, in which <q>designers, developers, and [stakeholders]... project their behaviors and reactions onto users.</q></dd>
+
+          <dt>Avoid &ldquo;average&rdquo; and assumptions</dt>
+          <dd>The &ldquo;average&rdquo; user does not exist.</dd>
+          <dd><q>[...] the moment you need to make a decision about any individual—the average is useless. Worse than useless, in fact, because it creates the illusion of knowledge, when in fact the average disguises what is most important about an individual.</q> <cite>Todd Rose</cite>, The End of Average: How We Succeed in a World That Values Sameness</dd>
+
+          <dt>Avoid single story narratives</dt>
+          <dd><q>The single story creates stereotypes, and the problem with stereotypes is not that they&rsquo;re <em>untrue</em>, but that they&rsquo;re incomplete.</q> -<cite>Chmamanda Ngozi Adichie</cite></dd>
+          <dd>Do not assume that because a person falls into a stereotype that the stereotype is true for them, or that it is the <em>only</em> truth for them.</dd>
+        </dl>
+      </article>
+
+      <article id="attention">
+        <h2>Value attention</h2>
+        <dl>
+          <dt>Value human attention</dt>
+          <dd>Recognize that any attention-based product impacts wellbeing.</dd>
+          <dd>Human attention is too often peripheral in the drive to educate and inform. Recognize that content design impacts the human mind and mental wellbeing. Hold a deep-rooted respect for human attention and examine the impact of the design decisions made through a user-centred process to build attentional content that prioritizes meaningful engagement between a person and the content.</dd>
+
+          <dt>Require the smallest possible amount of attention</dt>
+          <dd>Technology can communicate, but doesn&rsquo;t need to speak.</dd>
+          <dd>Create awareness through different senses.</dd>
+          <dd>Communicate information without taking people out of their environment or task.</dd>
+
+          <dt>Make use of the periphery</dt>
+          <dd>A calm technology will move easily from the periphery of our attention, to the center, and back.</dd>
+          <dd>The periphery is informing without overburdening.</dd>
+
+          <dt>Use the minimum needed to solve the problem</dt>
+          <dd>What is the minimum amount of technology or content needed to solve the problem?</dd>
+          <dd>Slim features down so that the content does what it needs to do and no more.</dd>
+
+          <dt>Respect information zones</dt>
+          <dd>Develop sustainable modes of communication between web assets and people.</dd>
+        </dl>
+      </article>
+
+
+      <article id="patterns">
+        <h2>Avoid anti-patterns</h2>
+        <p>These are also known as &ldquo;dark patterns&rdquo;. Because of the connotation that dark equals bad or evil (such as in this case), and our anti-racism work, avoid using the word &ldquo;dark&rdquo; unless it&rsquo;s directly related to light or color.</p>
+        <dl>
+          <dt>Avoid anti-patterns</dt>
+          <dd>Stop tricking people, and make it easier for them to make their own choices.</dd>
+          <dd><q>A Dark Pattern is a user interface that has been carefully crafted to trick users into doing things, such as buying insurance with their purchase or signing up for recurring bills.</q> (Brignull, 2010)</dd>
+          <dd>Anti-patterns are used to boost profits, and trick people into completing actions they didn&rsquo;t notice or mean to. Be aware of the interactions built into web assets, talk openly about their ethics, and reduce dependencies on deception.</dd>
+
+          <dt>Technology should work even when it fails</dt>
+          <dd>Think about what happens if the technology fails.</dd>
+          <dd>Does it default to a usable state or does it break down completely?</dd>
+
+          <dt>Prioritize quality</dt>
+          <dd>Focus on producing and encouraging high quality, distraction-free content.</dd>
+
+          <dt>Provide exit points</dt>
+          <dd>Promote a calm experience by providing a sense of completion and giving people an option to disengage.</dd>
+
+          <dt>Establish holistic measures</dt>
+          <dd>Create ways of measuring success which incorporate more than just the bottom line.</dd>
+
+        </dl>
+      </article>
+
+    </section>
 
   </main>
 

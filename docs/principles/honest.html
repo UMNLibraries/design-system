@@ -138,7 +138,7 @@
       <ol>
         <li><a href="/design-system/">Home</a></li>
         <li><a href="/design-system/principles/">Principles</a></li>
-        <li><a href="/design-system/principles/responsible.html" aria-current="page">Responsible</a></li>
+        <li><a href="/design-system/principles/honest.html" aria-current="page">Honest</a></li>
       </ol>
     </nav>
 
@@ -147,109 +147,117 @@
   <nav aria-label="Content">
     <ul class="list-group list-links">
       <li><a href="/design-system/principles/index.html">Overview</a></li>
-      <li><a href="/design-system/principles/universal.html">Universal</a></li>
       <li>
-        <a href="/design-system/principles/accessible.html">Accessible</a>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
         <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
           <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
           <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
           <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/ethical.html">Ethical</a>
-        <ul>
-          <li><a href="/design-system/principles/ethical.html#attention">Value attention</a></li>
-          <li><a href="/design-system/principles/ethical.html#patterns">Avoid dark patterns</a></li>
-          <li><a href="/design-system/principles/ethical.html#humanity">Respect humanity</a></li>
-          <li><a href="/design-system/principles/ethical.html#privacy">Personal privacy</a></li>
-          <li><a href="/design-system/principles/ethical.html#security">Data security</a></li>
-        </ul>
+        <a href="/design-system/principles/honest.html" aria-current="page">Honest</a>
+        <!--<ul>
+        </ul>-->
       </li>
       <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
       <li>
         <a href="/design-system/principles/mindful.html">Mindful</a>
         <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
           <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
           <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/responsible.html" aria-current="page">Responsible</a>
+        <a href="/design-system/principles/private.html">Private</a>
         <ul>
-          <li><a href="/design-system/principles/responsible.html#optimization">Optimization</a></li>
-          <li><a href="/design-system/principles/responsible.html#performance">Web performance</a></li>
-          <li><a href="/design-system/principles/responsible.html#sustainable">Sustainable practices</a></li>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
         </ul>
       </li>
     </ul>
   </nav>
 
+
   <main id="main" class="m-0">
 
-    <h1>Responsible design</h1>
-    <div class="lead">
-      <p>Optimize design and be lightweight. Do not assume people have unlimited data. Optimized code reduces our carbon footprint and increases efficiency.</p>
+    <h1>Honest</h1>
 
-      <p>Sustainable design is design that is efficient and accessible. Creating good experiences for both mobile and desktop improves accessibility because it makes it easy for people to access a site no matter what hardware they have. Mobile-first web design also helps avoid loading large assets designed for desktop machines, which improves site speed and energy efficiency.</p>
-    </div>
+  <div class="lead">
+    <p>Be transparent.</p>
+    <p>Provide accurate content written with non-biased language. Clearly identify opinionated content. Fight disinformation, or the act of intentionally deceiving in content and algorithms.</p>
+  </div>
 
-    <p>Adapted from <a href="https://sustainablewebdesign.org/" aria-describedby="ext-site">sustainable web design</a> and <cite rel="author">Lara Callender Hogan</cite>&rsquo;s book <cite>Designing for performance: weighing aesthetics and speed</cite>.</p>
 
-    <article id="optimization">
-      <h2>Optimization</h2>
+    <!--<article id="design">
+      <h2>Design</h2>
+      <p>Adapted from Mike Monteiro&rsquo;s <a href="https://github.com/mmmonteiro/designethics/blob/master/en_US.md" aria-describedby="ext-site">designer&rsquo;s code of ethics</a>.</p>
       <dl>
-        <dt>Findability</dt>
-        <dd>The easier content is to find, the fewer pages a user has to load to locate information. This means fewer server requests are made and that unnecessary page elements &mdash; like photos and videos, which take up a lot of bandwidth &mdash; don&rsquo;t load, either. These small energy savings accumulate over time.</dd>
+        <dt>A designer is first and foremost a human being.</dt>
+        <dd>As a human being, designers are part of the social contract. Work done by a designer impacts other people and can either help or hurt them.</dd>
+        <dd>Every human being on this planet is obligated to do our best to leave this planet in better shape than we found it. Designers don&rsquo;t get to opt out.</dd>
 
-        <dt>Optimize images</dt>
-        <dd>Images make up the majority of total page weight. The number of image bytes has grown by more than 30% on the average web page in 2014, with little growth in image requests to match the increase. Optimizing images is the easiest big win.</dd>
-        <dd>Find the right balance of file size and quality for each image, look for ways to reduce the title number of image requests, and optimize image creation workflows. Refer to <a href="/design-system/design/imagery.html">image guidelines</a> for how to optimize well.</dd>
+        <dt>A designer is responsible for the work they put into the world</dt>
+        <dd>The work designers bring into the world is their legacy. It will outlive them. And it will speak for them.</dd>
+        <dd>When designers knowingly produce work that is intended to harm, they are abdicating our responsibility. When they ignorantly produce work that harms others because they didn&rsquo;t consider the full ramifications of that work, they are doubly guilty.</dd>
 
-        <dt>Optimize markup</dt>
-        <dd>Avoid excessive use of <code>&lt;div&gt;</code> elements. Use semantic HTML (for example, use the appropriate heading element rather than a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>). Using correct elements to improve  accessibility as well as search engine optimization (a search engine may better determine what content is if it is &ldquo;tagged&rdquo; correctly). It also allows browsers to apply enhancements such as auto-filling standard form fields.</dd>
+        <dt>A designer values impact over form</dt>
+        <dd>Fear the consequences of the work more than love the cleverness of the ideas.</dd>
 
-        <dt>Optimize styles</dt>
-        <dd>Remove unused styles and condense and combine styles. Reduce specificity in stylesheets to improve overriding issues as well as write more performant code.</dd>
+        <dt>A designer owes the people who hire them not just their labor, but their counsel</dt>
+        <dd>The designer&rsquo; job is not just to produce that work but to evaluate the impact of that work; to relay the impact of that work to the employer. And should that impact be negative, relay that to the client along with a way, if possible, to eliminate the negative impact of the work.</dd>
 
-        <dt>Optimize fonts</dt>
-        <dd>Use system or web native fonts to reduce requests and &ldquo;flash of unstyled content&rdquo; concerns. Where non-native fonts are selected, remove sets in the font set that will not be used (e.g. will a semi-bold italic set be used?).</dd>
+        <dt>A designer welcomes criticism</dt>
+        <dd>Encourage criticism in order to create better work in the future.</dd>
 
+        <dt>A designer strives to know their audience</dt>
+        <dd>Design is the intentional solution to a problem within a set of constraints. To know whether designers are properly solving those problems, meet the people who are having them.</dd>
+        <dd> Empathy is a pretty word for exclusion. To know how women would use something being designed, get a woman on the team that&rsquo;s designing it.</dd>
+
+        <dt>A designer does not believe in edge cases</dt>
+        <dd>For years people who weren&rsquo;t crucial to a products&rsquo; success were &ldquo;edge cases&rdquo;. Designers were marginalizing people, making a decision that there were people in the world whose problems weren&rsquo;t worth solving.</dd>
+
+        <dt>A designer is part of a professional community</dt>
+        <dd>Designers are part of a professional community and the way they do their job and handle themselves professionally affects everyone in that community.</dd>
+
+        <dt>A designer welcomes a diverse and competitive field</dt>
+        <dd>A designer keeps their ego in check, knows when to shut up and listen, is aware of their own biases and welcomes having them checked, and fights to make room for those who have been silenced.</dd>
+
+        <dt>A designer takes time for self-reflection</dt>
+        <dd>Take the time for self-reflection every few months. Evaluate recent decisions. Are you staying true to who you are? Have you veered off course? Correct it.</dd>
       </dl>
-    </article>
+    </article>-->
 
-    <article id="performance">
-      <h2>Web performance</h2>
-      <dl>
-        <dt>Performance optimization</dt>
-        <dd>Sustainability and page speed go hand-in-hand. An efficient website uses less processing power, which means that your site uses less energy and has a lower carbon footprint.</dd>
-        <dd>People expect to get the content they want instantaneously, and efficient pages load more quickly. This reduces your site&rsquo;s bounce rate and keeps people engaged and satisfied.</dd>
-
-        <dt>Reduce resource requests</dt>
-        <dd>Optimize the size and number of requests that a web page takes to render. Request reduction is desirable despite threading capabilities in HTTP/2, to support HTTP/1 browsers and clients as well as intentionality of energy consumption for transmitting data. Be mindful of any increase in requests to the server.</dd>
-
-        <dt>Implement HTTP/2</dt>
-        <dd>HTTP/2 allows multiple requests to run over a single connection as well as simultaneous downloads. This replaces HTTP/1&rsquo;s rule of only one outstanding request per TCP connection. Servers can push content to the browser instead of waiting for the browser to request individual page assets.</dd>
-        <dd>For more practical information about HTTP/2, review Tim Frick's Designing for sustainability, pp. 218-220.</dd>
-
-        <dt>Utilize caching</dt>
-        <dd>Cache assets aggressively where possible.</dd>
-        <dd>Caching is critical for site performance; assets that are cached do not need to be requested again from the server, saving a request. All static assets such as CSS files, Javascript files, images, PDFs, and fonts should be cached.</dd>
-    </article>
-
-    <article id="sustainable">
-      <h2>Sustainable practices</h2>
-      <p>Just as people do not deserve a reduced experience, our planet does not deserve to suffer the consequences of bad design and web delivery.</p>
-      <dl>
-        <dt>Delete outdated and unused web assets</dt>
-        <dd>Nothing should live forever, including digital files. Retention plans need to exist with frequent auditing of all assets. That which continues to &ldquo;live&rdquo; requires energy and storage.</dd>
-
-        <dt>Green hosting</dt>
-        <dd>The servers that store the files that make up web pages require power 24 hours a day, so the single most impactful thing you can do to move toward a more sustainable website is use a hosting provider that runs on 100% renewable energy.</dd>
-      </dl>
-
-      <p>Consider committing to the <a href="https://www.sustainablewebmanifesto.com/" aria-describedby="ext-site">sustainable web manifesto</a>.</p>
-    </article>
+    <!--<article>
+      <h2>Further reading</h2>
+      <blockquote>
+        <p>All people, regardless of origin, age, background, or views, possess a right to privacy and confidentiality in their library use. Libraries should advocate for, educate about, and protect people’s privacy, safeguarding all library use data, including personally identifiable information.</p>
+        <footer>&ndash;<cite>American Library Association</cite>, <a href="http://www.ala.org/advocacy/intfreedom/librarybill" aria-describedby="ext-site">Library Bill of Rights</a>, 7</footer>
+      </blockquote>
+      <blockquote>
+        <p>Design ethics concerns moral behavior and responsible choices in the practice of design. It guides how designers work with clients, colleagues, and the end users of products, how they conduct the design process, how they determine the features of products, and how they assess the ethical significance or moral worth of the products that result from the activity of designing.</p>
+        <footer>&ndash;<cite>Encyclopedia.com</cite>, <a href="https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/design-ethics" aria-describedby="ext-site">Design ethics</a></footer>
+      </blockquote>
+    </article>-->
 
   </main>
 

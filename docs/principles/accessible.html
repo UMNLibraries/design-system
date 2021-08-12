@@ -147,39 +147,51 @@
   <nav aria-label="Content">
     <ul class="list-group list-links">
       <li><a href="/design-system/principles/index.html">Overview</a></li>
-      <li><a href="/design-system/principles/universal.html">Universal</a></li>
       <li>
-        <a href="/design-system/principles/accessible.html" aria-current="page">Accessible</a>
+        <a href="/design-system/principles/accessible.html" aria-current="page">(Universally) Accessible</a>
         <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
           <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
           <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
           <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/ethical.html">Ethical</a>
-        <ul>
-          <li><a href="/design-system/principles/ethical.html#attention">Value attention</a></li>
-          <li><a href="/design-system/principles/ethical.html#patterns">Avoid dark patterns</a></li>
-          <li><a href="/design-system/principles/ethical.html#humanity">Respect humanity</a></li>
-          <li><a href="/design-system/principles/ethical.html#privacy">Personal privacy</a></li>
-          <li><a href="/design-system/principles/ethical.html#security">Data security</a></li>
-        </ul>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <!--<ul>
+        </ul>-->
       </li>
       <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
       <li>
         <a href="/design-system/principles/mindful.html">Mindful</a>
         <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
           <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
           <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
         </ul>
       </li>
       <li>
-        <a href="/design-system/principles/responsible.html">Responsible</a>
+        <a href="/design-system/principles/private.html">Private</a>
         <ul>
-          <li><a href="/design-system/principles/responsible.html#optimization">Optimization</a></li>
-          <li><a href="/design-system/principles/responsible.html#performance">Web performance</a></li>
-          <li><a href="/design-system/principles/responsible.html#sustainable">Sustainable practices</a></li>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
         </ul>
       </li>
     </ul>
@@ -188,22 +200,47 @@
 
   <main id="main" class="m-0">
 
-    <h1>Accessible design</h1>
+    <h1>(Universally) accessible</h1>
     <div class="lead">
-      <p>Many of the guidelines for each consideration help with other areas of consideration. Creating an accessible web truly does improve the web for everyone.</p>
+      <p>Deliver content and services where barriers to access are removed for all people to use regardless of technology, format, or methods of delivery.</p>
+      <p>Avoid building to one way of doing or being. Build to be understandable, in a way that allows us to be human and make errors.</p>
       <blockquote>
         <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
         <footer>&ndash;<cite>Tim Berners-Lee</cite>, W3C director and inventor of the World Wide Web</footer>
       </blockquote>
-      <blockquote>
-        <p>For someone like me &mdash; who spends about half of any given month coping with chronic migraines &mdash; the web feels downright hostile, even dangerous.</p>
-        <footer>&ndash;<cite>Eileen Webb</cite>, <a href="https://source.opennews.org/articles/motion-sick/" aria-describedby="ext-site">Your interactive makes me sick</a></footer>
-      </blockquote>
     </div>
 
-    <p>Adapted from the <a href="https://ukhomeoffice.github.io/accessibility-posters/" aria-describedby="ext-site">UK Home Office</a>.</p>
+    <section>
 
-    <section role="region" id="emotional">
+      <section id="universal">
+        <article>
+          <p>Adapted from <a href="http://universaldesign.ie/What-is-Universal-Design/The-7-Principles/" aria-describedby="ext-site">National Disability Authority&rsquo;s 7 principles of universal design</a>.</p>
+        <dl>
+          <dt>Equitable use</dt>
+          <dd>The design is useful and marketable to people with diverse abilities.</dd>
+
+          <dt>Flexibility in use</dt>
+          <dd>The design accommodates a wide range of individual preferences and abilities.</dd>
+
+          <dt>Simple and intuitive use</dt>
+          <dd>Use of the design is easy to understand, regardless of the person’s experience, knowledge, language skills, or current concentration level.</dd>
+
+          <dt>Perceptible information</dt>
+          <dd>The design communicates necessary information effectively to the person, regardless of ambient conditions or the person’s sensory abilities.</dd>
+
+          <dt>Tolerance for error</dt>
+          <dd>The design minimizes hazards and the adverse consequences of accidental or unintended actions.</dd>
+
+          <dt>Low physical effort</dt>
+          <dd>The design can be used efficiently and comfortably and with a minimum of fatigue.</dd>
+
+          <dt>Size and space for approach and use</dt>
+          <dd>Appropriate size and space is provided for approach, reach, manipulation, and use regardless of person’s body size, posture, or mobility.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="emotional">
       <h2>Emotional</h2>
 
       <article id="anxiety">
@@ -211,7 +248,7 @@
         <dl>
           <dt>Give users enough time to complete an action</dt>
           <dd>Don&rsquo;t rush people or set impractical time limits.</dd>
-          <dd>People with anxiety might take longer to complete something because they are cautious or fear getting it wrong. Only impose time limits when absolutely neccessary, and make sure any time limits on actions are generous.</dd>
+          <dd>People with anxiety might take longer to complete something because they are cautious or fear getting it wrong. Only impose time limits when absolutely necessary, and make sure any time limits on actions are generous.</dd>
 
           <dt>Explain what will happen after completing a service</dt>
           <dd>Don&rsquo;t leave people confused about next steps or timeframes.</dd>
@@ -219,7 +256,7 @@
 
           <dt>Make important information clear</dt>
           <dd>Don&rsquo;t leave people uncertain about the consequences of their actions.</dd>
-          <dd>People will become more anxious on services that have consequences for them personally. Clear, simple information is important. If the service needs to warn people about the consequences of their actions, make sure to give them enough information to make the correct decision, so they can continue confidently.</dd>
+          <dd>People will become more anxious about services that have consequences for them personally. Clear, simple information is important. If the service needs to warn people about the consequences of their actions, make sure to give them enough information to make the correct decision, so they can continue confidently.</dd>
 
           <dt>Give people the support they need to complete a service</dt>
           <dd>Don&rsquo;t make support or help hard to access.</dd>
@@ -232,8 +269,12 @@
       </article>
     </section>
 
-    <section role="region" id="cognitive">
+    <section id="cognitive">
       <h2>Cognitive and learning</h2>
+      <blockquote>
+        <p>For someone like me &mdash; who spends about half of any given month coping with chronic migraines &mdash; the web feels downright hostile, even dangerous.</p>
+        <footer>&ndash;<cite>Eileen Webb</cite>, <a href="https://source.opennews.org/articles/motion-sick/" aria-describedby="ext-site">Your interactive makes me sick</a></footer>
+      </blockquote>
 
       <article id="crisis">
         <h3 class="h2">Crisis</h3>
@@ -295,12 +336,12 @@
 
           <dt>Consider producing materials in other formats (for example, audio or video)</dt>
           <dd>Don&rsquo;t force people to remember things from previous pages &mdash; give reminders and prompts.</dd>
-          <dd>Many people with dyslexia experience anxiety about being able to read and retain the information given to them. They may feel pressure if they are presented with lots of information on separate screens. Some people are able to remember information better if have listened to it or watched on a video. Video, graphics, and photos help to create a visual memory.</dd>
+          <dd>Many people with dyslexia experience anxiety about being able to read and retain the information given to them. They may feel pressure if they are presented with lots of information on separate screens. Some people are able to remember information better if they have listened to it or watched a video. Video, graphics, and photos help to create a visual memory.</dd>
 
           <dt>Keep content short and simple, make clear prompts</dt>
           <dd>Don&rsquo;t rely on accurate spelling. Use autocorrect or provide suggestions.</dd>
           <dd>Fewer words are better for someone who has trouble reading. Use bullet points to help guide a person with dyslexia through content.</dd>
-          <dd>People with dyslexia may find spelling and words order challenging. Tools like predictive text, autocorrect, and speech recognition can help them get things right.</dd>
+          <dd>People with dyslexia may find spelling and word order challenging. Tools like predictive text, autocorrect, and speech recognition can help them get things right.</dd>
 
           <dt>Let people change the contrast between the background and text</dt>
           <dd>Don&rsquo;t put too much information in one place.</dd>
@@ -312,14 +353,14 @@
         <h2>Memory &amp; attention</h2>
         <dl>
           <dt>Avoid tasks split across multiple screens</dt>
-          <dd>People with memory or attention disorders can be easily stranded when tasks or instructions are split across multple screens.</dd>
-          <dd>If you must break your content up, be sure to clearly denote progress on each page, both what&rsquo;s already been done, and what&rsquo;s coming. When the task is complete, make this unmistakeably clear.</dd>
+          <dd>People with memory or attention disorders can be easily stranded when tasks or instructions are split across multiple screens.</dd>
+          <dd>If you must break your content up, be sure to clearly denote progress on each page, both what&rsquo;s already been done, and what&rsquo;s coming. When the task is complete, make this unmistakably clear.</dd>
 
           <dt>Tweak, don&rsquo;t redesign</dt>
-          <dd>Small, interative changes allow you to address needed changes more rapidly, while creating less disruption and cognitive stress.</dd>
+          <dd>Small, interactive changes allow you to address needed changes more rapidly, while creating less disruption and cognitive stress.</dd>
 
           <dt>Explain unavoidable acronyms or jargon the first time they appear on any page</dt>
-          <dd>Don&rsquo;t rely on people coming to your content with prior knowledge, be it instituional or contextual.</dd>
+          <dd>Don&rsquo;t rely on people coming to your content with prior knowledge, be it institutional or contextual.</dd>
           <dd>Avoiding acronyms and jargon wherever possible is best. When it cannot be avoided, define the term or abbreviation the first time it appears on every page, and then move forward with the truncated expression. People with memory or attention disorders may not retain that knowledge from day to day or page to page.</dd>
         </dl>
       </article>
@@ -340,7 +381,7 @@
       </article>
     </section>
 
-    <section role="region" id="physical">
+    <section id="physical">
       <h2>Physical</h2>
 
       <article id="dhh">
@@ -358,7 +399,7 @@
           <dd>Don&rsquo;t make complex layouts and menus.</dd>
           <dd>People who have English as their second language may find it tiring or difficult to read lots of text. A logical layout can help people judge what content they need to read in order to complete their task.</dd>
 
-          <dt>Break up content with sub-headings, images, and videos</dt>
+          <dt>Break up content with subheadings, images, and videos</dt>
           <dd>Don&rsquo;t make people read long blocks of content</dd>
           <dd>American Sign Language is a very visual language &mdash; using visuals instead of text may be of benefit to these people, given the right context. Long blocks of text are difficult to read for those whose first language is not English. Headers help to explain the purpose of the copy that follows.</dd>
 
@@ -443,6 +484,16 @@
           <dd>Don&rsquo;t write uninformative links and headings.</dd>
           <dd>Screenreaders can read out a list of all the headings or links on a page. This enables the person to jump to the desired item without listening to all the content. Heading links need to make sense out of context &mdash; a list of &ldquo;Read more&rdquo; links is meaningless. Instead, describe the target section so a decision can be made about if it is the one required.</dd>
         </dl>
+      </article>
+
+      <article>
+        <h2>Further reading</h2>
+        <p>Adapted from the <a href="https://ukhomeoffice.github.io/accessibility-posters/" aria-describedby="ext-site">UK Home Office</a>.</p>
+        <ul>
+          <li><a href="https://www.goodreads.com/book/show/39644200-mismatch" aria-describedby="ext-site">Mismatch: How Inclusion Shapes Design</a> by Kate Holmes</li>
+          <li><a href="https://www.goodreads.com/book/show/20640233-a-web-for-everyone" aria-describedby="ext-site">A Web for Everyone: Designing Accessible User Experiences</a> by Sarah Horton</li>
+          <li><a href="https://www.goodreads.com/book/show/12910715-designing-for-emotion" aria-describedby="ext-site">Designing for Emotion</a> by Aarron Walter</li>
+        </ul>
       </article>
     </section>
 
