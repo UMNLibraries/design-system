@@ -240,7 +240,7 @@
       <article>
         <h3>Design</h3>
         <ul>
-          <li>Do not provide a &ldquo;Clear&rdquo; or &ldquo;Reset&rdquo; button for data submission forms. &ldquo;Clear&rdquo; button should only be used for a form that, after posting without errors, retains data in the fields and be visually different than the &ldquo;Send&rdquo; button.</li>
+          <li>Do not provide a &ldquo;Clear&rdquo; or &ldquo;Reset&rdquo; button for data submission forms. &ldquo;Clear&rdquo; button should only be used for a form that, after posting without errors, retains data in the fields and is visually different from the &ldquo;Send&rdquo; button.</li>
           <li>Red text is used only for warnings and error messages.</li>
           <li>Upon successful form submission, provide a success message and path out of form or to the next step. Avoid success message page dead ends.</li>
           <li>Form validation requires both HTML and server (or javascript) detection processes. Utilize HTML regex patterns and required attributes and provide sufficient error messaging for a person to easily update.</li>
@@ -257,7 +257,7 @@
           <li><strong>Ensure form fields are visibly labeled.</strong></li>
           <li><strong>Make sure form fields have clearly defined boundaries</strong> or outlines so that people with cognitive disabilities know the size and location of the click target.</li>
           <li><strong>Do not use placeholder text in form fields</strong>. Placeholder text causes usability issues because it disappears when content is entered into the form field. Hints and instructions should be persistent and placed outside of the field.</li>
-          <li><strong>Provide highly visible and specific error states</strong>. Use multiple cues like color, icons, bold font weight, heavy border or outline, and helpful text to make sure users don&rsquo;'t overlook this critical information.</li>
+          <li><strong>Provide highly visible and specific error states</strong>. Use multiple cues like color, icons, bold font weight, heavy border or outline, and helpful text to make sure users don&rsquo;t overlook this critical information.</li>
         </ul>
 
         <p>Forms that employ inclusive design have a higher completion rate. To make it easy to navigate through the form, at minimum:</p>
@@ -417,7 +417,7 @@
         <h3>Required vs. optional</h3>
         <p>Clearly mark mandatory fields.</p>
         <p>If all fields are required, state &ldquo;All fields are required&rdquo; at the beginning of the form.</p>
-        <p>If logical, place all optional fields at the end of the form and label them &ldquo;(optional)&rdquo;. More importantly, if the field is optional, consider whether it is necessary to have on the form.</p>
+        <p>If logical, place all optional fields at the end of the form and label them &ldquo;(optional)&rdquo;. More importantly, if the field is optional, consider whether it is necessary to have it on the form.</p>
         <p>To identify required fields, use the following code:</p>
   <pre rel="HTML" class="code" translate="no">
   <code>
@@ -442,7 +442,7 @@
   the same <code>name</code> attribute, e.g. <code>&lt;input type="checkbox" name="set" /&gt; &lt;input type="checkbox" name="set" /&gt;</code>).</dd>
 
           <dt><code>color</code></dt>
-          <dd>Do not use. As of August 2019, the website has 85% support: IE11, Opera Mini, and IE Mobile have no support, as well as slightly older version of all major browsers.
+          <dd>Do not use. As of August 2019, the website has 85% support: IE11, Opera Mini, and IE Mobile have no support, as well as slightly older versions of all major browsers.
           <dd>An advanced <code>&lt;select&gt;</code> dropdown with color swatches and can open the <abbr>OS</abbr> or other internal color picker.</dd>
 
           <dt><code>date</code></dt>
@@ -454,11 +454,11 @@
           <dd>Combines the built in calendar widget with the time spinner set to <abbr>UTC</abbr> time zone. <code>datetime-local</code>  adds time zone variation. Not recommended due to accessibility and functionality issues.</dd>
 
           <dt><code>email</code></dt>
-          <dd>If email is required (<code>&lt;input type=”email” required /&gt;</code>), the browser itself may check for valid email formats. Multiple email addresses may be entered. On some mobile devices, a specialized virtual keyboard is available for email addresses.</dd>
+          <dd>If email is required (<code>&lt;input type="email" required /&gt;</code>), the browser itself may check for valid email formats. Multiple email addresses may be entered. On some mobile devices, a specialized virtual keyboard is available for email addresses.</dd>
 
           <dt><code>file</code></dt>
-          <dd>Use with caution. As of August 2019, main site has 96% support, most lack of support existing in mobile browsers. If file upload is critical to the form and is expected on mobile devices, use other methods.</dd>
-          <dd>Provides a &ldquo;Browse...&rdquo; button to search local device for a file to upload and includes a status statement such as &ldquo;No file selected.&rdquo;.</dd>
+          <dd>Use with caution. As of August 2019, the main site has 96% support, lack of support mostly exists in mobile browsers. If file upload is critical to the form and is expected on mobile devices, use other methods.</dd>
+          <dd>Provides a &ldquo;Browse...&rdquo; button to search the local device for a file to upload and includes a status statement such as &ldquo;No file selected.&rdquo;.</dd>
 
           <dt><code>hidden</code></dt>
           <dd>To pass necessary parameters the person does not need to see or input. Typical usage is to pass additional search parameters to a search engine.</dd>
@@ -477,10 +477,10 @@
           <dd>Allows a user to select only one in a set of radio buttons (radio inputs are grouped together by using the same <code>name</code> attribute, e.g. <code>&lt;input type="radio" name="set" /&gt; &lt;input type="radio" name="set" /&gt;</code>). Requires more than one radio option.</dd>
 
           <dt><code>range</code></dt>
-          <dd>When number does not need to be exact, range can be used to provide a &ldquo;slider&rdquo; interface with <code>min</code> and <code>max</code> values.</dd>
+          <dd>When the number does not need to be exact, range can be used to provide a &ldquo;slider&rdquo; interface with <code>min</code> and <code>max</code> values.</dd>
 
           <dt><code>search</code></dt>
-          <dd>Styled similarly to the <code>text</code> type. May be used to target search input fields for styling or behavior modifications. Has benefits such as changing mobile keyboard &ldquo;Go&rdquo; to &ldquo;Search&rdquo;, some browsers allow <code>Esc</code> to clear text, and some offer an &ldquo;x&rdquo; to clear the field. <a href="https://scottaohara.github.io/a11y_styled_form_controls/src/search/" aria=describedby="ext-site">More about styled search component</a>.</dd>
+          <dd>Styled similarly to the <code>text</code> type. May be used to target search input fields for styling or behavior modifications. Has benefits such as changing the mobile keyboard &ldquo;Go&rdquo; to &ldquo;Search&rdquo;, some browsers allow <code>Esc</code> to clear text, and some offer an &ldquo;x&rdquo; to clear the field. <a href="https://scottaohara.github.io/a11y_styled_form_controls/src/search/" aria=describedby="ext-site">More about &ldquo;styled search component&rdquo;</a>.</dd>
 
           <dt><code>submit</code></dt>
           <dd>Associate input and submit buttons with a form.</dd>
@@ -500,7 +500,7 @@
 
           <dt><code>week</code></dt>
           <dd>Do not use. See <code>date</code> support statement.</dd>
-          <dd>Opens the built in browser calendar widget with additional week selection column. The result is the year along with the week number (e.g. 2015-W23).</dd>
+          <dd>Opens the built in browser calendar widget with an additional week selection column. The result is the year along with the week number (e.g. 2015-W23).</dd>
         </ul>
 
         <p>Be mindful of what types are supported. Also be mindful of what data SHOULD be accepted in fields. For instance, make no assumptions about a person&rsquo;s name &mdash; whether they have a first, last, middle, non-hyphenated, ASCII-only name. Read <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" aria-describedby="ext-site">Kalzumeus&rsquo; article</a> about some assumptions we make about names.</p>
@@ -510,7 +510,7 @@
         <h3>Auto-complete and auto-suggest HTML features</h3>
         <p>Use autocomplete smartly. Include on every input, even with a basic <code>"on"</code> or <code>"off"</code> value.</p>
 
-        <p>Autocomplete is helpful if someone has saved their data to their browser for future use, which may quickly speed up the form process by pre populating the fields with the browser-saved content. This helps most people but especially those using assistive technology, with motor limitations, with attention concerns, and with cognitive limitations.</p>
+        <p>Autocomplete is helpful if someone has saved their data to their browser for future use, which may quickly speed up the form process by pre-populating the fields with the browser-saved content. This helps most people but especially those using assistive technology, with motor limitations, with attention concerns, and with cognitive limitations.</p>
 
         <p>To enable this feature more consistently across browsers, identify the input content type with semantic markup, <code>autocomplete</code>.</p>
 
@@ -565,7 +565,7 @@
 
       <article>
         <h3>Dates</h3>
-        <p>Do not use <code>select</code> or other dropdown tool. Entering the dates in with a keyboard is far quicker than navigating dropdown lists. If a datepicker is desired, do not make it the only method to provide the data; have it as a supplemental input method second to the input field.</p>
+        <p>Do not use <code>select</code> or other dropdown tools. Entering the dates with a keyboard is far quicker than navigating dropdown lists. If a datepicker is desired, do not make it the only method to provide the data; have it as a supplemental input method second to the input field.</p>
       </article>
 
       <article>
@@ -613,7 +613,7 @@
         <h3>Checkboxes and radio buttons</h3>
         <p>The <code>&lt;fieldset&gt;</code> surrounds the entire grouping of checkboxes or radio buttons. The <code>&lt;legend&gt;</code> provides a description for the grouping.</p>
 
-        <p>Some assistive technology reads the legend text for reach fieldset, so it should be brief and descriptive. This helps someone using assistive technology to understand the question they are answering with the group of checkboxes.</p>
+        <p>Some assistive technology reads the legend text for each fieldset, so it should be brief and descriptive. This helps someone using assistive technology to understand the question they are answering with the group of checkboxes.</p>
 
         <p>Adapted from <a href="https://a11y-style-guide.com/style-guide/section-forms.html" aria-describedby="ext-site">A11y Style Guide</a>,  <a href="https://www.a11ywithlindsey.com/blog/create-custom-keyboard-accesible-checkboxes" class="ext-site">create custom keyboard accessible checkboxes</a>, and <a href="https://www.a11ywithlindsey.com/blog/create-custom-keyboard-accessible-radio-buttons/" aria-describedby="ext-site">create custom keyboard accessible radio buttons</a>.</p>
 

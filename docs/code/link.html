@@ -223,7 +223,7 @@
 
       <article>
         <h3>Link syntax</h3>
-        <p>Links take the person to another page, it goes somewhere. If the page is external, the link must be identified thusly. Other website have different code structures that cause keyboard and screen reader navigators effort to learn. If the href is empty, consider making the anchor a <code>&lt;button&gt;</code>.</p>
+        <p>Links take the person to another page, it goes somewhere. If the page is external, the link must be identified thusly. Other websites have different code structures that cause keyboard and screen reader navigators effort to learn. If the href is empty, consider making the anchor a <code>&lt;button&gt;</code>.</p>
 
         <p>All links require an <code>href</code>. If the link does not make sense with an <code>href</code>, use the <code>&lt;button&gt;</code> element instead.</p>
         <p><code>a</code> elements may not be empty.</p>
@@ -251,9 +251,9 @@
           <dd>for email addresses (prefer web forms over exposing email addresses)</dd>
         </dl>
 
-        <p>Keep the underline to clearly indicate where the interactive area and avoid using color only to indicate interactiveness. Ensure it&rsquo;s visibly distinguishable from the surrounding content.</p>
+        <p>Keep the underline to clearly indicate the interactive area and avoid using color only to indicate interactiveness. Ensure it&rsquo;s visibly distinguishable from the surrounding content.</p>
 
-        <p>If a link is to a file that the browser will need to download, include the <code>download</code> attribute as well as the file format. The value of this attribute is the name the file will be called on that person&rsquo; local device, regardless of the file name on the server.</p>
+        <p>If a link is to a file that the browser will need to download, include the <code>download</code> attribute as well as the file format. The value of this attribute is the name the file will be called on that person&rsquo;s local device, regardless of the file name on the server.</p>
 
         <h4>Download example</h4>
         <div class="example">
@@ -281,7 +281,7 @@
 </pre>
         <h3>External link</h3>
         <p>Deprecated. Further discussion needed to determine how library websites might utilize this pattern.</p>
-        <p>External links have additional content applied to them to provide visual and screen reader cues that the behavior is different from internal links. The <code>ext-site</code> class adds a graphic icon after the text as well as add the described by language that it opens a different site.</p>
+        <p>External links have additional content applied to them to provide visual and screen reader cues that the behavior is different from internal links. The <code>ext-site</code> class adds a graphic icon after the text as well as adds the <code>aria-describedby</code> language that it opens a different site.</p>
 
         <div class="example">
           <a href="https://w3c.org" aria-describedby="ext-site">World Wide Web Consortium</a>
