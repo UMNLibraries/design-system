@@ -249,6 +249,15 @@
       <h2>Breadcrumbs</h2>
       <p>All pages except the homepage has breadcrumbs on websites. For single page applications, use breadcrumbs if feasible and adds meaning (improves understanding and the application supports save states).</p>
       <p>Breadcrumbs are hierarchically ordered information architecture, whether representative of a file structure or a virtual structure. Use an ordered list to present it. Breadcrumb navigations are commonly identified with <code>aria-label="Breadcrumb"</code>.</p>
+
+      <div class="example>"
+        <nav aria-label="Breadcrumb">
+         <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/about/contact" aria-current="page">Contact</a></li>
+         </ol>
+        </nav>
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Breadcrumb"</span><span class="nt">&gt;</span>
@@ -260,7 +269,7 @@
 <span class="nt">&lt;/nav&gt;</span>
 </code>
 </pre>
-
+      </div>
     </article>
 
     <article id="submenu">
@@ -272,7 +281,17 @@
       <p>The Libraries' Drupal website does not support sub-items in menus.</p>
 
       <div class="example">
-
+        <nav aria-label="Results">
+          <ul>
+            <li><a href="/results/1">Item 1</a></li>
+            <li><a href="/results/2">Item 2</a>
+              <ul>
+                <li><a href="/results/1/1">Sub-item 1</a></li>
+              </ul>
+            </li>
+            <li><a href="/results/3" aria-current="page">Item 3</a></li>
+          </ul>
+        </nav>
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Results"</span><span class="nt">&gt;</span>
@@ -299,7 +318,7 @@
 
       <p>The &ldquo;skip&rdquo; links may be used by visual or non-visual people, either with keyboards, screen readers, or other assistive technology. Because some people may be sighted, ensure the links are visible on focus. Ideally, the skip link is always visible, not only on focus.</p>
 
-      <div class="example">
+      <div class="example" style="position:relative;">
         <a href="#main" class="skip-link">Skip to main content</a>
 <pre rel="HTML" class="code" translate="no">
 <code>
@@ -324,12 +343,12 @@
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Results"</span><span class="nt">&lt;/nav&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/1"</span> <span class="na">rel=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/3"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/5"</span> <span class="na">rel=</span><span class="s">"next"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/9"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/1"</span> <span class="na">rel=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/3"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/5"</span> <span class="na">rel=</span><span class="s">"next"</span><span class="nt">&gt;</span>Next<span class="nt">&lt;/a&gt;</span>
+ <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/9"</span><span class="nt">&gt;</span>Last<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/nav&gt;</span>
 </code>
 </pre>
