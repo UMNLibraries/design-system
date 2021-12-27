@@ -298,8 +298,8 @@
         <h5><code>&lt;label&gt;</code> + <code>&lt;input&gt;</code></h5>
         <p>The most traditional approach to pairing a <code>label</code> with an <code>input</code> is to give the <code>input</code> element a unique <code>id</code> that the <code>label</code> can refer to with the <code>for</code> attribute.</p>
 <pre rel="HTML" class="code" translate="no"><code>
-<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
         <h5><code>&lt;input&gt;</code> embedded in <code>&lt;label&gt;</code></h5>
@@ -679,7 +679,7 @@
 
       <article id="cbrb">
         <h3>Checkboxes and radio buttons</h3>
-        <p>The <code>&lt;fieldset&gt;</code> surrounds the entire grouping of checkboxes or radio buttons. The <code>&lt;legend&gt;</code> provides a description for the grouping.</p>
+        <p>Use <code>&lt;fieldset&gt;</code> to surround the entire grouping of checkboxes or radio buttons. Use <code>&lt;legend&gt;</code> to provide a description (for example, the question) for the grouping.</p>
 
         <p>Some assistive technology reads the legend text for each fieldset, so it should be brief and descriptive. This helps someone using assistive technology to understand the question they are answering with the group of checkboxes.</p>
 
@@ -756,6 +756,7 @@
         <h4>Toggles</h4>
         <p>When presenting a yes/no question, a toggle may be a friendlier interface option.</p>
         <p>Toggle functionality and styles adapted heavily from <a href="http://adrianroselli.com/2019/03/under-engineered-toggles.html" aria-describedby="ext-site">Adrian Roselli&rsquo;s under engineered toggles</a>.</p>
+        <p>Toggles should also include textual indicators, such as &ldquo;no or yes&rdquo; or &ldquo;disabled or enabled&rdquo; for each state.</p>
 
         <div class="example">
           <input type="checkbox" name="agree" id="i-agree" class="toggle" />
@@ -786,7 +787,7 @@
         <h4>Basic text field</h4>
         <div class="example">
           <label for="t0">Name</label>
-          <input name="name" id="t0" type="text" />
+          <input name="t0" id="t0" type="text" />
         </div>
 
 <pre rel="HTML" class="code" translate="no"><code>
@@ -809,7 +810,7 @@
   <span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"currentColor"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;circle&gt;</span> <span class="na">cx=</span><span class="s">"8"</span> <span class="na">cy=</span><span class="s">"5"</span> <span class="na">r=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"8"</span> <span class="na">cy=</span><span class="s">"5"</span> <span class="na">r=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/g&gt;</span>
   <span class="nt">&lt;/svg&gt;</span>
   Please use your university email if available.
@@ -818,7 +819,7 @@
 </code></pre>
 
         <h4>File field</h4>
-        <p>Browsers make styling this difficult, and to create a similar experience to the default Javascript is required. If preferred, a recommended custom styling  option is at <a href="https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" aria-describedby="ext-site">styling and customizing file inputs the smart way</a>.</p>
+        <p>Browsers do not allow styling the file field, so to create a similar experience to the default Javascript is required. If preferred, a recommended custom styling option is at <a href="https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" aria-describedby="ext-site">styling and customizing file inputs the smart way</a>.</p>
         <div class="example">
           <label for="f1">Reading list</label>
           <p class="alert alert-inline" id="f1-hint">Accepted file types: PDF, DOCX</p>
@@ -833,11 +834,11 @@
         <h4>Number field</h4>
         <div class="example">
           <label for="n1">Number of copies needed</label>
-          <input name="copynum" id="n1" type="number" min="1" max="100" />
+          <input name="n1" id="n1" type="number" min="1" max="100" />
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"n1"</span><span class="nt">&gt;</span>Number of copies needed<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"copynum"</span> <span class="na">id=</span><span class="s">"n1"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"n1"</span> <span class="na">id=</span><span class="s">"n1"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
         <h4>Textarea</h4>
@@ -847,7 +848,7 @@
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"ta1"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"desc"</span> <span class="na">id=</span><span class="s">"ta1"</span><span class="nt">&gt;</span><span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"ta1"</span> <span class="na">id=</span><span class="s">"ta1"</span><span class="nt">&gt;</span><span class="nt">&lt;/textarea&gt;</span>
 </code></pre>
 
         <h4>Feedback</h4>
@@ -877,7 +878,7 @@
             </svg>
             Please use your university email if available.
           </p>
-          <input name="name" id="t2" type="text" aria-invalid="true" aria-describedby="t2-error t2-hint" />
+          <input name="t2" id="t2" type="text" aria-invalid="true" aria-describedby="t2-error t2-hint" />
         </div>
 
 <pre rel="HTML" class="code" translate="no"><code>
@@ -901,7 +902,7 @@
   <span class="nt">&lt;/svg&gt;</span>
   Please use your university email if available.
 <span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"t2"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">aria-invalid=</span><span class="s">"true"</span> <span class="na">aria-describedby=</span><span class="s">"t2-hint"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"t2"</span> <span class="na">id=</span><span class="s">"t2"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">aria-invalid=</span><span class="s">"true"</span> <span class="na">aria-describedby=</span><span class="s">"t2-hint"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
         <h5>Success</h5>
@@ -917,7 +918,7 @@
             </svg>
             Name is found in our system.
           </p>
-          <input name="name" id="t3" type="text" value="Goldy Gopher" aria-invalid="false" aria-describedby="t3-success" />
+          <input name="t3" id="t3" type="text" value="Goldy Gopher" aria-invalid="false" aria-describedby="t3-success" />
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"t3"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
@@ -930,7 +931,7 @@
  <span class="nt">&lt;/svg&gt;</span>
   Name is found in our system.
 <span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"t3"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Goldy Gopher"</span> <span class="na">aria-invalid=</span><span class="s">"false"</span> <span class="na">aria-describedby=</span><span class="s">"t3-success"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"t3"</span> <span class="na">id=</span><span class="s">"t3"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Goldy Gopher"</span> <span class="na">aria-invalid=</span><span class="s">"false"</span> <span class="na">aria-describedby=</span><span class="s">"t3-success"</span> <span class="nt">/&gt;</span>
 </code></pre>
       </article>
 
@@ -1060,30 +1061,55 @@
    <section id="formgroups">
      <h2>Form groups</h2>
       <article>
-        <h3>Search</h3>
+        <div class="example">
+          <h3>Search</h3>
 
-        <form action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" class="search">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <select name="target" aria-label="Resource" class="btn-secondary">
-                <option value="Primo">Libraries search</option>
-                <option value="PubMed">PubMed</option>
-                <option value="WorldCat">WorldCat</option>
-                <option value="UMedia">UMedia</option>
-                <option value="GoogleCustomSearch">Libraries website only</option>
-              </select>
+          <form action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" class="search">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <select name="target" aria-label="Resource" class="btn-secondary">
+                  <option value="Primo">Libraries search</option>
+                  <option value="PubMed">PubMed</option>
+                  <option value="WorldCat">WorldCat</option>
+                  <option value="UMedia">UMedia</option>
+                  <option value="GoogleCustomSearch">Libraries website only</option>
+                </select>
+              </div>
+              <input id="form-input-text" class="form-control" name="search" required="required" type="search" aria-label="Search" />
+              <div class="input-group-append">
+                <button type="submit" class="btn-ghost">
+                  <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
+                    <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
+                  </svg>
+                  <span class="visuallyhidden-mobile">Search</span>
+                </button>
+              </div>
             </div>
-            <input id="form-input-text" class="form-control" name="search" required="required" type="search" aria-label="Search" />
-            <div class="input-group-append">
-              <button type="submit" class="btn-ghost">
-                <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
-                  <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
-                </svg>
-                <span class="visuallyhidden-mobile">Search</span>
-              </button>
-            </div>
-          </div>
-        </form>
+          </form>
+
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"//stacks.lib.umn.edu/janus"</span> <span class="na">aria-label=</span><span class="s">"Search Libraries resources"</span> <span class="na">method=</span><span class="s">"get"</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"target"</span> <span class="na">aria-label=</span><span class="s">"Resource"</span> <span class="na">class=</span><span class="s">"btn-secondary"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Primo"</span><span class="nt">&gt;</span>Libraries search<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"PubMed"</span><span class="nt">&gt;</span>PubMed<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"WorldCat"</span><span class="nt">&gt;</span>WorldCat<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"UMedia"</span><span class="nt">&gt;</span>UMedia<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"GoogleCustomSearch"</span><span class="nt">&gt;</span>Libraries website only<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"form-input-text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">required=</span><span class="s">"required"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn-ghost"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"glyph glyph-search"</span> <span class="na">viewBox=</span><span class="s">"0 0 30 32"</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"32"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/svg&gt;</span>
+   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visuallyhidden-mobile"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+</span class="nt">&lt;/form&gt;</span>
+</code></pre>
+        </div>
       </article>
 
       <article>
