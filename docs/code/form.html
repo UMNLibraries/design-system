@@ -229,18 +229,18 @@
           <li>Do not ask for two or more pieces of personally identifiable information (PII).</li>
           <li>The form must be on a secure page (https) sent to a secure location (e.g. a password protected server on an internal network).</li>
           <ul>
-            <li>If the data being requested is critical, contains a lot of PII, and is duplicative of data already available in a database, offer the ability to the person to auto-fill from existing resources (requires log in) to avoid manually entering the data.</li>
+            <li>If the data being requested is critical, contains a lot of PII, or is duplicative of data already available in a database, utilize existing resources or databaess (requires log in) to avoid manually entering the data or offer to auto-fill fields that may be already stored in their browser.</li>
           </ul>
           <li>Ask only for critical data to keep the forms as brief as possible. Some data may not be needed in the initial form submission (it can be collected at a later stage of an interaction).</li>
           <li>Ensure the form speaks with one voice, despite questions from several different people or departments.</li>
-          <li>If a field is optional, it may not need to be a part of the form.</li>
+          <li>If a field is optional, it may not need to be a part of the form. Consider removing any non-required fields.</li>
         </ul>
       </article>
 
       <article>
         <h3>Design</h3>
         <ul>
-          <li>Do not provide a &ldquo;Clear&rdquo; or &ldquo;Reset&rdquo; button for data submission forms. &ldquo;Clear&rdquo; button should only be used for a form that, after posting without errors, retains data in the fields and is visually different from the &ldquo;Send&rdquo; button.</li>
+          <li>Do not provide a &ldquo;Clear&rdquo; or &ldquo;Reset&rdquo; button for data submission forms. A &ldquo;clear&rdquo; button should only be used for a form that, after posting without errors, retains data in the fields and is visually different from the &ldquo;Send&rdquo; button.</li>
           <li>Red text is used only for warnings and error messages.</li>
           <li>Upon successful form submission, provide a success message and path out of form or to the next step. Avoid success message page dead ends.</li>
           <li>Form validation requires both HTML and server (or javascript) detection processes. Utilize HTML regex patterns and required attributes and provide sufficient error messaging for a person to easily update.</li>
@@ -279,7 +279,7 @@
           <li>Don&rsquo;t force people to answer or choose an option that doesn&rsquo;t fit them.</li>
           <li>If you cannot explain to the person why data is asked for, don&rsquo;t ask for it.</li>
         </ul>
-        <p><a href="https://alistapart.com/article/design-for-real-life-excerpt/" aria-describedby="ext-site">Conduct a question protocol</a> to verify every piece of information you ask of a person is intentional and appropriate by asking:</p>
+        <p><a href="https://alistapart.com/article/design-for-real-life-excerpt/" aria-describedby="ext-site">Conduct a question protocol</a> to verify every piece of information asked of a person is intentional and appropriate by considering:</p>
         <ul>
           <li>Who within the organization uses the answer</li>
           <li>What they use them for</li>
@@ -298,8 +298,8 @@
         <h5><code>&lt;label&gt;</code> + <code>&lt;input&gt;</code></h5>
         <p>The most traditional approach to pairing a <code>label</code> with an <code>input</code> is to give the <code>input</code> element a unique <code>id</code> that the <code>label</code> can refer to with the <code>for</code> attribute.</p>
 <pre rel="HTML" class="code" translate="no"><code>
-<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"an-element"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"an-element"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"search"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"search"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
         <h5><code>&lt;input&gt;</code> embedded in <code>&lt;label&gt;</code></h5>
@@ -326,7 +326,7 @@
 </code></pre>
         <h4>Language notes</h4>
         <ul>
-          <li>Use sentence casing and keep labels to 1-2 words</li>
+          <li>Use sentence casing and keep labels to 1 or 2 words</li>
           <li>Use consistent labels. Check the glossary for standard terms. Standard fields:</li>
           <ul>
             <li>Name</li>
@@ -350,6 +350,25 @@
 
         <h4>Input group instructions</h4>
         <p>Use a <code>fieldset</code> to group related <code>input</code> elements together, and use the <code>aria-describedby</code> attribute to indicate the element with instructions.</p>
+        <div class="example">
+          <fieldset aria-describedby="date-hint" role="group">
+            <legend>
+              <h3>When was your ID issued?</h3>
+            </legend>
+            <p id="date-hint">Example, 01 08 2007</p>
+            <div class="row">
+              <label>
+                 Day <input id="date-day" name="day" type="number" pattern="[0-9]*">
+              </label>
+              <label>
+                Month  <input id="date-month" name="month" type="number" pattern="[0-9]*">
+              </label>
+              <label>
+                Year  <input id="date-year" name="year" type="number" pattern="[0-9]*">
+              </label>
+            </div>
+          </fieldset>
+        </div>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;fieldset</span> <span class="na">aria-describedby=</span><span class="s">"date-hint"</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;legend&gt;</span>
@@ -418,21 +437,51 @@
         <p>Clearly mark mandatory fields.</p>
         <p>If all fields are required, state &ldquo;All fields are required&rdquo; at the beginning of the form.</p>
         <p>If logical, place all optional fields at the end of the form and label them &ldquo;(optional)&rdquo;. More importantly, if the field is optional, consider whether it is necessary to have it on the form.</p>
-        <p>To identify required fields, use the following code:</p>
+        <p>Required fields must have <code>required</code> attribute as well as <code>aria-required="true"</code>. Some assistive technology does not correctly identify native <code>required</code> so the ARIA form is also necessary.</p>
+        <p>To identify required fields, use one of the following patterns:</p>
+        <h4>Pattern 1</h4>
+  <div class="example">
+    <p>Add the text &ldquo;required&rdquo; inside the label.</p>
+  <label>Name (required)<input type="text" required aria-required="true" /></label>
   <pre rel="HTML" class="code" translate="no">
   <code>
   <span class="nt">&lt;p&gt;</span>* All fields marked with an asterisk are <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">aria-describedby=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>Name <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">aria-describedby=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>Name <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">required</span> <span class="na">aria-described=</span><span class="s">"true"</span>  <span class="nt">/&gt;&lt;/label&gt;</span>
   </code>
   </pre>
+  </div>
+  <h4>Pattern 2</h4>
+  <div class="example">
+  <p>Insert content with CSS based on the <code>required</code> attribute.</p>
+  <style type="text/css">label + input[required] {content: " (required)";}</style>
+  <label for="input-1">Name</label>
+  <input id="input-1" type="text" required aria-required="true" />
+  <pre rel="HTML" class="code" translate="no">
+  <code>
+    <span class="nt">&lt;style</span> <span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>label + input[required] {content: " (required)";}<span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"input-1"</span><span class="nt">&gt;</span>Name<span class="nt">/&gt;&lt;/label&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">required</span> <span class="na">aria-described=</span><span class="s">"true"</span> <span class="nt">&lt;/input&gt;</span>
+  </code>
+  </pre>
+  </div>
+        <h4>Pattern 3</h4>
+  <div class="example">
+    <p>* All fields marked with an asterisk are <span id="req-hint">required</span>.</p>
+  <label aria-describedby="req-hint">Name <input type="text" required aria-required="true" /></label>
+  <pre rel="HTML" class="code" translate="no">
+  <code>
+  <span class="nt">&lt;p&gt;</span>* All fields marked with an asterisk are <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;label</span> <span class="na">aria-describedby=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>Name <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">required</span> <span class="na">aria-required=</span><span class="s">"true"</span>  <span class="nt">/&gt;&lt;/label&gt;</span>
+  </code>
+  </pre>
+  </div>
       </article>
 
       <article>
         <h3>Input types</h3>
         <ul>
           <li>Use <code>&lt;select&gt;</code> for pre-determined lists over 5 items. Use <code>multiple</code> attribute when the list replaces <code>checkbox</code> items.</li>
-          <li>For
-        <p>Choose the best input type, avoid using &ldquo;text&rdquo; as a default if better options exist. Available input types in HTML5:</p>
+          <li>Choose the best input type, avoid using &ldquo;text&rdquo; as a default if better options exist. Available input types in HTML5:
         <dl>
           <dt><code>button</code></dt>
           <dd>Adds button-like functionality to a form.</dd>
@@ -442,22 +491,22 @@
   the same <code>name</code> attribute, e.g. <code>&lt;input type="checkbox" name="set" /&gt; &lt;input type="checkbox" name="set" /&gt;</code>).</dd>
 
           <dt><code>color</code></dt>
-          <dd>Do not use. As of August 2019, the website has 85% support: IE11, Opera Mini, and IE Mobile have no support, as well as slightly older versions of all major browsers.
+          <dd>Use with caution. As of December 2021, global browser support is 96% (75% full support and additional 21% partial support): IE11 and Opera Mini have no support, as well as fairly older versions of all major browsers.
           <dd>An advanced <code>&lt;select&gt;</code> dropdown with color swatches and can open the <abbr>OS</abbr> or other internal color picker.</dd>
 
           <dt><code>date</code></dt>
-          <dd>Do not use. As of August 2019, the website has 88% support: <abbr>IE</abbr> 11, Safari, and Opera Mini have no support; Firefox and <abbr>iOS</abbr> Safari have partial support.</dd>
+          <dd>Use with caution. As of December 2021, global browser support is 96%. However, 21% is partial support primarily for no support of week or month in Firefox and Safari, and additionally no min, max, or step support in mobile Safari. No support for <abbr>IE</abbr> 11 and Opera Mini.</dd>
           <dd>Provides a browser&rsquo;s internal calendar tool without the need of javascript. Support and consistency is uneven so not recommended. Additional attributes may improve the experience by adding min and max dates in <abbr>ISO</abbr> format.</dd>
 
           <dt><code>datetime</code> and <code>datetime-local</code></dt>
-          <dd>Do not use. See <code>date</code> support statement.</dd>
+          <dd>Use with caution. See <code>date</code> support statement.</dd>
           <dd>Combines the built in calendar widget with the time spinner set to <abbr>UTC</abbr> time zone. <code>datetime-local</code>  adds time zone variation. Not recommended due to accessibility and functionality issues.</dd>
 
           <dt><code>email</code></dt>
           <dd>If email is required (<code>&lt;input type="email" required /&gt;</code>), the browser itself may check for valid email formats. Multiple email addresses may be entered. On some mobile devices, a specialized virtual keyboard is available for email addresses.</dd>
 
           <dt><code>file</code></dt>
-          <dd>Use with caution. As of August 2019, the main site has 96% support, lack of support mostly exists in mobile browsers. If file upload is critical to the form and is expected on mobile devices, use other methods.</dd>
+          <dd>Use with caution. As of December 2021, the main site has 96% support, lack of support mostly exists in mobile browsers. If file upload is critical to the form and is expected on mobile devices, use other methods.</dd>
           <dd>Provides a &ldquo;Browse...&rdquo; button to search the local device for a file to upload and includes a status statement such as &ldquo;No file selected.&rdquo;.</dd>
 
           <dt><code>hidden</code></dt>
@@ -503,7 +552,7 @@
           <dd>Opens the built in browser calendar widget with an additional week selection column. The result is the year along with the week number (e.g. 2015-W23).</dd>
         </ul>
 
-        <p>Be mindful of what types are supported. Also be mindful of what data SHOULD be accepted in fields. For instance, make no assumptions about a person&rsquo;s name &mdash; whether they have a first, last, middle, non-hyphenated, ASCII-only name. Read <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" aria-describedby="ext-site">Kalzumeus&rsquo; article</a> about some assumptions we make about names.</p>
+        <p>Be mindful of what types are supported. Also be mindful of what data <em>should</em> be accepted in fields. For instance, make no assumptions about a person&rsquo;s name &mdash; whether they have a first, last, middle, non-hyphenated, ASCII-only name. Read <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" aria-describedby="ext-site">Kalzumeus&rsquo; article &ldquo;Falsehoods programmers believe about names&rdquo;</a> about some assumptions we make about names.</p>
       </article>
 
       <article>
@@ -601,6 +650,25 @@
             <li><a href="/step2/">Step two</a></li>
             <li aria-current="step"><span>Step three</span></li>
           </ol>
+<pre rel="HTML" class="code" translate="no"><code>
+  <span class="nt">&lt;ol</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"1"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuetext=</span><span class="s">"Step 1 of 3"</span> <span class="na">aria-valuemax=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">aria-current=</span><span class="s">"step"</span><span class="nt">&gt;&lt;span&gt;</span>Step one<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span><span class="nt">&lt;span&gt;</span>Step two<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span&gt;</span>Step three<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+
+  <span class="nt">&lt;ol</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"2"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuetext=</span><span class="s">"Step 2 of 3"</span> <span class="na">aria-valuemax=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span&gt;</span>Step one<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">aria-current=</span><span class="s">"step"</span>&gt;</span><span class="nt">&lt;span&gt;</span>Step two<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span&gt;</span>Step three<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+
+  <span class="nt">&lt;ol</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"3"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuetext=</span><span class="s">"Step 3 of 3"</span> <span class="na">aria-valuemax=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;span&gt;</span>Step one<span class="nt">&lt;/span&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span>&gt;</span><span class="nt">&lt;span&gt;</span>Step two<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">aria-current=</span><span class="s">"step"</span><span class="nt">&gt;&lt;span&gt;</span>Step three<span class="nt">&lt;/span&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+</code></pre>
         </div>
 
       </article>
@@ -611,7 +679,7 @@
 
       <article id="cbrb">
         <h3>Checkboxes and radio buttons</h3>
-        <p>The <code>&lt;fieldset&gt;</code> surrounds the entire grouping of checkboxes or radio buttons. The <code>&lt;legend&gt;</code> provides a description for the grouping.</p>
+        <p>Use <code>&lt;fieldset&gt;</code> to surround the entire grouping of checkboxes or radio buttons. Use <code>&lt;legend&gt;</code> to provide a description (for example, the question) for the grouping.</p>
 
         <p>Some assistive technology reads the legend text for each fieldset, so it should be brief and descriptive. This helps someone using assistive technology to understand the question they are answering with the group of checkboxes.</p>
 
@@ -688,6 +756,7 @@
         <h4>Toggles</h4>
         <p>When presenting a yes/no question, a toggle may be a friendlier interface option.</p>
         <p>Toggle functionality and styles adapted heavily from <a href="http://adrianroselli.com/2019/03/under-engineered-toggles.html" aria-describedby="ext-site">Adrian Roselli&rsquo;s under engineered toggles</a>.</p>
+        <p>Toggles should also include textual indicators, such as &ldquo;no or yes&rdquo; or &ldquo;disabled or enabled&rdquo; for each state.</p>
 
         <div class="example">
           <input type="checkbox" name="agree" id="i-agree" class="toggle" />
@@ -718,7 +787,7 @@
         <h4>Basic text field</h4>
         <div class="example">
           <label for="t0">Name</label>
-          <input name="name" id="t0" type="text" />
+          <input name="t0" id="t0" type="text" />
         </div>
 
 <pre rel="HTML" class="code" translate="no"><code>
@@ -741,7 +810,7 @@
   <span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"currentColor"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;circle&gt;</span> <span class="na">cx=</span><span class="s">"8"</span> <span class="na">cy=</span><span class="s">"5"</span> <span class="na">r=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"8"</span> <span class="na">cy=</span><span class="s">"5"</span> <span class="na">r=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/g&gt;</span>
   <span class="nt">&lt;/svg&gt;</span>
   Please use your university email if available.
@@ -750,7 +819,7 @@
 </code></pre>
 
         <h4>File field</h4>
-        <p>Browsers make styling this difficult, and to create a similar experience to the default Javascript is required. If preferred, a recommended custom styling  option is at <a href="https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" aria-describedby="ext-site">styling and customizing file inputs the smart way</a>.</p>
+        <p>Browsers do not allow styling the file field, so to create a similar experience to the default Javascript is required. If preferred, a recommended custom styling option is at <a href="https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" aria-describedby="ext-site">styling and customizing file inputs the smart way</a>.</p>
         <div class="example">
           <label for="f1">Reading list</label>
           <p class="alert alert-inline" id="f1-hint">Accepted file types: PDF, DOCX</p>
@@ -765,11 +834,11 @@
         <h4>Number field</h4>
         <div class="example">
           <label for="n1">Number of copies needed</label>
-          <input name="copynum" id="n1" type="number" min="1" max="100" />
+          <input name="n1" id="n1" type="number" min="1" max="100" />
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"n1"</span><span class="nt">&gt;</span>Number of copies needed<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"copynum"</span> <span class="na">id=</span><span class="s">"n1"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"n1"</span> <span class="na">id=</span><span class="s">"n1"</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">min=</span><span class="s">"1"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
         <h4>Textarea</h4>
@@ -779,7 +848,7 @@
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
   <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"ta1"</span><span class="nt">&gt;</span>Description<span class="nt">&lt;/label&gt;</span>
-  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"desc"</span> <span class="na">id=</span><span class="s">"ta1"</span><span class="nt">&gt;</span><span class="nt">&lt;/textarea&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"ta1"</span> <span class="na">id=</span><span class="s">"ta1"</span><span class="nt">&gt;</span><span class="nt">&lt;/textarea&gt;</span>
 </code></pre>
 
         <h4>Feedback</h4>
@@ -809,7 +878,7 @@
             </svg>
             Please use your university email if available.
           </p>
-          <input name="name" id="t2" type="text" aria-invalid="true" aria-describedby="t2-error t2-hint" />
+          <input name="t2" id="t2" type="text" aria-invalid="true" aria-describedby="t2-error t2-hint" />
         </div>
 
 <pre rel="HTML" class="code" translate="no"><code>
@@ -833,7 +902,7 @@
   <span class="nt">&lt;/svg&gt;</span>
   Please use your university email if available.
 <span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"t2"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">aria-invalid=</span><span class="s">"true"</span> <span class="na">aria-describedby=</span><span class="s">"t2-hint"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"t2"</span> <span class="na">id=</span><span class="s">"t2"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">aria-invalid=</span><span class="s">"true"</span> <span class="na">aria-describedby=</span><span class="s">"t2-hint"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
         <h5>Success</h5>
@@ -849,7 +918,7 @@
             </svg>
             Name is found in our system.
           </p>
-          <input name="name" id="t3" type="text" value="Goldy Gopher" aria-invalid="false" aria-describedby="t3-success" />
+          <input name="t3" id="t3" type="text" value="Goldy Gopher" aria-invalid="false" aria-describedby="t3-success" />
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"t3"</span><span class="nt">&gt;</span>Name<span class="nt">&lt;/label&gt;</span>
@@ -862,7 +931,7 @@
  <span class="nt">&lt;/svg&gt;</span>
   Name is found in our system.
 <span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">id=</span><span class="s">"t3"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Goldy Gopher"</span> <span class="na">aria-invalid=</span><span class="s">"false"</span> <span class="na">aria-describedby=</span><span class="s">"t3-success"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"t3"</span> <span class="na">id=</span><span class="s">"t3"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">value=</span><span class="s">"Goldy Gopher"</span> <span class="na">aria-invalid=</span><span class="s">"false"</span> <span class="na">aria-describedby=</span><span class="s">"t3-success"</span> <span class="nt">/&gt;</span>
 </code></pre>
       </article>
 
@@ -992,30 +1061,55 @@
    <section id="formgroups">
      <h2>Form groups</h2>
       <article>
-        <h3>Search</h3>
+        <div class="example">
+          <h3>Search</h3>
 
-        <form action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" class="search">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <select name="target" aria-label="Resource" class="btn-secondary">
-                <option value="Primo">Libraries search</option>
-                <option value="PubMed">PubMed</option>
-                <option value="WorldCat">WorldCat</option>
-                <option value="UMedia">UMedia</option>
-                <option value="GoogleCustomSearch">Libraries website only</option>
-              </select>
+          <form action="//stacks.lib.umn.edu/janus" aria-label="Search Libraries resources" method="get" role="search" class="search">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <select name="target" aria-label="Resource" class="btn-secondary">
+                  <option value="Primo">Libraries search</option>
+                  <option value="PubMed">PubMed</option>
+                  <option value="WorldCat">WorldCat</option>
+                  <option value="UMedia">UMedia</option>
+                  <option value="GoogleCustomSearch">Libraries website only</option>
+                </select>
+              </div>
+              <input id="form-input-text" class="form-control" name="search" required="required" type="search" aria-label="Search" />
+              <div class="input-group-append">
+                <button type="submit" class="btn-ghost">
+                  <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
+                    <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
+                  </svg>
+                  <span class="visuallyhidden-mobile">Search</span>
+                </button>
+              </div>
             </div>
-            <input id="form-input-text" class="form-control" name="search" required="required" type="search" aria-label="Search" />
-            <div class="input-group-append">
-              <button type="submit" class="btn-ghost">
-                <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
-                  <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
-                </svg>
-                <span class="visuallyhidden-mobile">Search</span>
-              </button>
-            </div>
-          </div>
-        </form>
+          </form>
+
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"//stacks.lib.umn.edu/janus"</span> <span class="na">aria-label=</span><span class="s">"Search Libraries resources"</span> <span class="na">method=</span><span class="s">"get"</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-prepend"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"target"</span> <span class="na">aria-label=</span><span class="s">"Resource"</span> <span class="na">class=</span><span class="s">"btn-secondary"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Primo"</span><span class="nt">&gt;</span>Libraries search<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"PubMed"</span><span class="nt">&gt;</span>PubMed<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"WorldCat"</span><span class="nt">&gt;</span>WorldCat<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"UMedia"</span><span class="nt">&gt;</span>UMedia<span class="nt">&lt;/option&gt;</span>
+   <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"GoogleCustomSearch"</span><span class="nt">&gt;</span>Libraries website only<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"form-input-text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">required=</span><span class="s">"required"</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-append"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn-ghost"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"glyph glyph-search"</span> <span class="na">viewBox=</span><span class="s">"0 0 30 32"</span> <span class="na">width=</span><span class="s">"30"</span> <span class="na">height=</span><span class="s">"32"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/svg&gt;</span>
+   <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"visuallyhidden-mobile"</span><span class="nt">&gt;</span>Search<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+ <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre>
+        </div>
       </article>
 
       <article>

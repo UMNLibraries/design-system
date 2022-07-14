@@ -250,63 +250,6 @@
           <dd>This <a href="https://web.dev/native-lazy-loading" aria-describedby="ext-site">new attribute for native image lazy loading</a> is introduced in Chrome 76</dd>
         </dl>
       </article>
-
-    <section id="optimization">
-      <h2>Optimization</h2>
-      <article>
-        <h3>Manual photograph optimization</h3>
-        <p>Use a graphic editor of choice; these steps are written specifically for Photoshop but are possible in most editors.</p>
-        <ol>
-          <li>Size: 750px wide maximum with 90dpi (to determine width, investigate what the largest display will be on the page)
-            <ol>
-              <li>Photoshop > Image > Image Size</li>
-              <li>Resolution: 90 Pixels/Inch</li>
-              <li>Width: 750px Pixels (or less)</li>
-            </ol>
-          </li>
-          <li>Color: black and white unless an archival image
-            <ol>
-              <li>Photoshop > Image > Adjustments > Black and white</li>
-              <li>modifying each channel may increase file size, proceed only if necessary</li>
-            </ol>
-          </li>
-          <li>Blur: for images with main focal points (head shots, buildings, single objects with irrelevant background)
-            <ol>
-              <li>Filter > Blur Gallery > Iris Blur</li>
-              <li>Pull corner of blur zone so it&rsquo;s only slightly rounded</li>
-              <li>Set blur radius between 3px and 5px</li>
-            </ol>
-          </li>
-          <li>Save as: <abbr>JPG</abbr> format at &ldquo;8&rdquo; high quality
-            <ol>
-              <li>Progressive load for images &ldquo;below the fold&rdquo;</li>
-            </ol>
-          </li>
-          <li>Optimize the <abbr>JPG</abbr> file by loading it in  <a href="https://squoosh.app" aria-describedby="ext-site">squoosh.app</a> or <a href="https://kraken.io" aria-describedby="ext-site">Kraken</a> and saving the optimized version</li>
-        </ol>
-      </article>
-
-      <article>
-        <h3>Manual SVG optimization</h3>
-        <p>
-          Read more about optimization tricks in <a href="https://css-tricks.com/understanding-and-manually-improving-svg-optimization/" aria-describedby="ext-site">understanding and manually improving <abbr>SVG</abbr> optimization</a>.
-        </p>
-        <ol>
-          <li>Open file in Adobe Illustrator (or create a new one)</li>
-          <li>Modify artboard size to the smallest possible to work with
-            <ol>
-              <li>For icons, make a square size no bigger than 100 by 100, preferably around 32 by 32</li>
-              <li>For other illustrations, fit tightly to the graphic size</li>
-            </ol>
-          </li>
-          <li>Set the top left corner of the artboard to <code>0,0</code></li>
-          <li>Utilize more efficient shapes when possible, such as <code>circle</code>, <code>ellipse</code>, <code>line</code>, and <code>rect</code></li>
-          <li>When saving as an <abbr>SVG</abbr>, consider how precise the decimals need to be, the fewer the more efficient</li>
-          <li>Remove Adobe Illustrator comments and <code>fill</code> (which can be added back in with CSS if embedding into the HTML) in the <abbr>SVG</abbr> file</li>
-          <li>Ensure the code includes <code>viewBox</code> (should be <code>0,0,[32],[32]</code>, for example), <code>width</code>, <code>height</code></li>
-          <li>Optimize the remaining code running it through <a href="https://jakearchibald.github.io/svgomg/" aria-describedby="ext-site">SVGO</a></li>
-        </ol>
-      </article>
     </section>
 
 
@@ -359,7 +302,7 @@
         <h3 class="h2">Information images</h3>
 
         <div class="example">
-          <figure role="figure">
+          <figure>
             <picture>
               <source type="image/webp" srcset="/design-system/img/mississippi.webp" />
               <img src="/design-system/img/mississippi.jpg" alt="1876 Minneapolis map" />
@@ -368,7 +311,7 @@
           </figure>
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
-<span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"figure"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;figure</span><span class="nt">&gt;</span>
   <span class="nt">&lt;picture&gt;</span>
     <span class="nt">&lt;source</span> <span class="na">type=</span><span class="s">"image/webp"</span> <span class="na">srcset=</span><span class="s">"mississippi.webp"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"mississippi.jpg"</span> <span class="na">alt=</span><span class="s">"1876 Minneapolis map"</span> <span class="nt">/&gt;</span>
@@ -382,7 +325,7 @@
         <h2>Complex images</h2>
 
         <div class="example">
-          <figure role="group">
+          <figure>
             <picture>
               <source type="image/webp" srcset="/design-system/img/chart.webp" />
               <img src="/design-system/img/chart.png" alt="2014 first quarter attendance bar chart" />
@@ -412,29 +355,29 @@
           </figure>
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
-<span class="nt">&lt;figure</span> <span class="na">role=</span><span class="s">"group"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;figure</span><span class="nt">&gt;</span>
   <span class="nt">&lt;picture&gt;</span>
     <span class="nt">&lt;source</span> <span class="na">type=</span><span class="s">"image/webp"</span> <span class="na">srcset=</span><span class="s">"chart.webp"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"chart.png"</span> <span class="na">alt=</span><span class="s">"2014 first quarter attendance bar chart"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/picture&gt;</span>
-  <span class="nt">&lt;table</span> <span class="na">role=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-   <span class="nt">thead</span> <span class="na">role=</span><span class="s">"rowgroup"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Affiliate type<span class="nt">&lt;/th&gt;</span>
-      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">role=</span><span class="s">"columnheader"</span><span class="nt">&gt;</span>Count<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;table&gt;</span>
+   <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Affiliate type<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Count<span class="nt">&lt;/th&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
    <span class="nt">&lt;/thead&gt;</span>
-   <span class="nt">&lt;tbody</span> <span class="na">role=</span><span class="s">"rowgroup"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Green Library<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Faculty<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>1,334<span class="nt">&lt;/td&gt;</span>
+   <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Green Library<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Faculty<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>1,334<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
-    <span class="nt">&lt;tr</span> <span class="na">role=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Green Library<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Students<span class="nt">&lt;/td&gt;</span>
-      <span class="nt">&lt;td</span> <span class="na">role=</span><span class="s">"cell"</span><span class="nt">&gt;</span>23,988<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Green Library<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Students<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>23,988<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
    <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;/table&gt;</span>

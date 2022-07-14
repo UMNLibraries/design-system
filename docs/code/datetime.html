@@ -220,19 +220,20 @@
     <h1>Date and time</h1>
 
     <article>
-      <p>Represent dates and times following the Chicago Manual of Style.</p>
-      <p>Present hours fully spelled out as &ldquo;10:00 a.m.&rdquo;, with the exception for &ldquo;noon&rdquo; and &ldquo;midnight&rdquo; instead of &ldquo;12:00 a.m.&rdquo; and &ldquo;12:00 p.m.&rdquo;, which are more confusing.</p>
+      <p>Represent dates and times following the Chicago Manual of Style with some modification.</p>
+      <p>For times on the hour, do not include the minutes, for example as &ldquo;10 a.m.&rdquo;. Removing the &ldquo;:00&rdquo; reduces noise for assistive technology.</p>
+      <p>Include the minutes for any times that are not on the hour, such as &ldquo;1:30 p.m.&rdquo;. Use &ldquo;noon&rdquo; and &ldquo;midnight&rdquo; instead of their more confusing numerical counterparts &ldquo;12 a.m.&rdquo; and &ldquo;12 p.m.&rdquo;.</p>
       <p>Do not use a dash to represent a time or date range. Use the word &ldquo;to&rdquo;.</p>
       <p><a href="https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string" aria-describedby="ext-site">Valid time durations</a>.</p>
 
       <div class="example">
-        <time>10:00 a.m. to midnight</time>
+        <time>10 a.m. to midnight</time>
         <p>Libraries are closed for <time datetime="2019-01-21">Martin Luther King Day</time>.</p>
         <p>The event starts at <time datetime="13:00">1 p.m.</time></p>
       </div>
 
 <pre rel="HTML" class="code" translate="no"><code>
-<span class="nt">&lt;time&gt;</span>10:00 a.m. to midnight<span class="nt">&lt;/time&gt;</span>
+<span class="nt">&lt;time&gt;</span>10 a.m. to midnight<span class="nt">&lt;/time&gt;</span>
 <span class="nt">&lt;p&gt;</span>Libraries are closed for <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">"2019-01-21"</span><span class="nt">&gt;</span>Martin Luther King Day<span class="nt">&lt;/time&gt;</span>.<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;</span>The event starts at <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">"13:00"</span><span class="nt">&gt;</span>1 p.m.<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
 </code></pre>
