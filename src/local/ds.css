@@ -19,8 +19,7 @@
   margin:0 -1rem;
   padding: calc( 2 * 1rem);
   text-align: center;
-  background: url(../img/forest.svg) top center no-repeat !important;
-  background-size: cover;
+  background: url(../img/forest.svg) top center / cover no-repeat !important;
   margin-bottom: 2rem;
   width: calc(100% + 2rem);
 }
