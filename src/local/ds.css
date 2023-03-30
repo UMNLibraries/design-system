@@ -46,6 +46,12 @@
 nav[aria-label="Main"]>a:first-child {
   padding: 0.25rem 0.5rem;
 }
+nav[aria-label="Main"]>*:last-child {
+  margin-left: auto;
+}
+header .search {
+  width: auto;
+}
 
 /* EXPERIMENTAL */
 article > p,
