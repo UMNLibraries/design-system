@@ -14,156 +14,75 @@
   <script src="/design-system/search/s.js"></script>
   <script src="https://cse.google.com/cse.js?cx=002834015805923805805:c-0k--9bdkk"></script>
   <style>
-    .gsc-control-cse {
- font-family:arial, sans-serif
-}
-.gsc-control-cse .gsc-table-result {
- font-family:arial, sans-serif
-}
-.gsc-refinementsGradient {
- background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))
-}
-.gsc-control-cse {
- border-color:#FFFFFF;
- background-color:#FFFFFF
-}
-input.gsc-input,
-.gsc-input-box,
-.gsc-input-box-hover,
-.gsc-input-box-focus {
- border-color:#FFFFFF
-}
-.gsc-search-button-v2,
-.gsc-search-button-v2:hover,
-.gsc-search-button-v2:focus {
- border-color:#7A0019;
- background-color:#7A0019;
- background-image:none;
- filter:none
-}
-.gsc-search-button-v2 svg {
- fill:#FFFFFF
-}
-.gsc-tabHeader.gsc-tabhActive,
-.gsc-refinementHeader.gsc-refinementhActive {
- color:#CCCCCC;
- border-color:#CCCCCC;
- background-color:#FFFFFF
-}
-.gsc-tabHeader.gsc-tabhInactive,
-.gsc-refinementHeader.gsc-refinementhInactive {
- color:#CCCCCC;
- border-color:#CCCCCC;
- background-color:#FFFFFF
-}
-.gsc-webResult.gsc-result,
-.gsc-results .gsc-imageResult {
- border-color:#FFFFFF;
- background-color:#FFFFFF
-}
-.gsc-webResult.gsc-result:hover {
- border-color:#FFFFFF;
- background-color:#F0EFEE
-}
-.gs-webResult.gs-result a.gs-title:link,
-.gs-webResult.gs-result a.gs-title:link b,
-.gs-imageResult a.gs-title:link,
-.gs-imageResult a.gs-title:link b {
- color:#990021
-}
-.gs-webResult.gs-result a.gs-title:visited,
-.gs-webResult.gs-result a.gs-title:visited b,
-.gs-imageResult a.gs-title:visited,
-.gs-imageResult a.gs-title:visited b {
- color:#5B0013
-}
-.gs-webResult.gs-result a.gs-title:hover,
-.gs-webResult.gs-result a.gs-title:hover b,
-.gs-imageResult a.gs-title:hover,
-.gs-imageResult a.gs-title:hover b {
- color:#5B0013
-}
-.gs-webResult.gs-result a.gs-title:active,
-.gs-webResult.gs-result a.gs-title:active b,
-.gs-imageResult a.gs-title:active,
-.gs-imageResult a.gs-title:active b {
- color:#5B0013
-}
-.gsc-cursor-page {
- color:#990021
-}
-a.gsc-trailing-more-results:link {
- color:#990021
-}
-.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,
-.gs-fileFormatType {
- color:#333
-}
-.gs-webResult div.gs-visibleUrl {
- color:#606162
-}
-.gs-webResult div.gs-visibleUrl-short {
- color:#606162
-}
-.gsc-cursor-box {
- border-color:#FFFFFF
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-page {
- border-color:#CCCCCC;
- background-color:#FFFFFF;
- color:#CCCCCC
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
- border-color:#CCCCCC;
- background-color:#FFFFFF;
- color:#CCCCCC
-}
-.gsc-webResult.gsc-result.gsc-promotion {
- border-color:#FFF;
- background-color:#FFFFFF
-}
-.gsc-completion-title {
- color:#990021
-}
-.gsc-completion-snippet {
- color:#333
-}
-.gs-promotion a.gs-title:link,
-.gs-promotion a.gs-title:link *,
-.gs-promotion .gs-snippet a:link {
- color:#990021
-}
-.gs-promotion a.gs-title:visited,
-.gs-promotion a.gs-title:visited *,
-.gs-promotion .gs-snippet a:visited {
- color:#5B0013
-}
-.gs-promotion a.gs-title:hover,
-.gs-promotion a.gs-title:hover *,
-.gs-promotion .gs-snippet a:hover {
- color:#5B0013
-}
-.gs-promotion a.gs-title:active,
-.gs-promotion a.gs-title:active *,
-.gs-promotion .gs-snippet a:active {
- color:#5B0013
-}
-.gs-promotion .gs-snippet,
-.gs-promotion .gs-title .gs-promotion-title-right,
-.gs-promotion .gs-title .gs-promotion-title-right * {
- color:#333
-}
-.gs-promotion .gs-visibleUrl,
-.gs-promotion .gs-visibleUrl-short {
- color:#606162
-}
-.gcsc-find-more-on-google {
- color:#990021
-}
-.gcsc-find-more-on-google-magnifier {
- fill:#990021
-}
-  </style>
+    .gsc-control-cse, .gsc-control-cse .gsc-table-result {font-family:arial, sans-serif}
+#umnhf-h-search input{padding:0 1em;}
+.gs-result .gs-title,.gs-result .gs-title *,.gsc-results .gsc-cursor-box .gsc-cursor-page{color:#067286 !important;}
+.gs-result .gs-title:hover,.gs-result .gs-title:focus{color:#03343d !important;}
+.gcsc-branding{visibility:hidden !important;}
+.gsc-results .gsc-cursor-box .gsc-cursor-page{padding:1em;border:1px solid #067286;}
+.gsc-results .gsc-cursor-box .gsc-cursor-page:hover,.gsc-results .gsc-cursor-box .gsc-cursor-page:focus{background-color:#dadada;}
+::-webkit-input-placeholder{color:transparent;}
+:-moz-placeholder{color:transparent;}
+::-moz-placeholder{color:transparent;}
+:-ms-input-placeholder{color:transparent;}
+.gsc-control-searchbox-only{max-width:100%;margin:0.3em auto 0;padding:0;}
+form.gsc-search-box{border:none;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;padding:0 0 0 1em;box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);}
+form.gsc-search-box:hover{box-shadow:0 3px 8px 0 rgba(0,0,0,.2),0 0 0 1px rgba(0,0,0,.08);}
+header .gsc-control-searchbox-only{max-width:auto;margin:0;padding:0}
+header form.gsc-search-box{border:1px solid #d5d6d2;box-shadow:none;}
+header form.gsc-search-box:hover{box-shadow:none;}
+header .cse .gsc-search-button-v2,header .gsc-search-button-v2{padding:10px 12px;}
+.gsc-control-cse{max-width:100%;margin:0 auto;padding:3em 0;}
+.gsc-control-cse table,.gsc-control-cse table table,.gsc-control-cse table table tbody,.gsc-control-cse table table td,.gsc-control-cse table table tr,.gsc-control-cse table tbody,.gsc-control-cse table td,.gsc-control-cse table tr,form.gsc-search-box table.gsc-search-box,form.gsc-search-box table.gsc-search-box table,form.gsc-search-box table.gsc-search-box table tbody,form.gsc-search-box table.gsc-search-box table td,form.gsc-search-box table.gsc-search-box table tr,form.gsc-search-box table.gsc-search-box tbody,form.gsc-search-box table.gsc-search-box td,form.gsc-search-box table.gsc-search-box tr{margin:0;padding:0;table-layout:auto;border-collapse:unset;}
+.gsc-control-cse table tbody tr:nth-child(odd){background:unset;}
+.gsc-search-box-tools .gsc-search-box td.gsc-input{padding:0;}
+input.gsc-input{padding:.2em .3em;box-shadow:none;background:none;text-indent:0;margin:0;height:unset;}
+input#gsc-i-id1{background:none !important;}
+.cse .gsc-search-button-v2,.gsc-search-button-v2{padding:10px 27px;}
+button.gsc-search-button.gsc-search-button-v2,table.gsc-search-box{margin:0;border-radius:0;}
+a.gsib_a,a.gsst_a,a.gsst_b{padding:0;border-bottom:none;}
+.gsc-control-cse .gsc-table-result,.gsc-control-cse .gsc-table-result *{height:unset;font-family:inherit;}
+.gsc-result .gs-title,.gsc-result .gs-title *{height:unset;text-decoration:none;}
+.gsc-result .gs-title:hover,.gsc-result .gs-title :hover{background:transparent;}
+a.gs-title:link:visited,a.gs-title:visited{border-color:#067286;}
+.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b,.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b{border-bottom:1px solid #d5d6d2;}
+.gs-bidi-start-align.gs-snippet,.gs-fileFormat>.gs-fileFormat,.gs-per-result-labels1,.gsc-role,.gsc-table-cell-thumbnail.gsc-thumbnail{padding-left:8px;}
+.gsc-input-box{border:none;height:auto;}
+div.gsc-cursor-page.gsc-cursor-current-page{background:#dadada !important;}
+.gsc-input-box-focus,.gsc-input-box-hover,.gsc-search-box .gsc-input>input:hover{box-shadow:none;}
+.cse .gsc-webResult.gsc-result.gsc-promotion,.gsc-webResult.gsc-result.gsc-promotion{padding:0;}
+.gs-per-result-labels,.gcsc-more-maybe-branding-root{display:none;}
+table.gssb_c{margin:0;}
+table.gsc-completion-container tbody tr:nth-child(2n){background:none;border:none;}
+.search-menu{max-width:100%;margin:0 auto;display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;padding:0;}
+.search-menu__item{list-style:none;margin:0 .5em 0 0;padding:0;}
+a.search-menu__link{font-size:.85em;display:block;padding:.5em;border-bottom:4px solid transparent;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;color:#333;text-decoration:none;}
+a.search-menu__link:hover{background:transparent;border-bottom:4px solid #067286;}
+#search-web{color:#067286;font-weight:700;border-bottom:4px solid #067286;}
+.search_campus label{display:none;}
+@media screen and (min-width:400px){.search_campus label{padding-right:.5em;-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;display:block;}}
+.search_campus{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-content:baseline;-ms-flex-line-pack:baseline;align-content:baseline;margin:0 0 0 auto;font-size:.8em;}
+select#campus_select{-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;margin:0;}
+.search-results-area{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;max-width:100%;margin:0 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}
+@media screen and (min-width:760px){.search-results-area{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}}
+.search-results-area>div:first-of-type{width:100%;}
+@media screen and (min-width:760px){.search-results-area>div:first-of-type{width:100%;}}
+
+@-webkit-keyframes a{0%{-webkit-transform:rotate(0deg);}to{-webkit-transform:rotate(1turn);}}
+.gsc-webResult.gsc-result.gsc-promotion{background-color:#f0efee;}
+.gsc-result.gsc-promotion::before{content:"University of Minnesota message";}
+#gs_id50,table.gsc-above-wrapper-area-container{border:0;}
+.gsc-orderby{font-size:13px;}
+.gsc-selected-option-container,.gsc-selected-option{line-height:27px !important;}
+section.search-results-area{display:block;}
+form.gsc-search-box,.gsc-search-box-tools .gsc-search-box td.gsc-input,#gs_tti50,.gsib_b{background:white;}
+input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border:0;}
+.gsc-webResult.gsc-result.gsc-promotion{background-color:#ffde7a90;}
+.gsc-result.gsc-promotion::before{font-weight:bold;}
+
+.gs-bidi-start-align.gs-snippet {padding-left:0;}
+
+</style>
 </head>
 
 <body>
@@ -323,7 +242,7 @@ a.gsc-trailing-more-results:link {
 
   <main id="main" class="m-0">
 
-    <h1>Design system search</h1>
+    <h1>Libraries' design system search</h1>
 
     <article>
       <section class="color-block block-secondary">
