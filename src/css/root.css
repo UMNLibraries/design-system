@@ -12,9 +12,12 @@
   --col-primary-dark: #5b0013;
 
   --col-secondary: #fc3;
+  --col-secondary-mid-light: #fcebb4;
   --col-secondary-light: #ffde7a;
+  --col-secondary-mid-dark: #fde28c;
   --col-secondary-dark: #ffc20d;
   --col-secondary-darkest: #b88a00; /* use for borders to make WCAG 2.1 compliant for 1.4.11 */
+  --col-secondary-text: #5C4500;
   --col-secondary-hint: #fefefb;
 
   --col-avail: #34610f;
@@ -28,6 +31,7 @@
   --col-link-dark: #002d61;
 
   --col-text: #333;
+  --col-text-medium: #363636;
   --col-text-light: #5a5a5a;
 
   --col-bg-light: #fafafa;
@@ -56,6 +60,8 @@
   --m-norm: 2;
   --m-min: 1;
   --m-max: 5;
+  
+  --b-rad: 0.8rem;
 
   --p-min: 0.3;
   --p-norm: 0.5;
