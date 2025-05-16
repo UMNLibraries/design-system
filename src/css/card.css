@@ -236,8 +236,8 @@ body > footer .cards {
 /* horizontal card */
 .cards-x > * {
   display: grid !important;
-  grid-template-columns: 180px repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: minmax(1fr, 180px) repeat(3, 1fr);
+  grid-template-rows: auto auto; 
   border: 1px solid var(--col-bg-med-dark);
   padding: 0;
   margin-bottom: 1rem;

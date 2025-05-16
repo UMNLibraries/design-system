@@ -1,5 +1,5 @@
 code {
-  font-size: 1.2rem;
+  /*font-size: 1.2rem;*/
   background-color: #f0efee;
   display: inline-block;
   padding: 0 0.1rem;
@@ -74,22 +74,22 @@ code .cv {
 
 /* js keyword, key method */
 .kd, .k {
-  color: #66d9ef;
+  color: #0F7E95;
 }
 
 /* js key/selector */
 .nx {
-  color: #a6e22e;
+  color: #597E11;
 }
 
 /* js parameter */
 .px {
-  color: #e6db74;
+  color: #7E7415;
 }
 
 /* js operator */
 .o {
-  color: #f92672;
+  color: #E00656;
 }
 
 /* dark theme */
@@ -100,32 +100,32 @@ code.dark {
 
 /* new tag */
 code.dark .nt {
-  color: #f92672;
+  color: #E00656;
 }
 
 /* new attribute */
 code.dark .na {
-  color: #a6e22e;
+  color: #597E11;
 }
 
 /* source */
 code.dark .s {
-  color: #e6db74;
+  color: #7E7415;
 }
 
 /* comments */
 code.dark .c {
-  color: #86816b;
+  color: #77725F;
 }
 
 /* css selector */
 code.dark .cs {
-  color :#a6e22e;
+  color :#597E11;
 }
 
 /* code punctuation */
 code.dark .p {
-  color: #f8f8f2;
+  color: #777731;
 }
 
 /* selector type, class/id */
@@ -135,12 +135,12 @@ code.dark .ct {
 
 /* selector property */
 code.dark .cp {
-  color: #f8f8f2;
+  color: #777731;
 }
 
 /* css property value */
 code.dark .cv {
-  color: #ae81ff;
+  color: #8847FF;
 }
 
 /* js keyword, key method */
