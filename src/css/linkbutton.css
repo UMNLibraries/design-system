@@ -47,14 +47,14 @@ body > footer a:focus svg {
 }
 
 
-[aria-describedby="ext-site"]::after {
-    content: ' \21D7';
-    /*content: ' \21F1';*/
+/*[aria-describedby="ext-site"]::after {
+  content: ' \21F1';
+  content: ' \21D7';
 }
 
 .icons [aria-describedby="ext-site"]::after {
     content: '';
-}
+}*/
 
 a:hover code,
 a:focus code,

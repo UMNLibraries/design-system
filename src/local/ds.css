@@ -64,3 +64,8 @@ article > dl {
   margin-left: auto;
   margin-right: auto;
 }
+
+.cards li {
+  border: 1px solid;
+  border-radius: var(--b-rad);
+}
