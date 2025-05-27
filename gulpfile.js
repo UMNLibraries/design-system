@@ -6,6 +6,7 @@ const gulp        = require('gulp'),
       autoprefixer = require('autoprefixer'), //in case it helps postcss-preset-env
       cssbrief    = require('gulp-shorthand'), //shorthands css code where possible
       del         = require('del'), //removes files and folders
+      includes    = require('gulp-file-include'), //process includes
       log         = require('fancy-log'), //log output like gulp's
       plumber     = require('gulp-plumber'),
       postcss     = require('gulp-postcss'), //needed for polyfills
@@ -18,10 +19,37 @@ const gulp        = require('gulp'),
 
 // Removes processed files to be re-written
 gulp.task('pre-build', function(done) {
-  del('./docs/s/ds.css').then(paths => {
+  del('./docs/*.*').then(paths => {
     log('Deleted:', paths.join('\n'));
     done();
   });
+});
+
+gulp.task('write:includes', function() {
+  console.log('Process includes');
+  return gulp.src('.src/docs/**/*.html')
+    .pipe(plumber({
+      errorHandler: _onError
+    }))
+    //write includes in first so haml is processed
+    .pipe(includes({
+      prefix: '@@',
+      basepath: './',
+      indent: true
+    }))
+    .pipe(gulp.dest('./docs'))
+    //update file modified date
+    .pipe(touch);
+});
+
+//Image copy
+gulp.task('copy:images', function() {
+  console.log('Copy image files');
+  return gulp.src('.src/img/**/*.*')
+    .pipe(plumber({
+      errorHandler: _onError
+    }))
+    .pipe(gulp.dest('./docs'));
 });
 
 // CSS processing, add prefixes, & minify
@@ -65,7 +93,7 @@ gulp.task('webserver', function() {
 
 //*********** Primary tasks
 
-gulp.task('default', gulp.series('pre-build', 'css', 'postcss'));
+gulp.task('default', gulp.series('pre-build', 'write:includes', 'copy:images', 'css', 'postcss'));
 
 
 //*********** EOF
