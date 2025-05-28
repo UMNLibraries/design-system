@@ -68,6 +68,12 @@ nav[aria-label="University"] {
   flex-wrap: nowrap;
 }
 
+nav[aria-label="University"] .link-action {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1rem;
+  border-color: var(--col-bg-light);
+}
+
 nav > a {
   padding: 1rem;
   display: inline-block;
@@ -154,9 +160,7 @@ nav[aria-label="Libraries"] > a::after {
 }
 
 nav[aria-label="Libraries"] > a:hover::after,
-nav[aria-label="Libraries"] > a:focus::after,
-.nav-hor > a:hover::after,
-.nav-hor > a:focus::after {
+nav[aria-label="Libraries"] > a:focus::after {
   background-color: var(--col-secondary-dark);
 }*/
 
@@ -210,6 +214,11 @@ nav[aria-label="Breadcrumb"] li:first-child {
 nav[aria-label="Breadcrumb"] li:first-child a {
   color: #333;
   text-decoration: none;
+}
+
+nav[aria-label="Breadcrumb"] li:first-child a:hover,
+nav[aria-label="Breadcrumb"] li:first-child a:focus {
+  color: var(--col-bg-light);
 }
 
 nav[aria-label="Breadcrumb"] li:not(:first-child):before {
