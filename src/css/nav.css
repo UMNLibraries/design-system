@@ -6,12 +6,8 @@ nav {
   flex-wrap: wrap;
 }
 
-#umn-logo,
-#logo {
-  min-width: 170px;
-  max-width: 220px;
-  min-width: calc(170px + 1rem);
-  max-width: calc(220px + 1rem);
+#umn-logo, #logo {
+  width: clamp(calc(170px + 1rem),220px,calc(220px + 1rem));
 }
 
 #umn-logo svg {
@@ -26,7 +22,7 @@ nav {
   #umn-logo,
   #logo {
     width: 170px;
-    width: calc(170px + 1rem);
+    /*width: calc(170px + 1rem);*/
   }
 
   #umn-logo svg {
@@ -34,7 +30,6 @@ nav {
   }
 
   #logo svg {
-    height: 35px;
     height: 31px;
     padding-top: 5px;
   }
@@ -65,31 +60,16 @@ nav {
   fill: white;
 }
 
+#logo path {
+  fill: var(--col-text);
+}
+
 nav[aria-label="University"] {
   flex-wrap: nowrap;
 }
 
-nav[aria-label="Main"] > a:first-child {
-  padding: 0.9rem 1.25rem 0.9rem 0.5rem;
-  color: var(--col-text);
-  font-weight: bold;
-  font-size: var(--h2);
-}
-
-@media (max-width: 50rem) {
-  nav[aria-label="Main"] > a:first-child {
-    margin: 0 0.5rem;
-    padding: 0;
-  }
-}
-
-nav[aria-label="Main"] > a:first-child:hover,
-nav[aria-label="Main"] > a:first-child:focus {
-  color: white;
-}
-
 nav > a {
-  padding: 1.25rem;
+  padding: 1rem;
   display: inline-block;
   text-decoration: none;
   position: relative;
@@ -105,41 +85,16 @@ nav > a:hover, nav > a:focus {
   text-decoration: underline;
 }
 
-nav[aria-label="Main"],
-.nav-hor {
+nav[aria-label="Libraries"] {
   display: flex;
-}
-
-nav[aria-label="Main"] > a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--col-primary);
 }
 
 nav[aria-label="Libraries"] > a {
   color: var(--col-primary);
-}
-
-@media screen and (max-width: 50em) {
-  nav[aria-label="Main"] > a {
-    text-align: left;
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-
-  nav[aria-label="Main"] > a:first-child {
-    width: 100%;
-    white-space: nowrap;
-    font-size: var(--h3);
-  }
-
-  nav[aria-label="Main"] > a:not(:first-child) {
-    text-align: center;
-    background-color: var(--col-secondary-light);
-    flex-basis: 25%;
-    max-width: 25%;
-    border-right: 1px solid white;
-  }
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease-out 0.15s;
 }
 
 nav[aria-label="University"] > a:first-child {
@@ -147,25 +102,47 @@ nav[aria-label="University"] > a:first-child {
 }
 
 nav[aria-label="Libraries"] > a:first-child {
-  padding: 0 0.5rem;
+  padding: 0 0 0 0.5rem;
+  margin: 0;
+  height: 100%;
+}
+
+nav[aria-label="Libraries"] a svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 0.3rem 0 0;
+}
+
+@media (max-width: 50em) {
+  nav[aria-label="University"] > a {
+    padding: 0.5rem;
+  }
+}
+
+nav[aria-label="Libraries"] > a:first-child {
+  padding: 0 0.5rem 0 0;
+  height: 100%;
 }
 
 nav[aria-label="University"] > a:hover,
 nav[aria-label="University"] > a:focus,
 nav[aria-label="Libraries"] > a:hover,
 nav[aria-label="Libraries"] > a:focus {
-  color: var(--col-text);
-  background-color: var(--col-secondary);
+ color:var(--col-text);
+ background-color: var(--col-secondary-light);
 }
 
-nav[aria-label="Main"] > a:hover,
-nav[aria-label="Main"] > a:focus {
+#umn-logo:hover svg .white-fill {
+  fill: var(--col-text);
+}
+
+/*nav[aria-label="Libraries"] > a:hover,
+nav[aria-label="Libraries"] > a:focus {
   color: #fff;
   background-color: var(--col-primary);
 }
 
-nav[aria-label="Main"] > a::after,
-.nav-hor > a::after {
+nav[aria-label="Libraries"] > a::after {
   content: "";
   display: block;
   width: 100%;
@@ -176,13 +153,12 @@ nav[aria-label="Main"] > a::after,
   left: 0;
 }
 
-
-nav[aria-label="Main"] > a:hover::after,
-nav[aria-label="Main"] > a:focus::after,
+nav[aria-label="Libraries"] > a:hover::after,
+nav[aria-label="Libraries"] > a:focus::after,
 .nav-hor > a:hover::after,
 .nav-hor > a:focus::after {
   background-color: var(--col-secondary-dark);
-}
+}*/
 
 header > a[aria-current="location"]:not(#logo)::after,
 header > a[aria-current="location"]:not(#logo):hover::after,
@@ -200,13 +176,14 @@ header > a[aria-current="location"]:not(#logo):focus::after {
 /*** Breadcrumb nav ***/
 nav[aria-label="Breadcrumb"] {
   flex-basis: 100%;
-  padding: 1rem;
+  padding: .5rem;
   border-bottom:1px solid var(--col-bg-medium);
+  width: 100%;
 }
 
 @media (max-width: 50rem) {
   nav[aria-label="Breadcrumb"] {
-    padding: 0.5rem;
+    padding: 0.3rem;
   }
 }
 
@@ -220,12 +197,22 @@ nav[aria-label="Breadcrumb"] li {
   display: inline-block;
 }
 
-nav[aria-label="Breadcrumb"] li:before {
+nav[aria-label="Breadcrumb"] li:after {
   content: "\2000";
   position: absolute;
 }
 
-nav[aria-label="Breadcrumb"] li:not(:last-child):after {
+nav[aria-label="Breadcrumb"] li:first-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+nav[aria-label="Breadcrumb"] li:first-child a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav[aria-label="Breadcrumb"] li:not(:first-child):before {
   content: "";
   display: inline-block;
   margin-left: 0.75ch;
@@ -252,15 +239,48 @@ nav[aria-label="Content"] li > a {
   display: block;
 }
 
-nav[aria-label="Content"] li > a[aria-current] {
+/*nav a[aria-current] {
   background-color: var(--col-link);
   color: white;
   border-radius: 0;
   text-decoration: none;
-}
+}*/
 
 @media (min-width: 80em) { /* flex-basis shouldn't require this...*/
   nav[aria-label="Content"] {
     max-width: 20rem;
   }
+}
+
+nav[aria-label="In-page"] [aria-current] {
+  background-color: var(--col-secondary-light);
+  color: var(--col-text);
+}
+
+nav[aria-label="Pages"] a {
+  border: 1px solid var(--col-link);
+  border-radius: var(--b-rad);
+}
+
+nav[aria-label="University"] {
+  background-color: var(--col-primary);
+}
+
+nav[aria-label="University"] a {
+  color: var(--col-bg-light);
+}
+
+nav[aria-label="Libraries"], nav[aria-label="Main"] {
+  background-color: var(--col-bg-light);
+  border-bottom: 1px solid var(--col-secondary-light);
+}
+
+nav[aria-label="University"] a:first-of-type {
+  margin-right: auto;
+}
+
+nav[aria-label="Libraries"] form {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  color: var(--col-text);
 }
