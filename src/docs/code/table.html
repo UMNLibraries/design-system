@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tables | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Tables</li>
+      </ol>
+    </nav>
+
+  </header>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html" aria-current="page">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Tables</h1>
+
+    <article>
+      <p><a href="https://www.w3.org/WAI/tutorials/tables/" aria-describedby="ext-site">Tables</a> are specifically for tabular data. Tables are complex layouts; however, utilizing the proper code will dramatically improve navigation.</p>
+
+      <p>The table caption acts as a title for the table. Avoid using the <code>summary</code> attribute, which is deprecated.</p>
+
+      <p>The code is based on <a href="http://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html" aria-describedby="ext-site">Adrien Roselli&rsquo;s responsive table code</a> as well as <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role" aria-describedby="ext-site">Mozilla&rsquo;s rowgroup role best practices</a>.</p>
+
+      <p>Example table with column and row headings.</p>
+      <div class="example">
+        <style>
+          #table-1 tbody td:nth-of-type(1)::before { content: "Author: "; }
+          #table-1 tbody td:nth-of-type(2)::before { content: "Page count: "; }
+        </style>
+        <table id="table-1">
+         <caption>Books Read in 2019</caption>
+         <thead>
+          <tr>
+            <th scope="col" tabindex="0">Title</th>
+            <th scope="col" tabindex="0">Author</th>
+            <th scope="col" tabindex="0">Page count</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+            <th scope="row" tabindex="0">Don Quixote</th>
+            <td tabindex="0">Miguel de Cervantes</td>
+            <td tabindex="0">1023 pages</td>
+          </tr>
+          <tr>
+            <th scope="row" tabindex="0">Moby Dick</th>
+            <td tabindex="0">Herman Melville</td>
+            <td tabindex="0">720 pages</td>
+          </tr>
+         </tbody>
+        </table>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;style&gt;</span>
+ <span class="ct">#table-1 tbody td:nth-of-type(1)::before</span> <span class="p">{</span><span class="cp">content</span><span class="p">:</span> <span class="cv">"Author: "</span><span class="p">;}</span>
+ <span class="ct">#table-1 tbody td:nth-of-type(2)::before</span> <span class="p">{</span><span class="cp">content</span><span class="p">:</span> <span class="cv">"Page count: "</span><span class="p">;}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"table-1"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;caption&gt;</span>Books Read in 2019<span class="nt">&lt;/caption&gt;</span>
+ <span class="nt">&lt;thead</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Author<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Page count<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/thead&gt;</span>
+ <span class="nt">&lt;tbody&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Don Quixote<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Miguel de Cervantes<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>1023 pages<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">tabindex=</span><span class="s">"0"</span> <span class="na">scope=</span><span class="s">"row"</span><span class="nt">&gt;</span>Moby Dick<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span>&gt;</span>Herman Melville<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>720 pages<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre>
+
+      <p>Example table with column headings only.</p>
+      <div class="example">
+        <style>
+          #table-2 tbody td:nth-of-type(1)::before { content: "Rank: "; }
+          #table-2 tbody td:nth-of-type(2)::before { content: "Title: "; }
+          #table-2 tbody td:nth-of-type(3)::before { content: "Author: "; }
+        </style>
+        <table id="table-2">
+         <caption>New York Times Best Sellers 5 May 2019</caption>
+         <thead>
+          <tr>
+            <th scope="col" tabindex="0">Rank</th>
+            <th scope="col" tabindex="0">Title</th>
+            <th scope="col" tabindex="0">Author</th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+            <td tabindex="0">1<sup>st</sup></td>
+            <td tabindex="0">Redemption</td>
+            <td tabindex="0">David Baldacci</td>
+          </tr>
+          <tr>
+            <td tabindex="0">2<sup>nd</sup></td>
+            <td tabindex="0">The Mister</td>
+            <td tabindex="0">E L James</td>
+          </tr>
+         </tbody>
+        </table>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;style&gt;</span>
+ <span class="ct">#table-2 tbody td:nth-of-type(1)::before</span> <span class="p">{</span><span class="cp">content</span><span class="p">:</span> <span class="cv">"Rank: "</span><span class="p">;}</span>
+ <span class="ct">#table-2 tbody td:nth-of-type(2)::before</span> <span class="p">{</span><span class="cp">content</span><span class="p">:</span> <span class="cv">"Title: "</span><span class="p">;}</span>
+ <span class="ct">#table-2 tbody td:nth-of-type(3)::before</span> <span class="p">{</span><span class="cp">content</span><span class="p">:</span> <span class="cv">"Author: "</span><span class="p">;}</span>
+<span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;table</span> <span class="na">id=</span><span class="s">"table-2"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;caption&gt;</span>New York Times Best Sellers 5 May 2019<span class="nt">&lt;/caption&gt;</span>
+ <span class="nt">&lt;thead&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Rank<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">scope=</span><span class="s">"col"</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Author<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/thead&gt;</span>
+ <span class="nt">&lt;tbody&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>1<sup>st</sup><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>Redemption<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>David Baldacci<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>2<sup>nd</sup><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>The Mister<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">tabindex=</span><span class="s">"0"</span><span class="nt">&gt;</span>E L James<span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+ <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span>
+</code></pre>
+
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

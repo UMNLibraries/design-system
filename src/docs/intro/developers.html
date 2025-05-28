@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intro | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/intro/">Intro</a></li>
+        <li>Developers</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/intro/index.html">Overview</a></li>
+      <li><a href="/design-system/intro/editors.html">Editors</a></li>
+      <li><a href="/design-system/intro/developers.html" aria-current="page">Developers</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/intro/code-style.html">Code style guide</a></li>
+        <li><a href="/design-system/intro/contribute.html">Contributing</a></li>
+        <ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Developer checklist</h1>
+
+    <article>
+      <h2>Semantics</h2>
+      <ul class="list-group list-check mb-1">
+        <li>Use the <a href="/design-system/intro/code-style.html">coding style guide</a> to write consistent code</li>
+        <li>Do not commit the files if they contain secure data</li>
+        <li>Use the <a href="https://github.umn.edu/Libraries/example-repository" aria-describedby="ext-site"><code>example-repository</code> template</a> for creating GitHub repositories; it includes <code>.editorconfig</code>, <code>CODEOWNERS</code>, and <code>README.md</code>
+        <li>Follow the <a href="https://docs.google.com/document/d/119UZHc8daiWhw3KcSHI_BGybh9EvlXVc6ynP59_vLiE/edit?usp=sharing" aria-describedby="ext-site">GitHub repository naming conventions (Google Doc)</a></li>
+      </ul>
+
+      <h2>Frameworks and build processes</h2>
+      <ul class="list-group list-check mb-1">
+        <li>Use 3<sup>rd</sup> party frameworks sparingly; if possible, remove any unused features to reduce bulk</li>
+        <li>Minify and amalgamate CSS and JS, and remove unused/redundant code</li>
+      </ul>
+
+      <h2>Page structure</h2>
+      <ul class="list-group list-check mb-1">
+        <li>Include the <code>DOCTYPE</code> statement</li>
+        <li>Attribute a language to the entire page, i.e. <code>&lt;html lang="en-us"&gt;</code></li>
+        <li>Use [current page title] | [website name] for <code>&lt;title&gt;</code> (e.g. "Services | University of Minnesota Libraries")</li>
+        <li>All content inside <code>&lt;body&gt;</code> must be within a proper HTML region: <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>
+        <li>Each region has an accessible label associated with it if more than one of that type of region is present, i.e. <code>&lt;nav aria-label="Main"&gt;</code> and <code>&lt;nav aria-label="Breadcrumbs"&gt;</code></li>
+        <li>The <code>&lt;h1&gt;</code> is the descriptive heading for the content on that page</li>
+        <li>Headings must be properly nested; do not use out of order to achieve styles, i.e. <code>&lt;h3&gt;</code> is nested below an <code>&lt;h2&gt;</code></li>
+      </ul>
+
+      <h2>Custom components</h2>
+      <p>Adapted from Adrian Roselli&rsquo;s <a href="http://adrianroselli.com/2019/08/basic-custom-control-requirements.html" aria-describedby="ext-site">basic custom control requirements</a>.</p>
+      <ul class="list-group list-check mb-1">
+        <li>Internationalization support: correctly use <code>lang</code> attribute, has left-to-right (LTR) text support, uses writing modes (for more than LTR and RTL) where appropriate, using CSS logical properties</li>
+        <li>Keyboard: built-in keyboard support, uses defaults where known, includes obvious focus styles</li>
+        <li>System settings: supports Windows high contrast mode (WHCM), honors people&rsquo;s color scheme preferences (dark mode), honors reduced motion preferences, honors new user-preference-based feature queries as they become available</li>
+        <li>Scaling: does not disable zoom, does not fall apart on zoom, does not override custom font size settings, uses relative sizing (for lines, text, borders, spacing...)</li>
+        <li>ARIA: uses appropriate ARIA roles and attributes for its purpose, when no ARIA role fits treat it as a group of distinct controls with apprioriate ARIA roles for each smaller component, use ARIA states and properties (use expected ones for defined widgets), do not use ARIA to define native operating-system-style controls that are not a fit for a web control or web document</li>
+        <li>Clearly convey disabled, read-only, and required states along with name, role, and value</li>
+        <li>Maintain good contrast of content and contrast across use, states, and context</li>
+        <li>Tested (by real people) screen reader support (beyond compliance)</li>
+        <li>Use progressive enhancement</li>
+        <li>Include print styles</li>
+        <li>Does not have unnecessary dependencies (packages, libraries, images, styles...)</li>
+      </ul>
+
+      <h2>Inclusive design</h2>
+      <p>Adapted from <a href="https://github.com/Heydon/inclusive-design-checklist" aria-describedby="ext-site">Heydon Pickering&rsquo;s inclusive design checklist</a>.</p>
+      <ul class="list-group list-check">
+        <li>Content must all be keyboard and screen reader navigable</li>
+        <li>Make sure heading levels describe a logical section/subsection structure</li>
+        <li>Honor DNT (Do Not Track) header</li>
+        <li>Do not hijack standard scrolling behavior</li>
+        <li>Make sure main body (paragraph) text is no smaller than the default (user agent) size</li>
+        <li>Use relative units (em, rem, and ch), especially for font metrics</li>
+        <li>Support &ldquo;pinch zoom&rdquo; (remove <code>user-scalable=no</code> if present)</li>
+        <li>Make sure styles and scripts are not render blocking</li>
+        <li>Use content-based, not device-specific, media queries</li>
+        <li>Do not include third parties that compromise user privacy</li>
+        <li>Make sure controls do not elicit unexpected or jarring behavior</li>
+        <li>Do not recreate supported and expected browser behaviors with bespoke scripts</li>
+        <li>Support Windows high contrast mode (use images, not background images)</li>
+        <li>Provide large touch &ldquo;targets&rdquo; for interactive elements</li>
+      </ul>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

@@ -15,6 +15,11 @@
 @import "code.css";
 @import "../css/print.css";
 
+header {
+  width: 100%;
+  background: var(--col-bg-light);
+}
+
 .hero {
   margin:0 -1rem;
   padding: calc( 2 * 1rem);

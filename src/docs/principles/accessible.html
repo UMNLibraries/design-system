@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Principles | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/principles/">Principles</a></li>
+        <li>Accessible</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/principles/index.html">Overview</a></li>
+      <li>
+        <a href="/design-system/principles/accessible.html" aria-current="page">(Universally) Accessible</a>
+        <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
+          <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
+          <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
+          <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <ul>
+          <li><a href="/design-system/principles/honest.html#code">Journalistic ethics</a></li>
+          <li><a href="/design-system/principles/honest.html#misinformation">Mis- and dis-information</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
+      <li>
+        <a href="/design-system/principles/mindful.html">Mindful</a>
+        <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
+          <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
+          <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/private.html">Private</a>
+        <ul>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+
+    <h1>(Universally) accessible</h1>
+    <div class="lead">
+      <p>Deliver content and services where barriers to access are removed for all people to use regardless of technology, format, or methods of delivery.</p>
+      <p>Avoid building to one way of doing or being. Build to be understandable, in a way that allows us to be human and make errors.</p>
+      <blockquote>
+        <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+        <footer>&ndash;<cite>Tim Berners-Lee</cite>, W3C director and inventor of the World Wide Web</footer>
+      </blockquote>
+    </div>
+
+    <section>
+
+      <section id="universal">
+        <article>
+          <p>Adapted from <a href="https://universaldesign.ie/about-universal-design/the-7-principles" aria-describedby="ext-site">National Disability Authority&rsquo;s 7 principles of universal design</a>.</p>
+        <dl>
+          <dt>Equitable use</dt>
+          <dd>The design is useful and marketable to people with diverse abilities.</dd>
+
+          <dt>Flexibility in use</dt>
+          <dd>The design accommodates a wide range of individual preferences and abilities.</dd>
+
+          <dt>Simple and intuitive use</dt>
+          <dd>Use of the design is easy to understand, regardless of the person’s experience, knowledge, language skills, or current concentration level.</dd>
+
+          <dt>Perceptible information</dt>
+          <dd>The design communicates necessary information effectively to the person, regardless of ambient conditions or the person’s sensory abilities.</dd>
+
+          <dt>Tolerance for error</dt>
+          <dd>The design minimizes hazards and the adverse consequences of accidental or unintended actions.</dd>
+
+          <dt>Low physical effort</dt>
+          <dd>The design can be used efficiently and comfortably and with a minimum of fatigue.</dd>
+
+          <dt>Size and space for approach and use</dt>
+          <dd>Appropriate size and space is provided for approach, reach, manipulation, and use regardless of person’s body size, posture, or mobility.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="emotional">
+      <h2>Emotional</h2>
+
+      <article id="anxiety">
+        <h3 class="h2">Anxiety</h3>
+        <dl>
+          <dt>Give users enough time to complete an action</dt>
+          <dd>Don&rsquo;t rush people or set impractical time limits.</dd>
+          <dd>People with anxiety might take longer to complete something because they are cautious or fear getting it wrong. Only impose time limits when absolutely necessary, and make sure any time limits on actions are generous.</dd>
+
+          <dt>Explain what will happen after completing a service</dt>
+          <dd>Don&rsquo;t leave people confused about next steps or timeframes.</dd>
+          <dd>Services that end without any concrete guidance on what will happen next can increase people&rsquo;s anxiety. For example if someone requests a book, tell them the next steps and how long those steps normally take.</dd>
+
+          <dt>Make important information clear</dt>
+          <dd>Don&rsquo;t leave people uncertain about the consequences of their actions.</dd>
+          <dd>People will become more anxious about services that have consequences for them personally. Clear, simple information is important. If the service needs to warn people about the consequences of their actions, make sure to give them enough information to make the correct decision, so they can continue confidently.</dd>
+
+          <dt>Give people the support they need to complete a service</dt>
+          <dd>Don&rsquo;t make support or help hard to access.</dd>
+          <dd>A person with anxiety is more likely to need extra support to complete a service. People who cannot complete a service on their own might need support from someone else.</dd>
+
+          <dt>Let people check their answers before they submit them</dt>
+          <dd>Don&rsquo;t leave people questioning what answers they gave.</dd>
+          <dd>We can reassure people by giving them the opportunity to check and change their answers before they submit. Without this step, people are less informed, which could increase anxiety.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="cognitive">
+      <h2>Cognitive and learning</h2>
+      <blockquote>
+        <p>For someone like me &mdash; who spends about half of any given month coping with chronic migraines &mdash; the web feels downright hostile, even dangerous.</p>
+        <footer>&ndash;<cite>Eileen Webb</cite>, <a href="https://source.opennews.org/articles/motion-sick/" aria-describedby="ext-site">Your interactive makes me sick</a></footer>
+      </blockquote>
+
+      <article id="crisis">
+        <h3 class="h2">Crisis</h3>
+        <p>Adapted from <a href="https://medium.com/net-magazine/designing-for-crisis-9cab10b4c519" aria-describedby="ext-site">designing for crisis</a> (original source no longer available).</p>
+        <p>When people are in a state of shock, or are in a chaotic phase of their lives, the brain is paralysed. As a result, people have less mental bandwidth for things like processing and reasoning.</p>
+        <dl>
+          <dt>Run triage</dt>
+          <dd>Deprioritise any non-essential task and focus on the most important needs first. Make contact information highly visible.</dd>
+
+          <dt>Minimise the cognitive load</dt>
+          <dd>People experiencing crisis simply do not have any cognitive function to spare. Consider situational context: likely accessing content on a mobile device in difficult, complex settings.</dd>
+
+          <dt>Provide clarity</dt>
+          <dd>Those in crisis are among the most challenged and vulnerable people in society. We have a moral responsibility to do the hard work to make things simple for everyone. Services need to work for real humans in real life situations. Use design patterns that have been rigorously tested to ensure accessibility.</dd>
+
+          <dt>Write in plain English</dt>
+          <dd>Write at no greater than an 8<sup>th</sup> grade reading level so everyone can understand.</dd>
+
+          <dt>Aim not just for seamlessness, but for kindness</dt>
+          <dd>Kindness for people when they need it most.</dd>
+        </dl>
+      </article>
+
+      <article id="autistic">
+        <h3 class="h2">Autistic spectrum</h3>
+        <dl>
+          <dt>Use simple colors</dt>
+          <dd>Don&rsquo;t use bright contrasting colors.</dd>
+          <dd>Some people may experience sensitivity to sensory information such as colors which can cause anxiety or pain. Use a color contrast ratio of at least 4.5:1 for text and test it with people to get the right balance.</dd>
+
+          <dt>Write in plain English</dt>
+          <dd>Don&rsquo;t use figures of speech and idioms.</dd>
+          <dd>People on the spectrum perceive language differently and might take figures of speech and idioms literally. Write in clear, plain language to make content understood by more people.</dd>
+
+          <dt>Use simple sentences and bullets</dt>
+          <dd>Don&rsquo;t create a wall of text.</dd>
+          <dd>Lots of unbroken text can be hard to focus on making it frustrating to read. Break text down into simple sentences and use bullets for important points to make content easier to understand.</dd>
+
+          <dt>Make buttons descriptive</dt>
+          <dd>Don&rsquo;t make buttons vague and unpredictable.</dd>
+          <dd>Not knowing what will happen after clicking a button or link can cause people stress and anxiety. Use descriptive buttons and links to help people know what to expect and give them a sense of control.</dd>
+
+          <dt>Build simple and consistent layouts</dt>
+          <dd>Don&rsquo;t build complex and cluttered layouts.</dd>
+          <dd>Complex and cluttered layouts can be overwhelming for people to process. Make the layout predictable and consistent. Put common components such as navigation and search on the top of a page in a highly visible area.</dd>
+        </dl>
+      </article>
+
+      <article id="dyslexia">
+        <h2>Dyslexia</h2>
+        <dl>
+          <dt>Use images and diagrams to support text</dt>
+          <dd>Don&rsquo;t use large blocks of heavy text.</dd>
+          <dd>Some people with dyslexia have trouble focusing when reading on a screen. They can experience visual distortion where letters and words get jumbled. Large blocks of content can be intimidating. Use images to help illustrate the point and break up copy.</dd>
+
+          <dt>Align text to the left and keep a consistent layout</dt>
+          <dd>Don&rsquo;t underline words, use italics, or write in capitals.</dd>
+          <dd>A consistent layout will help someone with dyslexia navigate a screen. It will help draw their eyes to relevant content and build familiarity and confidence as they go. Serif fonts have hooks at the end of letter strokes that can cause letters to run together &mdash; the same is true for italics.</dd>
+
+          <dt>Consider producing materials in other formats (for example, audio or video)</dt>
+          <dd>Don&rsquo;t force people to remember things from previous pages &mdash; give reminders and prompts.</dd>
+          <dd>Many people with dyslexia experience anxiety about being able to read and retain the information given to them. They may feel pressure if they are presented with lots of information on separate screens. Some people are able to remember information better if they have listened to it or watched a video. Video, graphics, and photos help to create a visual memory.</dd>
+
+          <dt>Keep content short and simple, make clear prompts</dt>
+          <dd>Don&rsquo;t rely on accurate spelling. Use autocorrect or provide suggestions.</dd>
+          <dd>Fewer words are better for someone who has trouble reading. Use bullet points to help guide a person with dyslexia through content.</dd>
+          <dd>People with dyslexia may find spelling and word order challenging. Tools like predictive text, autocorrect, and speech recognition can help them get things right.</dd>
+
+          <dt>Let people change the contrast between the background and text</dt>
+          <dd>Don&rsquo;t put too much information in one place.</dd>
+          <dd>Many dyslexic people are sensitive to the bright, high contrast colors. They can make words swirl and blur together. Many people adjust their screen contrast or use colored filters on their screen to help ease this symptom.</dd>
+        </dl>
+      </article>
+
+      <article id="memory">
+        <h2>Memory &amp; attention</h2>
+        <dl>
+          <dt>Avoid tasks split across multiple screens</dt>
+          <dd>People with memory or attention disorders can be easily stranded when tasks or instructions are split across multiple screens.</dd>
+          <dd>If you must break your content up, be sure to clearly denote progress on each page, both what&rsquo;s already been done, and what&rsquo;s coming. When the task is complete, make this unmistakably clear.</dd>
+
+          <dt>Tweak, don&rsquo;t redesign</dt>
+          <dd>Small, interactive changes allow you to address needed changes more rapidly, while creating less disruption and cognitive stress.</dd>
+
+          <dt>Explain unavoidable acronyms or jargon the first time they appear on any page</dt>
+          <dd>Don&rsquo;t rely on people coming to your content with prior knowledge, be it institutional or contextual.</dd>
+          <dd>Avoiding acronyms and jargon wherever possible is best. When it cannot be avoided, define the term or abbreviation the first time it appears on every page, and then move forward with the truncated expression. People with memory or attention disorders may not retain that knowledge from day to day or page to page.</dd>
+        </dl>
+      </article>
+
+      <article id="motion">
+        <h2>Motion sensitivities</h2>
+        <p>Adapted from Eileen Webb, <a href="https://source.opennews.org/articles/motion-sick/" aria-describedby="ext-site">Your interactive makes me sick</a></p>
+        <dl>
+          <dt>Respect the physics</dt>
+          <dd>For each planned animation or interaction, ask, &ldquo;If this effect was stronger (much faster, or bouncier, or swoopier), would it be disorienting, or make me feel motion-sick?&rdquo; If the answer is yes, then rest assured plenty of people in the world&rdquo;s threshold is already low enough to be bothered.</dd>
+
+          <dt>Remember we call them &ldquo;readers&rdquo;</dt>
+          <dd>Part of respecting the context of the web is remembering that a large portion of your audience is interested in reading content. Not watching, not immersing, not &ldquo;experiencing&rdquo;: reading. For every person thrilled by a video or animated chart, there&rsquo;s another who would prefer a plain-text transcript.</dd>
+
+          <dt>Ask for consent</dt>
+          <dd>Provide controls on each individual element, allowing the person to decide whether they want any given video or animation to play and loop. Animated charts and infographics include a &ldquo;skip to the end-state&rdquo; shortcut. Any element that moves or animates needs to include a pause/stop button. Everybody&rsquo;s triggers are unique: a movement that bothers one person might be fine with another, or might be fine on their laptop but difficult on their phone. Providing element-level control means the person can stop any particular piece that&rsquo;s giving them trouble.</dd>
+        </dl>
+      </article>
+    </section>
+
+    <section id="physical">
+      <h2>Physical</h2>
+
+      <article id="dhh">
+        <h3 class="h2">Deaf or hard of hearing</h3>
+        <dl>
+          <dt>Write in plain English</dt>
+          <dd>Don&rsquo;t use complicated words or figures of speech.</dd>
+          <dd>People who use American Sign Language may consider it to be their first language and English to be their second language. Sentence structure differs between these two languages and therefore content should be kept simple to make it easier for ASL users to read.</dd>
+
+          <dt>Use subtitles or provide transcripts for videos</dt>
+          <dd>Don&rsquo;t put content in audio or video format only.</dd>
+          <dd>People who are Deaf, deaf, or hard of hearing will need to visually access videos. Do not rely on the people&rsquo;s ability to lipread to understand what is being said. Videos should include captions, a transcript, or an American Sign Language interpreter &mdash; the more of these included the more people&rsquo;s needs will be met.</dd>
+
+          <dt>Use a linear, logical layout</dt>
+          <dd>Don&rsquo;t make complex layouts and menus.</dd>
+          <dd>People who have English as their second language may find it tiring or difficult to read lots of text. A logical layout can help people judge what content they need to read in order to complete their task.</dd>
+
+          <dt>Break up content with subheadings, images, and videos</dt>
+          <dd>Don&rsquo;t make people read long blocks of content.</dd>
+          <dd>American Sign Language is a very visual language &mdash; using visuals instead of text may be of benefit to these people, given the right context. Long blocks of text are difficult to read for those whose first language is not English. Headers help to explain the purpose of the copy that follows.</dd>
+
+          <dt>Let people ask for their preferred communication support when booking appointments</dt>
+          <dd>Don&rsquo;t make telephone the only means of contact for people.</dd>
+          <dd>A d/Deaf or hard of hearing person may not be able to answer a phone call. Allow for people to specify how they want to be contacted. If a service requires a face to face interaction, design the interface to allow for the person to request communication support (and what kind of support that needs to be).</dd>
+        </dl>
+      </article>
+
+      <article id="lowvision">
+        <h2>Low vision</h2>
+        <dl>
+          <dt>Use a font with a high color contrast and a readable font size</dt>
+          <dd>Don&rsquo;t use low color contrasts and small font sizes.</dd>
+          <dd>Make the default appearance of text easy to read so that people with visual impairments can take in the information more quickly, particularly if assistive technology is not available.</dd>
+
+          <dt>Publish all information on web pages</dt>
+          <dd>Don&rsquo;t bury information in downloads.</dd>
+          <dd>HTML is the most accessible format because people can change the appearance of web pages to meet their needs &mdash; for example using high contrast colors or large fonts. The text can also be read aloud. Other formats often require extra steps and software to open, and can be harder to navigate and have less flexible display options.</dd>
+
+          <dt>Use a combination of color, shapes, and text</dt>
+          <dd>Don&rsquo;t only use color to convey meaning.</dd>
+          <dd>Color vision deficiency (color blindness) is a common condition which makes it difficult to identify certain colors. This can make it hard to understand elements like buttons and graphs which rely only on color to convey information. Use other signifiers like text labels or different styles of dashed lines in those cases.</dd>
+
+          <dt>Follow a linear, logical layout</dt>
+          <dd>Don&rsquo;t spread content all over a page.</dd>
+          <dd>Users of screen magnifiers can miss content like side columns if they are not expected or well sign posted. Particularly if they use the tab key to move between links and form elements. Place features in a logical order where people would expect them to be.</dd>
+          <dd>Some people choose to enlarge text as well as or instead of using magnification features. The design should flex accordingly, showing a mobile, single column layout.</dd>
+
+          <dt>Put buttons and notifications in context</dt>
+          <dd>Don&rsquo;t separate actions from their context.</dd>
+          <dd>When using a screen magnifier, it is disorientating for a person to hunt around the page for an element. Put things like help text, error messages, submit buttons, and notifications close to the thing they relate to.</dd>
+        </dl>
+      </article>
+
+      <article id="motor">
+        <h2>Physical or motor disabilities</h2>
+        <dl>
+          <dt>Make large clickable actions</dt>
+          <dd>Don&rsquo;t demand precision.</dd>
+          <dd>Buttons with a small interaction area can be frustrating for people with motor disabilities who may not be able to control a mouse or keyboard very well.</dd>
+
+          <dt>Give form fields space</dt>
+          <dd>Don&rsquo;t bunch unique interactions together.</dd>
+          <dd>Having lots of actions near each other increases the risk of a person taking the wrong action by mistake.</dd>
+
+          <dt>Design for keyboard or speech only use</dt>
+          <dd>Don&rsquo;t make dynamic content that requires a lot of mouse movement.</dd>
+          <dd>Some people with a motor disability may not use a mouse or may use an assistive technology that functions like the tab key on a keyboard. Make sure all content is accessible by keyboard only.</dd>
+
+          <!--<dt>Design with mobile and touchscreen in mind</dt>-->
+          <dt>Allow extra time to complete tasks</dt>
+          <dd>Don&rsquo;t have short time out windows.</dd>
+          <dd>Using a computer can be tiring for people with motor disabilities. They may need to take frequent breaks. A short time-out period means they will probably have to start again after taking a break.</dd>
+
+          <dt>Provide shortcuts</dt>
+          <dd>Don&rsquo;t tire people with lots of typing and scrolling.</dd>
+          <dd>It can be difficult for people who find controlling a computer hard to keep their place on long pages and form fields.</dd>
+        </dl>
+      </article>
+
+      <article id="screenreaders">
+        <h2>Screenreaders</h2>
+        <dl>
+          <dt>Describe images and provide transcripts for video</dt>
+          <dd>Don&rsquo;t only show information in an image or video.</dd>
+          <dd>People with severe sight impairments need a way of getting the information that visual elements on a page try to convey. They also need to know if there are any additional details they are missing. Provide text content and/or descriptions of: photos, illustrations, diagrams, graphs, animations, and videos so a screenreader can read it aloud. This is good for informing search engines too. Also use audio description in videos, either as a natural part of the narration or additional to it.</dd>
+
+          <dt>Follow a linear logical layout</dt>
+          <dd>Don&rsquo;t spread content all over a page.</dd>
+          <dd>A screenreader takes people through a web page in the order they appear in the HTML code. This might not be the same as how they appear visually on the page. It can be confusing if things are announced out of context or in the wrong sequence. And a person&rsquo;s flow can be interrupted because the element expected next, for example a submit button after an input field, is a lot later or earlier in the HTML, even though visually it is close by. Ensure that screenreaders move around pages in the correct order.</dd>
+
+          <dt>Structure content using HTML5</dt>
+          <dd>Don&rsquo;t rely on text size and placement for structure.</dd>
+          <dd>A screenreader will usually read out text with the same voice regardless of font size, weight or other styling. Screenreaders will also not convey the visual arrangement of content on a web page, and what it implies.</dd>
+          <dd>To interpret a web page effectively, people need elements like headings, form labels, and lists marked up correctly in HTML. Similarly, set the building blocks of the page (header, navigation, main content, and footer) with landmark tags, so the structure can be announced audibly, understood and jumped to.</dd>
+
+          <dt>Build for keyboard use only</dt>
+          <dd>Don&rsquo;t force mouse or screen use.</dd>
+          <dd>People who use screenreaders often cannot see a mouse pointer. Instead of a mouse, they use the keyboard to navigate, moving between elements such as links, form fields, and buttons. Make sure that all the actions on the page can be started and finished using only a keyboard. This includes actions such as closing notifications, getting help, controlling videos, and submitting forms.</dd>
+
+          <dt>Write descriptive links and headings</dt>
+          <dd>Don&rsquo;t write uninformative links and headings.</dd>
+          <dd>Screenreaders can read out a list of all the headings or links on a page. This enables the person to jump to the desired item without listening to all the content. Heading links need to make sense out of context &mdash; a list of &ldquo;Read more&rdquo; links is meaningless. Instead, describe the target so a decision can be made about if it is the one required.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h2>Further reading</h2>
+        <p>Adapted from the <a href="https://ukhomeoffice.github.io/accessibility-posters/" aria-describedby="ext-site">UK Home Office</a>.</p>
+        <ul>
+          <li><a href="https://www.goodreads.com/book/show/39644200-mismatch" aria-describedby="ext-site">Mismatch: How Inclusion Shapes Design</a> by Kate Holmes</li>
+          <li><a href="https://www.goodreads.com/book/show/20640233-a-web-for-everyone" aria-describedby="ext-site">A Web for Everyone: Designing Accessible User Experiences</a> by Sarah Horton</li>
+          <li><a href="https://www.goodreads.com/book/show/12910715-designing-for-emotion" aria-describedby="ext-site">Designing for Emotion</a> by Aarron Walter</li>
+        </ul>
+      </article>
+    </section>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+</body>
+</html>

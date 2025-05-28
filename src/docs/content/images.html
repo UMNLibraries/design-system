@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Content | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/content/">Content</a></li>
+        <li>Images</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/content/index.html">Overview</a></li>
+      <li><a href="/design-system/content/writing.html">Writing content</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/content/writing.html#titles">Titles and headings</a></li>
+          <li><a href="/design-system/content/writing.html#simple">Simplified writing</a></li>
+          <li><a href="/design-system/content/writing.html#voice">Voice</a></li>
+          <li><a href="/design-system/content/writing.html#links">Links and buttons</a></li>
+          <li><a href="/design-system/content/writing.html#people">Referring to people</a></li>
+          <li><a href="/design-system/content/writing.html#punctuation">Punctuation</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content/phrases.html">Terms and phrases</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/content/phrases.html#jargon">Jargon and acronyms</a></li>
+          <li><a href="/design-system/content/phrases.html#idioms">Idioms, metaphors, clich&eacute;s, and colloquialisms</a></li>
+          <li><a href="/design-system/content/phrases.html#exaggerated">Exaggerated and informal parts of speech</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content/images.html" aria-current="page">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/content/images.html#formats">Formats</a></li>
+          <li><a href="/design-system/content/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/content/images.html#purpose">Image purpose</a></li>
+          <li><a href="/design-system/content/images.html#alt">Alternative text</a></li>
+          <li><a href="/design-system/content/images.html#captions">Figure captions</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content/media.html">Media</a></li>
+      <li><a href="/design-system/content/files.html">Files</a></li>
+      <li><a href="/design-system/content/glossary.html">Glossary</a></li>
+    </ul>
+  </nav>
+  <main id="main" class="m-0">
+    <h1>Images</h1>
+
+    <div class="lead">
+      <p>Use images sparingly.</p>
+      <p>Images are a significant source of slow web experiences. In some cases, imagery enhances the message of the text. However, in many more cases an image adds little to the message and instead may provide an unintentional lesser experience.</p>
+    </div>
+
+    <article id="formats">
+      <h2>Formats</h2>
+      <dl>
+        <dt>Photography</dt>
+        <dd>Examples: building exteriors, person profiles, building spaces</dd>
+        <dd>Preferred: optimized progressive <abbr>JPG</abbr></dd>
+        <dd>Do not use: <abbr>BMP</abbr>, <abbr>TIFF</abbr></dd>
+
+        <dt>Illustrations</dt>
+        <dd>Examples: logos, label enhancements (e.g. an &ldquo;x&rdquo; next to word &ldquo;close&rdquo;), icons</dd>
+        <dd>Preferred: <abbr>SVG</abbr></dd>
+        <dd>Do not use: <abbr>GIF</abbr></dd>
+      </dl>
+
+      <p>Do not use animated <abbr>GIF</abbr>s or any animated images that lack controls (pause and stop) over the animation.</p>
+      <p>When adding images outside of Drupal, follow the <a href="/design-system/code/images.html#optimization">optimization techniques</a>, described in Photoshop CC steps.</p>
+    </article>
+
+    <section id="optimization">
+      <h2>Optimization</h2>
+      <article>
+        <h3>Manual photograph optimization</h3>
+        <p>Use a graphic editor of choice; these steps are written specifically for Photoshop but are possible in most editors.</p>
+        <ol>
+          <li>Size: 750px wide maximum with 90dpi (to determine width, investigate what the largest display will be on the page)
+            <ol>
+              <li>Photoshop > Image > Image Size</li>
+              <li>Resolution: 90 Pixels/Inch</li>
+              <li>Width: 750px Pixels (or less)</li>
+            </ol>
+          </li>
+          <li>Color: black and white unless an archival image
+            <ol>
+              <li>Photoshop > Image > Adjustments > Black and white</li>
+              <li>modifying each channel may increase file size, proceed only if necessary</li>
+            </ol>
+          </li>
+          <li>Blur: for images with main focal points (head shots, buildings, single objects with irrelevant background)
+            <ol>
+              <li>Filter > Blur Gallery > Iris Blur</li>
+              <li>Pull corner of blur zone so it&rsquo;s only slightly rounded</li>
+              <li>Set blur radius between 3px and 5px</li>
+            </ol>
+          </li>
+          <li>Save as: <abbr>JPG</abbr> format at &ldquo;8&rdquo; high quality
+            <ol>
+              <li>Progressive load for images &ldquo;below the fold&rdquo;</li>
+            </ol>
+          </li>
+          <li>Optimize the <abbr>JPG</abbr> file by loading it in  <a href="https://squoosh.app" aria-describedby="ext-site">squoosh.app</a> or <a href="https://kraken.io" aria-describedby="ext-site">Kraken</a> and saving the optimized version</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Manual SVG optimization</h3>
+        <p>
+          Read more about optimization tricks in <a href="https://css-tricks.com/understanding-and-manually-improving-svg-optimization/" aria-describedby="ext-site">understanding and manually improving <abbr>SVG</abbr> optimization</a>.
+        </p>
+        <ol>
+          <li>Open file in Adobe Illustrator (or create a new one)</li>
+          <li>Modify artboard size to the smallest possible to work with
+            <ol>
+              <li>For icons, make a square size no bigger than 100 by 100, preferably around 32 by 32</li>
+              <li>For other illustrations, fit tightly to the graphic size</li>
+            </ol>
+          </li>
+          <li>Set the top left corner of the artboard to <code>0,0</code></li>
+          <li>Utilize more efficient shapes when possible, such as <code>circle</code>, <code>ellipse</code>, <code>line</code>, and <code>rect</code></li>
+          <li>When saving as an <abbr>SVG</abbr>, consider how precise the decimals need to be, the fewer the more efficient</li>
+          <li>Remove Adobe Illustrator comments and <code>fill</code> (which can be added back in with CSS if embedding into the HTML) in the <abbr>SVG</abbr> file</li>
+          <li>Ensure the code includes <code>viewBox</code> (should be <code>0,0,[32],[32]</code>, for example), <code>width</code>, <code>height</code></li>
+          <li>Optimize the remaining code running it through <a href="https://jakearchibald.github.io/svgomg/" aria-describedby="ext-site">SVGO</a></li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="purpose">
+      <h2>Image purpose</h2>
+      <article>
+        <h3 class="h2">General guidance</h3>
+        <p>Determine if the image is decorative or more substantial. When selecting images, follow these standard practices.</p>
+        <dl>
+          <dt>Avoid placing text in or on top of an image</dt>
+          <dd>Text inside an image is not accessible and may become pixelated and difficult to read. Text on top of an image is more difficult to read with the background noise.</dd>
+
+          <dt>Do not use photos of people without photo releases</dt>
+          <dd>Respect individual rights to anonymity. <a href="https://drive.google.com/file/d/0B0oXM1kEpijPejR0RnZ0bTJmSXM/view" aria-describedby="ext-site">Photo releases (University-access only)</a> are available through Libraries Communications.</dd>
+
+          <dt>Avoid proprietary images from other places without consent</dt>
+          <dd>Taking images from the web that do not expressly state their copyright falls within the University Libraries’ use is prohibited.</dd>
+
+          <dt>Use accurate images</dt>
+          <dd>Avoid stock photo websites outside of the University-provided resources. Images must accurately represent spaces, services, and people.</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3 class="h2">Image types</h3>
+        <h4 class="h3">Decorative images</h4>
+        <p>From <a href="https://www.w3.org/WAI/tutorials/images/decorative/" aria-describedby="ext-site">WAI Decorative Images</a>:</p>
+        <p>Decorative images do not add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive.</p>
+
+        <ul>
+          <li><strong>Drupal</strong>: alt text and figcaption are blank</li>
+          <li><strong>Other</strong>: see <a href="/design-system/code/images.html#decorative">decorative image code</a></li>
+        </ul>
+
+        <h4 class="h3">Informative image</h4>
+        <p>From <a href="https://www.w3.org/WAI/tutorials/images/informative/" aria-describedby="ext-site">WAI Informative Images</a>:</p>
+        <p>Informative images convey a simple concept or information that can be expressed in a short phrase or sentence. They may be used to label other information (such as a phone for &ldquo;telephone&rdquo;), to supplement other information, to convey succinct information, or to convey an impression or emotion.</p>
+
+        <ul>
+          <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, use a short phrase or a couple words to describe the image</li>
+          <li><strong>Other</strong>: see <a href="/design-system/code/images.html#informative">informative image code</a></li>
+        </ul>
+
+        <h4 class="h3">Complex image (e.g. charts)</h4>
+        <p>From <a href="https://www.w3.org/WAI/tutorials/images/complex/" aria-describedby="ext-site">WAI Complex Images</a>:</p>
+        <p>Complex images contain substantial information than can be conveyed in a short phrase or sentence, such as graphs, charts, diagrams, and maps.</p>
+
+        <p>Present the visual and textual data together for best information dissemination. Provide both an image and a data table.</p>
+
+        <p>A more technical option is to merge the visual data and textual data displays for objects like charts, by building accessible <abbr>SVG</abbr> and coding the vectors to behave like a data table (&ldquo;2 in 1&rdquo;).</p>
+
+        <ul>
+          <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, short description of what the image is (e.g. &ldquo;2014 first quarter attendance bar chart&rdquo;); in &ldquo;figure caption&rdquo;, describe the content in context of the page (e.g. &ldquo;Display of monthly and total visitors by type &mdash; student, faculty, staff, and community member &mdash;  for the first quarter in 2014&rdquo;)</li>
+        	<li>Include a data table that mirrors the content of the visual representation (see tables)</li>
+          <li><strong>Other</strong>: see <a href="/design-system/code/images.html#complex">complex image code</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <article id="alt">
+      <h2>Alternative text</h2>
+      <p>For more on alternative text, read <a href="https://jakearchibald.com/2021/great-alt-text/" aria-describedby="ext-site">&ldquo;Writing great alt text: emotion matters&rdquo;</a> by Jake Archibald.</p>
+      <p>Alternative text, or alt text, is necessary for screen readers to &ldquo;describe&rdquo; images, so the content is accessible to people with impaired vision, or people that have disabled images for cognitive impairments or data limitations. Alt text needs to be as brief yet meaningful as possible given the surrounding text, rather than just a filename, for example.</p>
+
+      <p>Avoid any redundancy; those who have to listen to the web all day can hear a lot of unnecessary repetition. If the image contains something the surrounding text doesn&rsquo;t convey, describe it in the alt attribute.</p>
+
+      <p>More specifically, &ldquo;the alt attribute&rsquo;s value should never contain text that could be considered the image&rsquo;s <code>caption</code> [...] or <code>legend</code>. It is supposed to contain replacement text that could be used by users instead of the image; it is not meant to supplement the image.&rdquo; (<a href="https://html.spec.whatwg.org/multipage/images.html#alt" aria-describedby="ext-site">HTML alt spec</a>)</p>
+
+      <p>If the text included in the alt attribute benefits other people, use a visible text option such as a wrapping <code>&lt;figure&gt;</code> with accompanying <code>&lt;figcaption&gt;</code>.</p>
+
+      <p>In cases where the accompanying text already directly mirrors the content of the image, the alt text should be left blank, so that it isn&rsquo;t duplicated.</p>
+
+      <p>Avoid starting alt text with &ldquo;This is an image of&rdquo;, &ldquo;Photo&rdquo; or &ldquo;Photo of&rdquo;, &ldquo;A view of&rdquo;, &ldquo;You see&rdquo;, &ldquo;Screenshot of&rdquo;, or &ldquo;Thumbnail&rdquo;.</p>
+
+      <p>Use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" aria-describedby="ext-site">alt decision tree</a> to determine how to write alt text.</p>
+
+      <h2>Example</h2>
+      <p>&ldquo;PNRs304.jpg&rdquo; (no)<br />
+        vs.<br />
+        &ldquo;Screenshot from Parks and Rec&rdquo; (better)<br />
+        vs.<br />
+        &ldquo;Screenshot from Parks and Rec&rdquo; with a <code>&lt;figcaption&gt;</code> element including the text: A self-referential screencap from Parks &amp; Recreation, showing character Tom Haverford looking at an uncaptioned photo of himself. The subtitle reads, &ldquo;What is he thinking?&rdquo; (yes)
+      </p>
+    </article>
+
+    <article id="caption">
+      <h2>Figure captions</h2>
+      <p>Captions are visible, and the text is not italicized to improve readability. To distinguish it from surrounding text, both the image and caption are centered on the page when not full width, and the caption has a 90% size.</p>
+      <ul>
+        <li>Adding captions optimizes search results as well as accessibility.</li>
+        <li>The caption adds context to the image, not just duplicates what the reader already sees.</li>
+        <li>Captions are written in complete sentences with who, what, where, when and (sometimes) why.</li>
+        <li>Target length for captions is no more than two short sentences.</li>
+        <li>Acknowledge the person who took the photo or the image source. Use the following syntax for acknowledgement: &ldquo;Photo courtesy of [x].&rdquo;</li>
+      </ul>
+
+      <p><a href="https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html" aria-describedby="ext-site">Captions are not a substitute for <code>alt</code> text</a>. &ldquo;If an image is given an empty alt, then the <code>&lt;figcaption&gt;</code> is in effect describing nothing. And that doesn&rsquo;t make much sense, does it?&rdquo;  When <code>&lt;figure&gt;</code> is used, <code>alt</code> text is required (no empty attribute).</p>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

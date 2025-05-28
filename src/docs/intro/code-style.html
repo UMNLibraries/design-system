@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intro | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/intro/">Intro</a></li>
+        <li><a href="/design-system/intro/developers.html">Developers</a></li>
+        <li>Code style guide</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/intro/index.html">Overview</a></li>
+      <li><a href="/design-system/intro/editors.html">Editors</a></li>
+      <li><a href="/design-system/intro/developers.html">Developers</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/intro/code-style.html" aria-current="page">Code style guide</a></li>
+          <li><a href="/design-system/intro/contribute.html">Contributing</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Code style guide</h1>
+
+    <article>
+      <h2>Formatting</h2>
+      <h3>Indentation</h3>
+      <p>Each indentation level is made up of one tab. Do not use spaces. This allows each person to customize the size of their tab for their visual needs. Read <cite><a href="https://dev.to/alexandersandberg/why-we-should-default-to-tabs-instead-of-spaces-for-an-accessible-first-environment-101f" aria-describedby="ext-site">why we should default to Tabs instead of Spaces for an accessible first environment</a></cite> for more discussion.</p>
+<pre rel="JS" class="code"><code>
+<span class="k">if</span> (<span class="nx">true</span>) {
+  <span class="nx">doSomething</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre>
+
+      <h3>Statement termination</h3>
+      <p>End all statements with a semi-colon in <abbr>JS</abbr> and <abbr>CSS</abbr>.</p>
+<pre rel="JS" class="code"><code>
+<span class="k">return</span> '<span class="px">this is a random string</span>';
+</code></pre>
+
+      <h3>Line length</h3>
+      <p>Code and documentation line length is no more than 100 columns.</p>
+      <p>The exception to this is if the code is an <abbr>HTML</abbr> injection into the <abbr>DOM</abbr>. This code remains condensed in one strong as long as necessary.</p>
+<pre rel="JS" class="code"><code>
+<span class="nx">el</span>.<span class="nx">append</span>('<span class="px">&lt;div class="container"&gt;&lt;p&gt;Do you truly intend to
+perform this action?&lt;/p&gt;&lt;button class="btn primary"
+type="button"&gt;I do&lt;/button&gt;&lt;/div&gt;</span>');
+</code></pre>
+      <p>If a line reaches the maximum length, break it on an operator or a chain (a comma or period) for easiest reading. The next line is indented one additional level. Align chained commands.</p>
+<pre rel="JS" class="code"><code>
+<span class="nx">$</span>.<span class="nx">get</span>(<span class="px">url</span>)
+.<span class="nx">fail</span>(<span class="nx">function</span>() {
+<span class="nx">return</span> <span class="px">false</span>;
+})
+.<span class="nx">done</span>(<span class="nx">function</span>() {
+<span class="nx">return</span> <span class="px">true</span>;
+});
+</code></pre>
+
+      <p>For assigning variable values, align the overflow with the column of the first value.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="nx">var</span> <span class="px">results</span> <span class="o">=</span> <span class="px">thisIsAVariable</span> <span class="o">+</span> <span class="px">thisIsAnotherVariable</span> <span class="o">+</span>
+              <span class="px">probablyOneMoreVariable</span>;
+</code></pre>
+
+      <h3>Blank lines</h3>
+      <p>Add one blank line in between methods, as well as within methods before flow control statements, and style statements.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="c">//comment</span>
+<span class="k">if</span> (<span class="px">statement</span>) {
+  <span class="nx">var</span> <span class="k">el</span> <span class="o">=</span> <span class="px">0</span>;
+
+  <span class="k">if</span> (<span class="nx">var</span> <span class="o">===</span> <span class="px">0</span>) {
+    <span class="nx">return</span> <span class="px">true</span>;
+  }
+}
+</code></pre>
+
+      <h3>Quotations</h3>
+      <p>Use single quotes for all variables and related code; use double quotes when writing <abbr>HTML</abbr> inside the single quote variables.</p>
+<pre rel="JS" class="code"><code>
+<span class="nx">var</span> <span class="px">html</span> <span class="o">=</span> '<span class="px">&lt;h1 class=”h1”&gt;Welcome&lt;/h1&gt;</span>';
+</code></pre>
+
+      <h3>Naming</h3>
+      <p>For <abbr>JS</abbr>, variable and function names must be descriptive but kept as short as possible. Use camel-casing for multi-word names. Variable names start with a noun and function names start with a verb. The variable name should indicate the type of variable, e.g. count, length, and size are likely to be integers.</p>
+      <p>Some verb name starters for functions:</p>
+      <dl>
+        <dt>can-</dt>
+        <dd>function returns a boolean</dd>
+        <dd>Example: canHydrate</dd>
+
+        <dt>has-</dt>
+        <dd>function returns a boolean</dd>
+        <dd>Example: hasContent</dd>
+
+        <dt>is-</dt>
+        <dd>function returns a boolean</dd>
+        <dd>Example: isChecked</dd>
+
+        <dt>get-</dt>
+        <dd>function returns a nonboolean</dd>
+        <dd>Example: getItemList</dd>
+
+        <dt>set-</dt>
+        <dd>function is used to save a value</dd>
+        <dd>Example: setItemList</dd>
+      </dl>
+
+      <p>Some abbreviated variable names are acceptable such as those used through multiple methods or style statements.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> $(<span class="px">this</span>);
+<span class="kd">var</span> <span class="nx">pid</span> <span class="o">=</span> person id;
+<span class="kd">var</span> <span class="nx">rid</span> <span class="o">=</span> request id;
+<span class="kd">var</span> <span class="nx">lid</span> <span class="o">=</span> list id;
+<span class="kd">var</span> <span class="nx">el</span> <span class="o">=</span> event listener;
+<span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> data object;
+</code></pre>
+
+      <h3>Constants</h3>
+      <p>Variables intended to be constant are styled in uppercase with underscores to separate words in the name. Any variable styled as a constant should not change.</p>
+<pre rel="JS" class="code"><code>
+if (count < MAX_COUNT) {
+  doSomething();
+}
+</code></pre>
+
+      <h3>Constructors</h3>
+      <p>When creating objects, use Pascal camel case and a noun to more clearly differentiate it from functions.</p>
+
+<pre rel="JS" class="code"><code>
+function Person(name) {
+  this.name = name;
+}
+Person.prototype.sayName = function() {
+  alert(this.name);
+}
+<span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> new Person('George');
+</code></pre>
+
+      <h3>Decimals</h3>
+      <p>Do not leave a decimal point hanging (e.g. 1. or .1 should be 1.0 or 0.1).</p>
+
+      <h3>Null vs. undefined</h3>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> null; <span class="c">//null</span>
+<span class="kd">var</span> <span class="nx">person</span>; <span class="c">//undefined</span>
+</code></pre>
+
+      <h3>Arrays</h3>
+      <p>Do not explicitly state the constructor when creating an array. Remove spaces between values unless it cannot fit on one line. In that case, the opening bracket remains on the initial declaration line and each value has its own line.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">var</span> <span class="nx">colors</span> <span class="o">=</span> ['red','yellow','blue'];
+<span class="kd">var</span> <span class="nx">years</span> <span class="o">=</span> [
+  '1971',
+  '1983',
+  '1988',
+  '1990',
+  '1995',
+  '1999',
+  '2008'
+];
+</code></pre>
+    </article>
+
+    <article>
+      <h2>Comments and documentation</h2>
+      <p>Use <a href="http://usejsdoc.org" aria-describedby="ext-site">JSDoc</a> for properly documenting javascript functions. Also include single line comment lines to clarify what the code is doing, especially if it could be easily misunderstood. Use single line or multi-line comments to comment out code chunks.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="c">/** @description Alerts the person that an error was found
+    @fires alertmessage
+*/</span>
+function alertUser(message) {
+  <span class="c">//the user id is found in the DOM</span>
+  <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> getId();
+  //var otherId = soemthing;
+  <span class="c">/* if(id === otherId) {
+      alertmessage();
+  }
+  */</span>
+}
+</code></pre>
+
+      <h3>Debugging</h3>
+      <p>When working with code in development mode, prefer using <code>console.log()</code> over <code>alert()</code> to display data in the browser. For more advanced logging, use <code>console.info()</code> (informational), <code>console.warn()</code> (warning), and <code>console.error()</code> (error that is also counted towards all page errors).</p>
+      <p>Always comment out or remove all alert and console calls in the code before releasing code to production.</p>
+    </article>
+
+    <article>
+      <h2>Statements and expressions</h2>
+      <p>Always use brackets and semi colons. Put a space between the function parameters (the parenthetical variables) and the bracket. Put a space between an expression and the conditions, but not within the condition parentheses or within the function parameters.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">function</span> <span class="nx">hello</span>() {
+  <span class="nx">console</span>.<span class="nx">log</span>('<span class="px">Hello.</span>');
+}
+<span class="k">if</span> (<span class="px">state</span>) {
+  <span class="nx">hello</span>();
+}
+</code></pre>
+
+      <h3>Switch</h3>
+      <p>Switch statements follow similar bracket styling. Each case is indented, and the code listed on the next line. Cases are not separated by extra breaklines.</p>
+      <p>The <code>Default</code> case is required. Add break statement to the end of every case unless falling through (the ability to <code>"or"</code> cases together. Falling through may only be done if the previous cases do not contain additional code.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">switch</span>(<span class="px">action</span>) {
+  case 'login':
+    login();
+    break;
+  case 'timeout':
+  case 'logout':
+    logout();
+    break;
+  default:
+    console.log('No action');
+}
+</code></pre>
+
+      <h3>With</h3>
+      <p>Do not use <code>With</code> coding.</p>
+      <h3>For</h3>
+      <p>Use to iterate through an array. use <code>for-in</code> to iterate through objects.</p>
+    </article>
+
+    <article>
+      <h2>Variables, operators, and functions</h2>
+      <h3>Declaring variables and functions</h3>
+      <p>Declare all variables at the beginning of the function in a single variable initiation call. Combine similar attributes together and order accordingly if a variable is dependent on another.</p>
+      <p>Functions must be placed above any calls to that function. When nesting a function within a function, place the function right below the variable declarations and before the logic begins. Nested functions cannot be declared inside block statements (e.g. if/else).</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">function</span> <span class="nx">getList</span>() {
+  <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> $(<span class="px">this</span>),
+    <span class="nx">list</span> <span class="o">=</span> <span class="nx">t</span>.<span class="nx">closest</span>('<span class="px">ul</span>'),
+    <span class="nx">pid</span> <span class="o">=</span> <span class="nx">getId</span>(),
+    <span class="nx">x</span>;
+  <span class="kd">function</span> <span class="nx">checkLogin</span>(<span class="px">pid</span>,<span class="px">t</span>) {
+    <span class="k">return</span> <span class="nx">login</span>(<span class="px">pid</span>);
+  }
+  <span class="k">if</span> (<span class="px">checkLogin</span>) {
+    <span class="nx">x</span> <span class="o">=</span> list;
+  }
+}
+</code></pre>
+
+      <p>Additionally, a variable may immediate invoke a function to assign a value. Include parentheses around the function.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">var</span> <span class="nx">pid</span> <span class="o">=</span> <span class="kd">function</span>() {
+  <span class="k">return</span> <span class="nx">getId</span>();
+}
+</code></pre>
+
+      <h3>Equal</h3>
+      <p>Use <code>==</code> for comparing values with loose equality (same value but could be different types, e.g. <code>5 == "5"</code> will return true), and use <code>===</code> for strict equality (value and type must be the same, e.g. <code>5 === "5"</code> will return false). Prefer <code>===</code> when performing comparisons.</p>
+
+      <h3>Unary operators</h3>
+      <p>Prefer to use prefix unary operators over postfix (<code>++a</code> over <code>a++</code>) to avoid potential issues in code execution order (prefix will increment before being executed when nested inside an executable statement such as <code>alert(++a);</code>).</p>
+
+      <h3>Ternary operators</h3>
+      <p>Where possible, write code with ternary operators to reduce code. Syntax is <code>condition ? true : false</code>.</p>
+
+<pre rel="JS" class="code"><code>
+<span class="kd">var</span> <span class="nx">highscore</span> <span class="o">=</span> (<span class="px">player1</span> &gt; <span class="px">player2</span>) ? <span class="px">player1</span> : <span class="px">player2</span>;
+<span class="c">//equivalent to</span>
+<span class="kd">var</span> <span class="nx">highscore</span>;
+<span class="k">if</span> (<span class="px">player1</span> &gt; <span class="px">player2</span>) {
+  <span class="nx">highscore</span> <span class="o">=</span> player1;
+<span class="k">else</span> {
+  <span class="nx">highscore</span> <span class="o">=</span> player2;
+}
+</code></pre>
+
+      <h3>Loosely couple <abbr>UI</abbr> layers</h3>
+      <p>Use as much loose coupling between front end layers (<abbr>HTML</abbr>, <abbr>CSS</abbr>, and <abbr>JS</abbr>) as possible so they do not rely heavily on each other (reduces errors when changing code).</p>
+      <p>Do not mix <abbr>CSS</abbr> and <abbr>JS</abbr>; <abbr>JS</abbr> only exists in <abbr>JS</abbr> files and <abbr>CSS</abbr> only in <abbr>CSS</abbr> files (e.g. do not use <abbr>CSS</abbr> expressions and apply classes and not styles in <abbr>JS</abbr>).</p>
+      <p>Do not use <abbr>JS</abbr> <abbr>HTML</abbr> embedded event handlers, such as <code>onClick</code>.</p>
+      <p>When generating <abbr>HTML</abbr> from <abbr>JS</abbr>, use Handlebars to create the templates to preserve loose coupling.</p>
+
+      <h3>Avoid globals</h3>
+      <p>Write as much of the data local to the function rather than using globals.</p>
+      <p>Note: A variable declared locally but missing <code>var</code> becomes global (e.g. instantiated as <code>title = "Test"</code> rather than <code>var title = "Test"</code>). Ensure proper syntax is followed.</p>
+      <p>When creating <abbr>HTML</abbr> templates for javascript, use Handlebars rather than inserting <abbr>HTML</abbr> into the <abbr>JS</abbr> file.</p>
+      <p>If global variables cannot be avoided, use the one-global approach with namespaces.</p>
+
+      <h3>Event handling</h3>
+      <p>Decouple events from application logic; a function should not be defined within an event handler, only called.</p>
+      <p>When calling a function for an event, only pass the data in the event logic needed for that function (e.g. not <code>event</code> but <code>event.clientX</code> as a parameter) and not the entire event object.</p>
+      <p>The event handler function should also handle the event default actions such as <code>preventDefault()</code> and <code>stopPropagation()</code>.</p>
+
+<pre rel="JS" class="code"><code>
+var application() = {
+  clickEvent: function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    this.showTip(e.clientX,e.clientY);
+  },
+  showTip: function(x,y) {
+    var tip = $('#tip');
+    tip.addClass('hasValue');
+  }
+};
+addListener(el,'click',function(e) {
+  application.clickEvent(e);
+});
+</code></pre>
+
+      <h3>Avoid null comparisons</h3>
+      <p>Use typeof to detect the correct primitive type (string, number, Boolean, null, and undefined). Use null only if null is an expected type (such as determining the existence of an element).</p>
+
+<pre rel="JS" class="code"><code>
+if (tyopeof name === 'string') {}
+if (tyopeof count === 'number') {}
+if (tyopeof found === 'boolean' &amp;&amp; found) {}
+if (tyopeof app === 'undefined') {}
+</code></pre>
+
+      <p>For reference values, or objects, use instanceof to determine type, which also includes the prototype chain (e.g. Date type is a child of Object, so test would pass for both). Note: instanceof detection does not work if data is being passed to different frames.</p>
+
+<pre rel="JS" class="code"><code>
+if (value instanceof Date) {/*date object*/}
+if (value instanceof RegExp) {/*regular expression object*/}
+if (value instanceof Error) {/*error object*/}
+</code></pre>
+
+      <p>To detect functions in browsers not IE8 or older, use typeof.</p>
+      <p>Arrays may be identified with the <code>isArray()</code> function, although adding older checks (for browsers using ECMAScript 4 or older) may be valuable.</p>
+
+<pre rel="JS" class="code"><code>
+function isArray(value) {
+  if (typeof Array.isArray === 'function') {
+    return Array.isArray(value);
+  }
+  else {
+    return Object.prototype.toString.call(value) === '[object Array]';
+  }
+}
+</code></pre>
+
+      <p>Checking the existence of object properties, use "in" testing. To check a specific instance, <code>hasOwnProperty()</code> may work if IE8 and earlier is not supported.</p>
+
+<pre rel="JS" class="code"><code>
+var object = {
+  count: 0,
+  related: null
+}
+if ('count' in object) {}
+</code></pre>
+
+      <h3>Configuration data</h3>
+      <p>Configuration data consists of any hardcoded values such as URLs, strings returned to the UI (e.g. error messages), repeated unique values (e.g. a class name), settings, and any changeable values.</p>
+      <p>Create a separate config file to manage all the values and call the references in the code:</p>
+      <p><code>config.js</code></p>
+
+<pre rel="JS" class="code"><code>
+var config = {
+  'MSG_INVALID_VALUE': 'Invalid value';
+  'URL_INVALID': '/errors/invalid.html';
+};
+</code></pre>
+
+      <p><code>application.js</code></p>
+
+<pre rel="JS" class="code"><code>
+var validate(value) {
+  if (!value) {
+    alert(config.MSG_INVALID_VALUE);
+    location.href = config.URL_INVALID;
+  }
+}
+</code></pre>
+
+      <h3>Error throwing</h3>
+      <p>Include custom error messages to more easily find erroneous code. Best used in utility functions often used in multiple places.</p>
+
+<pre rel="JS" class="code"><code>
+function getDivs(el) {
+  if (el &amp;&amp; el.getElementsByTagName) {
+    return el.getElementsByTagName('div');
+  }
+  else {
+    throw new Error ('getDivs(): Argument must be a DOM element.');
+  }
+}
+</code></pre>
+
+    </article>
+
+    <article>
+      <h2>Ordering CSS properties</h2>
+      <p>Organize CSS properties by purpose.</p>
+      <ol>
+        <li>Box model properties</li>
+        <li>Layout properties</li>
+        <li>Background properties</li>
+        <li>Typographic properties</li>
+        <li>Colors and borders</li>
+        <li>Effects including animation</li>
+      </ol>
+    </article>
+
+  </main>
+
+   @@include('./src/includes/footer.html', {"active":"requests"})
+
+  </body>
+</html>

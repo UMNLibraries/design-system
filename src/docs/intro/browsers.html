@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intro | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/intro/">Intro</a></li>
+        <li><a href="/design-system/intro/developers.html">Developers</a></li>
+        <li>Browser support</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/intro/index.html">Overview</a></li>
+      <li><a href="/design-system/intro/editors.html">Editors</a></li>
+      <li><a href="/design-system/intro/developers.html">Developers</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/intro/code-style.html">Code style guide</a></li>
+          <li><a href="/design-system/intro/contribute.html">Contributing</a></li>
+          <li><a href="/design-system/intro/browsers.html" aria-current="page">Browser support</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Browser support</h1>
+    <p>Adapted from <a href="https://browsersupport.clearleft.com/" aria-describedby="ext-site">ClearLeft's browser support policy</a>.</p>
+
+    <article id="features">
+      <h2>Features, not browsers</h2>
+      <p>Browser support is based on capabilities of the browsers rather than their name or version. The <a href="https://web.dev/baseline">Baseline</a> initiative provides clear information about which web standards features are ready to use in websites. It designates new features into two categories:</p>
+      <ul>
+        <li>Newly available: a feature is supported by the latest versions of all core browsers</li>
+        <li>Widely available: a feature has been supported across browsers for at least 30 months</li>
+      </ul>
+      <p>A feature must be "widely available" to be used. A "newly available" feature may be used if it can be implemented as progressive enhancement.</p>
+      <p>Progressive enhancement means missing the feature does not harm the browser or prevent access to mission-critical requirements or content. Implementing "newly available" features must be nice-to-have additions with usable degradation.</p>
+    </article>
+
+    <article id="optimize">
+        <h2>Support and optimization</h2>
+        <p>We support every browser and optimise for none.</p>
+        <p>Support means that the core content and functionality of a website should be available to any browser. That doesn't mean the content will look exactly the same in every browser.</p>
+        <p>It may also mean that every interaction may not be identical; some may be implemented as progressive enhancements in newer browsers provided the interaction isn't part of the core functionality of the website.</p>
+        <p>Avoid polyfills, hacks, and workarounds that would need later removal. Follow <a href="https://web.dev/blog/interop-2024">Interop</a> to keep abreast of features browser makers have collectively agreed to prioritize.</p>
+    </article>
+
+    <article id="access">
+        <p>Two foundational principles underly this browser support policy:</p>
+        <ul>
+            <li>Website content and core functionality must be accessible to everyone.</li>
+            <li>It's okay for websites to look different in different browsers.</li>
+        </ul>
+        <p>Content displaying slightly differently in some browsers is a facet of the web, not a bug. This means there will sometimes be subtle visual and functional differences from browser to browser, which is acceptable provided content and core functionality are unaffected.</p>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

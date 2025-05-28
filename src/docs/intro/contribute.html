@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intro | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/intro/">Intro</a></li>
+        <li><a href="/design-system/intro/editors.html" aria-current="page">Editors</a></li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/intro/index.html">Overview</a></li>
+      <li><a href="/design-system/intro/editors.html">Editors</a></li>
+      <li><a href="/design-system/intro/developers.html">Developers</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/intro/code-style.html">Code style guide</a></li>
+          <li><a href="/design-system/intro/contribute.html" aria-current="page">Contributing</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Contributing</h1>
+
+    <article id="suggestions">
+      <h2>Making suggestions</h2>
+      <p>The design system exists in GitHub to encourage collaborative work. If something can be better, it should be made better.</p>
+      <p>Content recommendations go through the Web Content Managment Committee, all other recommendations go through Web Development.</p>
+      <p>If comfortable with GitHub, make a pull request with details for why the change should be made.</p>
+    </article>
+
+    <article id="writing">
+      <h2>Writing for the design system</h2>
+      <p>These guidelines are borrowed from the wonderfully written <a href="https://web.archive.org/web/20211215210850/https://v3.vuejs.org/guide/contributing/writing-guide.html#principles">principles at Vue.js</a>.</p>
+      <ul>
+        <li>A feature does not exist until it is well documented.</li>
+        <li>Respect people&rsquo;s cognitive capacity. When people start reading, they begin with a limited amount of brain power, and when they run out, they stop learning.</li>
+        <ul>
+          <li>Cognitive capacity is deplated faster by complex sentences.</li>
+          <li>Break concepts down into digestible pieces and mind the flow of the document to more slowly deplete cognitive capacity.</li>
+        </ul>
+        <li>Read the documentation from other&rsquo;s perspective. Avoid the &ldquo;curse of knowledge&rdquo;, where something may seem obvious but is not. Good documentation meets people where they are.</li>
+        <li>Describe the problem first, then the solution. Before demonstrating how a feature works, explain why it exists.</li>
+        <li>While writing, ask questions. Especially if they might seem &ldquo;dumb&rdquo;.</li>
+        <li>Be involved in feature discussions. Harness documentation-driven development.</li>
+      </ul>
+    </article>
+
+    <article id="testing">
+      <h2>Testing requirements</h2>
+      <p>All code must be tested against the following environments. All HTML, CSS, and JS techniques must have 98% coverage based on <a href="https://caniuse.com">caniuse.com</a> using the past full semester&rsquo;s statistics from the main website (or the Health Sciences Library website for HSL).</p>
+      <p>All code must function or meaningfully and gracefully degrade on these platforms using the listed tool combinations.</p>
+      <p>Screen reader combinations from <a href="https://webaim.org/projects/screenreadersurvey10/">WebAIM's Screen Reader User Survey</a> published 22 February 2024.</p>
+      <p>Last updated: <strong>19 May 2025</strong></p>
+      <h3>Desktop combinations</h3>
+      <ul class="list-group list-check mb-1">
+        <li>Windows 11 + Chrome</li>
+        <li>Windows 11 + Chrome + NVDA</li>
+        <li>Windows 11 + Edge</li>
+        <li>Windows 11 + Edge + JAWS</li>
+        <li>Windows 11 + Firefox + NVDA</li>
+        <li>Mac + Safari</li>
+        <li>Mac + Safari + VoiceOver</li>
+        <li>Mac + Chrome</li>
+      </ul>
+
+      <h3>Mobile</h3>
+      <ul class="list-group list-check">
+        <li>iPhone iOS + Safari</li>
+        <li>iPhone iOS + Safari + VoiceOver</li>
+        <li>iPad + Safari</li>
+        <li>Samsung Android + Samsung Internet</li>
+        <li>Samsung Android + Chrome</li>
+        <li>Samsung Android + Chrome + TalkBack</li>
+      </ul>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

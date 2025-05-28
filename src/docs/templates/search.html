@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Templates | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/templates/">Templates</a></li>
+        <li><a href="/design-system/templates/index.html" aria-current="page">Overview</a></li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/templates/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/design-system/templates/primary.html">Primary site patterns</a></li>
+      <ul>
+        <li><a href="/design-system/templates/primary.html#semantic">Semantic HTML</a></li>
+        <li><a href="/design-system/principles/primary.html#landmark">Landmarks</a></li>
+        <li><a href="/design-system/principles/primary.html#heading">Heading</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+    <h1>LibGuides search</h1>
+
+
+    <article>
+      <h2>LibGuides search</h2>
+      <form class="search" action="https://umnlibraries.github.io/design-system/templates/search.html" aria-label="Search Libraries resources" method="get" role="search">
+      <div class="input-group">
+        <input type="search" name="search" class="form-control form-control-lg" aria-label="Search words" required="">
+        <div class="input-group-append">
+          <button class="btn btn-dark form-control-lg" type="submit">
+            <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
+              <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
+            </svg>
+            <span class="visible-desktop">Search</span>
+          </button>
+        </div>
+      </div>
+    </form>
+    </article>
+
+
+    <style type="text/css">
+    #umnhf-h-search input {
+        padding:0 1em;
+    }
+    .gs-result .gs-title, .gs-result .gs-title *, .gsc-results .gsc-cursor-box .gsc-cursor-page {color:#067286 !important;}
+    .gs-result .gs-title:hover, .gs-result .gs-title:focus {color:#03343d !important;}
+    .gcsc-branding {visibility:hidden !important;}
+    .gsc-results .gsc-cursor-box .gsc-cursor-page {padding:1em; border:1px solid #067286;}
+    .gsc-results .gsc-cursor-box .gsc-cursor-page:hover, .gsc-results .gsc-cursor-box .gsc-cursor-page:focus {background-color:#dadada;}
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color: transparent;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: transparent;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: transparent;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: transparent;
+    }
+    .gsc-control-searchbox-only {
+        max-width:100%;
+        margin: 0.3em auto 0;
+        padding: 0;
+    }
+    form.gsc-search-box {
+        border:none;
+        /*background:#fff;*/
+        -webkit-transition:all .3s ease-in-out;
+        transition:all .3s ease-in-out;
+        /*font-size:18px;*/
+        padding:0 0 0 1em;
+        box-shadow:0 2px 2px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);
+    }
+    form.gsc-search-box:hover {
+        box-shadow:0 3px 8px 0 rgba(0,0,0,.2),0 0 0 1px rgba(0,0,0,.08);
+    }
+    header .gsc-control-searchbox-only {
+        max-width:auto;
+        margin:0;
+        padding:0
+    }
+    header form.gsc-search-box {
+        border:1px solid #d5d6d2;
+        box-shadow:none;
+    }
+    header form.gsc-search-box:hover {
+        box-shadow:none;
+    }
+    header .cse .gsc-search-button-v2,header .gsc-search-button-v2 {
+        padding:10px 12px;
+    }
+    .gsc-control-cse {
+        max-width:100%;
+        margin:0 auto;
+        padding:3em 0;
+    }
+    .gsc-control-cse table,.gsc-control-cse table table,.gsc-control-cse table table tbody,.gsc-control-cse table table td,.gsc-control-cse table table tr,.gsc-control-cse table tbody,.gsc-control-cse table td,.gsc-control-cse table tr,form.gsc-search-box table.gsc-search-box,form.gsc-search-box table.gsc-search-box table,form.gsc-search-box table.gsc-search-box table tbody,form.gsc-search-box table.gsc-search-box table td,form.gsc-search-box table.gsc-search-box table tr,form.gsc-search-box table.gsc-search-box tbody,form.gsc-search-box table.gsc-search-box td,form.gsc-search-box table.gsc-search-box tr {
+        margin: 0;
+        padding:0;
+        table-layout: auto;
+        border-collapse:unset;
+    }
+    .gsc-control-cse table tbody tr:nth-child(odd) {
+        background:unset;
+    }
+    .gsc-search-box-tools .gsc-search-box td.gsc-input {
+        padding:0;
+        /*font-size:18px;*/
+    }
+    input.gsc-input {
+        padding:.2em .3em;
+        /*font-size:18px;*/
+        box-shadow:none;
+        background:none;
+        text-indent:0;
+        margin:0;
+        height:unset;
+    }
+    input#gsc-i-id1 {
+      background:none !important;
+    }
+
+    .cse .gsc-search-button-v2,.gsc-search-button-v2 {
+        padding:10px 27px;
+    }
+    button.gsc-search-button.gsc-search-button-v2,table.gsc-search-box {
+        margin:0;
+        border-radius:0;
+    }
+    a.gsib_a,a.gsst_a,a.gsst_b {
+        padding:0;
+        border-bottom:none;
+    }
+    .gsc-control-cse .gsc-table-result,.gsc-control-cse .gsc-table-result * {
+        height:unset;
+        /*font-size:16px;*/
+        font-family:inherit;
+    }
+    .gsc-result .gs-title,.gsc-result .gs-title * {
+        height:unset;
+        /*font-size:18px;*/
+        text-decoration:none;
+    }
+    .gsc-result .gs-title:hover,.gsc-result .gs-title :hover {
+        background:transparent;
+    }
+    a.gs-title:link:visited,a.gs-title:visited {
+        /*border-color:#7a0019;*/
+        border-color:#067286;
+    }
+    .gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b,.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b {
+        border-bottom:1px solid #d5d6d2;
+    }
+    .gs-bidi-start-align.gs-snippet,.gs-fileFormat>.gs-fileFormat,.gs-per-result-labels1,.gsc-role,.gsc-table-cell-thumbnail.gsc-thumbnail {
+        padding-left:8px;
+    }
+    .gsc-input-box {
+        border:none;
+        /*font-size:18px;*/
+        height:auto;
+    }
+
+    div.gsc-cursor-page.gsc-cursor-current-page {
+       background: #dadada !important;
+    }
+
+    .gsc-input-box-focus,.gsc-input-box-hover,.gsc-search-box .gsc-input>input:hover {
+        box-shadow:none;
+    }
+    .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-long,.gs-visibleUrl.gs-visibleUrl-long {
+        /*font-size:13px;*/
+    }
+    .cse .gsc-webResult.gsc-result.gsc-promotion,.gsc-webResult.gsc-result.gsc-promotion {
+        padding:0 8px;
+    }
+    .gs-per-result-labels, .gcsc-more-maybe-branding-root {
+        display:none;
+    }
+    table.gssb_c {
+        margin:0;
+    }
+    table.gsc-completion-container {
+        /*font-family:Open Sans*/
+    }
+    table.gsc-completion-container tbody tr:nth-child(2n) {
+        background:none;
+        border:none;
+    }
+    .search-menu {
+        max-width:100%;
+        margin:0 auto;
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display:flex;
+        padding:0;
+        /*font-size:18px;*/
+    }
+    .search-menu__item {
+        list-style:none;
+        margin:0 .5em 0 0;
+        padding:0;
+    }
+    a.search-menu__link {
+        font-size:.85em;
+        display:block;
+        padding:.5em;
+        border-bottom:4px solid transparent;
+        -webkit-transition:all .3s ease-in-out;
+        transition:all .3s ease-in-out;
+        color:#333;
+        text-decoration:none;
+    }
+    a.search-menu__link:hover {
+        background:transparent;
+        /*border-bottom:4px solid #7a0019;*/
+        border-bottom:4px solid #067286;
+    }
+    #search-web {
+        /*color:#7a0019;*/
+        color:#067286;
+        font-weight:700;
+        /*border-bottom:4px solid #7a0019;*/
+        border-bottom:4px solid #067286;
+    }
+    .search_campus label {
+        display:none;
+    }
+    @media screen and (min-width:400px) {
+        .search_campus label{
+            padding-right:.5em;
+            -webkit-align-self:center;
+            -ms-flex-item-align:center;
+            -ms-grid-row-align:center;
+            align-self:center;
+            display:block;
+        }
+    }
+    .search_campus {
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display:flex;
+        -webkit-align-content:baseline;
+        -ms-flex-line-pack:baseline;
+        align-content:baseline;
+        margin:0 0 0 auto;
+        font-size:.8em;
+    }
+    select#campus_select {
+        -webkit-align-self:center;
+        -ms-flex-item-align:center;
+        -ms-grid-row-align:center;
+        align-self:center;
+        /*font-size:16px;*/
+        margin:0;
+    }
+    .search-results-area {
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-moz-box;
+        display:-ms-flexbox;
+        display:flex;
+        max-width:100%;
+        margin:0 auto;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        -webkit-flex-direction:column;
+        -moz-box-orient:vertical;
+        -moz-box-direction:normal;
+        -ms-flex-direction:column;
+        flex-direction:column;
+    }
+    @media screen and (min-width:760px) {
+        .search-results-area {
+            -webkit-box-orient:horizontal;
+            -webkit-box-direction:normal;
+            -webkit-flex-direction:row;
+            -moz-box-orient:horizontal;
+            -moz-box-direction:normal;
+            -ms-flex-direction:row;
+            flex-direction:row;
+        }
+    }
+    .search-results-area>div:first-of-type {
+        width:100%;
+    }
+    @media screen and (min-width:760px) {
+        .search-results-area>div:first-of-type {
+            width:100%;
+        }
+    }
+    .people-search__result-item {
+        display:block;
+        line-height:1.5;
+    }
+    .people-search__container {
+        width:100%;
+        /*font-family:Open Sans,sans-serif;*/
+        padding:3em 0;
+    }
+    @media screen and (min-width:760px) {
+        .people-search__container {
+            width:30%;
+        }
+    }
+    .people-search__result {
+        margin-bottom:1.5em;
+        /*font-size:16px;*/
+        line-height:1.4;
+    }
+    .people-search__name {
+        font-weight:700;
+    }
+    .people-search__email,.people-search__name,.people-search__tel {
+        color:#5a5a5a;
+    }
+    .people-search__svg-placeholder.active {
+        margin:12px auto;
+        width:30px;
+        height:30px;
+        -webkit-animation:a 4s infinite linear;
+        animation:a 4s infinite linear;
+    }
+    .people-search__svg-placeholder svg path {
+        /*fill:#7a0019;*/
+        fill:#067286;
+    }
+    @-webkit-keyframes a {
+        0% {
+            -webkit-transform:rotate(0deg);
+        }
+        to {
+            -webkit-transform:rotate(1turn);
+        }
+    }
+
+    .gsc-webResult.gsc-result.gsc-promotion {
+      background-color: #f0efee;
+    }
+
+    .gsc-result.gsc-promotion::before {
+      content: "University of Minnesota message";
+    }
+    </style>
+
+    <script>
+        (function() {
+          var cx = '002834015805923805805:c-0k--9bdkk';
+          var gcse = document.createElement('script');
+          gcse.type = 'text/javascript';
+          gcse.async = true;
+          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(gcse, s);
+        })();
+    </script>
+
+    <h2>Search results</h2>
+    <!-- Search box in the main area of the page -->
+    <gcse:searchbox-only resultsURL="/search"></gcse:searchbox-only>
+
+    <div class="search-results-area">
+
+    <!-- search results -->
+    <gcse:searchresults-only as_oq="site:libguides.umn.edu" ></gcse:searchresults-only>
+
+
+    </div>
+
+
+    <script defer="defer">
+    !function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a="function"==typeof require&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}for(var i="function"==typeof require&&require,o=0;o<r.length;o++)s(r[o]);return s}({1:[function(require,module,exports){!function($){var myAccountUrl="http://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&campus=a&role=any&CN=",deptUrl="https://directory.umn.edu/search?q=",peopleUrl="https://myaccount.umn.edu/lookup?format=JSON&results=ALL&CN=",search={get:{queryVariable:function(variable){for(var query=window.location.search.substring(1),vars=query.split("&"),i=0;i<vars.length;i++){var pair=vars[i].split("=");if(pair[0]==variable)return pair[1]}return!1},query:function(){var q=search.get.queryVariable("query");return q},campus:function(){var x=window.location.href,x=x.split("/").pop().split("?")[0];return""==x?"tc":"all-campuses"==x?"all":x}},check:{space:function(){var q=search.get.query(),s="%20";return q.indexOf(s)!==-1},url:function(){var u=window.location.href;return u.indexOf("search-results")>-1}},replace:{plus:function(){var s=/\%20/gi,q=search.get.query(),q=q.replace(s,"+");return q}},click:{filter:function(){var $f=$(".search-menu__link");$f.click(function(){var id=$(this).attr("id");switch(id){case"search-people":$(this).attr("href",myAccountUrl+search.replace.plus());break;case"search-depts":$(this).attr("href",deptUrl+search.replace.plus());break;case"search-web":$(this).attr("href",window.location.href)}})},campusMatch:function(){var c=search.get.campus();console.log("campus = "+c),$("select#campus_select option").prop("selected",!1),$("select#campus_select option[value="+c+"]").prop("selected",!0)},campusSelect:function(){var $c=$("select#campus_select");$c.change(function(){var q="?query="+search.get.query(),linkID=$(this).find(":selected").val();switch(linkID){case"all":console.log("selected: all campuses"),location="/all-campuses"+q;break;case"crookston":console.log("selected: crookston"),location="/"+linkID+q;break;case"duluth":console.log("selected: duluth"),location="/"+linkID+q;break;case"morris":console.log("selected: morris"),location="/"+linkID+q;break;case"rochester":console.log("selected: rochester"),location="/"+linkID+q;break;case"tc":console.log("selected: twin cities"),location="/"+q;break;case"onestop":console.log("selected: onestop"),location="/"+linkID+q}})}},people:{makeContainer:function(){var $main=$(".search-results-area"),$div="<div class='people-search__container'><h2 id='um_srch_people_header' class='people-search__header h4'>People Search Results</h2><div class='people-search__list-container'></di></div>";$main.append($div)},callAPI:function(){var q=search.get.query(),theUrl=peopleUrl+q;$.ajax({url:theUrl,type:"GET",dataType:"json",async:!1,xhrFields:{withCredentials:!1},success:function(response){$(".people-search__list-container, .people-search__svg-placeholder").empty(),$(".people-search__svg-placeholder").toggleClass("active"),console.log("JSON url = "+theUrl);var peopleHtml="<div role='list' id='people-search__items' class='people-search__results'>";if(response&&response.people&&response.people.length>0)for(var people=response.people,i=("<div class='search-results__total'>Total results: "+response.people.length+"</div>",0);i<=response.people.length;i++)$.isEmptyObject(people[i])||(console.log("is department blocking working?"),peopleHtml+="<div role='listitem' class='people-search__result'><a class='people-search__name people-search__result-item' href='http://www.umn.edu/lookup?SET_INSTITUTION=UMNTC&amp;type=name&amp;campus=a&amp;role=any&amp;CN="+people[i].uid+"'>"+people[i].freeFormName+" ("+people[i].persontypelist+")</a>",people[i].umnRegUnit.length>0&&"student"==people[i].persontypelist&&(peopleHtml+="<div class='people-search__reg-unit people-search__result-item'>"+people[i].umnRegUnit+"</div>"),people[i].ou.length>0&&(peopleHtml+="<div class='people-search__dept people-search__result-item'>"+people[i].ou+"</div>"),people[i].email.length>0&&(peopleHtml+="<a class='people-search__email people-search__result-item' href='mailto:"+people[i].email+"'>"+people[i].email+"</a>"),people[i].workphone.length>0&&(peopleHtml+="<a class='people-search__tel people-search__result-item' href='tel:"+people[i].workphone+"'>"+people[i].workphone+"</a>"),peopleHtml+="</div>");else peopleHtml+="<span> No people found.</span>";peopleHtml+="</div></div></div>",response.people&&response.people.length>1&&(peopleHtml+="<div id='um_srch_people_footer' style='margin-top:10px;'><a href='https://www.umn.edu/lookup?SET_INSTITUTION=UMNTC&amp;type=name&amp;campus=a&amp;role=any&amp;CN="+q+"'>View more People Search results</a></div>"),$(".people-search__list-container").append(peopleHtml)},error:function(err){console.log(err),$(".people-search__list-container").empty();var peopleHtml="<div role='list' id='people-search__items'>";peopleHtml+="<span> No people found.</span></div>",$(".people-search__list-container").append(peopleHtml)}})}},init:function(){search.click.campusMatch(),search.click.campusSelect(),0!=search.get.queryVariable("query")?(search.click.filter(),search.people.callAPI()):$(".people-search__container").empty()}};window.onload=function(){search.init()}}(jQuery)},{}]},{},[1]);
+    </script>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>References | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Citing sources</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html" aria-current="page">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Citing sources</h1>
+
+    <article>
+      <h2>Citations</h2>
+      <p>Default to <a href="https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-1.html" aria-describedby="ext-site">Chicago Manual of Style citation styles</a> unless another format is preferred in the field the content represents (e.g. use APA format for a psychology-oriented guide).</p>
+      <p>Do not use underlines stylistically. Underlines on the web are specifically for hyperlinks.</p>
+
+      <div class="example">
+        <p>Rebecca Mead, <q>The Prophet of Dystopia</q>, <cite>New Yorker</cite>, <date>April 17, 2017</date>, 43.</p>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;p&gt;</span>Rebecca Mead, <span class="nt">&lt;q&gt;</span>The Prophet of Dystopia<span class="nt">&lt;/q&gt;</span>, <span class="nt">&lt;cite&gt;</span>New Yorker<span class="nt">&lt;/cite&gt;</span>, <span class="nt">&lt;date&gt;</span>April 17, 2017<span class="nt">&lt;/date&gt;</span>, 43.<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+
+      <div class="example">
+        <p><q>Archives and Special Collections: Children’s Literature Research Collections</q>, University of Minnesota, accessed <date>30 April 2019</date>, <a href="https://www.lib.umn.edu/clrc">https://www.lib.umn.edu/clrc</a>.</p>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;p&gt;&lt;q&gt;</span>Archives and Special Collections: Children&rsquo;s Literature Research Collections<span class="nt">&lt;/q&gt;</span>, University of Minnesota, accessed <span class="nt">&lt;date&gt;</span>30 April 2019<span class="nt">&lt;/date&gt;</span>, <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.lib.umn.edu/clrc"</span><span class="nt">&gt;</span>https://www.lib.umn.edu/clrc<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+
+    </article>
+
+    <article>
+      <h2>Footnotes</h2>
+      <p>When a web page has a significant number of citations in it, similar to an academic paper, the citations may be better consolidated in a footnotes list at the bottom of the content with reference links in the content referring to those citations. This method may also be considered when aggregating a person&rsquo;s body of works on a profile page.</p>
+      <p>This method was adapted from <a href="https://www.sitepoint.com/accessible-footnotes-css/" aria-describedby="ext-site">Accessible footnotes with CSS</a>.</p>
+
+      <div class="example">
+        <article>
+          <p>To understand how some of the thoughts evolved around this design system, watch Mike Monteiro&rsquo;s talk about <a href="#f-1" id="ref-1" aria-describedby="f-label">design destroying the world</a>, Aaron Gustafson&rsquo;s presentations on <a href="#f-2" id="ref-2" aria-describedby="f-label">performance as a user experience</a>, Una Kravets&rsquo; <a href="#f-3" id="ref-3" aria-describedby="f-label">image optimization</a> presentation, Damien Senger describing <a href="#f-4" id="ref-4" aria-describedby="f-label">readability on the web</a>, and Dafydd Henke-Reed&rsquo;s <a href="#f-5" id="ref-5" aria-describedby="f-label">elegant accessibility</a> presentation.</p>
+
+          <footer class="footnote">
+            <h2 hidden="hidden" id="f-label">Footnotes</h2>
+            <ol>
+              <li id="f-1"><a href="https://vimeo.com/68470326" aria-describedby="ext-site">How Designers Destroyed the World</a>, Mike Monteiro, Webstock 2013 <a href="#ref-1">&larrhk;</a></li>
+              <li id="f-2"><a href="https://aneventapart.com/news/post/performance-as-user-experience-by-aaron-gustafson-aea-video" aria-describedby="ext-site">Performance as User Experience</a>, Aaron Gustafson, An Event Apart 2017 <a href="#ref-2">&larrhk;</a></li>
+              <li id="f-3"><a href="https://aneventapart.com/news/post/the-joy-of-optimizing-images-by-una-kravets-aea-video" aria-describedby="ext-site">The Joy of Image Optimization</a>, Una Kravets, An Event Apart 2017 <a href="#ref-2">&larrhk;</a></li>
+              <li id="f-4"><a href="https://youtu.be/u1v_G1yQhTU" aria-describedby="ext-site">Readability &amp; Web</a>, Damien Senger, Inclusive Design 24 (ID24) 2018 <a href="#ref-4">&larrhk;</a></li>
+              <li id="f-5"><a href="https://youtu.be/mlMfynLKGXA" aria-describedby="ext-site">Elegant Accessibility (video)</a>, Dafydd Henke-Reed, Inclusive Design 24 (ID24) 2018 <a href="#ref-5">&larrhk;</a></li>
+            </ol>
+          </footer>
+        </article>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;article&gt;</span>
+ <span class="nt">&lt;p&gt;</span>To understand how some of the thoughts evolved around this design system, watch Mike Monteiro&rsquo;s talk about <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#f-1"</span> <span class="na">id=</span><span class="s">"ref-1"</span> <span class="na">aria-describedby=</span><span class="s">"f-label"</span><span class="nt">&gt;</span>design destroying the world<span class="nt">&lt;/a&gt;</span>, Aaron Gustafson&rsquo;s presentations on <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#f-2"</span> <span class="na">id=</span><span class="s">"ref-2"</span> <span class="na">aria-describedby=</span><span class="s">"f-label"</span><span class="nt">&gt;</span>performance as a user experience<span class="nt">&lt;/a&gt;</span>, Una Kravets&rsquo; <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#f-3"</span> <span class="na">id=</span><span class="s">"ref-3"</span> <span class="na">aria-describedby=</span><span class="s">"f-label"</span><span class="nt">&gt;</span>image optimization<span class="nt">&lt;/a&gt;</span> presentation, Damien Senger describing <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#f-4"</span> <span class="na">id=</span><span class="s">"ref-4"</span> <span class="na">aria-describedby=</span><span class="s">"f-label"</span><span class="nt">&gt;</span>readability on the web<span class="nt">&lt;/a&gt;</span>, and Dafydd Henke-Reed&rsquo;s <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#f-5"</span> <span class="na">id=</span><span class="s">"ref-5"</span> <span class="na">aria-describedby=</span><span class="s">"f-label"</span><span class="nt">&gt;</span>elegant accessibility<span class="nt">&lt;/a&gt;</span> presentation.<span class="nt">&lt;/p&gt;</span>
+
+ <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"footnote"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">hidden=</span><span class="s">"hidden"</span> <span class="na">id=</span><span class="s">"f-label"</span><span class="nt">&gt;</span>Footnotes<span class="nt">&lt;/h2&gt;</span>
+   <span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"f-1"</span><span class="nt">&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://vimeo.com/68470326"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>How Designers Destroyed the World<span class="nt">&lt;/a&gt;</span>, Mike Monteiro, Webstock 2013 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#ref-1"</span><span class="nt">&gt;</span>&larrhk;<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"f-2"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://aneventapart.com/news/post/performance-as-user-experience-by-aaron-gustafson-aea-video"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>Performance as User Experience<span class="nt">&lt;/a&gt;</span>, Aaron Gustafson, An Event Apart 2017 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#ref-2"</span><span class="nt">&gt;&larrhk;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"f-3"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://aneventapart.com/news/post/the-joy-of-optimizing-images-by-una-kravets-aea-video"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>The Joy of Image Optimization<span class="nt">&lt;/a&gt;</span>, Una Kravets, An Event Apart 2017 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#ref-2"</span><span class="nt">&gt;&larrhk;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"f-4"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://youtu.be/u1v_G1yQhTU"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>Readability &amp; Web<span class="nt">&lt;/a&gt;</span>, Damien Senger, Inclusive Design 24 (ID24) 2018 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#ref-4"</span><span class="nt"><span class="nt">&gt;&larrhk;&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">id=</span><span class="s">"f-5"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://youtu.be/mlMfynLKGXA"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>Elegant Accessibility (video)<span class="nt">&lt;/a&gt;</span>, Dafydd Henke-Reed, Inclusive Design 24 (ID24) 2018 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#ref-5"</span><span class="nt">&gt;&larrhk;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+ <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/article&gt;</span>
+</code></pre>
+
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

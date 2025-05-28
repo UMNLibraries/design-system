@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intro | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+  <link rel="stylesheet" type="text/css" href="s.css" />
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="/design-system/search/s.js"></script>
+  <script src="https://cse.google.com/cse.js?cx=002834015805923805805:c-0k--9bdkk"></script>
+  <style>
+    .gsc-control-cse, .gsc-control-cse .gsc-table-result {font-family:arial, sans-serif}
+#umnhf-h-search input{padding:0 1em;}
+.gs-result .gs-title,.gs-result .gs-title *,.gsc-results .gsc-cursor-box .gsc-cursor-page{color:#067286 !important;}
+.gs-result .gs-title:hover,.gs-result .gs-title:focus{color:#03343d !important;}
+.gcsc-branding{visibility:hidden !important;}
+.gsc-results .gsc-cursor-box .gsc-cursor-page{padding:1em;border:1px solid #067286;}
+.gsc-results .gsc-cursor-box .gsc-cursor-page:hover,.gsc-results .gsc-cursor-box .gsc-cursor-page:focus{background-color:#dadada;}
+::-webkit-input-placeholder{color:transparent;}
+:-moz-placeholder{color:transparent;}
+::-moz-placeholder{color:transparent;}
+:-ms-input-placeholder{color:transparent;}
+.gsc-control-searchbox-only{max-width:100%;margin:0.3em auto 0;padding:0;}
+form.gsc-search-box{border:none;}
+form.gsc-search-box:hover{outline: .2rem solid var(--col-link);}
+header .gsc-control-searchbox-only{max-width:auto;margin:0;padding:0}
+header form.gsc-search-box{border:1px solid #333;box-shadow:none;}
+header form.gsc-search-box:hover{box-shadow:none;}
+header .cse .gsc-search-button-v2,header .gsc-search-button-v2{padding:10px 12px;}
+.gsc-control-cse{max-width:100%;margin:0 auto;padding:3em 0;}
+.gsc-control-cse table,.gsc-control-cse table table,.gsc-control-cse table table tbody,.gsc-control-cse table table td,.gsc-control-cse table table tr,.gsc-control-cse table tbody,.gsc-control-cse table td,.gsc-control-cse table tr,form.gsc-search-box table.gsc-search-box,form.gsc-search-box table.gsc-search-box table,form.gsc-search-box table.gsc-search-box table tbody,form.gsc-search-box table.gsc-search-box table td,form.gsc-search-box table.gsc-search-box table tr,form.gsc-search-box table.gsc-search-box tbody,form.gsc-search-box table.gsc-search-box td,form.gsc-search-box table.gsc-search-box tr{margin:0;padding:0;table-layout:auto;border-collapse:unset;}
+.gsc-control-cse table tbody tr:nth-child(odd){background:unset;}
+.gsc-search-box-tools .gsc-search-box td.gsc-input{padding:0;}
+input.gsc-input{padding:.2em .3em;box-shadow:none;background:none;text-indent:0;margin:0;height:unset;}
+input#gsc-i-id1{background:none !important;}
+.cse .gsc-search-button-v2,.gsc-search-button-v2{padding:10px 27px;}
+button.gsc-search-button.gsc-search-button-v2,table.gsc-search-box{margin:0;border-radius:0;}
+a.gsib_a,a.gsst_a,a.gsst_b{padding:0;border-bottom:none;}
+.gsc-control-cse .gsc-table-result,.gsc-control-cse .gsc-table-result *{height:unset;font-family:inherit;}
+.gsc-result .gs-title,.gsc-result .gs-title *{height:unset;text-decoration:none;}
+.gsc-result .gs-title:hover,.gsc-result .gs-title :hover{background:transparent;}
+a.gs-title:link:visited,a.gs-title:visited{border-color:#067286;}
+.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b,.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b{border-bottom:1px solid #d5d6d2;}
+.gs-bidi-start-align.gs-snippet,.gs-fileFormat>.gs-fileFormat,.gs-per-result-labels1,.gsc-role,.gsc-table-cell-thumbnail.gsc-thumbnail{padding-left:8px;}
+.gsc-input-box{border:none;height:auto;}
+div.gsc-cursor-page.gsc-cursor-current-page{background:#dadada !important;}
+.gsc-input-box-focus,.gsc-input-box-hover,.gsc-search-box .gsc-input>input:hover{box-shadow:none;}
+.cse .gsc-webResult.gsc-result.gsc-promotion,.gsc-webResult.gsc-result.gsc-promotion{padding:0;}
+.gs-per-result-labels,.gcsc-more-maybe-branding-root{display:none;}
+table.gssb_c{margin:0;}
+table.gsc-completion-container tbody tr:nth-child(2n){background:none;border:none;}
+@media screen and (min-width:400px){.search_campus label{padding-right:.5em;-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;display:block;}}
+.search_campus{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;-webkit-align-content:baseline;-ms-flex-line-pack:baseline;align-content:baseline;margin:0 0 0 auto;font-size:.8em;}
+select#campus_select{-webkit-align-self:center;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;margin:0;}
+.search-results-area{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;max-width:100%;margin:0 auto;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}
+@media screen and (min-width:760px){.search-results-area{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-moz-box-orient:horizontal;-moz-box-direction:normal;-ms-flex-direction:row;flex-direction:row;}}
+.search-results-area>div:first-of-type{width:100%;}
+@media screen and (min-width:760px){.search-results-area>div:first-of-type{width:100%;}}
+
+@-webkit-keyframes a{0%{-webkit-transform:rotate(0deg);}to{-webkit-transform:rotate(1turn);}}
+.gsc-webResult.gsc-result.gsc-promotion{background-color:#f0efee;}
+.gsc-result.gsc-promotion::before{content:"University of Minnesota message";}
+#gs_id50,table.gsc-above-wrapper-area-container{border:0;}
+.gsc-orderby{font-size:13px;}
+.gsc-selected-option-container,.gsc-selected-option{line-height:27px !important;}
+section.search-results-area{display:block;}
+form.gsc-search-box,.gsc-search-box-tools .gsc-search-box td.gsc-input,#gs_tti50,.gsib_b{background:white;}
+input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border:0;}
+.gsc-webResult.gsc-result.gsc-promotion{background-color:#ffde7a90;}
+.gsc-result.gsc-promotion::before{font-weight:bold;}
+
+.gs-bidi-start-align.gs-snippet {padding-left:0 !important;}
+/* Google search fix */
+.gsc-search-box td {
+  display: table-cell;
+  border: 0;
+}
+
+.gsc-search-box tr {
+  border: 0;
+}
+@media (max-width: 50rem) {
+   table[role="presentation"] tbody {
+   width: 100%;
+   }
+}
+
+</style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/search/" aria-current="page">Search</a></li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/search/" aria-current="page">Search results</a></li>
+      <li><a href="/design-system/principles/">Principles</a></li>
+      <li><a href="/design-system/content/">Content</a></li>
+      <li><a href="/design-system/design/">Design</a></li>
+      <li><a href="/design-system/code/">Code</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Libraries' design system search</h1>
+
+    <article>
+      <section class="color-block block-secondary">
+        <gcse:searchbox-only resultsURL="/search"></gcse:searchbox-only>
+        </section>
+        <section class="search-results-area">
+          <h2>Search results</h2>
+          <!-- search results -->
+          <gcse:searchresults-only as_oq="site:umnlibraries.github.io/"></gcse:searchresults-only>
+        </section>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+  
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Buttons | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Buttons</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Date and time</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html" aria-current="page">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Buttons</h1>
+    <div class="lead">
+      <p>Buttons are actions that do something, not go somewhere.</p>
+      <p>If uncertain whether to use a button or a link, in most cases use a link. CSS Tricks has a few tips about buttons:</p>
+      <ul>
+        <li>Button is a form element</li>
+        <li>If a button doesn&rsquo;t have a meaningful &ldquo;href&rdquo;, or URL, it is a button. <br />
+          For instance, if the href is &ldquo;#&rdquo;) instead of an in-page link or other valid URL, with the intention of using javascript to do something, it's a button.</li>
+      </ul>
+    </div>
+
+    <article>
+      <h2>Language</h2>
+      <p>Begin with an active verb. Avoid the default verb &ldquo;Submit&rdquo;, and apply a relevant verb instead (e.g. when applying or registering for a library card, &ldquo;Apply&rdquo; or &ldquo;Register&rdquo; are the correct verbs for the action).</p>
+      <p>Keep button text to 1 to 3 words, as few as necessary to provide clarity to the person what the action will be engaged when used. Refer to the <a href="/design-system/content/writing.html#links">links and buttons content guidelines</a> for examples.<p>
+    </article>
+
+    <article>
+      <h2>Sizes and position</h2>
+      <p>Standard web forms use the default button size.</p>
+      <p>Left-align buttons for improved findability for people who increase the screen size. Position the primary button first and any secondary action after it (to the right).</p>
+    </article>
+
+    <article>
+      <h2>Colors</h2>
+      <p>Buttons default to the primary color, currently set as maroon. Primary actions use the primary color.</p>
+      <p>If a form or interactive has secondary actions, use the secondary color, currently set as gold, by using the <code>btn-secondary</code> class.</p>
+      <p>If the button set includes a &ldquo;cancel&rdquo; option (never use this on a form), set it as <code>btn-exit</code>, which sets it to a gray.</p>
+    </article>
+
+    <article>
+      <h2>Default buttons</h2>
+      <p>Do not use &ldquo;Clear&rdquo; or &ldquo;Reset&rdquo; buttons on forms, people can navigate away from a form if they desire to abandon it whereas their presence could cause negative experiences (by accidentally losing all their form data).</p>
+
+      <h3>Primary button</h3>
+      <div class="example">
+        <button type="button">Request appointment</button>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Request appointment<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+
+      <h3>Form submissions</h3>
+      <div class="example">
+        <button type="submit">Send</button>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Send<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+
+      <h3>Secondary button</h3>
+      <p>In the case where two actions are presented.</p>
+      <div class="example">
+        <button type="button" class="btn-secondary">Edit request</button>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-secondary"</span><span class="nt">&gt;</span>Edit request<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+
+      <h3>&ldquo;Exit&rdquo; button</h3>
+      <p>Exit buttons refer to a tertiary &ldquo;undo&rdquo; type action for a specific task, such as canceling a book request in a &ldquo;manage request&rdquo; form.</p>
+      <div class="example">
+        <button type="button" class="btn-exit">Cancel request</button>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-exit"</span><span class="nt">&gt;</span>Cancel request<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+
+      <h3>&ldquo;Ghost&rdquo; button</h3>
+      <p>These buttons may be used in places where the action is de-emphasized or less important than the nearby content, where having the bright colors attract away from the necessary text.</p>
+      <div class="example">
+        <button type="button" class="btn-ghost">Contact</button>
+      </div>
+      <pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-ghost"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/button&gt;</span>
+</code></pre>
+    </article>
+
+  </main>
+
+   @@include('./src/includes/footer.html', {"active":"requests"}) 
+
+</body>
+</html>

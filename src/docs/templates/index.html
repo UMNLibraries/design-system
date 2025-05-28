@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Templates | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/templates/">Templates</a></li>
+        <li><a href="/design-system/templates/index.html" aria-current="page">Overview</a></li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/templates/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/design-system/templates/primary.html">Primary site patterns</a></li>
+      <ul>
+        <li><a href="/design-system/templates/primary.html#semantic">Semantic HTML</a></li>
+        <li><a href="/design-system/principles/primary.html#landmark">Landmarks</a></li>
+        <li><a href="/design-system/principles/primary.html#heading">Heading</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+    <h1>Templates overview</h1>
+    <p class="lead">Templates are groupings of components within a web page&rsquo;s main content area. The main area is one region of the entire web page, described by landmarks.</p>
+
+    <article>
+      <h2>Section summary</h2>
+    </article>
+
+    <article>
+      <form class="cards">
+            <fieldset>
+              <legend>Start date</legend>
+              <div class="form-inline form-date">
+                <label>
+                  Month
+                  <input type="text" name="smonth" pattern="[0-9]*" minlength="1" maxlength="2" autocorrect="off" inputmode="numeric">
+                </label>
+                <label>
+                  Day
+                  <input type="text" name="sday" pattern="[0-9]*" minlength="1" maxlength="2" autocorrect="off" inputmode="numeric">
+                </label>
+                <label>
+                  Year
+                  <input type="text" name="syear" pattern="[0-9]*" minlength="2" maxlength="4" autocorrect="off" inputmode="numeric">
+                </label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>End date</legend>
+              <div class="form-inline form-date">
+                <label>
+                  Month
+                  <input type="text" name="emonth" pattern="[0-9]*" minlength="1" maxlength="2" autocorrect="off" inputmode="numeric">
+                </label>
+                <label>
+                  Day
+                  <input type="text" name="eday" pattern="[0-9]*" minlength="1" maxlength="2" autocorrect="off" inputmode="numeric">
+                </label>
+                <label>
+                  Year
+                  <input type="text" name="eyear" pattern="[0-9]*" minlength="2" maxlength="4" autocorrect="off" inputmode="numeric">
+                </label>
+              </div>
+            </fieldset>
+            <button type="submit">Search hours</button>
+          </form>
+    </article>
+
+    <article>
+      <h2>LibGuides search</h2>
+      <form class="search" action="https://umnlibraries.github.io/design-system/templates/search.html" aria-label="Search Libraries resources" method="get" role="search">
+      <div class="input-group">
+        <input type="search" name="search" class="form-control form-control-lg" aria-label="Search words" required="">
+        <div class="input-group-append">
+          <button class="btn btn-dark form-control-lg" type="submit">
+            <svg class="glyph glyph-search" viewBox="0 0 30 32" width="30" height="32" focusable="false" aria-hidden="true">
+              <path d="M20.576 14.848q0-3.296-2.368-5.632t-5.632-2.368-5.664 2.368-2.336 5.632 2.336 5.664 5.664 2.336 5.632-2.336 2.368-5.664zm9.152 14.88q0 .928-.704 1.6t-1.6.672q-.96 0-1.6-.672l-6.112-6.112q-3.2 2.208-7.136 2.208-2.56 0-4.896-.992t-4-2.688-2.688-4T0 14.848t.992-4.864T3.68 5.952t4-2.688 4.896-.992 4.864.992 4.032 2.688 2.688 4.032.992 4.864q0 3.936-2.208 7.136l6.112 6.112q.672.672.672 1.632z"></path>
+            </svg>
+            <span class="visible-desktop">Search</span>
+          </button>
+        </div>
+      </div>
+    </form>
+    </article>
+
+    <article>
+      <h2>Datalist</h2>
+      <form>
+        <label for="dbnames">Database names</label>
+        <input type="text" id="dbnames" name="dbnames" autocomplete="off" list="dbnames-list" />
+
+        <datalist id="dbnames-list">
+
+        </datalist>
+      </form>
+      <script>
+      function ajax_get(url, callback) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //console.log('responseText:' + xmlhttp.responseText);
+            try {
+                var data = JSON.parse(xmlhttp.responseText);
+            } catch(err) {
+                console.log(err.message + " in " + xmlhttp.responseText);
+                return;
+            }
+            callback(data);
+          }
+        };
+
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+      }
+
+      ajax_get('https://stacks.lib.umn.edu/lg/tc/az/names.json', function(data) {
+        var html = "";
+        for (var i=0; i < data.length; i++) {
+          html += '<option label="' + data[i].replace(/"/g, '\\"') + '" value="' + data[i].replace(/"/g, '\\"') + '" />';
+        }
+        document.getElementById("dbnames-list").innerHTML = html;
+      });
+      </script>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+  
+</body>
+</html>

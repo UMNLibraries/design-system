@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dynamic content | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Dynamic content components</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html" aria-current="page">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Dynamic content components</h1>
+    <article id="general">
+      <h2>General</h2>
+      <p>The Libraries design system does not support dynamic content components. Hiding content with non-semantic HTML that requires inconsistently-supported ARIA is contradictory to the design system&rsquo;s principles.</p>
+      <p>This decision will be continually revisited as more content is introduced to the Libraries&rsquo; web assets and as the web evolves and matures.</p>
+      <ul>
+        <li>Dynamic content components are unnecessarily difficult to navigate without a mouse. Often, they require special key commands to access, which may or may not work per people&rsquo;s expectations. Links, however, have predictable behavior.</li>
+        <li>Searching within the page will not include hidden content, which is misleading. If folks use a tool such as <code>ctrl + f</code> on the page, the in-page search function will not return any content that isn&rsquo;t visually displayed.</li>
+        <li>Dynamic content components require javascript to function, which also means if the javascript fails to load, the majority of content may be inaccessible. Creating the components as progressive enhancement may resolve this. A better experience is to bypass the potential failures of a javascript-dependent component and create well-sectioned succinct and accessible content.</li>
+        <li>Simple elegant code that supports a sustainable web environment is a core principle of the design system. Non-semantic javascript-driven components contradict these principles.</li>
+      </ul>
+    </article>
+
+    <article id="tabs">
+      <h2>Tabs</h2>
+      <p>The Libraries design system does not support tabs.</p>
+      <p>Links do not fail. Tabs do.</p>
+      <p>Tabs also create an undesirable responsive layout. When the content within the tabs is longer than the space, often the tabs wrap onto multiple lines or labels are truncated. This becomes more pronounced on small screens, where the tabs may fill the visible space and a person may not notice the content updating below the tab interface.</p>
+      <p>Similar to the previous point, tabs create awkward limitations to tabs and tab labels.</p>
+    </article>
+
+    <article id="accordions">
+      <h2>Accordions</h2>
+      <p>The Libraries design system does not support accordions.</p>
+      <p>The <code>&lt;details&gt;</code> element may be considered once browsers more fully support it. The <code>&lt;details&gt;</code> element generates a simple no-javascript widget to show and hide element contents. Global support for <code>&lt;details&gt;</code> is 97% as of December 2021, so consider use with caution.</p>
+      <p>Though <code>&lt;details&gt;</code> is a native element, it still hides content that cannot easily be searched for on the page. For this reason, support continues to be minimal and not offered via the design system.</p>
+    </article>
+
+    <article id="carousels">
+      <h2>Carousels</h2>
+      <p>Carousels are sometimes used to present a lot of information in one place. However, for many years web industry experts have found them to be ineffective and challenging for people to use.</p>
+      <p>In <a href="https://www.nngroup.com/articles/auto-forwarding/">Auto-forwarding carousels and accordions annoy users and reduce visibility</a>, the Nielsen Normal Group's studies found carousel content is ignored. Auto moving content also causes challenges for people with attention disabilities such as ADHD. Moving content may make a page unusable. Carousels encourage the use of images, which also create a degraded experience for people who cannot visually access the graphics. Other usability oriented issues identified by Nielsen Norman regarding moving carousels:</p>
+      <ul>
+        <li>Moving UI elements usually reduce accessibility, particularly for users with motor skill issues who have difficulty clicking something before it's taken away.</li>
+        <li>Low-literacy users often don't have enough time to read the information before it's removed.</li>
+        <li>International users also read more slowly if your site is not in their native language, and thus they won't be able to understand a panel if it's displayed only briefly.</li>
+        <li>Single-item visibility is reduced by having to take turns being on display. The probability that users will spot the item they want is drastically reduced when only one thing is displayed at any given time; in the Siemens example, the discount deal is visible only 20% of the time.</li>
+        <li>It's just plain annoying for users to lose control of the user interface when things move around of their own accord.</li>
+        <li>Most important, because it moves, users automatically assume that it might be an advertisement, which makes them more likely to ignore it.</li>
+      </ul>
+      <p>Jared Smith, author of the <a href="http://shouldiuseacarousel.com/" aria-describedby="ext-site">Do not use carousels</a>, <a href="https://www.creativebloq.com/accessibility-expert-warns-stop-using-carousels-7133778">said this in an interview</a> regarding the impacts on accessibility:</p>
+      <blockquote>
+        <p>Beyond usability frustrations caused by carousels for all users, there are several distinct issues for users with disabilities. For auto-playing carousels, having content automatically disappear can cause loss of focus for screen reader and keyboard users that are reading or have keyboard focus on that content when it animates away. This can force the user back to the top of the page.</p>
+        <p>There also is no easy way to semantically or programmatically associate the controls for a carousel—often just numbers or dots—with the carousel content. This is especially difficult for users that cannot see the interface. The cognitive load and distraction caused by carousels can be especially difficult for some users with cognitive and learning disabilities.</p>
+      </blockquote>
+      <p>Carousels pose more usability and accessibility concerns than are listed here.</p>
+      <p>The Libraries design system does not support carousels.</p>
+    </article>
+
+    <article id="tooltips">
+      <h2>Tooltips</h2>
+      <p>The Libraries design system does not support tooltips.</p>
+      <p>Tooltips hide potentially critical information that people may not be able to access. They may also provide on demand clarification for acronyms located farther down the page, so this is a pattern that may be available once an accessible javascript free solution is found.</p>
+    </article>
+
+  </main>
+
+    @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

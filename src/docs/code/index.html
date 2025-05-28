@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Overview</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Code overview</h1>
+    <p class="lead">Code is intentionally written in pure HTML and CSS as agnostic output. It is the developer&rsquo;s discretion to translate the output into the language dictated by the project.</p>
+    <section class="cards">
+      <article>
+        <h2>Who should use this guide</h2>
+        <p>Anyone comfortable with HTML and wishes to create a more inclusive online experience.</p>
+        <p>The code content is written for developers who are familiar with HTML and CSS. Please reach out to Web Development if you need assistance understanding the content.</p>
+      </article>
+
+      <article>
+        <h2>What services are within scope</h2>
+        <p>All places with a University Libraries presence including but not limited to: the main website, HSL website, LibGuides (open or <acronym title="What You See is What You Get">WYSIWYG</acronym> code blocks only), Drupal Lite websites where Libraries is a primary partner.</p>
+      </article>
+    </section>
+
+
+    <article>
+      <p>The code in the design system is recommended to meet the outlined principles, focusing on optimization, accessibility, as well as responsiveness. Modifying the architecture of the code is not recommended, as well as some CSS patterns that may disable assistive technology features.</p>
+      <p>For example, changing a <code>&lt;table&gt;</code>&rsquo;s <code>display</code> default from <code>table</code> to <code>block</code> will remove all native table navigation features, such as a screen reader announcing the column and row headers. If modification is necessary or desired, ensure the output code is heavily tested.</p>
+      <p>To reiterate, modification of code output is NOT recommended. Rather, suggest improvements or changes to the code using pull requests.</p>
+
+      <ul class="cards">
+        <li class="bt-md">
+          <h2>General</h2>
+          <p>Guidelines for global or overarching features of code.</p>
+          <footer><a href="/design-system/code/general.html">General</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Content blocking</h2>
+          <p>Building content groupings on pages.</p>
+          <footer><a href="/design-system/code/article.html">Content blocking</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Quotations</h2>
+          <p>Using HTML elements to display quotations.</p>
+          <footer><a href="/design-system/code/reference.html">Quotations</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Citing sources</h2>
+          <p>Code patterns for correctly writing references including citations and footnotes.</p>
+          <footer><a href="/design-system/code/reference.html">Citing sources</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Dates and times</h2>
+          <p>How to code dates and times meaningfully for machine reading and assistive technology.</p>
+          <footer><a href="/design-system/code/datetime.html">Date and time</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Links</h2>
+          <p>Different methods to code hyperlinks for different scenarios such as internal and external linking.</p>
+          <footer><a href="/design-system/code/link.html">Links</a></footer>
+        </li class="bt-md">
+
+        <li class="bt-md">
+          <h2>Buttons</h2>
+          <p>Appropriate use of buttons and how to code them.</p>
+          <footer><a href="/design-system/content/files.html">Buttons</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Images</h2>
+          <p>Instructions for processing images and what file types to use.</p>
+          <footer><a href="/design-system/code/images.html">Images</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Lists</h2>
+          <p>Different list styling options.</p>
+          <footer><a href="/design-system/code/list.html">Lists</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Cards</h2>
+          <p>Modified list option to allow more complex content groupings.</p>
+          <footer><a href="/design-system/code/card.html">Cards</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Forms</h2>
+          <p>All web form considerations and coding recommendations for the most effective accessibility and usability.</p>
+          <footer><a href="/design-system/code/form.html">Forms</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Tables</h2>
+          <p>Proper use and layout of data tables.</p>
+          <footer><a href="/design-system/code/table.html">Tables</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Navigation</h2>
+          <p>Primary, skip links, subsection, breadcrumb navigation patterns.</p>
+          <footer><a href="/design-system/code/nav.html">Navigation</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Alerts</h2>
+          <p>Information notices, error alerts, and warnings for forms, outages, and more.</p>
+          <footer><a href="/design-system/code/alert.html">Alerts</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Tooltips</h2>
+          <p>For informational descriptions, tooltips provide context. Use sparingly.</p>
+          <footer><a href="/design-system/code/tooltip.html">Tooltips</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Code snippets</h2>
+          <p>To expose code, primarily for use in the design system.</p>
+          <footer><a href="/design-system/code/code.html">Code snippets</a></footer>
+        </li>
+      </ul>
+
+    </article>
+
+    <article>
+      <h2>Further reading</h2>
+      <blockquote>
+        <p>The most performant[, sustainable], accessible and easily maintainable feature of a website is the one that you don&rsquo;t make in the first place.</p>
+        <footer>&ndash;<cite>Heydon Pickering</cite>, modified by Jack Lenox in <a href="https://wordpress.tv/2019/04/18/jack-lenox-how-better-performing-websites-can-help-save-the-planet/" aria-describedby="ext-site">How better performing website can help save the plant</a></footer>
+      </blockquote>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

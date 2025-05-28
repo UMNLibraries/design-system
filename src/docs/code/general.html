@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>General | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>General</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html" aria-current="page">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>General code guidelines</h1>
+
+    <article id="js">
+      <h2>Javascript resiliency</h2>
+      <p>Javascript is a progressive enhancement only. Where javascript is used, it is implemented minimally with thorough unit testing for user experience including accessibility. Avoid frameworks, and any javascript, to deliver critical content where possible.</p>
+      <p><a href="https://speakerdeck.com/brucel/ijs-conference?slide=48" aria-describedby="ext-site">BuzzFeed monitored javascript timeouts</a> noting 1% failed to load equalling 13 million requests per month. Web assets must be designed for resiliency with graceful degradation.</p>
+    </article>
+
+    <article id="support">
+      <h2>Ubiquitous support</h2>
+      <p>Web tools and languages must have 98% or greater coverage for the audience (e.g. use University Libraries website analytics for https://www.lib.umn.edu)</p>
+      <p>Only use elements, attributes, and features that have at least 98% or greater coverage for lib.umn.edu (or intended website audience) on <a href="https://caniuse.com" aria-describedby="ext-site">caniuse.com</a>. Analytics data used for rate determination is for the entire semester (if the current semester is less than three months, move the start point to include the previous semester data).</p>
+    </article>
+
+    <article id="title">
+      <h2><code>Title</code> attribute</h2>
+      <p>Do not use the <code>title</code> attribute unless specifically recommended. Better tools exist for most cases where <code>title</code> might be considered, and all of them are more accessible.</p>
+      <p><code>title</code> is never used for images, always use <code>alt</code>.</p>
+    </article>
+
+    <article id="lang">
+      <h2><code>Lang</code> attribute</h2>
+      <p>Identifying the language of a content block is essential for technology to interpret content correctly, such as text-to-speech readers applying different language rules for pronunciation.</p>
+      <p>Each page is set to present American English at the top of each web document and specified reading direction is left-to-right, <code>&lt;html lang="en-us" dir="ltr"&gt;</code>. This may not be modified.</p>
+      <p>When using any language outside of American English, identify the words using the lang attribute. The lang attribute may be added to most elements but is recommended specifically for: <code>span</code>, <code>p</code>, and <code>blockquote</code>. Use the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" aria-describedby="ext-site">ISO 639-1</a> 2-letter code to identify the language.</p>
+
+      <h3>Example</h3>
+      <p><code>&lt;p&gt;The world is full of languages. As the saying goes, &lt;span lang="fr"&gt;Une seule langue n&rsquo;est jamais suffisante&lt;/span&gt;.&lt;/p&gt;</code></p>
+      <p><code>&lt;p lang="de"&gt;Anfangen ist leicht, Beharren eine Kunst.&lt;/p&gt;</code></p>
+    </article>
+
+    <article id="motion">
+      <h2>Reduced motion</h2>
+      <blockquote>
+        <p>If you have a vestibular disorder or have certain kinds of migraine or seizure triggers, navigating the web can be a lot like walking through a minefield - you’re perpetually one click away from activating an unannounced animation. And that’s just for casual browsing.</p>
+        <footer>-<cite>Eric Baily</cite>, CSS Tricks</footer>
+      </blockquote>
+
+      <p>Animation is a progressive enhancement.</p>
+
+      <p>For any pages that might have motion, such as animated graphics, utilize <code>prefers-reduced-motion</code> to stop animation effects. This honors a person&rsquo;s choice to prevent animation that may cause motion sensitivities or distraction, among other negative health effects.</p>
+
+<pre rel="CSS" class="code" translate="no">
+<code>
+@media screen and
+ (prefers-reduced-motion: reduce),
+ (update: slow) {
+  <span class="nt">*</span> <span class="p">{</span>
+   <span class="cp">animation-duration</span><span class="p">:</span> <span class="cv">0.001ms !important</span><span class="p">;</span>
+   <span class="cp">animation-iteration-count</span><span class="p">:</span> <span class="cv">1 !important</span><span class="p">;</span> <span class="c">/* Hat tip Nick/cssremedy (https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/#comment-1700170) */</span>
+   <span class="cp">transition-duration</span><span class="p">:</span> <span class="cv">0.001ms !important</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code>
+</pre>
+      <p>Code from <a href="https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/" aria-describedby="ext-site">Revisiting prefers-reduced-motion, the reduced motion media query</a>, CSS Tricks</p>
+    </article>
+
+    <article id="embedded">
+      <h2>Embedded content</h2>
+      <p>Never embed social media threads.</p>
+      <p>If content must be embedded, such as a hosted video or a LibGuides widget, attribute it correctly and provide a link to the original content.</p>
+      <p>Utilize HTML5 embedding methods, or <code>&lt;iframe&gt;</code> if necessary, over javascript.</p>
+      <p>All content presented on the website must meet University accessibility requirements, including embedded content. Video hosted elsewhere but embedded on a Libraries website must provide closed captions and preferably transcripts.</p>
+    </article>
+  </main>
+
+   @@include('./src/includes/footer.html', {"active":"requests"})
+
+  </body>
+</html>

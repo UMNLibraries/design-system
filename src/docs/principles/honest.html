@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Principles | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/principles/">Principles</a></li>
+        <li>Honest</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/principles/index.html">Overview</a></li>
+      <li>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
+        <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
+          <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
+          <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
+          <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/honest.html" aria-current="page">Honest</a>
+        <ul>
+          <li><a href="/design-system/principles/honest.html#code">Journalistic ethics</a></li>
+          <li><a href="/design-system/principles/honest.html#misinformation">Mis- and dis-information</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
+      <li>
+        <a href="/design-system/principles/mindful.html">Mindful</a>
+        <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
+          <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
+          <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/private.html">Private</a>
+        <ul>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+
+    <h1>Honest</h1>
+
+  <div class="lead">
+    <p>Be transparent.</p>
+    <p>Provide accurate content written with non-biased language. Clearly identify opinionated content. Fight disinformation, or the act of intentionally deceiving in content and algorithms.</p>
+  </div>
+
+  <article id="code">
+    <h2>Society of Professional Journalists (SPJ)&rsquo;s Code of Ethics</h2>
+    <p>Adapted from <a href="https://www.spj.org/spj-code-of-ethics/" aria-describedby="ext-site">SPJ&rsquo;s code of ethics</a>.</p>
+    <dl>
+      <dt>Seek truth and write it</dt>
+      <dd>Take responsibility for the accuracy of your writing. Verify information before publishing it.</dd>
+      <dd>Neither speed nor format excuses inaccuracy.</dd>
+      <dd>Provide context. Take special care not to misrepresent or oversimplify when promoting, previewing, or summarizing.</dd>
+      <dd>Gather, update, and correct information.</dd>
+      <dd>Identify sources clearly and provide access to source material when it is relevant and appropriate.</dd>
+      <dd>Avoid stereotyping.</dd>
+      <dd>Never deliberately distort facts or context, including visual information. Clearly label illustrations.</dd>
+      <dd>Never plagiarize. Always attribute, including visual information.</dd>
+
+      <dt>Minimize harm</dt>
+      <dd>Show compassion for those who may be affected by information. Use heightened sensitivity when dealing with younger audiences. Consider cultural differences in approach and treatment.</dd>
+      <dd>Consider the long-term implications of the extended reach and permanence of publication. Provide updated and more complete information as appropriate.</dd>
+
+      <dt>Act independently</dt>
+      <dd>Avoid conflicts of interest, real or perceived. Disclose unavoidable conflicts.</dd>
+      <dd>Refuse gifts of any kind and avoid any outside activities that may compromise integrity or impartiality, or may damage credibility.</dd>
+      <dd>Resist internal and external pressure to influence information or information architecture.</dd>
+
+      <dt>Be accountable and transparent</dt>
+      <dd>Explain ethical choices and processes to audiences. Encourage a civil dialogue with the public about content.</dd>
+      <dd>Respond quickly to questions about accuracy, clarity, and fairness.</dd>
+      <dd>Acknowledge mistakes and correct them promptly and prominently.</dd>
+      <dd>Abide by the same high standards expected of others.</dd>
+    </dl>
+  </article>
+
+  <article id="misinformation">
+    <h2>Misinformation, disinformation, and malinformation</h2>
+    <p>Understand what misinformation, disinformation, and malinformation are and how to avoid them. Take <a href="https://checkology.org/" aria-describedby="ext-site">Checkology</a>&rsquo;s news literacy course to develop these skills, or read the <a href="https://levelupmn.org/thing-7/" aria-describedby="ext-site">disinformation, misinformation, malinformation overview from Level Up MN</a>.</p>
+    <dl>
+      <dt>Understand what the difference is between mis-, dis-, and mal-information</dt>
+      <dd>Avoid sowing confusion, which may break down the concept of truth.</dd>
+
+      <dt>Avoid and refute misinformation</dt>
+      <dd>Misinformation is false information created and spread without the intent to cause harm, though it can often lead to harm.</dd>
+
+      <dt>Avoid and refute disinformation</dt>
+      <dd>Disinformation is intentionally created and spread to cause harm, targeting certain types of audiences to achieve some goal. It is often refered to as &ldquo;fake news&rdquo;.</dd>
+
+      <dt>Avoid malinformation</dt>
+      <dd>Malinformation is true information that is spread to cause harm.</dd>
+    </dl>
+
+  </article>
+
+    <!--<article id="design">
+      <h2>Design</h2>
+      <p>Adapted from Mike Monteiro&rsquo;s <a href="https://github.com/mmmonteiro/designethics/blob/master/en_US.md" aria-describedby="ext-site">designer&rsquo;s code of ethics</a>.</p>
+      <dl>
+        <dt>A designer is first and foremost a human being.</dt>
+        <dd>As a human being, designers are part of the social contract. Work done by a designer impacts other people and can either help or hurt them.</dd>
+        <dd>Every human being on this planet is obligated to do our best to leave this planet in better shape than we found it. Designers don&rsquo;t get to opt out.</dd>
+
+        <dt>A designer is responsible for the work they put into the world</dt>
+        <dd>The work designers bring into the world is their legacy. It will outlive them. And it will speak for them.</dd>
+        <dd>When designers knowingly produce work that is intended to harm, they are abdicating our responsibility. When they ignorantly produce work that harms others because they didn&rsquo;t consider the full ramifications of that work, they are doubly guilty.</dd>
+
+        <dt>A designer values impact over form</dt>
+        <dd>Fear the consequences of the work more than love the cleverness of the ideas.</dd>
+
+        <dt>A designer owes the people who hire them not just their labor, but their counsel</dt>
+        <dd>The designer&rsquo; job is not just to produce that work but to evaluate the impact of that work; to relay the impact of that work to the employer. And should that impact be negative, relay that to the client along with a way, if possible, to eliminate the negative impact of the work.</dd>
+
+        <dt>A designer welcomes criticism</dt>
+        <dd>Encourage criticism in order to create better work in the future.</dd>
+
+        <dt>A designer strives to know their audience</dt>
+        <dd>Design is the intentional solution to a problem within a set of constraints. To know whether designers are properly solving those problems, meet the people who are having them.</dd>
+        <dd> Empathy is a pretty word for exclusion. To know how women would use something being designed, get a woman on the team that&rsquo;s designing it.</dd>
+
+        <dt>A designer does not believe in edge cases</dt>
+        <dd>For years people who weren&rsquo;t crucial to a products&rsquo; success were &ldquo;edge cases&rdquo;. Designers were marginalizing people, making a decision that there were people in the world whose problems weren&rsquo;t worth solving.</dd>
+
+        <dt>A designer is part of a professional community</dt>
+        <dd>Designers are part of a professional community and the way they do their job and handle themselves professionally affects everyone in that community.</dd>
+
+        <dt>A designer welcomes a diverse and competitive field</dt>
+        <dd>A designer keeps their ego in check, knows when to shut up and listen, is aware of their own biases and welcomes having them checked, and fights to make room for those who have been silenced.</dd>
+
+        <dt>A designer takes time for self-reflection</dt>
+        <dd>Take the time for self-reflection every few months. Evaluate recent decisions. Are you staying true to who you are? Have you veered off course? Correct it.</dd>
+      </dl>
+    </article>-->
+
+    <!--<article>
+      <h2>Further reading</h2>
+      <blockquote>
+        <p>All people, regardless of origin, age, background, or views, possess a right to privacy and confidentiality in their library use. Libraries should advocate for, educate about, and protect people’s privacy, safeguarding all library use data, including personally identifiable information.</p>
+        <footer>&ndash;<cite>American Library Association</cite>, <a href="http://www.ala.org/advocacy/intfreedom/librarybill" aria-describedby="ext-site">Library Bill of Rights</a>, 7</footer>
+      </blockquote>
+      <blockquote>
+        <p>Design ethics concerns moral behavior and responsible choices in the practice of design. It guides how designers work with clients, colleagues, and the end users of products, how they conduct the design process, how they determine the features of products, and how they assess the ethical significance or moral worth of the products that result from the activity of designing.</p>
+        <footer>&ndash;<cite>Encyclopedia.com</cite>, <a href="https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/design-ethics" aria-describedby="ext-site">Design ethics</a></footer>
+      </blockquote>
+    </article>-->
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

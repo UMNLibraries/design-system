@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Principles | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/principles/">Principles</a></li>
+        <li>Sustainable</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/principles/index.html">Overview</a></li>
+      <li>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
+        <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
+          <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
+          <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
+          <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <ul>
+          <li><a href="/design-system/principles/honest.html#code">Journalistic ethics</a></li>
+          <li><a href="/design-system/principles/honest.html#misinformation">Mis- and dis-information</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
+      <li>
+        <a href="/design-system/principles/mindful.html">Mindful</a>
+        <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
+          <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
+          <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/private.html">Private</a>
+        <ul>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html" aria-current="page">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Sustainable</h1>
+    <div class="lead">
+      <p>Factor in energy source and consumption for optimizations, from server to client side. Just as people do not deserve a reduced experience, our planet does not deserve to suffer the consequences of bad design and web delivery.</p>
+      <p>Sustainability is as much about our planet&rsquo;s wellbeing as it is our own, as they are intertwined.</p>
+    </div>
+
+    <article id="optimization">
+      <p>Adapted from <a href="https://web.archive.org/web/20190927063608/http://www.sustainablewebdesign.org/" aria-describedby="ext-site">sustainable web design (archived)</a> and <cite rel="author">Lara Callender Hogan</cite>&rsquo;s book <cite>Designing for performance: weighing aesthetics and speed</cite>.</p>
+
+      <h2>Optimization</h2>
+      <dl>
+        <dt>Findability</dt>
+        <dd>The easier content is to find, the fewer pages a user has to load to locate information. This means fewer server requests are made and that unnecessary page elements &mdash; like photos and videos, which take up a lot of bandwidth &mdash; don&rsquo;t load, either. These small energy savings accumulate over time.</dd>
+
+        <dt>Optimize images</dt>
+        <dd>Images make up the majority of total page weight. The number of image bytes has grown by more than 30% on the average web page in 2014, with little growth in image requests to match the increase. Optimizing images is the easiest big win.</dd>
+        <dd>Find the right balance of file size and quality for each image, look for ways to reduce the title number of image requests, and optimize image creation workflows. Refer to <a href="/design-system/design/imagery.html">image guidelines</a> for how to optimize well.</dd>
+
+        <dt>Optimize markup</dt>
+        <dd>Avoid excessive use of <code>&lt;div&gt;</code> elements. Use semantic HTML (for example, use the appropriate heading element rather than a <code>&lt;p&gt;</code> or <code>&lt;div&gt;</code>). Using correct elements to improve  accessibility as well as search engine optimization (a search engine may better determine what content is if it is &ldquo;tagged&rdquo; correctly). It also allows browsers to apply enhancements such as auto-filling standard form fields.</dd>
+
+        <dt>Optimize styles</dt>
+        <dd>Remove unused styles and condense and combine styles. Reduce specificity in stylesheets to improve overriding issues as well as write more performant code.</dd>
+
+        <dt>Optimize fonts</dt>
+        <dd>Use system or web native fonts to reduce requests and &ldquo;flash of unstyled content&rdquo; concerns. Where non-native fonts are selected, remove sets in the font set that will not be used (e.g. will a semi-bold italic set be used?).</dd>
+
+      </dl>
+    </article>
+
+    <article id="performance">
+      <h2>Web performance</h2>
+      <dl>
+        <dt>Performance optimization</dt>
+        <dd>Sustainability and page speed go hand-in-hand. An efficient website uses less processing power, which means that your site uses less energy and has a lower carbon footprint.</dd>
+        <dd>People expect to get the content they want instantaneously, and efficient pages load more quickly. This reduces your site&rsquo;s bounce rate and keeps people engaged and satisfied.</dd>
+
+        <dt>Reduce resource requests</dt>
+        <dd>Optimize the size and number of requests that a web page takes to render. Request reduction is desirable despite threading capabilities in HTTP/2, to support HTTP/1 browsers and clients as well as intentionality of energy consumption for transmitting data. Be mindful of any increase in requests to the server.</dd>
+
+        <dt>Implement HTTP/2 or HTTP/3</dt>
+        <dd>HTTP/3 offers several advantages over HTTP/2, primarily related to increased performance and robustness by using UDP where HTTP/2 relies on TCP. HTTP/2 allows multiple requests to run over a single connection as well as simultaneous downloads. This replaces HTTP/1&rsquo;s rule of only one outstanding request per TCP connection. Servers can push content to the browser instead of waiting for the browser to request individual page assets.</dd>
+        <dd>For more practical information about HTTP/2, review Tim Frick's Designing for sustainability, pp. 218-220.</dd>
+
+        <dt>Utilize caching</dt>
+        <dd>Cache assets aggressively where possible.</dd>
+        <dd>Caching is critical for site performance; assets that are cached do not need to be requested again from the server, saving a request. All static assets such as CSS files, Javascript files, images, PDFs, and fonts should be cached.</dd>
+    </article>
+
+    <article id="sustainable">
+      <h2>Sustainable practices</h2>
+      <p>Just as people do not deserve a reduced experience, our planet does not deserve to suffer the consequences of bad design and web delivery.</p>
+      <dl>
+        <dt>Delete outdated and unused web assets</dt>
+        <dd>Nothing should live forever, including digital files. Retention plans need to exist with frequent auditing of all assets. That which continues to &ldquo;live&rdquo; requires energy and storage.</dd>
+
+        <dt>Green hosting</dt>
+        <dd>The servers that store the files that make up web pages require power 24 hours a day, so the single most impactful thing you can do to move toward a more sustainable website is use a hosting provider that runs on 100% renewable energy.</dd>
+      </dl>
+
+      <p>Consider committing to the <a href="https://www.sustainablewebmanifesto.com/" aria-describedby="ext-site">sustainable web manifesto</a>.</p>
+    </article>
+
+    <article id="design">
+      <h2>Design justice</h2>
+      <p>These principles are from the <a href="https://designjustice.org/read-the-principles">Design Justice</a> community.</p>
+      <ul>
+        <li>We use design to <strong>sustain, heal, and empower</strong> our communities, as well as to seek liberation from exploitative and oppressive systems.</li>
+        <li>We <strong>center the voices of those who are directly impacted</strong> by the outcomes of the design process.</li>
+        <li>We <strong>prioritize design&rsquo;s impact on the community</strong> over the intentions of the designer.</li>
+        <li>We view <strong>change as emergent from an accountable, accessible, and collaborative process</strong>, rather than as a point at the end of a process.</li>
+        <li>We see the role of the <strong>designer as a facilitator rather than an expert</strong>.</li>
+        <li>We believe that <strong>everyone is an expert based on their own lived experience</strong>, and that we all have unique and brilliant contributions to bring to a design process.</li>
+        <li>We <strong>share design knowledge and tools</strong> with our communities.</li>
+        <li>We work towards <strong>sustainable, community-led and -controlled</strong> outcomes.</li>
+        <li>We work towards <strong>non-exploitative solutions</strong> that reconnect us to the earth and to each other.</li>
+        <li>Before seeking new design solutions, <strong>we look for what is already working</strong> at the community level. We honor and uplift traditional, indigenous, and local knowledge and practices.</li>
+      </ul>
+
+    </article>
+
+    <article id="manifesto">
+      <h2>Sustainable Web Manifesto</h2>
+      <p>Adapted from the <a href="https://www.sustainablewebmanifesto.com/" aria-describedby="ext-site">sustainable web manifesto</a>.</p>
+      <dl>
+        <dt>Clean</dt>
+        <dd>The services we provide and services we use will be powered by renewable energy.</dd>
+
+        <dt>Efficient</dt>
+        <dd>The products and services we provide will use the least amount of energy and material resources possible.</dd>
+
+        <dt>Open</dt>
+        <dd>The products and services we provide will be accessible, allow for the open exchange of information, and allow people to control their data.</dd>
+
+        <dt>Honest</dt>
+        <dd>The products and services we provide will not mislead or exploit people in their design or content.</dd>
+
+        <dt>Regenerative</dt>
+        <dd>The products and services we provide will support an economy that nourishes people and planet.</dd>
+
+        <dt>Resilient</dt>
+        <dd>The products and services we provide will function in the times and places where people need them most.</dd>
+      </dl>
+
+      <p>Consider committing to the <a href="https://www.sustainablewebmanifesto.com/" aria-describedby="ext-site">sustainable web manifesto</a>.</p>
+    </article>
+
+    <article id="reading">
+      <h2>Further reading</h2>
+      <p>Adapted from the <a href="https://www.sustainablewebmanifesto.com/" aria-describedby="ext-site">sustainable web manifesto</a>.</p>
+      <ul>
+        <li><a href="https://w3c.github.io/sustainableweb-wsg/" aria-describedby="ext-site">W3C Web Sustainability Guidelines</a></li>
+        <li><a href="https://www.goodreads.com/book/show/28321009-designing-for-sustainability" aria-describedby="ext-site">Designing for Sustainability: a Guide to Building Greener Digital Products and Services</a> by Tim Frick</li>
+        <li><a href="https://www.goodreads.com/book/show/56861271-sustainable-web-design" aria-describedby="ext-site">Sustainable Web Design</a> by Tom Greenwood</li>
+        <li><a href="https://www.goodreads.com/book/show/53459822-world-wide-waste---how-digital-is-killing-our-planet-and-what-we-can-do" aria-describedby="ext-site">World Wide Waste: How Digital is Killing Our Planet - and What we Can Do About It</a> by Gerry McGovern</li>
+      </ul>
+    </article>
+
+  </main>
+
+   @@include('./src/includes/footer.html', {"active":"requests"})
+</body>
+</html>

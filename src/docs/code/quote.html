@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Quotes | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Quotations</li>
+      </ol>
+    </nav>
+
+  </header>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html" aria-current="page">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Quotations</h1>
+    <p class="lead">For more about the elements used, please read <a href="https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/">Quoting in HTML</a>.</p>
+
+    <article>
+      <h2>Inline quotes</h2>
+      <p>Follow guidelines for when to use inline quotes. Use the <code>&lt;q&gt;</code> element, which surrounds the text in quotation marks. The <code>&lt;q&gt;</code> element may be nested and provides the correct quotation marks.</p>
+
+
+      <div class="example">
+        <p>Based on the <acronym title="American Library Association">ALA</acronym> Bill of Rights, libraries should not exclude materials <q>because of the origin, age, background, or views of those contributing to their creation</q>.</p>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;p&gt;</span>Based on the <span class="nt">&lt;acronym </span><span class="na">title=</span><span class="s">"American Library Association"</span><span class="nt">&gt;</span>ALA<span class="nt">&lt;/acronym&gt;</span> Bill of Rights, libraries should not exclude materials <span class="nt">&lt;q&gt;</span>because of the origin, age, background, or views of those contributing to their creation<span class="nt">&lt;/q&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+
+    </article>
+
+    <article>
+      <h2>Blockquotes</h2>
+      <p>When a quote is longer, use <code>&lt;blockquote&gt;</code> and provide a citation if possible.</p>
+
+      <div class="example">
+        <blockquote>
+          <p>I learned this, at least, by my experiment: that if one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours.</p>
+          <footer>&mdash; Henry David Thoreau, <cite>Walden: Or, Life in the Woods</cite></footer>
+        </blockquote>
+
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;blockquote&gt;</span>
+ <span class="nt">&lt;p&gt;</span>I learned this, at least, by my experiment: that if one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours.<span class="nt">&lt;/p&gt;</span>
+ <span class="nt">&lt;footer&gt;</span>&amp;mdash; Henry David Thoreau, <span class="nt">&lt;cite&gt;</span>Walden: Or, Life in the Woods<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre>
+
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Alerts | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/design-system/">Design system</a></li>
+      <li><a href="/design-system/code/">Code</a></li>
+      <li>Alert</li>
+    </ol>
+  </nav>  
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html" aria-current="page">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Alerts and notifications</h1>
+
+    <article>
+      <h2>Usage</h2>
+      <p>From <a href="https://rivet.iu.edu/components/overlays/alerts/" aria-describedby="ext-site">Rivet Design System Alerts</a></p>
+      <p>Alerts are used to display brief important messages to users. They are designed to attract the user&rsquo;s attention, but not interrupt their work.</p>
+      <p>Load alerts via static HTML or server side scripting over javascript whenever possible. For dismissable alerts, do not auto remove; give people the ability to dismiss the alert. Dismissable alerts and alerts that are dynamically added to the content after page load must have appropriate accessibility attributes outlined below.</p>
+      <h3>When to use</h3>
+      <ul>
+        <li>To notify people about system status including error, warnings, and updates.</li>
+        <li>To notify people they&rsquo;ve successfully completed a task.</li>
+        <li>Use along with inline validation alerts to summarize multiple errors on longer forms.</li>
+      </ul>
+      <h3>When to use something else</h3>
+      <ul>
+        <li>When it&rsquo;s necessary to interrupt the person&rsquo;s workflow.</li>
+        <li>When input/action is required to continue working.</li>
+        <li>If action taken by the person will result in losing/destroying their work, require confirmation.</li>
+      </ul>
+      <h3>Accessibility</h3>
+      <ul>
+        <li>Use the <code>role="alert"</code> attribute.</li>
+        <li>Alerts that have a dismiss or close button use the <code>role="alertdialog"</code> attribute.</li>
+        <li>Use the <code>aria-labelledby</code> attribute to link the alert title with the alert element.</li>
+        <li>Dynamically rendered alerts are automatically announced by most screen readers; note that screen readers will not inform people of alerts that are present before a page has finished loading.</li>
+      </ul>
+      <h4>Alert list accessibility</h4>
+      <p>Alert lists can be particularly useful for summarizing multiple errors on a page, and providing links to the invalid fields. These summaries are especially helpful for people with visual impairments, who will not receive the visual cue provided by multiple inline alerts appearing on the page when a form is submitted.</p>
+      <h3>Microcopy</h3>
+      <ul>
+        <li>Alert title is clear and concise. &ldquo;Success&rdquo; rather than &ldquo;Application was submitted successfully&rdquo;</li>
+        <li>Alert message is descriptive and clearly articulates the problem encountered or the information needing conveyance. &ldquo;The user ID and password you entered do not match&rdquo; is more clear than &ldquo;Unauthorized&rdquo;.</li>
+        <li>Where appropriate, alert title is a link to the position on the page where the invalid element can be found.</li>
+        <li>Alert message ideally provides next steps where appropriate.</li>
+      </ul>
+      <h4>Example</h4>
+      <div class="alert alert-warning">
+        <h5 class="h2">Scheduled system maintenance</h5>
+        <p>The system will be unavailable on August 1<sup>st</sup> due to scheduled system maintenance. Access to databases will continue.</p>
+      </div>
+      <p>(good copy)</p>
+
+      <div class="alert alert-warning">
+        <h5 class="h2">System is down</h5>
+        <p>The system is currently unavailable.</p>
+      </div>
+      <p>(bad)</p>
+
+      <h3>Notes</h3>
+      <ul>
+        <li>Avoid using error messages that automatically disappear.</li>
+        <li>Write helpful alert messages. For errors, include a brief description of the problem and how to fix it.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Code</h2>
+      <h3>Page level messages</h3>
+      <p>Page level messages present at the top of the page below the header but above the main content area.</p>
+
+      <h4>Informational notice</h4>
+      <div class="example">
+        <div class="alert alert-info" role="alert" aria-labelledby="alert-title">
+          <h5 class="h2" id="alert-title">Scheduled system maintenance</h5>
+          <p>The system will be unavailable August 1<sup>st</sup> due to scheduled system maintenance.</p>
+        </div>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-info"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-labelledby=</span><span class="s">"alert-title"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"alert-title"</span><span class="nt">&gt;</span>Scheduled system maintenance<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>The system will be unavailable August 1<sup>st</sup> due to scheduled system maintenance.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code>
+</pre>
+
+      <h4>Success notice</h4>
+      <p>Often a response to a form submission on a confirmation page. The message is a response to an action.</p>
+
+      <div class="example">
+        <div class="alert alert-success" role="alert" aria-labelledby="alert-title2">
+          <h2 id="alert-title2">Thank you</h2>
+          <p>We have received your request. Request status is available in My Account.</p>
+        </div>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-success"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-labelledby=</span><span class="s">"alert-title2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"alert-title2"</span><span class="nt">&gt;</span>Thank you<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>We have received your request. Request status is available in My Account.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code>
+</pre>
+
+      <h4>Warning notice</h4>
+      <p>Use for announcing scheduled outages and upcoming closures.</p>
+      <div class="example">
+        <div class="alert alert-warning" role="alert" aria-labelledby="alert-title3">
+          <h2 id="alert-title3">Closing soon</h2>
+          <p>The Library is closing soon. If you need assistance, go to a service desk.</p>
+        </div>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-warning"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-labelledby=</span><span class="s">"alert-title3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"alert-title3"</span><span class="nt">&gt;</span>Closing soon<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>The Library is closing soon. If you need assistance, go to a service desk.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code>
+</pre>
+
+      <h4>Error notices</h4>
+      <p>This most commonly occurs with web forms, but it may also be applied to unplanned service failures.</p>
+
+      <div class="example">
+        <div class="alert alert-danger" role="alert" aria-labelledby="alert-title4">
+          <h2 id="alert-title4">Errors</h2>
+          <p>The form needs attention. Please enter the correct date.</p>
+        </div>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-danger"</span> <span class="na">role=</span><span class="s">"alert"</span> <span class="na">aria-labelledby=</span><span class="s">"alert-title4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2</span> <span class="na">id=</span><span class="s">"alert-title4"</span><span class="nt">&gt;</span>Errors<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;p&gt;</span>The form needs attention. Please enter the correct date.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code>
+</pre>
+
+      <h3>Inline messages</h3>
+      <p>Use inline messages for web form validation. In addition to the alert message, include an id for the input field to be described by.</p>
+
+      <h4>Informational inline alerts</h4>
+
+      <div class="example">
+        <p class="alert alert-inline alert-info">
+          <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16">
+          <g fill="currentColor">
+            <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+            <path d="M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z"/>
+            <circle cx="8" cy="5" r="1"/>
+            </g>
+           </svg>
+           Provide your university email address ending in umn.edu.
+        </p>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert alert-inline alert-info"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"glyph"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">viewBox=</span><span class="s">"0 0 16 16"</span> <span class="na">width=</span><span class="s">"16"</span> <span class="na">height=</span><span class="s">"16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"currentColor"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,12a1,1,0,0,1-1-1V8A1,1,0,0,1,9,8v3A1,1,0,0,1,8,12Z"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"8"</span> <span class="na">cy=</span><span class="s">"5"</span> <span class="na">r=</span><span class="s">"1"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+ <span class="nt">&lt;/svg&gt;</span>
+   Provide your university email address ending in umn.edu.
+<span class="nt">&lt;/p&gt;</span>
+</code>
+</pre>
+
+      <h4>Success inline alerts</h4>
+
+      <div class="example">
+        <p class="alert alert-inline alert-success">
+           <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16">
+           <g fill="currentColor">
+             <path d="M10.2,5.4,7.1,9.53,5.67,8.25a1,1,0,1,0-1.34,1.5l2.05,1.82a1.29,1.29,0,0,0,.83.32h.12a1.23,1.23,0,0,0,.88-.49L11.8,6.6a1,1,0,1,0-1.6-1.2Z"/>
+             <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"/>
+            </g>
+           </svg>
+           The password meets security requirements.
+        </p>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert alert-inline alert-success"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"glyph"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">viewBox=</span><span class="s">"0 0 16 16"</span> <span class="na">width=</span><span class="s">"16"</span> <span class="na">height=</span><span class="s">"16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"currentColor"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M10.2,5.4,7.1,9.53,5.67,8.25a1,1,0,1,0-1.34,1.5l2.05,1.82a1.29,1.29,0,0,0,.83.32h.12a1.23,1.23,0,0,0,.88-.49L11.8,6.6a1,1,0,1,0-1.6-1.2Z"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+ <span class="nt">&lt;/svg&gt;</span>
+ The password meets security requirements.
+<span class="nt">&lt;/p&gt;</span>
+</code>
+</pre>
+
+      <h4>Warning inline alerts</h4>
+
+      <div class="example">
+        <p class="alert alert-inline alert-warning">
+           <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16">
+            <g fill="currentColor">
+              <path d="M11,9H5A1,1,0,0,1,5,7h6a1,1,0,0,1,0,2Z"/>
+              <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"/>
+            </g>
+          </svg>
+            Connection times out in 2 minutes.
+        </p>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert alert-inline alert-warning"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"glyph"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">viewBox=</span><span class="s">"0 0 16 16"</span> <span class="na">width=</span><span class="s">"16"</span> <span class="na">height=</span><span class="s">"16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"currentColor"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M11,9H5A1,1,0,0,1,5,7h6a1,1,0,0,1,0,2Z"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,2a6,6,0,1,0,6,6A6,6,0,0,0,8,2Z"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+ <span class="nt">&lt;/svg&gt;</span>
+ Connection times out in 2 minutes.
+<span class="nt">&lt;/p&gt;</span>
+</code>
+</pre>
+
+      <h4>Error inline alerts</h4>
+
+      <div class="example">
+        <p class="alert alert-inline alert-danger">
+          <svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 16 16" width="16" height="16">
+            <g fill="currentColor">
+              <path d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z" />
+              <path d="M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"/>
+             </g>
+            </svg>
+            </span>
+            Email address is required.
+        </p>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert alert-inline alert-danger"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;svg</span> <span class="na">class=</span><span class="s">"glyph"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span> <span class="na">focusable=</span><span class="s">"false"</span> <span class="na">viewBox=</span><span class="s">"0 0 16 16"</span> <span class="na">width=</span><span class="s">"16"</span> <span class="na">height=</span><span class="s">"16"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">fill=</span><span class="s">"currentColor"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,14a6,6,0,1,1,6-6A6,6,0,0,1,8,14Z"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M10.83,5.17a1,1,0,0,0-1.41,0L8,6.59,6.59,5.17A1,1,0,0,0,5.17,6.59L6.59,8,5.17,9.41a1,1,0,1,0,1.41,1.41L8,9.41l1.41,1.41a1,1,0,0,0,1.41-1.41L9.41,8l1.41-1.41A1,1,0,0,0,10.83,5.17Z"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+ <span class="nt">&lt;/svg&gt;</span>
+ Email address is required.
+<span class="nt">&lt;/p&gt;</span>
+</code>
+</pre>
+    </article>
+
+  </main>
+
+
+   @@include('./src/includes/footer.html', {"active":"requests"}) 
+
+</body>
+</html>

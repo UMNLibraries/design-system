@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Intro | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/intro/">Intro</a></li>
+        <li>Overview</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/intro/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/design-system/intro/editors.html">Editors</a></li>
+      <li><a href="/design-system/intro/developers.html">Developers</a></li>
+      <li><a href="/design-system/intro/contribute.html">Contributing</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Getting started</h1>
+
+    <article>
+      <h2>What is a design system?</h2>
+      <p>The design system provides guidelines and code to help quickly create trustworthy, accessible, and consistent digital library services.</p>
+      <p>The design system takes a content-first approach. When developing web assets, the design reflects the needs of the content to be understood well. Design is important but supplemental for the University Libraries&rsquo; web presence.</p>
+      <p>The design system is thusly presented in the order the Libraries&rsquo; considers and develops web assets: based on the principles, content is developed then fine tuned for design requirements before it&rsquo;s coded into accessible formats and standardized page patterns. Developing consistent language and patterns in code and page layouts improves people&rsquo;s ability to navigate and complete tasks.</p>
+      <ul class="cards">
+        <li>
+          <div class="card-body">
+            <h3>Content editors</h3>
+            <p>Learn about the design system and how to make recommendations.</p>
+          </div>
+          <footer><a href="/design-system/intro/editors.html">Content introduction</a></footer>
+        </li>
+        <li>
+          <div class="card-body">
+            <h3>Developers</h3>
+            <p>Technical implementation and principles and how to contribute.</p>
+          </div>
+          <footer><a href="/design-system/intro/developers.html">Developer introduction</a></footer>
+        </li>
+      </ul>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

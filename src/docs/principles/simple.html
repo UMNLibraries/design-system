@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Principles | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+  <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/principles/">Principles</a></li>
+        <li>Simple</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/principles/index.html">Overview</a></li>
+      <li>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
+        <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
+          <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
+          <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
+          <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <ul>
+          <li><a href="/design-system/principles/honest.html#code">Journalistic ethics</a></li>
+          <li><a href="/design-system/principles/honest.html#misinformation">Mis- and dis-information</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
+      <li>
+        <a href="/design-system/principles/mindful.html">Mindful</a>
+        <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
+          <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
+          <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/private.html">Private</a>
+        <ul>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html" aria-current="page">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+
+    <h1>Simple</h1>
+    <div class="lead">
+      <p>Write simple and plain language for clear and concise messaging. Craft the most elegant semantic solution, and use available resources intentionally.</p>
+    </div>
+
+    <article id="plain">
+      <h2>Plain language guidelines</h2>
+      <p>Adapted and summarized <a href="https://www.plainlanguage.gov/guidelines/" aria-describedby="ext-site">Federal Plain Language guidelines</a>.</p>
+      <dl>
+        <dt>Write for your audience</dt>
+        <dd>To hold someone&rsquo;s attention, figure out who they are and what they want to know. Tell them why the content is important to them.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/audience/do-your-research/" aria-describedby="ext-site">Do your research</a>, <a href="https://www.plainlanguage.gov/guidelines/audience/address-the-user/" aria-describedby="ext-site">address people</a>, <a href="https://www.plainlanguage.gov/guidelines/audience/address-separate-audiences-separately/" aria-describedby="ext-site">address separate audiences separately</a>.</dd>
+        <dt>Organize the information</dt>
+        <dd>Start by stating your purpose and summarize. Lay content out in a logical order, beginning with the most important information. Put background information (when necessary) toward the end.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/organize/make-it-easy-to-follow/" aria-describedby="ext-site">Make it easy to follow</a>, <a href="https://www.plainlanguage.gov/guidelines/organize/add-useful-headings/" aria-describedby="ext-site">add useful headings</a>, <a href="https://www.plainlanguage.gov/guidelines/organize/have-a-topic-sentence/" aria-describedby="ext-site">have a topic sentence</a>, <a href="https://www.plainlanguage.gov/guidelines/organize/place-the-main-idea-before-exceptions-and-conditions/" aria-describedby="ext-site">place the main idea before exceptions and conditions</a>, use <a href="https://www.plainlanguage.gov/guidelines/organize/use-transition-words/" aria-describedby="ext-site">transition words</a>, and <a href="https://www.plainlanguage.gov/guidelines/organize/use-lists/" aria-describedby="ext-site">use lists</a>.</dd>
+        <dt>Choose your words carefully</dt>
+        <dd>Words matter. They are the most basic building blocks of written and spoken communication. Don’t complicate things by using jargon, technical terms, or abbreviations that people won’t understand. Choose your words carefully and be consistent in your writing style.</dd>
+        <dd>From <cite>The King&rsquo;s English</cite>:
+          <ul>
+            <li>Prefer the familiar word to the far-fetched.</li>
+            <li>Prefer the concrete word to the abstraction.</li>
+            <li>Prefer the single word to the circumlocution.</li>
+            <li>Prefer the short word to the long.</li>
+          </ul>
+        </dd>
+        <dd>Additionally, <a href="https://www.plainlanguage.gov/guidelines/words/use-simple-words-phrases/" aria-describedby="ext-site">use simple words and phrases</a>, <a href="https://www.plainlanguage.gov/guidelines/words/avoid-hidden-verbs/" aria-describedby="ext-site">avoid hidden verbs</a>, <a href="https://www.plainlanguage.gov/guidelines/words/avoid-noun-strings/" aria-describedby="ext-site">avoid noun strings</a>, <a href="https://www.plainlanguage.gov/guidelines/words/avoid-jargon/" aria-describedby="ext-site">avoid jargon</a>, <a href="https://www.plainlanguage.gov/guidelines/words/minimize-abbreviations/" aria-describedby="ext-site">minimize abbreviations</a>, <a href="https://www.plainlanguage.gov/guidelines/words/minimize-definitions/" aria-describedby="ext-site">minimize definitions</a>, <a href="https://www.plainlanguage.gov/guidelines/words/use-the-same-terms-consistently/" aria-describedby="ext-site">use the same terms consistently</a>, and <a href="https://www.plainlanguage.gov/guidelines/words/place-words-carefully/" aria-describedby="ext-site">place words carefully</a>.</dd>
+        <dt>Be concise</dt>
+        <dd>Unnecessary words waste your audience&rsquo;s time. Great writing is like a conversation. Omit information that the audience doesn’t need to know. This can be difficult as a subject matter expert so it&rsquo;s important to have someone look at the information from the audience’s perspective.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/concise/write-short-sentences/" aria-describedby="ext-site">Write short sentences</a>; <a href="https://www.plainlanguage.gov/guidelines/concise/keep-the-subject-verb-and-object-close-together/" aria-describedby="ext-site">keep the subject, verb, and object close together</a>; <a href="https://www.plainlanguage.gov/guidelines/concise/use-positive-language/" aria-describedby="ext-site">use positive language</a>; <a href="https://www.plainlanguage.gov/guidelines/concise/write-short-paragraphs/" aria-describedby="ext-site">write short paragraphs</a>; and <a href="https://www.plainlanguage.gov/guidelines/concise/write-short-sections/" aria-describedby="ext-site">write short sections</a>.</dd>
+        <dt>Keep it conversational</dt>
+        <dd>Verbs are the fuel of writing. They give your sentences power and direction. They enliven your writing and make it more interesting. Verbs tell your audience what to do. Make sure it’s clear who does what.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/conversational/use-active-voice/" aria-describedby="ext-site">Use active voice</a>, <a href="https://www.plainlanguage.gov/guidelines/conversational/use-the-present-tense/" aria-describedby="ext-site">use the present tense</a>, <a href="https://www.plainlanguage.gov/guidelines/conversational/use-contractions/" aria-describedby="ext-site">use contractions</a>, <a href="https://www.plainlanguage.gov/guidelines/conversational/use-examples/" aria-describedby="ext-site">use examples</a>, <a href="https://www.plainlanguage.gov/guidelines/conversational/use-must-to-indicate-requirements/" aria-describedby="ext-site">use &ldquo;must&rdquo; to indicate requirements</a>, and <a href="https://www.plainlanguage.gov/guidelines/conversational/dont-use-slashes/" aria-describedby="ext-site">don&rsquo;t use slashes</a>.</dd>
+        <dt>Design for reading</dt>
+        <dd>Designing for reading is an important part of developing effective communications. Writing that is legible and well-organized is far easier to understand than more traditional styles.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/design/use-tables-to-make-complex-material-easier-to-understand/" aria-describedby="ext-site">Use tables to make complex material easier to understand</a>, <a href="https://www.plainlanguage.gov/guidelines/design/consider-using-visuals/" aria-describedby="ext-site">consider using visuals</a>, <a href="https://www.plainlanguage.gov/guidelines/design/highlight-important-concepts/" aria-describedby="ext-site">highlight important concepts</a>, and <a href="https://www.plainlanguage.gov/guidelines/design/minimize-cross-references/" aria-describedby="ext-site">minimize cross-references</a>.</dd>
+        <dt>Follow web standards</dt>
+        <dd>Follow web standards to effectively communicate online, such as recommendations based on usability testing performed by the Nielsen/Norman Group.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/web/avoid-faqs/" aria-describedby="ext-site">Avoid FAQs</a>, <a href="https://www.plainlanguage.gov/guidelines/web/write-effective-links/" aria-describedby="ext-site">write effective links</a>, <a href="https://www.plainlanguage.gov/guidelines/web/repurpose-print-material/" aria-describedby="ext-site">repurpose print material for the web</a>, and <a href="https://www.plainlanguage.gov/guidelines/web/avoid-pdf-overload/" aria-describedby="ext-site">avoid PDF overload</a>.</dd>
+        <dt>Test your assumptions</dt>
+        <dd>Testing your writing to make sure it&rsquo;s clear to users can save you time in answering questions later. Start testing as early as you can, whether creating something new or making revisions.</dd>
+        <dd><a href="https://www.plainlanguage.gov/guidelines/test/paraphrase-testing/" aria-describedby="ext-site">Paraphrase testing</a> (individual interviews, best for short documents, short web pages, and to test the questions on a survey), <a href="https://www.plainlanguage.gov/guidelines/test/usability-testing/" aria-describedby="ext-site">usability testing</a> (individual interviews, best for longer documents and websites where finding the right information is important; also best for forms), and <a href="https://www.plainlanguage.gov/guidelines/test/controlled-comparative-studies/" aria-describedby="ext-site">controlled comparative studies</a> (large scale studies where you don’t meet the people but you collect statistics on responses).</dd>
+        <dd>
+      </dl>
+    </article>
+
+    <article id="clean">
+      <h2>Clean code guidelines</h2>
+      <p>Adapted from <a href="https://www.smashingmagazine.com/2008/11/12-principles-for-keeping-your-code-clean/" aria-describedby="ext-site">12 principles for keeping your code clean on Smashing Magazine</a>.</p>
+      <ul>
+        <li>Use strict DOCTYPE</li>
+        <li>Identify the character set and encode characters</li>
+        <li>Use proper indentation</li>
+        <li>Keep CSS and Javascript external</li>
+        <li>Nest elements properly</li>
+        <li>Eliminate unnecessary &lt;div&gt;s</li>
+        <li>Use better naming conventions</li>
+        <li>Leave typography to CSS</li>
+        <li>Validate the code</li>
+        <li>Follow logical ordering</li>
+      </ul>
+    </article>
+
+
+    <article>
+      <h2>Further reading</h2>
+      <blockquote>
+        <p>Your objective should always be to eliminate instructions entirely by making everything self-explanatory, or as close to it as possible.</p>
+        <p>Get rid of half the words on each page, then get rid of half of what&rsquo;s left.</p>
+        <footer>&ndash;<cite>Steve Krug</cite>, Don't Make Me Think: A Common Sense Approach to Web Usability</footer>
+      </blockquote>
+      <blockquote>
+        <p>The user interface should be so simple that a beginner in an emergency can understand it within ten seconds.</p>
+        <footer>&ndash;<cite>Ted Nelson</cite>, computer scientist</footer>
+      </blockquote>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

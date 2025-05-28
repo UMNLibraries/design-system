@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Lists | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Lists</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html" aria-current="page">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Lists</h1>
+    <p class="lead">Lists are powerful for web content. They aid in content scanning and generally improve readability.</p>
+
+    <article id="general">
+      <h2>General lists</h2>
+
+      <h3>Types of lists</h3>
+      <p>Three primary types of lists exist:</p>
+      <dl>
+        <dt>ordered list</dt>
+        <dd>lists where the order is important</dd>
+
+        <dt>unordered list</dt>
+        <dd>lists whose order is not specific</dd>
+
+        <dt>definition list</dt>
+        <dd>list of terms and their definitions</dd>
+      </dl>
+
+      <h3>Nesting lists</h3>
+      <p>Ordered and unordered lists may be nested. Content that has more than one nested list may mean the content is more complex and needs to be broken down in another way.</p>
+    </article>
+
+    <article id="ordered">
+      <h2>Ordered lists</h2>
+      <p>Ordered lists are numbered (default) or alphabetized. Use them to present steps, directions, or content that is read or done in a specific order. This type of content is less common.</p>
+
+      <h3>Numerical-based style</h3>
+      <p>By default, ordered lists are numerical and start at 1.</p>
+
+      <div class="example">
+        <ol>
+          <li>Gather ingredients</li>
+          <li>Mix ingredients together in a bowl</li>
+          <li>Bake at 450&deg;F for 20 minutes</li>
+          <li>Cool before serving</li>
+        </ol>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;ol&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Gather ingredients<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Mix ingredients together in a bowl<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Bake at 450&deg;F for 20 minutes<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Cool before serving<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code></pre>
+
+      <h3>Alphabetical or outline style</h3>
+
+      <div class="example">
+        <ol type="A">
+          <li>Introduction paragraph</li>
+          <li>Introduction paragraph</li>
+          <li>Argument 1
+            <ol type="i">
+              <li>Evidence 1 for argument 1</li>
+              <li>Evidence 2 for argument 1</li>
+            </ol>
+          </li>
+          <li>Argument 2
+            <ol type="i">
+              <li>Evidence 1 for argument 2</li>
+              <li>Evidence 2 for argument 2</li>
+           </ol>
+         </li>
+        </ol>
+      </div>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;ol</span> <span class="na">type=</span><span class="s">"A"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Introduction paragraph<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Argument 1
+  <span class="nt">&lt;ol</span> <span class="na">type=</span><span class="s">"i"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Evidence 1 for argument 1<span class="nt">&lt;/li&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Evidence 2 for argument 1<span class="nt">&lt;/li&gt;</span>
+
+  <span class="nt">&lt;/ol&gt;</span>
+ <span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Argument 2
+  <span class="nt">&lt;ol</span> <span class="na">type=</span><span class="s">"i"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Evidence 1 for argument 2<span class="nt">&lt;/li&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Evidence 2 for argument 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+ <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code>
+</pre>
+    </article>
+
+    <article id="unordered">
+      <h2>Unordered lists</h2>
+      <p>Unordered lists are by default represented with bullets, and are most commonly used.</p>
+
+      <div class="example">
+        <ul>
+          <li>Database 1</li>
+          <li>Database 2
+            <ul>
+              <li>Note 1</li>
+              <li>Note 2</li>
+            </ul>
+          </li>
+          <li>Database 3</li>
+        </ul>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;ul&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Database 1<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Database 2
+  <span class="nt">&lt;ul&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Note 1<span class="nt">&lt;/li&gt;</span>
+   <span class="nt">&lt;li&gt;</span>Note 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+ <span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Database 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+    </article>
+
+    <article id="description">
+      <h2>Description lists</h2>
+      <p>Description lists are appropriate for a list of terms and their corresponding definitions, or a key-value style pairing. A definition term may have more than one definition. Description lists are used sparingly.</p>
+
+      <div class="example">
+        <dl>
+          <dt>Position</dt>
+          <dd>Business analyst</dd>
+
+          <dt>Location</dt>
+          <dd>Building 1, Room 3</dd>
+
+          <dt>Hours</dt>
+          <dd>Available daily during business hours</dd>
+        </dl>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;dl&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Position<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Business analyst<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Location<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Building 1, Room 3<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Hours<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Available daily during business hours<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre>
+
+      <h3>Horizontal definition list</h3>
+      <div class="example">
+        <dl class="dl-horizontal">
+          <dt>Position</dt>
+          <dd>Business analyst</dd>
+
+          <dt>Location</dt>
+          <dd>Building 1</dd>
+          <dd>Room 3</dd>
+
+          <dt>Hours</dt>
+          <dd>Available daily during business hours</dd>
+        </dl>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Position<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Business analyst<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Location<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Building 1<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Room 3<span class="nt">&lt;/dd&gt;</span>
+ <span class="nt">&lt;dt&gt;</span>Hours<span class="nt">&lt;/dt&gt;</span>
+ <span class="nt">&lt;dd&gt;</span>Available daily during business hours<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code></pre>
+
+    </article>
+
+    <article id="listgroup">
+      <h2>List group</h2>
+      <p>List groups style a list with extra padding and borders. They are made with an unstyled (the bullet is removed) unordered list. Removing the list styling also affects how some assistive technology understands the content (it may not read it out as a list group).</p>
+
+      <h3>Default group</h3>
+      <p>When any type of content may be in a group, the default stylings are recommended. If used similar to a menu, adding <code>aria-current="list-item"</code> to the active item is also recommended.</p>
+
+      <div class="example">
+        <ul class="list-group">
+          <li>Database 1</li>
+          <li aria-current="list-item">Database 2 (current)</li>
+          <li disabled>Database 3 (disabled)</li>
+        </ul>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;li&gt;</span>Database 1<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li</span> <span class="na">aria-current=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Database 2<span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li</span> <span class="na">disabled</span><span class="nt">&gt;</span>Database 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+
+      <h3>Embedded list groups</h3>
+      <p>Additional option to be used in conjunction with <code>list-group</code>.</p>
+      <p>When a list group is within another component, primarily cards, using <code>list-inline</code> will remove the left, right, and bottom borders, as well as bottom margin and padding, so the list group fits snuggly within the encompassing component.</p>
+
+      <div class="example">
+        <ul class="list-group list-inline">
+          <li>Database 1</li>
+          <li>Database 2</li>
+          <li>Database 3</li>
+        </ul>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group list-inline"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;li&gt;</span>Database 1<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">aria-current=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Database 2<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">disabled</span><span class="nt">&gt;</span>Database 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+
+      <h3>Striped-style list groups</h3>
+      <p>Striping may be added to any repeatable element, though it is written specifically for use with the <code>.list-group</code> class.</p>
+
+      <div class="example">
+        <ul class="list-group striped">
+          <li>Database 1</li>
+          <li>Database 2</li>
+          <li>Database 3</li>
+        </ul>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-group striped"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;li&gt;</span>Database 1<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">aria-current=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>Database 2<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;li</span> <span class="na">disabled</span><span class="nt">&gt;</span>Database 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+
+      <h3>Groups of links</h3>
+      <p>Additional option to be used in conjunction with <code>list-group</code>.</p>
+      <p>Often, a list group is used to present a list of links alone, without mixed content such as paragraph text. Adding <code>list-links</code> expands the anchor element to fill the entire padded space of a list item to provide a more convenient interactive zone.</p>
+
+      <div class="example">
+        <ul class="list-group list-links">
+          <li><a href="//data.ba.se">Database 1</a></li>
+          <li><a href="//data.ba.se">Database 2</a></li>
+          <li><a href="//data.ba.se">Database 3</a></li>
+        </ul>
+      </div>
+<pre rel="HTML" class="code" translate="no"><code>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list list-links"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//data.ba.se"</span><span class="nt">&gt;</span>Database 1<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//data.ba.se"</span><span class="nt">&gt;</span>Database 2<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+ <span class="nt">&lt;li&gt;</span><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"//data.ba.se"</span><span class="nt">&gt;</span>Database 3<span class="nt">&lt;/a&gt;</span><span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

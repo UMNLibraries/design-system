@@ -23,5 +23,10 @@
     "gulp-webserver": "^0.9.1",
     "postcss-partial-import": "^4.1.0",
     "postcss-preset-env": "^6.7.0"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "gulp-file-include": "^2.3.0",
+    "through2": "^4.0.2"
   }
 }

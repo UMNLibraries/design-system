@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Templates | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/templates/">Templates</a></li>
+        <li><a href="/design-system/templates/index.html" aria-current="page">Overview</a></li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/templates/index.html" aria-current="page">Overview</a></li>
+      <li><a href="/design-system/templates/primary.html">Primary site patterns</a></li>
+      <ul>
+        <li><a href="/design-system/templates/primary.html#semantic">Semantic HTML</a></li>
+        <li><a href="/design-system/principles/primary.html#landmark">Landmarks</a></li>
+        <li><a href="/design-system/principles/primary.html#heading">Heading</a></li>
+      </ul>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+    <h1>General template information</h1>
+
+    <article id="urls">
+      <h2>Friendly URLs</h2>
+      <p>Provide brief precise friendly URLs to individual web pages. Avoid replicating concepts within the URL. For instance, if the web page is within a subsite, take the subsite path into account to avoid word duplication.</p>
+
+      <p>Also, all characters must be basic alphabetical and numerical entities. Avoid spaces, quotations, and any other punctuation that may cause a browser to misinterpret the file path.</p>
+
+      <h3>Example</h3>
+      <p><code>/about/about "libraries" in-TC-campus</code> (no)<br />
+        vs.<br />
+        <code>/about/about-libraries</code> (better)<br />
+        vs.<br />
+        <code>/about/libraries</code> (yes)
+      </p>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

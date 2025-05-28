@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Code snippets | Code | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/code/">Code</a></li>
+        <li>Code snippets</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/code/index.html">Overview</a></li>
+      <li><a href="/design-system/code/general.html">General</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/general.html#js">Javascript resiliency</a></li>
+          <li><a href="/design-system/code/general.html#support">Ubiquitous support</a></li>
+          <li><a href="/design-system/code/general.html#title">Title attribute</a></li>
+          <li><a href="/design-system/code/general.html#lang">Language attribute</a></li>
+          <li><a href="/design-system/code/general.html#motion">Reduced motion</a></li>
+          <li><a href="/design-system/code/general.html#embedded">Embedded content</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/article.html">Content blocks</a></li>
+      <li><a href="/design-system/code/quote.html">Quotations</a></li>
+      <li><a href="/design-system/code/reference.html">Citing sources</a></li>
+      <li><a href="/design-system/code/datetime.html">Dates and times</a></li>
+      <li><a href="/design-system/code/link.html">Links</a></li>
+      <li><a href="/design-system/code/button.html">Buttons</a></li>
+      <li><a href="/design-system/code/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/images.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/code/images.html#photos">Photos</a></li>
+          <li><a href="/design-system/code/images.html#illustrations">Illustrations</a></li>
+          <li><a href="/design-system/code/images.html#icons">Iconography</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/list.html">Lists</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/list.html#ordered">Ordered</a></li>
+          <li><a href="/design-system/code/list.html#unordered">Unordered</a></li>
+          <li><a href="/design-system/code/list.html#description">Description list</a></li>
+          <li><a href="/design-system/code/list.html#listgroup">List group</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/card.html" aria-current="page">Cards</a></li>
+      <li><a href="/design-system/code/form.html">Forms</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/form.html#general">General</a></li>
+          <li><a href="/design-system/code/form.html#formelements">Form elements</a></li>
+          <li><a href="/design-system/code/form.html#formgroups">Form groups</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/table.html">Tables</a></li>
+      <li><a href="/design-system/code/nav.html">Navigation</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/nav.html#primary">Primary navigation</a></li>
+          <li><a href="/design-system/code/nav.html#submenu">Submenus and table of contents</a></li>
+          <li><a href="/design-system/code/nav.html#bread">Breadcrumb</a></li>
+          <li><a href="/design-system/code/nav.html#skip">&ldquo;Skip&rdquo; links</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/alert.html">Alerts</a></li>
+      <li><a href="/design-system/code/dynamicdisplay.html">Dynamic content components</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/code/dynamicdisplay.html#tabs">Tabs</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#accordions">Accordions</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#carousels">Carousels</a></li>
+          <li><a href="/design-system/code/dynamicdisplay.html#tooltips">Tooltips</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/code/code.html" aria-current="page">Code snippets</a></li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+    <h1>Code snippet</h1>
+    <div class="lead">
+      <p>When exposing code, use the patterns below. If the code is brief &mdash; an element, an attribute, a value, or a single combination of those &mdash; the code may be embedded using <code>&lt;code&gt;</code>.</p>
+      <p>Code blocks are displayed with <code>&lt;pre&gt;&lt;code&gt;</code>, where <code>&lt;pre&gt;</code> has the <code>code</code> class, and <code>rel</code> is the language the code is written in.</p>
+      <p>Add the <code>translate="no"</code> attribute to prevent webpage translators from attempting to translate the code into other languages like French or Mandarin.</p>
+    </div>
+
+    <article>
+      <h2>HTML code</h2>
+      <p>Example layout for HTML code.</p>
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;pre</span> <span class="na">rel=</span><span class="s">"HTML"</span> <span class="na">class=</span><span class="s">"code"</span> <span class="na">translate=</span><span class="s">"no"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;code&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"nt"</span><span class="nt">&gt;</span>element content<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/code&gt;</span>
+<span class="nt">&lt;/pre&gt;</span>
+</code>
+</pre>
+
+      <dl>
+        <dt>Element components</dt>
+        <dd><code>"nt"</code></dd>
+
+        <dt>Attribute components</dt>
+        <dd><code>"na"</code></dd>
+
+        <dt>Attribute values</dt>
+        <dd><code>"s"</code></dd>
+      </dl>
+
+    </article>
+
+    <article>
+      <h2>CSS code</h2>
+      <dl>
+        <dt>Selector</dt>
+        <dd><code>"nt"</code></dd>
+
+        <dt>Property</dt>
+        <dd><code>"cp"</code></dd>
+
+        <dt>Value</dt>
+        <dd><code>"cv"</code></dd>
+
+        <dt>Punctuation</dt>
+        <dd><code>"p"</code></dd>
+      </dl>
+
+
+<pre rel="CSS" class="code" translate="no">
+<code>
+@media query <span class="p">{</span>
+ <span class="nt">selector</span> <span class="p">{</span>
+  <span class="cp">property</span><span class="p">:</span> <span class="cv">value</span><span class="p">;</span>
+  <span class="c">/* syntax */</span>
+ <span class="p">}</span>
+ <span class="nt">body</span> <span class="p">{</span>
+  <span class="cp">font-family</span><span class="p">:</span> <span class="cv">sans-serif</span><span class="p">;</span>
+  <span class="c">/* going basic */</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</code>
+</pre>
+    </article>
+
+    <article>
+      <h2>JS code</h2>
+    </article>
+
+  </main>
+
+   @@include('./src/includes/footer.html', {"active":"requests"}) 
+  
+</body>
+</html>

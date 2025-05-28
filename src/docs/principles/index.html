@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Principles | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/principles/">Principles</a></li>
+        <li>Overview</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/principles/index.html" aria-current="page">Overview</a></li>
+      <li>
+        <a href="/design-system/principles/accessible.html">(Universally) Accessible</a>
+        <ul>
+          <li><a href="/design-system/principles/accessible.html#universal">Universal</a></li>
+          <li><a href="/design-system/principles/accessible.html#emotional">Emotional</a></li>
+          <li><a href="/design-system/principles/accessible.html#cognitive">Cognitive</a></li>
+          <li><a href="/design-system/principles/accessible.html#physical">Physical</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/honest.html">Honest</a>
+        <ul>
+          <li><a href="/design-system/principles/honest.html#code">Journalistic ethics</a></li>
+          <li><a href="/design-system/principles/honest.html#misinformation">Mis- and dis-information</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
+      <li>
+        <a href="/design-system/principles/mindful.html">Mindful</a>
+        <ul>
+          <li><a href="/design-system/principles/mindful.html#humanity">Respect humanity</a></li>
+          <li><a href="/design-system/principles/mindful.html#intentional">Intentional design</a></li>
+          <li><a href="/design-system/principles/mindful.html#person-first">Person-first design</a></li>
+          <li><a href="/design-system/principles/mindful.html#attention">Value attention</a></li>
+          <li><a href="/design-system/principles/mindful.html#patterns">Avoid anti-patterns</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/private.html">Private</a>
+        <ul>
+          <li><a href="/design-system/principles/private.html#privacy">Personal privacy</a></li>
+          <li><a href="/design-system/principles/private.html#security">Data security</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/simple.html">Simple</a>
+        <ul>
+          <li><a href="/design-system/principles/simple.html#plain">Plain language</a></li>
+          <li><a href="/design-system/principles/simple.html#clean">Clean code</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/design-system/principles/sustainable.html">Sustainable</a>
+        <ul>
+          <li><a href="/design-system/principles/sustainable.html#optimization">Optimization</a></li>
+          <li><a href="/design-system/principles/sustainable.html#performance">Web performance</a></li>
+          <li><a href="/design-system/principles/sustainable.html#sustainable">Sustainable practices</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main id="main" class="m-0">
+
+    <h1>Principles overview</h1>
+    <div class="lead">
+      <p>Principles help people make informed decisions. Awareness of these foundational principles may help to implement additional solutions not in the design system.</p>
+      <p>These core principles are relevant for designing responsible content and online experiences, and we encourage others to adopt them.</p>
+    </div>
+
+    <section class="cards">
+      <article>
+        <h2>Who should use this guide</h2>
+        <p>All people who develop, design, and write for the University Libraries.</p>
+        <p>If you create or maintain any web assets, you are a designer of experiences. It is in your hands to take on the responsibility that carries.</p>
+      </article>
+
+      <article>
+        <h2>What services are within scope</h2>
+        <p>All places with a University Libraries presence including but not limited to: the main website, HSL website, LibGuides, and websites where Libraries is a primary partner or host.</p>
+      </article>
+    </section>
+
+    <article>
+      <ul class="cards">
+        <li class="bt-md">
+          <h2>(Universally) accessible</h2>
+          <p>Deliver content and services where barriers to access are removed for all people to use, regardless of technology, format, or methods of delivery.</p>
+          <footer><a href="/design-system/principles/accessible.html">Accessible guidelines</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Honest</h2>
+          <p>Be transparent.</p>
+          <p>Provide accurate content written with non-biased language. Clearly identify opinionated content. Fight disinformation, or the act of intentionally deceiving in content and algorithms.</p>
+          <footer><a href="/design-system/principles/honest.html">Honest guidelines</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Inclusive</h2>
+          <p>Lead with person-first design, designing with people, not for them. Be aware of our own biases and assumptions, and recognize we are not the user.</p>
+          <p>Embrace people as complex beings, where average doesn&rsquo;t exist.</p>
+          <footer><a href="/design-system/principles/inclusive.html">Inclusive guidelines</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Mindful</h2>
+          <p>Make decisions that prioritize user well-being, don&rsquo;t build to steal attention, and avoid anti-patterns.</p>
+          <footer><a href="/design-system/principles/mindful.html">Mindful guidelines</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Private</h2>
+          <p>Promote and ensure privacy through security and personal data ownership. Provide these tenets in systems and services to the best of our ability and be transparent where we cannot.</p>
+          <footer><a href="/design-system/principles/private.html">Private guidelines</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Simple</h2>
+          <p>Write simple and plain language for clear and concise messaging. Craft the most elemegant semantic solution, and use available resources intentionally.</p>
+          <footer><a href="/design-system/principles/simple.html">Simple guidelines</a></footer>
+        </li>
+
+        <li class="bt-md">
+          <h2>Sustainable</h2>
+          <p>Factor in energy source and consumption for optimizations, from server to client side. Just as people do not deserve a reduced experience, our planet does not deserve to suffer the consequences of bad design and web delivery.</p>
+          <p>Sustainability is as much about our planet&rsquo;s wellbeing as it is our own, as they are intertwined.</p>
+          <footer><a href="/design-system/principles/sustainable.html">Sustainable guidelines</a></footer>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Further reading</h2>
+      <ul>
+        <li><a href="https://www.goodreads.com/book/show/41975945-future-ethics" aria-describedby="ext-site">Future Ethics</a> by Cennydd Bowles</li>
+        <li><a href="https://www.goodreads.com/book/show/44432844-ruined-by-design" aria-describedby="ext-site">Ruined by Design: How Designers Destroyed the World, and What We Can Do to Fix It</a> by Mike Monteiro</li>
+      </ul>
+      <blockquote>
+        <p>The Web must be accessible to provide equal access and equal opportunity to people with diverse abilities. Indeed, the UN Convention on the Rights of Persons with Disabilities recognizes access to information and communications technologies, including the Web, as a basic human right.</p>
+        <footer>&ndash;<cite>W3C</cite></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>The University of Minnesota (University), founded in the belief that ALL people are enriched by understanding, is dedicated to the advancement of learning and the search for truth; to the sharing of this knowledge through education for a diverse community; and to the application of this knowledge to benefit the people of the state, the nation, and the world.</p>
+        <footer>&ndash;<cite>Board of Regents</cite>, <a href="http://regents.umn.edu/sites/regents.umn.edu/files/policies/Mission_Statement.pdf" aria-describedby="ext-site">University of Minnesota mission statement (PDF)</a></footer>
+      </blockquote>
+
+      <blockquote>
+        <p>Access provides opportunities for everyone in the community to obtain library resources and services with minimal disruption. Library workers create systems that ensure members of their community can freely access the information they need for learning, growth, and empowerment regardless of technology, format, or delivery methods.</p>
+        <footer>&ndash;<cite>American Library Association</cite>, <a href="https://www.ala.org/advocacy/advocacy/intfreedom/corevalues" aria-describedby="ext-site">Core Values of Librarianship</a></footer>
+      </blockquote>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

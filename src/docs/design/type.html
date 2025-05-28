@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Design | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/design/">Design</a></li>
+        <li>Typography</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/design/index.html">Overview</a></li>
+      <li><a href="/design-system/design/brand.html">Brand</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/design/brand.html#header">Header</a></li>
+          <li><a href="/design-system/design/brand.html#footer">Footer</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/design/color.html">Color</a></li>
+      <li><a href="/design-system/design/spacing.html">Spacing</a></li>
+      <li><a href="/design-system/design/type.html" aria-current="page">Typography</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/design/type.html#face">Typeface</a></li>
+          <li><a href="/design-system/design/type.html#size">Font size</a></li>
+          <li><a href="/design-system/design/type.html#style">Font styles</a></li>
+          <li><a href="/design-system/design/type.html#weight">Font weight</a></li>
+          <li><a href="/design-system/design/type.html#hp">Headings and paragraphs</a></li>
+          <li><a href="/design-system/design/type.html#lead">Leads</a></li>
+          <li><a href="/design-system/design/type.html#align">Text alignment</a></li>
+          <li><a href="/design-system/design/type.html#measure">Measure</a></li>
+          <li><a href="/design-system/design/type.html#height">Line height</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="main" class="m-0">
+
+    <h1>Typography</h1>
+    <div class="lead">
+      <blockquote>
+        <p>For development purposes, it is best to use relative units (such as percentages or ems) to specify font sizes rather than absolute units (such as pixels or points). This provides much flexibility in modifying the visual presentation using CSS.</p>
+        <footer>&ndash;<cite>WebAIM</cite></footer>
+      </blockquote>
+      <p>Typesetting controls the readability of a text with the size, style, and spacing of its type. Text with poor readability turns off readers and can make it challenging for them to stay focused.</p>
+    </div>
+    <p>Adapted from the <a href="https://designsystem.digital.gov/components/typography/" aria-describedby="ext-site">United States Web Design System</a>.</p>
+
+    <article id="face">
+      <h2>Typeface</h2>
+      <p>Two typefaces were chosen because they are native so do not require additional resource requests nor external dependencies. The font sets have a superlative count for glyph support and are highly readable. They are available to everyone.</p>
+
+      <h3>Headings and blockquotes</h3>
+      <p><strong><a href="https://designerly.com/georgia/" aria-describedby="ext-site">Georgia</a></strong> is the primary typeface for headings and quotes.</p>
+      <p><strong>Lucida Bright</strong> is the secondary fallback and is never listed as the primary.</p>
+
+<pre rel="CSS" class="code" translate="no">
+<code>
+<span class="cs">h1</span><span class="p">,</span> <span class="cs">h2</span><span class="p">,</span> <span class="cs">h3</span><span class="p">,</span> <span class="cs">h4</span><span class="p">,</span> <span class="cs">h5</span><span class="p">,</span> <span class="cs">h6</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h1</span><span class="p">,</span> <span class="p">.</span><span class="cs">h2</span><span class="p">,</span> <span class="cs">.</span><span class="cs">h3</span><span class="p">,</span> <span class="p">.</span><span class="cs">h4</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h5</span><span class="p">,</span> <span class="ct">.</span><span class="cs">h6</span><span class="p">,</span> <span class="cs">blockquote</span> <span class="p">{</span>
+  <span class="cp">font-family</span><span class="p">:</span> <span class="cv">Georgia, Lucida Bright, serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+
+      <h3>Body text, links, and buttons</h3>
+      <p><strong><a href="https://designerly.com/tahoma/" aria-describedby="ext-site">Tahoma</a></strong> is the primary typeface for copy.</h3>
+      <p><strong>Verdana</strong> is the secondary fallback and is never listed as the primary.</p>
+
+<pre rel="CSS" class="code" translate="no">
+<code>
+<span class="cs">body</span> <span class="p">{</span>
+  <span class="cp">font-family</span><span class="p">:</span> <span class="cv">Tahoma, Verdana, sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code>
+</pre>
+    </article>
+
+    <article id="size">
+      <h2>Font size</h2>
+      <p>Use a comfortable reading size for body text.</p>
+      <p>Body text uses a minimum effective size of <code>19px</code> for large screens and <code>16px</code> on small screens. Smaller and larger text are used sparingly via semantic HTML elements (headings, captions, footnotes).</p>
+      <p>Smaller text may be used for captions and footnotes. The text may not be smaller than (effectively) <code>16px</code> on large screens and <code>14px</code> on small screens.</p>
+    </article>
+
+    <article id="style">
+      <h2>Font styles</h2>
+      <h3>Uppercase</h3>
+      <p>Use uppercase only for abbreviations. &ldquo;All caps&rdquo; is difficult for people to read because we read primarily by word shapes and not character by character; it may be especially problematic for people with dyslexia who rely on word shapes more heavily.</p>
+
+      <h3>Italics</h3>
+      <p>Avoid use of italics text unless listed as an exception in the guidelines below. Similar to using all uppercase letters, italics are harder to see and read. Do not use italics for captions or smaller font sizes, which increases the risk of illegibility. Italics font styles significantly impairs the ability to read and understand the text.</p>
+
+      <h4>Stressed words or phrases</h4>
+      <p>Use <code>&lt;em&gt;</code> to stress specific words that change the meaning of a sentence. For instance, &ldquo;<em>dogs</em> are cute animals&rdquo; vs. &ldquo;dogs <em>are</em> cute animals&rdquo; vs. &ldquo;dogs are <em>cute</em> animals&rdquo; vs. &ldquo;dogs are cute <em>animals</em>&rdquo;. Other stressed emphasis may also denote clarification, correction, sarcasm or a key part of a counter argument.</p>
+
+      <h4>Alternate voice or mood</h4>
+      <p>Use <code>&lt;i&gt;</code> to represent &ldquo;a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text.&rdquo; For example, &ldquo;<i>Carnivorous Vulgaris</i> keeps chasing his prey, <i>Accelerati Incrediblus</i>.&rdquo; This is coded thus:</p>
+
+<pre rel="HTML" class="code" translate="no">
+<code>
+<span class="nt">&lt;i</span> <span class="na">lang=</span><span class="s">"la"</span><span class="nt">&gt;</span>Carnivorous Vulgaris<span class="nt">&lt;/i&gt;</span> keeps chasing his prey, <span class="nt">&lt;i</span> <span class="na">lang=</span><span class="s">"la"</span><span class="nt">&gt;</span>Accelerati Incrediblus<span class="nt">&lt;/i&gt;</span>.
+</code>
+</pre>
+      <p>Tips for selecting the correct italics method.</p>
+      <ul>
+        <li>When considering italics for a word/phrase, think about why and choose the right element for the task, if possible.</li>
+        <li>When in doubt, read it aloud. Or get someone else to read it aloud and see if it matches expected inflections.</li>
+        <li>If using italics on more than one or two words, <code>&lt;em&gt;</code> may not be the right element.</li>
+        <li>Marking a whole phrase with <code>&lt;em&gt;</code> means urgency, typically with exclamations.</li>
+        <li>When nesting italics-producing tags, use a bold font weight.</li>
+      </ul>
+
+      <p><cite><a href="https://logrocket.com/blog/youre-using-em-wrong/" aria-describedby="ext-site">You&rsquo;re using <code>&lt;em&gt;</code> wrong</a></cite><br />
+        <cite><a href="https://alistapart.com/article/conversational-semantics/" aria-describedby="ext-site">Conversational semantics</a></cite>
+      </p>
+
+      <h3>Underline</h3>
+      <p>Reserve underlines for hyperlinks unless listed as an exception.</p>
+    </article>
+
+    <article id="weight">
+      <h2>Font weight</h2>
+      <p>Do not use a font weight less than 400 (normal). A light or thin font weight is hard to read or may be unreadable for some people. For text that needs emphasis, use <code>&lt;strong&gt;</code> to get a 700 font weight (bold).<p>
+    </article>
+
+    <article id="hp">
+      <h2>Headings and paragraphs</h2>
+      <p>Well-formatted documents improve assistive technology navigation. Avoid using <abbr>HTML</abbr> elements for style, only use elements semantically.</p>
+      <p>Use only one space after a sentence period. The use of two spaces was to accommodate the physical typewriter&rsquo;s use of the monospace typeface, in which the period has the same width as the letter &ldquo;w&rdquo;, making it harder to visually determine its role. In dynamic typography, characters have their own widths and so double spacing is not necessary. Read <a href="https://apastyle.apa.org/style-grammar-guidelines/paper-format/accessibility/typography#myth4" aria-describedby="ext-site">more about two spaces at APA Style</a>.</p>
+
+      <h3>Headings</h3>
+      <p>Headings will cascade in size.</p>
+      <ul>
+        <li><code>&lt;h1&gt;</code> is only allowed for page titles, the most descriptive heading for the page. Only <strong>one</strong> is allowed per page.</li>
+        <li><code>&lt;h2&gt;</code> is primarily used for major content sections.</li>
+        <li><code>&lt;h3&gt;</code> is for a subsection of a major content section.</li>
+        <li>Avoid using <code>&lt;h4&gt;</code> through <code>&lt;h6&gt;</code> when possible</li>
+      </ul>
+
+      <h3>Paragraphs</h3>
+      <p>Paragraphs follow <a href="/design-system/content/">content guidelines</a> for writing.</p>
+      <p>All text maintains default colors unless it is modified by components or elements. Do not manually modify colors or sizes.</p>
+    </article>
+
+    <article id="lead">
+      <h2>Leads</h2>
+      <p>For blocks of content that read like an article, use a lead paragraph to summarize the who, what, why, when, where, and how for the key point of the content. Style this paragraph with the <code>.lead</code> class, which increases the size of the text.</p>
+      <p>For pages with leads that span more than one paragraph, use <code>.lead</code> on a <code>&lt;div&gt;</code> element.</p>
+    </article>
+
+    <article id="align">
+      <h2>Text alignment</h2>
+      <p>Left align all content unless the component automatically modifies alignment. Do not manually change text alignment.</p>
+      <p>The rag (the uneven edge the text creates) on the right of a left-aligned content block is important for ease of reading. If longer words (16+ characters) may possibly cause extreme gaps in the rag, add a soft hyphen (<code>&amp;shy;</code>) in the <abbr>HTML</abbr> code to encourage an appropriate breakpoint in the word. Use the soft hyphen sparingly.</p>
+      <p>Avoid centered and justified text. Only use right aligned text for languages that read from right to left and are properly coded using the <code>lang</code> attribute to identify the correct language.</p>
+    </article>
+
+    <article id="measure">
+      <h2>Measure</h2>
+      <p>Controlling the length of lines of text (measure), helps readers&rsquo; attention flow easily from one line to the next, making reading more natural and comfortable.</p>
+      <p>Lines of text are 45-90 characters are broadly considered to be a readable line length, with enough line spacing for the eye to easily track and travel from one end to the other. Target 66 characters wide for comfortable reading of longer text.</p>
+      <p>Utilize the <code>ch</code> measuring unit to adhere closely. For instance, the CSS <code>p {width: 66ch;}</code> will strictly enforce good line length.</p>
+    </article>
+
+    <article id="height">
+      <h2>Line height</h2>
+      <p>Line height controls the vertical rhythm and density of a text block. Its measure is written as a unitless multiplier of the text&rsquo;s font size.</p>
+      <p>Longer text and longer lines require more line height. The eye struggles to distinguish between lines of text when it has to travel from the end of one long line to the beginning of the next.</p>
+      <p>For text that is <code>1rem</code> (approximately <code>16px</code>) and <code>66ch</code> wide, aim for a <code>line-height</code> of <code>1.6</code>.</p>
+    </article>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>

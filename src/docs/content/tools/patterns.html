@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Content | Libraries Design System</title>
+  <meta name="description" content="University of Minnesota Libraries Design System">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/design-system/s/ds.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  @@include('./src/includes/header.html', {"active":"requests"})
+
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/design-system/">Design system</a></li>
+        <li><a href="/design-system/content/">Content</a></li>
+        <li>Content patterns</li>
+      </ol>
+    </nav>
+
+  <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/content/index.html">Overview</a></li>
+      <li><a href="/design-system/content/writing.html">Writing content</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/content/writing.html#titles">Titles and headings</a></li>
+          <li><a href="/design-system/content/writing.html#simple">Simplified writing</a></li>
+          <li><a href="/design-system/content/writing.html#voice">Voice</a></li>
+          <li><a href="/design-system/content/writing.html#links">Links and buttons</a></li>
+          <li><a href="/design-system/content/writing.html#people">Referring to people</a></li>
+          <li><a href="/design-system/content/writing.html#punctuation">Punctuation</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content/phrases.html">Terms and phrases</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/content/phrases.html#jargon">Jargon and acronyms</a></li>
+          <li><a href="/design-system/content/phrases.html#idioms">Idioms, metaphors, clich&eacute;s, and colloquialisms</a></li>
+          <li><a href="/design-system/content/phrases.html#exaggerated">Exaggerated and informal parts of speech</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content/images.html">Images</a></li>
+      <li>
+        <ul>
+          <li><a href="/design-system/content/images.html#formats">Formats</a></li>
+          <li><a href="/design-system/content/images.html#purpose">Image purpose</a></li>
+          <li><a href="/design-system/content/images.html#alt">Alternative text</a></li>
+          <li><a href="/design-system/content/images.html#captions">Figure captions</a></li>
+        </ul>
+      </li>
+      <li><a href="/design-system/content/media.html">Media</a></li>
+      <li><a href="/design-system/content/files.html">Files</a></li>
+      <li><a href="/design-system/content/glossary.html">Glossary</a></li>
+    </ul>
+  </nav>
+  <main id="main" class="m-0">
+
+    <h1>Content patterns in Drupal</h1>
+    <p class="lead">Thoughtful, consistent interface content is a core element of a well-designed experience.</p>
+
+    <section id="overview">
+      <article>
+        <h2>Recommended layouts by content type</h2>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#spaces">Spaces</a></li>
+          <li><a href="#collections">Collections</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="services">
+      <article>
+        <h2>Services</h2>
+        <p>The services content type describes things the library <em>does</em>, offerings that require some sort of interaction by or contact with Libraries staff. Offerings described as services must include an action facilitating that contact point. The focus of offerings using the services content type must be on the service itself, even if aspects of the offering might also include resource, space, or guide components.</p>
+
+        <h3>Services Drupal fields</h3>
+        <dl>
+          <dt>Name of service</dt>
+          <dd>Drupal &ldquo;Title&rdquo; field</dd>
+          <dd>Required</dd>
+
+          <dt>Brief summary</dt>
+          <dd>Drupal &ldquo;Article&rdquo; type</dd>
+          <dd>Required</dd>
+          <dd>
+            <p>1 to 2 sentences</p>
+            <ul>
+              <li>Briefly describe the service using plain language</li>
+              <li>List who has access to the service</li>
+              <li>List any specific access details around the service (for example, if users must be logged into submit a form)</li>
+            </ul>
+          <p>Example: Our librarians teach individuals and small groups to search databases and optimize search strategies. This service is available to U of M health sciences faculty, staff, and students.</p>
+        </dd>
+
+        <dt>Benefits/examples</dt>
+        <dd>Drupal open paragraphs</dd>
+        <dd>List benefits or examples of how the service can be used, focusing on user needs.</dd>
+
+        <dt>Service action</dt>
+        <dd>Drupal &ldquo;Action link&rdquo; field</dd>
+        <dd>Required</dd>
+        <dd>
+          <p>A call to action button, with language describing the interaction</p>
+          <p>Example: &ldquo;Request a consultation&rdquo; or &ldquo;Make a purchase request&rdquo;</p>
+        </dd>
+        <dd>A form on the other end of the button, initiating contact with a staff person or unit</dd>
+
+        <dt>Related policies and/or information</dt>
+        <dd>Drupal related content type</dd>
+        <dd>If applicable, list complementary or related policies, or informational pieces, such as strategic planning, principles, missions, etc</dd>
+
+        <dt>Associated staff</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable/appropriate, list the staff that are the primary and/or auxiliary contact points for the service</dd>
+
+        <dt>Related services</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related services</dd>
+
+        <dt>Related collections, guides, or research support</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related resources</dd>
+        <dd>If applicable, list guides that support this service</dd>
+
+        <dt>Related spaces</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related spaces</dd>
+      </dl>
+
+      </article>
+    </section>
+
+    <section id="spaces">
+      <article>
+        <h2>Spaces</h2>
+        <p>The spaces content type describes physical spaces in our libraries. Offerings described as spaces must include the physical location of the space. The focus of offerings using the spaces content type must be on the space itself, even if the space contains resources, or offers services. </p>
+
+        <h3>Spaces Drupal fields</h3>
+        <dl>
+          <dt>Name of space</dt>
+          <dd>Drupal &ldquo;Title&rdquo; field</dd>
+          <dd>Required</dd>
+
+          <dt>Space details</dt>
+          <dd>Drupal &ldquo;Article&rdquo; type</dd>
+          <dd>Required</dd>
+          <dd>
+            <p>Space summary (required)</p>
+            <ul>
+              <li>Briefly describe what the space offers,</li>
+              <li>where the space is,</li>
+              <li>who has access to the space</li>
+              <li>and any specific access details around the space (for example, if users must have a reservation, or if the space requires UCard access)</li>
+            </ul>
+          <p>Example: The Breakerspace is a free-to-use, student-centered makerspace, managed and funded by the Libraries. It is located on the second floor of Walter Library, on the East Bank campus. All majors, years, and skill levels welcome.</p>
+        </dd>
+
+        <dt>Location(s)</dt>
+        <dd>Drupal field</dd>
+        <dd>Required</dd>
+
+        <dt>Hours</dt>
+        <dd>Drupal field</dd>
+
+
+        <dt>Contact</dt>
+        <dd>Drupal field</dd>
+
+
+        <dt>Benefits/examples</dt>
+        <dd>Drupal open paragraph field</dd>
+
+        <dt>Call to action</dt>
+        <dd>Drupal &ldquo;Action link&rdquo; field</dd>
+        <dd>A call to action button, with language describing the interaction<br />
+          Example: &ldquo;Reserve a room&rquo; or &ldquo;Request staff support&rdquo;</dd>
+        <dd>A form on the other end of the button, initiating contact with a staff person or unit</dd>
+
+        <dt>Related policies and/or information</dt>
+        <dd>Drupal related content type</dd>
+        <dd>If applicable, list complementary or related policies, or informational pieces, such as strategic planning, principles, missions, etc</dd>
+
+        <dt>Associated staff</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable/appropriate, list the staff that are the primary and/or auxiliary contact points for the resource</dd>
+
+
+        <dt>Other related</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related spaces</dd>
+        <dd>If applicable, list complementary or related collections</dd>
+        <dd>If applicable, list complementary or related services</dd>
+
+      </dl>
+
+      </article>
+    </section>
+
+    <section id="collections">
+      <article>
+        <h2>Collections</h2>
+        <p>The collections content type describes things the library has. These things can be digital, physical, or both. Offerings described as resources must include how and where library patrons can access the resource. The focus of offerings using the resources contact type must be on the resource itself, even if aspects of the offering might also include service, space, or guide components.</p>
+
+        <h3>Collections Drupal fields</h3>
+        <dl>
+          <dt>Name of collection</dt>
+          <dd>Drupal &ldquo;Title&rdquo; field</dd>
+          <dd>Required</dd>
+
+          <dt>Collection details</dt>
+          <dd>Drupal &ldquo;Article&rdquo; type</dd>
+          <dd>Required</dd>
+          <dd>
+            <p>Process summary (required)</p>
+            <ul>
+              <li>Briefly describe the resource using plain language</li>
+              <li>Briefly describe where the resource is (digital, physical)</li>
+              <li>List who has access to the resource</li>
+              <li>List any specific access details around the resource (for example, if users must be logged in, or need a valid UCard)</li>
+            </ul>
+          <p>Example: Our librarians teach individuals and small groups to search databases and optimize search strategies. This service is available to U of M health sciences faculty, staff, and students.</p>
+        </dd>
+
+        <dt>Benefits/examples</dt>
+        <dd>Drupal open paragraphs</dd>
+        <dd>List benefits or examples of why you might use the resource over similar ones, focusing on user needs.</dd>
+
+        <dt>Collection access</dt>
+        <dd>Drupal field</dd>
+        <dd>Required</dd>
+        <dd>
+          <p>A URL or address, the specifics of any related access instructions</p>
+        </dd>
+
+        <dt>Associated staff</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable/appropriate, list the staff that are the primary and/or auxiliary contact points for the resource</dd>
+
+        <dt>Related collections or guides</dt>
+        <dd>If applicable, list complementary or related collections</dd>
+
+        <dt>Related services</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related resources</dd>
+        <dd>If applicable, list guides that support this resource</dd>
+
+        <dt>Related spaces</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related spaces</dd>
+
+        <dt>Related research support</dt>
+        <dd>Drupal article or paragraphs</dd>
+        <dd>If applicable, list complementary or related research support</dd>
+
+        <dt>Related policies and/or information</dt>
+        <dd>Drupal related content type</dd>
+        <dd>If applicable, list complementary or related policies, or informational pieces, such as strategic planning, principles, missions, etc</dd>
+      </dl>
+
+      </article>
+    </section>
+
+  </main>
+
+  @@include('./src/includes/footer.html', {"active":"requests"})
+
+</body>
+</html>
