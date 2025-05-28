@@ -12,8 +12,19 @@ const gulp        = require('gulp'),
       postcss     = require('gulp-postcss'), //needed for polyfills
       postcsspart = require('postcss-partial-import'),
       postcsspre  = require('postcss-preset-env'), //polyfills the snot out of the code
+      through     = require('through2'),
+      utimes      = require('fs').utimes, //to force files to update modify date when partials are edited
       uglifycss   = require('gulp-uglifycss'); //squash css code so it isn't human readable
       webserver   = require('gulp-webserver');
+
+// GLOBAL VARIABLES
+var _onError = function(err) { console.log(err); };
+
+//temporary solution to force file modify date to update since partials editing doesn't trigger it
+var touch = through.obj(function(file, enc, done) {
+  var now = new Date;
+  utimes(file.path, now, now, done);
+});
 
 //*********** Gulp individual tasks
 
@@ -27,7 +38,7 @@ gulp.task('pre-build', function(done) {
 
 gulp.task('write:includes', function() {
   console.log('Process includes');
-  return gulp.src('.src/docs/**/*.html')
+  return gulp.src('./src/docs/**/*.html')
     .pipe(plumber({
       errorHandler: _onError
     }))
@@ -45,11 +56,11 @@ gulp.task('write:includes', function() {
 //Image copy
 gulp.task('copy:images', function() {
   console.log('Copy image files');
-  return gulp.src('.src/img/**/*.*')
+  return gulp.src('./src/img/**/*.*')
     .pipe(plumber({
       errorHandler: _onError
     }))
-    .pipe(gulp.dest('./docs'));
+    .pipe(gulp.dest('./docs/img/'));
 });
 
 // CSS processing, add prefixes, & minify
