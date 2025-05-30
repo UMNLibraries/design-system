@@ -200,7 +200,7 @@
   </nav>
 
 
-  <main id="main" class="m-0">
+  <main id="main">
     <h1>Web forms</h1>
     <p class="lead">Make forms as simple as possible and only ask what is absolutely needed to complete the task.</p>
 
@@ -209,13 +209,15 @@
 
       <article>
         <h3>Content</h3>
+        <p>Forms are some of the least enjoyable interactions on the web, so being mindful of the precise data needs and minimizing the effort to completion is necessary. Trust is a foundation for forms, so security and clarity are fundamental.</p>
         <ul>
           <li>Do not ask for two or more pieces of personally identifiable information (PII).</li>
           <li>The form must be on a secure page (https) sent to a secure location (e.g. a password protected server on an internal network).</li>
           <ul>
-            <li>If the data being requested is critical, contains a lot of PII, or is duplicative of data already available in a database, utilize existing resources or databaess (requires log in) to avoid manually entering the data or offer to auto-fill fields that may be already stored in their browser.</li>
+            <li>If the data being requested is critical, contains a lot of PII, or is duplicative of data already available in a database, utilize existing resources or secure databaess so the person doesn&rsquo;t need to manually enter the data.</li>
           </ul>
-          <li>Ask only for critical data to keep the forms as brief as possible. Some data may not be needed in the initial form submission (it can be collected at a later stage of an interaction).</li>
+          <li>Offer to auto-fill fields that may be already stored in their browser.</li>
+          <li>Ask only for critical necessary data to keep the forms as brief as possible. Some data may not be needed in the initial form submission (it can be collected at a later stage of an interaction).</li>
           <li>Ensure the form speaks with one voice, despite questions from several different people or departments.</li>
           <li>If a field is optional, it may not need to be a part of the form. Consider removing any non-required fields.</li>
         </ul>
@@ -225,22 +227,32 @@
         <h3>Design</h3>
         <ul>
           <li>Do not provide a &ldquo;Clear&rdquo; or &ldquo;Reset&rdquo; button for data submission forms. A &ldquo;clear&rdquo; button should only be used for a form that, after posting without errors, retains data in the fields and is visually different from the &ldquo;Send&rdquo; button.</li>
-          <li>Red text is used only for warnings and error messages.</li>
+          <li>Red text is used only for warnings and error messages and paired with descriptive labels so the importance of the message does not rely solely on color.</li>
           <li>Upon successful form submission, provide a success message and path out of form or to the next step. Avoid success message page dead ends.</li>
-          <li>Form validation requires both HTML and server (or javascript) detection processes. Utilize HTML regex patterns and required attributes and provide sufficient error messaging for a person to easily update.</li>
+          <li>Form validation requires both HTML and server (or javascript) detection processes. Implement HTML regex patterns and required attributes and provide sufficient error messaging for a person to easily update, but also provide good instructions for data input as well as flexibility.</li>
           <li>Use 50% to 75% of the height of a single input field between adjacent inputs. (Web Form Design, Wroblewski)</li>
           <li>Design the form to reduce ambiguity while not adding cognitive burden to the person filling it out. For instance, a date is 3 text fields with appropriate attributes to reduce input errors. This removes the requirement for a person to use a specific punctuation pattern.</li>
           <li>To prevent spam and other automated attacks, use hidden validation techniques such as Honeypot that do not disrupt the user experience. Avoid CAPTCHA methods.</li>
+          <li>Avoid unnecessary or repeated questions.</li>
+          <li>Don&rsquo;t force people to answer or choose an option that doesn&rsquo;t fit them.</li>
+          <li>If you cannot explain to the person why data is asked for, don&rsquo;t ask for it.</li>
+        </ul>
+        <p><a href="https://alistapart.com/article/design-for-real-life-excerpt/#section8" aria-describedby="ext-site">Conduct a question protocol</a> to verify every piece of information asked of a person is intentional and appropriate by considering:</p>
+        <ul>
+          <li>Who within the organization uses the answer</li>
+          <li>What they use them for</li>
+          <li>Whether an answer is required or optional</li>
+          <li>If an answer is required, what happens if a user enters any old thing just to get through the form</li>
         </ul>
       </article>
       <article>
         <h3>Accessibility</h3>
-        <p>From <a href="https://accessibility.digital.gov/visual-design/forms/" aria-describedby="ext-site">Accessibility for Teams visual design for forms</a>.</p>
+        <p>From <a href="https://web.archive.org/web/20240323205330/https://accessibility.digital.gov/visual-design/forms/" aria-describedby="ext-site">Accessibility for Teams visual design for forms (archived)</a>.</p>
         <ul>
           <li><strong>Present fields in a single-column layout.</strong> This keeps visual momentum moving down the page so users don&rsquo;t have to reorient themselves with multiple columns. (Exceptions to this rule are short, logical fields that may be presented on the same row like City, State, and Zip code.)</li>
           <li><strong>Ensure form fields are visibly labeled.</strong></li>
           <li><strong>Make sure form fields have clearly defined boundaries</strong> or outlines so that people with cognitive disabilities know the size and location of the click target.</li>
-          <li><strong>Do not use placeholder text in form fields</strong>. Placeholder text causes usability issues because it disappears when content is entered into the form field. Hints and instructions should be persistent and placed outside of the field.</li>
+          <li><strong>Do not use placeholder text in form fields</strong>. Placeholder text causes usability issues because it disappears when content is entered into the form field. Hints and instructions should be displayed persistently and placed outside of the field.</li>
           <li><strong>Provide highly visible and specific error states</strong>. Use multiple cues like color, icons, bold font weight, heavy border or outline, and helpful text to make sure users don&rsquo;t overlook this critical information.</li>
         </ul>
 
@@ -259,16 +271,6 @@
           <li>Avoid triggering or judgmental verbiage</li>
           <li>Keep it short. Use bullet points. Remove excess words.</li>
           <li>Give the form a clear concise title. Identify whom the form is for and its purpose at the start.</li>
-          <li>Avoid unnecessary or repeated questions.</li>
-          <li>Don&rsquo;t force people to answer or choose an option that doesn&rsquo;t fit them.</li>
-          <li>If you cannot explain to the person why data is asked for, don&rsquo;t ask for it.</li>
-        </ul>
-        <p><a href="https://alistapart.com/article/design-for-real-life-excerpt/" aria-describedby="ext-site">Conduct a question protocol</a> to verify every piece of information asked of a person is intentional and appropriate by considering:</p>
-        <ul>
-          <li>Who within the organization uses the answer</li>
-          <li>What they use them for</li>
-          <li>Whether an answer is required or optional</li>
-          <li>If an answer is required, what happens if a user enters any old thing just to get through the form</li>
         </ul>
       </article>
 
@@ -302,7 +304,7 @@
 <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="nt">/&gt;</span>
 </code></pre>
 
-        <h5><acronym>ARIA</acronym> to tie two elements together</h5>
+        <h5><abbr>ARIA</abbr> to tie two elements together</h5>
         <p>This method allows for the label to be something other than a <code>label</code> element.</p>
 <pre rel="HTML" class="code" translate="no"><code>
 <span class="nt">&lt;input</span> <span class="na">aria-labelledby=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt"> /&gt;</span>

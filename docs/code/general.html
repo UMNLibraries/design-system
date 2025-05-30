@@ -200,19 +200,18 @@
   </nav>
 
 
-  <main id="main" class="m-0">
+  <main id="main">
     <h1>General code guidelines</h1>
 
     <article id="js">
       <h2>Javascript resiliency</h2>
-      <p>Javascript is a progressive enhancement only. Where javascript is used, it is implemented minimally with thorough unit testing for user experience including accessibility. Avoid frameworks, and any javascript, to deliver critical content where possible.</p>
+      <p>Javascript is for progressive enhancement only. Where javascript is used, implement it minimally with thorough unit testing for user experience including accessibility. Avoid frameworks, and any javascript, to deliver critical content where possible.</p>
       <p><a href="https://speakerdeck.com/brucel/ijs-conference?slide=48" aria-describedby="ext-site">BuzzFeed monitored javascript timeouts</a> noting 1% failed to load equalling 13 million requests per month. Web assets must be designed for resiliency with graceful degradation.</p>
     </article>
 
     <article id="support">
       <h2>Ubiquitous support</h2>
-      <p>Web tools and languages must have 98% or greater coverage for the audience (e.g. use University Libraries website analytics for https://www.lib.umn.edu)</p>
-      <p>Only use elements, attributes, and features that have at least 98% or greater coverage for lib.umn.edu (or intended website audience) on <a href="https://caniuse.com" aria-describedby="ext-site">caniuse.com</a>. Analytics data used for rate determination is for the entire semester (if the current semester is less than three months, move the start point to include the previous semester data).</p>
+      <p>Web tools, elements, and attributes must have 98% or greater browser coverage on <a href="https://caniuse.com" aria-describedby="ext-site">caniuse.com</a>. Analytics data used for rate determination is for the entire semester (if the current semester is less than three months, move the start point to include the previous semester data).</p>
     </article>
 
     <article id="title">
@@ -224,8 +223,8 @@
     <article id="lang">
       <h2><code>Lang</code> attribute</h2>
       <p>Identifying the language of a content block is essential for technology to interpret content correctly, such as text-to-speech readers applying different language rules for pronunciation.</p>
-      <p>Each page is set to present American English at the top of each web document and specified reading direction is left-to-right, <code>&lt;html lang="en-us" dir="ltr"&gt;</code>. This may not be modified.</p>
-      <p>When using any language outside of American English, identify the words using the lang attribute. The lang attribute may be added to most elements but is recommended specifically for: <code>span</code>, <code>p</code>, and <code>blockquote</code>. Use the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" aria-describedby="ext-site">ISO 639-1</a> 2-letter code to identify the language.</p>
+      <p>An example is the main Libraries site. Each page is set to American English and the reading direction identified as left-to-right, <code>&lt;html lang="en-us" dir="ltr"&gt;</code>.</p>
+      <p>When using a language outside of the page-level defined one, identify the words using the <code>lang</code> attribute. The <code>lang</code> attribute may be added to most elements but is recommended specifically for: <code>span</code>, <code>p</code>, and <code>blockquote</code>. Use the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php" aria-describedby="ext-site">ISO 639-1</a> 2-letter code to identify the language.</p>
 
       <h3>Example</h3>
       <p><code>&lt;p&gt;The world is full of languages. As the saying goes, &lt;span lang="fr"&gt;Une seule langue n&rsquo;est jamais suffisante&lt;/span&gt;.&lt;/p&gt;</code></p>
@@ -235,7 +234,7 @@
     <article id="motion">
       <h2>Reduced motion</h2>
       <blockquote>
-        <p>If you have a vestibular disorder or have certain kinds of migraine or seizure triggers, navigating the web can be a lot like walking through a minefield - you’re perpetually one click away from activating an unannounced animation. And that’s just for casual browsing.</p>
+        <p>If you have a vestibular disorder or have certain kinds of migraine or seizure triggers, navigating the web can be a lot like walking through a minefield &emdash; you&rsquo;re perpetually one click away from activating an unannounced animation. And that&rsquo;s just for casual browsing.</p>
         <footer>-<cite>Eric Baily</cite>, CSS Tricks</footer>
       </blockquote>
 
@@ -256,7 +255,7 @@
 <span class="p">}</span>
 </code>
 </pre>
-      <p>Code from <a href="https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/" aria-describedby="ext-site">Revisiting prefers-reduced-motion, the reduced motion media query</a>, CSS Tricks</p>
+      <p>Code from <a href="https://css-tricks.com/revisiting-prefers-reduced-motion/" aria-describedby="ext-site">Revisiting prefers-reduced-motiony</a>, CSS Tricks</p>
     </article>
 
     <article id="embedded">
@@ -264,7 +263,7 @@
       <p>Never embed social media threads.</p>
       <p>If content must be embedded, such as a hosted video or a LibGuides widget, attribute it correctly and provide a link to the original content.</p>
       <p>Utilize HTML5 embedding methods, or <code>&lt;iframe&gt;</code> if necessary, over javascript.</p>
-      <p>All content presented on the website must meet University accessibility requirements, including embedded content. Video hosted elsewhere but embedded on a Libraries website must provide closed captions and preferably transcripts.</p>
+      <p>All content presented on the website must meet University accessibility requirements, including embedded content. Video hosted elsewhere but embedded on a University-related website must provide closed captions and preferably transcripts.</p>
     </article>
   </main>
 

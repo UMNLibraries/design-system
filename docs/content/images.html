@@ -188,7 +188,7 @@
       </dl>
 
       <p>Do not use animated <abbr>GIF</abbr>s or any animated images that lack controls (pause and stop) over the animation.</p>
-      <p>When adding images outside of Drupal, follow the <a href="/design-system/code/images.html#optimization">optimization techniques</a>, described in Photoshop CC steps.</p>
+      <p>When adding images outside of Drupal, follow the optimization techniques below, described in Photoshop CC steps.</p>
     </article>
 
     <section id="optimization">
@@ -259,7 +259,7 @@
           <dd>Text inside an image is not accessible and may become pixelated and difficult to read. Text on top of an image is more difficult to read with the background noise.</dd>
 
           <dt>Do not use photos of people without photo releases</dt>
-          <dd>Respect individual rights to anonymity. <a href="https://drive.google.com/file/d/0B0oXM1kEpijPejR0RnZ0bTJmSXM/view" aria-describedby="ext-site">Photo releases (University-access only)</a> are available through Libraries Communications.</dd>
+          <dd>Respect individual rights to anonymity. <a href="https://drive.google.com/file/d/1bVFBlsJGxirKu3VtCHfLKHeMKdDtWv36/view?usp=sharing" aria-describedby="ext-site">Photo releases (University-access only)</a> are available through Libraries Communications.</dd>
 
           <dt>Avoid proprietary images from other places without consent</dt>
           <dd>Taking images from the web that do not expressly state their copyright falls within the University Libraries’ use is prohibited.</dd>
@@ -295,19 +295,20 @@
 
         <p>Present the visual and textual data together for best information dissemination. Provide both an image and a data table.</p>
 
+        <ul>
+          <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, give a short description of what the image is (e.g. &ldquo;2014 first quarter monthly attendance bar chart by attendance and audience type&rdquo;); then in the &ldquo;figure caption&rdquo; or an adjacent paragraph, describe the content in context of the page (e.g. &ldquo;The total visitors by type &mdash; student, faculty, staff, and community member &mdash;  for the first quarter in 2014 trended upwards at the beginning of the semester as well as midterms.&rdquo;)</li>
+        	<li>Include a data table that mirrors the content of the visual representation (<a href="/design-system/code/table.html">go to tables</a>)</li>
+          <li><strong>Other</strong>: check out <a href="/design-system/code/images.html#complex">complex image code</a></li>
+        </ul>
+
         <p>A more technical option is to merge the visual data and textual data displays for objects like charts, by building accessible <abbr>SVG</abbr> and coding the vectors to behave like a data table (&ldquo;2 in 1&rdquo;).</p>
 
-        <ul>
-          <li><strong>Drupal</strong>: In &ldquo;alt text&rdquo;, short description of what the image is (e.g. &ldquo;2014 first quarter attendance bar chart&rdquo;); in &ldquo;figure caption&rdquo;, describe the content in context of the page (e.g. &ldquo;Display of monthly and total visitors by type &mdash; student, faculty, staff, and community member &mdash;  for the first quarter in 2014&rdquo;)</li>
-        	<li>Include a data table that mirrors the content of the visual representation (see tables)</li>
-          <li><strong>Other</strong>: see <a href="/design-system/code/images.html#complex">complex image code</a></li>
-        </ul>
       </article>
     </section>
 
     <article id="alt">
       <h2>Alternative text</h2>
-      <p>For more on alternative text, read <a href="https://jakearchibald.com/2021/great-alt-text/" aria-describedby="ext-site">&ldquo;Writing great alt text: emotion matters&rdquo;</a> by Jake Archibald.</p>
+      <p>If uncertain about what to write, ask yourself how you would describe the graphic to a friend during a brief phone call. For more on alternative text, read <a href="https://jakearchibald.com/2021/great-alt-text/" aria-describedby="ext-site">&ldquo;Writing great alt text: emotion matters&rdquo;</a> by Jake Archibald.</p>
       <p>Alternative text, or alt text, is necessary for screen readers to &ldquo;describe&rdquo; images, so the content is accessible to people with impaired vision, or people that have disabled images for cognitive impairments or data limitations. Alt text needs to be as brief yet meaningful as possible given the surrounding text, rather than just a filename, for example.</p>
 
       <p>Avoid any redundancy; those who have to listen to the web all day can hear a lot of unnecessary repetition. If the image contains something the surrounding text doesn&rsquo;t convey, describe it in the alt attribute.</p>
@@ -318,7 +319,7 @@
 
       <p>In cases where the accompanying text already directly mirrors the content of the image, the alt text should be left blank, so that it isn&rsquo;t duplicated.</p>
 
-      <p>Avoid starting alt text with &ldquo;This is an image of&rdquo;, &ldquo;Photo&rdquo; or &ldquo;Photo of&rdquo;, &ldquo;A view of&rdquo;, &ldquo;You see&rdquo;, &ldquo;Screenshot of&rdquo;, or &ldquo;Thumbnail&rdquo;.</p>
+      <p>Avoid starting alt text with &ldquo;This is an image of&rdquo;, &ldquo;Photo&rdquo; or &ldquo;Photo of&rdquo;, &ldquo;A view of&rdquo;, &ldquo;You see&rdquo;, or &ldquo;Thumbnail&rdquo;.</p>
 
       <p>Use the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" aria-describedby="ext-site">alt decision tree</a> to determine how to write alt text.</p>
 
@@ -338,8 +339,8 @@
         <li>Adding captions optimizes search results as well as accessibility.</li>
         <li>The caption adds context to the image, not just duplicates what the reader already sees.</li>
         <li>Captions are written in complete sentences with who, what, where, when and (sometimes) why.</li>
-        <li>Target length for captions is no more than two short sentences.</li>
-        <li>Acknowledge the person who took the photo or the image source. Use the following syntax for acknowledgement: &ldquo;Photo courtesy of [x].&rdquo;</li>
+        <li>Target length for captions is around two short sentences.</li>
+        <li>Acknowledge the person who took the photo or the image source. Use the following syntax for acknowledgement: &ldquo;Photo courtesy of [name].&rdquo;</li>
       </ul>
 
       <p><a href="https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html" aria-describedby="ext-site">Captions are not a substitute for <code>alt</code> text</a>. &ldquo;If an image is given an empty alt, then the <code>&lt;figcaption&gt;</code> is in effect describing nothing. And that doesn&rsquo;t make much sense, does it?&rdquo;  When <code>&lt;figure&gt;</code> is used, <code>alt</code> text is required (no empty attribute).</p>

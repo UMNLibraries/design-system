@@ -20,6 +20,10 @@ header {
   background: var(--col-bg-light);
 }
 
+main {
+  margin: 0;
+}
+
 .hero {
   margin:0 -1rem;
   padding: calc( 2 * 1rem);

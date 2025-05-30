@@ -157,7 +157,7 @@
     </ul>
   </nav>
 
-  <main id="main" class="m-0">
+  <main id="main">
 
     <h1>Typography</h1>
     <div class="lead">
@@ -201,17 +201,17 @@
     <article id="size">
       <h2>Font size</h2>
       <p>Use a comfortable reading size for body text.</p>
-      <p>Body text uses a minimum effective size of <code>19px</code> for large screens and <code>16px</code> on small screens. Smaller and larger text are used sparingly via semantic HTML elements (headings, captions, footnotes).</p>
+      <p>Body text has an ideal effective size of <code>18px</code> (<code>1.125rem</code>) for large screens and <code>16px</code> (<code>1rem</code>) on small screens. Smaller and larger text are used sparingly via semantic HTML elements (headings, captions, footnotes).</p>
       <p>Smaller text may be used for captions and footnotes. The text may not be smaller than (effectively) <code>16px</code> on large screens and <code>14px</code> on small screens.</p>
     </article>
 
     <article id="style">
       <h2>Font styles</h2>
       <h3>Uppercase</h3>
-      <p>Use uppercase only for abbreviations. &ldquo;All caps&rdquo; is difficult for people to read because we read primarily by word shapes and not character by character; it may be especially problematic for people with dyslexia who rely on word shapes more heavily.</p>
+      <p>Use uppercase only for abbreviations. &ldquo;All caps&rdquo; is difficult for people to read because we use word shapes as clues and do not read character by character; it may be especially problematic for people with dyslexia who may rely on word shapes more heavily.</p>
 
       <h3>Italics</h3>
-      <p>Avoid use of italics text unless listed as an exception in the guidelines below. Similar to using all uppercase letters, italics are harder to see and read. Do not use italics for captions or smaller font sizes, which increases the risk of illegibility. Italics font styles significantly impairs the ability to read and understand the text.</p>
+      <p>Avoid italics text unless listed as an exception in the guidelines below. Similar to using all uppercase letters, italics are harder to see and read. Do not use italics for captions or smaller font sizes, which increases the risk of illegibility.</p>
 
       <h4>Stressed words or phrases</h4>
       <p>Use <code>&lt;em&gt;</code> to stress specific words that change the meaning of a sentence. For instance, &ldquo;<em>dogs</em> are cute animals&rdquo; vs. &ldquo;dogs <em>are</em> cute animals&rdquo; vs. &ldquo;dogs are <em>cute</em> animals&rdquo; vs. &ldquo;dogs are cute <em>animals</em>&rdquo;. Other stressed emphasis may also denote clarification, correction, sarcasm or a key part of a counter argument.</p>
@@ -273,22 +273,22 @@
 
     <article id="align">
       <h2>Text alignment</h2>
-      <p>Left align all content unless the component automatically modifies alignment. Do not manually change text alignment.</p>
+      <p>Left align all content unless the component or theme automatically modifies alignment.</p>
       <p>The rag (the uneven edge the text creates) on the right of a left-aligned content block is important for ease of reading. If longer words (16+ characters) may possibly cause extreme gaps in the rag, add a soft hyphen (<code>&amp;shy;</code>) in the <abbr>HTML</abbr> code to encourage an appropriate breakpoint in the word. Use the soft hyphen sparingly.</p>
-      <p>Avoid centered and justified text. Only use right aligned text for languages that read from right to left and are properly coded using the <code>lang</code> attribute to identify the correct language.</p>
+      <p>Avoid centered and justified text. Use right aligned text for languages that read from right to left and are properly coded using the <code>lang</code> attribute to identify the correct language.</p>
     </article>
 
     <article id="measure">
       <h2>Measure</h2>
-      <p>Controlling the length of lines of text (measure), helps readers&rsquo; attention flow easily from one line to the next, making reading more natural and comfortable.</p>
-      <p>Lines of text are 45-90 characters are broadly considered to be a readable line length, with enough line spacing for the eye to easily track and travel from one end to the other. Target 66 characters wide for comfortable reading of longer text.</p>
-      <p>Utilize the <code>ch</code> measuring unit to adhere closely. For instance, the CSS <code>p {width: 66ch;}</code> will strictly enforce good line length.</p>
+      <p>Capping the text line length (measure) helps readers&rsquo; attention flow easily from one line to the next, making reading more natural and comfortable.</p>
+      <p>Lines of text between 45 to 90 characters are broadly considered to be an optimal line length for reading, with enough line spacing for the eye to easily track and travel from one end to the other. Target 66 character-long lines for comfortable reading of longer text.</p>
+      <p>The <code>ch</code> measuring unit may help to achieve this because it is based on character length. For instance, the CSS <code>p {width: 66ch;}</code> will enforce a good maximum line length.</p>
     </article>
 
     <article id="height">
       <h2>Line height</h2>
       <p>Line height controls the vertical rhythm and density of a text block. Its measure is written as a unitless multiplier of the text&rsquo;s font size.</p>
-      <p>Longer text and longer lines require more line height. The eye struggles to distinguish between lines of text when it has to travel from the end of one long line to the beginning of the next.</p>
+      <p>The eye struggles to distinguish between lines of text when it has to travel from the end of one long line to the beginning of the next. Giving the right amount of breathing room optimizes the eye's ability to travel efficiently to the next line.</p>
       <p>For text that is <code>1rem</code> (approximately <code>16px</code>) and <code>66ch</code> wide, aim for a <code>line-height</code> of <code>1.6</code>.</p>
     </article>
 
