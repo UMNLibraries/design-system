@@ -127,6 +127,11 @@ nav[aria-label="Libraries"] > a:focus::after {
   background-color: var(--col-secondary-dark);
 }
 
+nav[aria-label="Breadcrumb"] li:first-child {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 nav[aria-label="Breadcrumb"] li:first-child a {
   color: var(--col-text);
   text-decoration: none;
@@ -137,14 +142,8 @@ nav[aria-label="Breadcrumb"] li:first-child a:focus {
   color: var(--col-bg-light);
 }
 
-nav[aria-label="Breadcrumb"] li:not(:first-child):before {
-  content: "";
-  display: inline-block;
-  margin-left: 0.75ch;
-  margin-right: 0.5ch;
-  border-top: 0.75ch solid transparent;
-  border-bottom: 0.75ch solid transparent;
-  border-left: 0.75ch solid var(--col-text);
+nav[aria-label="Breadcrumb"] {
+  width: 100%;
 }
 
 nav a[aria-current] {
@@ -162,7 +161,7 @@ nav[aria-label="University"] a {
   color: var(--col-bg-light);
 }
 
-nav[aria-label="Libraries"], nav[aria-label="Main"] {
+nav[aria-label="Libraries"] {
   background-color: var(--col-bg-light);
   border-bottom: 1px solid var(--col-secondary-light);
 }

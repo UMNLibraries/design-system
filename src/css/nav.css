@@ -160,13 +160,13 @@ header > a[aria-current="location"]:not(#logo):focus::after {
 /*** Breadcrumb nav ***/
 nav[aria-label="Breadcrumb"] {
   flex-basis: 100%;
-  padding: 1rem;
-  border-bottom:1px solid var(--col-bg-medium);
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--col-bg-medium);
 }
 
 @media (max-width: 50rem) {
   nav[aria-label="Breadcrumb"] {
-    padding: 0.5rem;
+    padding: 0.3rem;
   }
 }
 
@@ -180,12 +180,12 @@ nav[aria-label="Breadcrumb"] li {
   display: inline-block;
 }
 
-nav[aria-label="Breadcrumb"] li:before {
+nav[aria-label="Breadcrumb"] li:after {
   content: "\2000";
   position: absolute;
 }
 
-nav[aria-label="Breadcrumb"] li:not(:last-child):after {
+nav[aria-label="Breadcrumb"] li:not(:first-child):before {
   content: "";
   display: inline-block;
   margin-left: 0.75ch;
