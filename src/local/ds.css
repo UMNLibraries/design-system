@@ -1,12 +1,14 @@
 @import "../css/root.css";
 @import "../css/a11y.css";
 @import "../css/alert.css";
+@import "../css/accordion.css";
 @import "../css/form.css";
 @import "../css/layout.css";
 @import "../css/linkbutton.css";
 @import "../css/list.css";
 @import "../css/media.css";
 @import "../css/nav.css";
+@import "../css/orgchart.css";
 @import "../css/table.css";
 @import "../css/typography.css";
 @import "../css/card.css";
@@ -74,7 +76,103 @@ article > dl {
   margin-right: auto;
 }
 
-/*.cards li {
-  border: 1px solid;
-  border-radius: var(--b-rad);
-}*/
+nav[aria-label="University"] .link-action {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1rem;
+  border-color: var(--col-bg-light);
+}
+
+nav[aria-label="Libraries"] {
+  display: flex;
+}
+
+nav[aria-label="Libraries"] > a {
+  color: var(--col-primary);
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease-out 0.15s;
+}
+
+nav[aria-label="Libraries"] > a:first-child {
+  padding: 0 0 0 0.5rem;
+  margin: 0;
+  height: 100%;
+}
+
+nav[aria-label="Libraries"] a svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 0.3rem 0 0;
+}
+
+nav[aria-label="Libraries"] > a:first-child {
+  padding: 0 0.5rem 0 0;
+  height: 100%;
+}
+
+nav[aria-label="Libraries"] > a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--col-bg-med);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav[aria-label="Libraries"] > a:hover::after,
+nav[aria-label="Libraries"] > a:focus::after {
+  background-color: var(--col-secondary-dark);
+}
+
+nav[aria-label="Breadcrumb"] li:first-child a {
+  color: var(--col-text);
+  text-decoration: none;
+}
+
+nav[aria-label="Breadcrumb"] li:first-child a:hover,
+nav[aria-label="Breadcrumb"] li:first-child a:focus {
+  color: var(--col-bg-light);
+}
+
+nav[aria-label="Breadcrumb"] li:not(:first-child):before {
+  content: "";
+  display: inline-block;
+  margin-left: 0.75ch;
+  margin-right: 0.5ch;
+  border-top: 0.75ch solid transparent;
+  border-bottom: 0.75ch solid transparent;
+  border-left: 0.75ch solid var(--col-text);
+}
+
+nav a[aria-current] {
+  background-color: var(--col-link);
+  color: var(--col-bg-light);
+  border-radius: 0;
+  text-decoration: none;
+}
+
+nav[aria-label="University"] {
+  background-color: var(--col-primary);
+}
+
+nav[aria-label="University"] a {
+  color: var(--col-bg-light);
+}
+
+nav[aria-label="Libraries"], nav[aria-label="Main"] {
+  background-color: var(--col-bg-light);
+  border-bottom: 1px solid var(--col-secondary-light);
+}
+
+nav[aria-label="University"] a:first-of-type {
+  margin-right: auto;
+}
+
+nav[aria-label="Libraries"] form {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  color: var(--col-text);
+}
