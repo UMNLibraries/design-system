@@ -8,8 +8,13 @@ table, thead, tbody, th, tr {
 }
 
 table {
-  border-collapse: collapse;
-  margin-bottom: 1.3rem;
+  border-radius: var(--b-rad);
+}
+
+body #main-content table {
+  max-width: 100% !important;
+  width: 100%;
+  margin: 0 auto 1.3rem auto;
 }
 
 th {
@@ -26,9 +31,28 @@ tbody tr:nth-child(odd) {
   background-color: var(--col-bg-medium);
 }
 
+table tr:last-child td:first-of-type {
+  border-bottom-left-radius: var(--b-rad);
+}
+
+table tr:last-child td:last-of-type {
+  border-bottom-right-radius: var(--b-rad);
+}
+
 thead th, tfoot tr {
   background-color: var(--col-secondary-light);
 }
+
+thead th:first-of-type {
+  border-top-left-radius: var(--b-rad);
+}
+
+thead th:last-of-type {
+  border-top-right-radius: var(--b-rad);
+}
+
+/* for time in hours tables*/
+.table-hours p {margin-bottom:0;}
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
 thead tr {
@@ -46,8 +70,9 @@ td {
   flex-flow: row wrap;
 }
 
+thead td, thead th,
 tbody td, tbody th {
-  padding: 0.5rem;
+  background-clip: padding-box; /* addresses ancient firefox bug https://bugzilla.mozilla.org/show_bug.cgi?id=688556*/
 }
 
 td::before {
@@ -60,8 +85,8 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: var(--h2);
-  padding: 0.5rem;
+  font-size: var(--h3);
+  padding: 0.5rem 0;
   display: block;
 }
 
@@ -77,6 +102,11 @@ caption {
       position: static;
   }
 
+  thead th {
+    position: sticky;
+    top: 0;
+  }
+
   thead, tbody {
     display: table-row-group;
   }
@@ -84,7 +114,7 @@ caption {
   th, td {
     display: table-cell;
     padding: 1rem;
-    vertical-align: text-top;
+    vertical-align: top;
     font-size: var(--base-size);
   }
 
@@ -103,5 +133,12 @@ caption {
 
   caption {
     display: table-caption;
+  }
+
+  .table-hours th {
+    white-space: nowrap;
+  }
+  .table-hours p {
+    margin-bottom: 0;
   }
 }

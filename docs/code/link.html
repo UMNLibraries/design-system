@@ -213,7 +213,7 @@
 
         <p><code>a</code> elements may not be empty, they must contain content.</p>
 
-        <p>Keep the underline to clearly indicate the interactive area and avoid using color only to indicate interactiveness. Ensure it&rsquo;s visibly distinguishable from the surrounding content.</p>
+        <p>Keep the default underline to clearly indicate the interactive area and avoid using color only to indicate interactiveness. Ensure it&rsquo;s visibly distinguishable from the surrounding content.</p>
       </article>
 
       <article>
@@ -242,10 +242,10 @@
       <article>
         <h3><code>target</code> attribute</h3>
         <p>The default behavior for a link is to replace the current page that is open in a browser tab. Using the <code>target</code> attribute on a link can change the default behavior.</p>
-        <p>The value to use the default behavior is <code>target="_self"</code>. The other standard value is <code>target="_blank"</code>. By changing the default behavior, it removes a person's ability to select the way they wish to engage with that link's destination. For instance, a link with normal behavior allows a person to right-click and open in a new tab or window. <code>target="_blank"</code> prevents a person from choosing how they prefer to open the link and forces a new tab.</p>
+        <p>The default <code>target</code> value is <code>target="_self"</code>. The other common value is <code>target="_blank"</code>, which opens the link in a new tab or window. By changing the default behavior, it removes a person's ability to select the way they wish to engage with that link's destination. For instance, a link with normal behavior allows a person to right-click and open in a new tab or window. <code>target="_blank"</code> prevents a person from choosing how they prefer to open the link and forces a new tab.</p>
         <p>In the case of web applications, such as an email client, a link opening to a new tab is expected. However, for websites, people expect default behavior and the ability to choose. Changing the expected behavior prevents interaction options.</p>
-        <p>An unexpected behavior may also cause confusion and frustration. For instance, the use of <code>_blank</code>, on a mobile device, may make content hard to return to, especially because browser interfaces on small screens make tabs unclear. This increases cognitive load for people to understand re-find content and removes them from their primary task.</p>
-        <p>Using the <code>_blank</code> value is not recommended.</p>
+        <p>Unexpected behavior may cause confusion and frustration. For instance, <code>_blank</code> on a mobile device may make content hard to return to because browsers on small screens hide tabs. This increases cognitive load for people to re-find content and removes them from their primary task.</p>
+        <p>Because of these reasons, using the <code>_blank</code> value is not recommended.</p>
       </article>
 
       <article>
@@ -278,8 +278,8 @@
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.lib.umn.edu"</span><span class="nt">&gt;</span>University Libraries<span class="nt">&lt;/a&gt;</span>
 </code>
 </pre>
-        <h3>External link (deprecated pattern)</h3>
-        <p>Deprecated. Further discussion needed to determine how library websites might utilize this pattern.</p>
+        <!--<h3>External link (not implemented)</h3>
+        <p>Further discussion needed to determine how library websites might utilize this pattern.</p>
         <p>External links have additional content applied to them to provide visual and screen reader cues that the behavior is different from internal links. The <code>ext-site</code> class adds a graphic icon after the text as well as adds the <code>aria-describedby</code> language that it opens a different site.</p>
 
         <div class="example">
@@ -289,7 +289,7 @@
 <code>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://w3c.org"</span> <span class="na">aria-describedby=</span><span class="s">"ext-site"</span><span class="nt">&gt;</span>World Wide Web Consortium<span class="nt">&lt;/a&gt;</span>
 </code>
-</pre>
+</pre>-->
       </article>
 
       <article>

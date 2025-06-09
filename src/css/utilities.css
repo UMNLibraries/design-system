@@ -162,7 +162,7 @@
 /* COLOR */
 .c-primary {
   background-color: var(--col-primary);
-  color: #fff;
+  color: var(--col-bg-light);
 }
 
 .c-primary-text {
@@ -171,7 +171,7 @@
 
 .c-primary-light {
   background-color: var(--col-primary-light);
-  color: #fff;
+  color: var(--col-bg-light);
 }
 
 .c-primary-light-text {
@@ -180,7 +180,7 @@
 
 .c-primary-dark {
   background-color: var(--col-primary-dark);
-  color: #fff;
+  color: var(--col-bg-light);
 }
 
 .c-primary-dark-text {
@@ -216,7 +216,7 @@
 
 .c-link {
   background-color: var(--col-link);
-  color: #fff;
+  color: var(--col-bg-light);
 }
 
 .c-link-text {
@@ -225,7 +225,7 @@
 
 .c-link-light {
   background-color: var(--col-link-light);
-  color: #fff;
+  color: var(--col-bg-light);
 }
 
 .c-link-light-text {
@@ -234,7 +234,7 @@
 
 .c-link-dark {
   background-color: var(--col-link-dark);
-  color: #fff;
+  color: var(--col-bg-light);
 }
 
 .c-link-dark-text {
@@ -258,8 +258,8 @@
 }
 
 /* color variations */
-.striped > *:nth-of-type(odd),
-.striped tbody tr:nth-of-type(odd) {
+.striped:not(dl) > *:nth-of-type(even),
+.striped tbody tr:nth-of-type(even) {
   background-color: var(--col-bg-medium);
 }
 
@@ -311,12 +311,14 @@
 /* floats */
 .float-right {
   float: right;
-  margin: 0 0 1rem 1rem;
+  padding: 0 0 0.5ex 1ex;
+  margin-top: 1ex;
 }
 
 .float-left {
   float: left;
-  margin: 0 1rem 1rem 0;
+  padding: 0 1ex 0.5ex 0;
+  margin-top: 1ex;
 }
 
 .float-right::after {
@@ -328,7 +330,8 @@
 }
 
 /* to support IE */
-[hidden] {
+[hidden],
+.no-display {
   display: none;
 }
 
@@ -345,4 +348,18 @@
 .col-3 {
   column-count: 3;
   column-gap: 1rem;
+}
+
+@media(min-width: 30.1em) and (max-width:60em) {
+  .col-3 {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+}
+
+@media(max-width:30em) {
+  .col-3, .col-2 {
+    column-count: 1;
+    column-gap: 1rem;
+  }
 }

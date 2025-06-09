@@ -1,14 +1,15 @@
 @media print {
   div, section, article, header, main {
-    --m-norm: 0.3;
+    --m-norm: 0.2;
   }
 
   * {
     background: none !important;
+    color: black !important;
   }
 
   body {
-    font: 400 0.8rem/1.1 Tahoma, Verdana, sans-serif !important;
+    font: 400 10pt/1.1 Arial, sans-serif !important;
   }
 
   h2, h3 {
@@ -16,11 +17,30 @@
   }
 
   h1 {
-    font-size: 1.7689rem;
+    font-size: 14pt !important;
   }
 
   h2 {
-    font-size: 1.33rem;
+    font-size: 13pt !important;
+    line-height: 1.1 !important;
+  }
+
+  h3, .link-title {
+    font-size: 12pt !important;
+    line-height: 1.1 !important;
+  }
+
+  p, ul, ol, li, dl, dt, dd, table, td, th, a, blockquote, h4, h5, h6, .link-description {
+    font-size: 10pt !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+  }
+
+  li {
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 0 4pt 0 !important;
   }
 
   nav, footer {
@@ -35,4 +55,102 @@
     content: " (" attr(href) ")";
   }
 
+  a[href="#top"] {
+    display: none;
+  }
+
+  a {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  tbody td,
+  tbody th {
+   padding: 4pt;
+  }
+
+  #main-content section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .list-group.list-links a {
+    padding: 4pt;
+  }
+
+  section, .cards, .cards article {
+    grid-gap: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+
+  .cards article {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .cards ol.list-group, .cards ul.list-group, .cards dl {
+    margin-bottom: 0;
+  }
+
+  #main-content > *,
+  #main-content > * > * {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  picture source,
+  picture img {
+   width: 50%;
+   max-width: 3in;
+   height: auto;
+  }
+
+  #main-content p,
+  #main-content section > * {
+    width: 8in;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #main-article > section.lead > p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #main-content section > ul {
+    max-width: 100%;
+  }
+
+  /* Defining all page breaks */
+  a {
+    page-break-inside: avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  img {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  table, pre {
+    page-break-inside:avoid;
+  }
+
+  ul, ol, dl  {
+    page-break-before:avoid;
+  }
+
+  #homepage > .cards {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+  }
 }

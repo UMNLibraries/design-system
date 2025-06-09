@@ -10,12 +10,12 @@ main {
 
 body > footer {
   padding: 1rem 5vw;
+  position: relative;
 }
 
-/*header {
-  margin-bottom: calc( var(--m-min) * 1rem);
+header {
   background-color: white;
-}*/
+}
 
 @media (max-width: 50rem) {
   main, header, footer, body > nav {
@@ -28,7 +28,7 @@ body > footer {
   }
 }
 
-
+/* HSL specific? */
 main > footer {
   background-color: var(--col-text);
   color: var(--col-bg-light);
@@ -47,15 +47,14 @@ body > footer hr {
 }
 
 /*** BLOCK STYLING ***/
-main > article,
-section > article {
+main section > article {
   padding: 1rem;
   background: white;
   border: 1px solid var(--col-bg-medium);
 }
 
-section,
-article {
+main section,
+main article {
   position: relative;
   width: 100%;
 }
@@ -87,20 +86,14 @@ nav + main {
   flex: 3 0px;
 }
 
-article {
+#main-article > section > article,
+#main-article section > section {
   margin-bottom: calc( var(--m-norm) * 1rem);
 }
 
 body > footer {
   color: var(--col-bg-light);
   background-color: var(--col-text);
-}
-
-#section-primary > section,
-.color-block {
-  margin: 1rem -5vw;
-  padding: 1rem 5vw;
-  width: calc(100% + 10vw);
 }
 
 /* Content columns */
@@ -186,4 +179,69 @@ main {
   .visible-desktop {
     display: none;
   }
+}
+
+
+/* grid option */
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.left-sidebar {
+  grid-template-rows: auto;
+  grid-template-columns: minmax(300px, 25%) 4fr;
+  /*grid-template-columns: 2fr 4fr;*/
+}
+
+.right-sidebar, .search-results {
+  grid-template-rows: auto;
+  grid-template-columns: 4fr minmax(300px, 25%);
+  /*grid-template-columns: 4fr 2fr;*/
+}
+
+.grid.left-sidebar > :first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / span 10;
+}
+
+.grid.left-sidebar > :not(:first-child) {
+  grid-row: auto;
+  grid-column: 2 / 3;
+}
+
+
+.grid.right-sidebar > :first-child {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 10;
+}
+
+.grid.right-sidebar > :not(:first-child) {
+  grid-row: auto;
+  grid-column: 1 / 2;
+}
+
+.grid.search-results > :last-child {
+  grid-column: 2 / 3;
+  grid-row: 1 / span 10;
+}
+
+.grid.search-results > :not(:last-child) {
+  grid-row: auto;
+  grid-column: 1 / 2;
+}
+
+.grid > :not(section) {
+  display:block;
+}
+
+@media(max-width:50rem) {
+  .grid {
+    display: block;
+  }
+}
+
+#main-content #contact-information {
+  border: 0;
+  padding: 0;
 }

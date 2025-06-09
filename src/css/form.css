@@ -1,5 +1,5 @@
-main form {
-  margin-bottom: calc(var(--m-norm) * 1rem);
+main form, footer form {
+  margin: 0 auto calc(var(--m-norm) * 1rem) auto;
 }
 
 fieldset {
@@ -49,6 +49,7 @@ input[aria-invalid='false'], textarea[aria-invalid='false'] {
 [type="checkbox"], [type="radio"] {
   padding: 0;
   opacity: 0;
+  display: block;
 }
 
 [type="checkbox"] + label, [type="radio"] + label {
@@ -138,7 +139,7 @@ input[type="radio"][disabled]:focus + label::before {
   top: 3px;
   width: 8px;
   height: 14px;
-  border: solid #fff;
+  border: solid var(--col-bg-light);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -222,6 +223,26 @@ textarea {
   /*transition: all 0.15s ease;*/
 }
 
+main [type="text"],
+main [type="search"],
+main [type="email"],
+main [type="number"],
+main [type="password"],
+main [type="tel"],
+main [type="url"],
+main textarea,
+footer [type="text"],
+footer [type="search"],
+footer [type="email"],
+footer [type="number"],
+footer [type="password"],
+footer [type="tel"],
+footer [type="url"],
+footer textarea,
+main form .description {
+  margin: 0 0 1rem 0;
+}
+
 textarea {
   min-height: 8rem;
   overflow: auto;
@@ -230,7 +251,7 @@ textarea {
 
 /* select */
 select {
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/12px 14px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.5rem center/12px 14px;
   background-size: 12px 14px;
   height: calc(2.875rem + 2px);
   padding: 0.5rem calc(15px + 1rem) 0.5rem 1rem;
@@ -238,13 +259,13 @@ select {
   display: inline-block;
   width: 100%;
   vertical-align: middle;
-  border: 1px solid #333;
+  border: 1px solid var(--col-text);
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
 
-main select {
+main select, footer select {
   margin: 0 0 calc(var(--m-norm) * 1rem) 0;
 }
 
@@ -391,7 +412,7 @@ select[aria-disabled="true"] {
 
 .form-control {
   display: block;
-  background-color: #fff;
+  background-color: var(--col-bg-light);
   background-clip: padding-box;
   border: 1px solid var(--col-text);
   height: calc(2.875rem + 2px);
@@ -407,10 +428,15 @@ select[aria-disabled="true"] {
   height: calc(2.875rem + 2px);
   padding: 0.5rem 1rem;
   white-space: nowrap;
+  text-decoration: none;
+}
+
+header .search select, header .search button {
+  border: 1px solid var(--col-text);
 }
 
 nav > .search {
-  margin: 0.2rem 1.25rem;
+  margin: 0.2rem 0.5rem;
 }
 
 @media (max-width: 50rem) {
@@ -419,13 +445,22 @@ nav > .search {
   }
 }
 
-/*select.btn-secondary {
-  background-color: var(--col-secondary);
-}*/
+#top .search {
+  position: relative;
+}
 
-/*select.btn-ghost {
-  background-image: white;
-}*/
+#auto-suggest {
+  position: relative;
+  display: flex;
+  position: absolute;
+  top: 1.2rem;
+  right: 0;
+  background: var(--col-bg-light);
+  z-index: 100;
+  max-height: 40vh;
+  overflow: hidden auto;
+  border: 1px solid var(--col-bg-border);
+}
 
 @media (max-width: 40rem) {
   .visuallyhidden-mobile {
@@ -666,7 +701,7 @@ ol[role="progressbar"] li::before {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  color: #fff;
+  color: var(--col-bg-light);
   text-align: center;
   font-size: 1.3rem;
   line-height: 1.3;

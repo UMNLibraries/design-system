@@ -19,11 +19,6 @@ body #main-content .cards {
   margin: 0 auto 2rem auto; /*add margin bottom to make space for back to top links*/
 }
 
-/*center aligns a card when it's the only one in the deck*/
-/*main .cards article:only-child { 
-  margin: auto;
-} -may not be necessary now*/
-
 main .cards article {
   background-color: var(--col-bg-light);
 }
@@ -55,8 +50,6 @@ body > footer .cards {
   flex-direction: column;
   justify-content: flex-start;
   padding: 0.5rem;
-  /*-webkit-transform: translate3d(0, 0, 0);
-  transition: all 0.2s cubic-bezier(0.25,0.8,0.25,1);*/
   position: relative;
   width: auto;
 }
@@ -163,25 +156,6 @@ body > footer .cards {
   margin-top: auto;
 }
 
-/* card as link-type work */
-/* removing card as link feature - Aug 2024 */
-/*.card-as-link:focus-within,
-.card-as-link:hover {
-  outline: 0.2rem solid var(--col-link);
-  outline-offset: 0.1rem;
-}
-
-.card-body .h3 a::before {
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-  content: "";
-}*/
-
 /* card as link retained only for locations on homepage - Aug 2024 */
 .locations-summary .card-as-link:focus-within,
 .locations-summary .card-as-link:hover {
@@ -200,17 +174,13 @@ body > footer .cards {
   content: "";
 }
 
-/*.card-body:focus .h3 a::before {
-  outline: 0.2rem solid var(--col-link);
-  outline-offset: 0.1rem;
-}*/
-
 .card-body > :not(.h3) {
   position: relative;
   z-index: 1;
 }
 
-.cards > * footer {
+.cards > * footer,
+.cards-x > * footer {
   margin: auto -0.5rem -0.5rem -0.5rem;
   background-color: var(--col-bg-medium);
   padding: 0.5rem;
@@ -236,8 +206,10 @@ body > footer .cards {
 /* horizontal card */
 .cards-x > * {
   display: grid !important;
-  grid-template-columns: minmax(1fr, 180px) repeat(3, 1fr);
-  grid-template-rows: auto auto; 
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "cf-img cf-body";
   border: 1px solid var(--col-bg-med-dark);
   padding: 0;
   margin-bottom: 1rem;
@@ -259,8 +231,6 @@ body > footer .cards {
 .cards-x > * picture source,
 .cards-x > * picture img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .cards-x .card-body {
@@ -280,11 +250,6 @@ body > footer .cards {
 .cards-promo > .card-action-button {
   bottom: -4.5rem;
 }
-
-/*.card-as-link:has(.card-action-button:hover):hover,
-.card-as-link:has(p:hover):hover {
-  outline: none;
-}*/
 
 /* card - job posting */
 #main-content .card-job {
@@ -306,6 +271,10 @@ body > footer .cards {
   flex-wrap: wrap;
   margin: 0 auto 0;
   max-width: 66ch;
+}
+
+.card .card-job-body section {
+  border: 0;
 }
 
 .card .card-job-detail {
@@ -365,17 +334,20 @@ body > footer .cards {
 
 /* card optional footer */
 
-.card footer {
+.card footer,
+.cards-x footer {
   border-top: 1px solid var(--col-bg-medium);
   background-color:  var(--col-bg-light);
   padding: 0.3rem 1rem;
 }
 
-.card footer * {
+.card footer *,
+.cards-x footer * {
   margin: 0 0.1rem;
 }
 
-.card footer a {
+.card footer a,
+.cards-x footer a {
   display: inline-block;
 }
 
@@ -399,7 +371,8 @@ body > footer .cards {
   white-space: nowrap;
 }
 
-.cards article .card-action-button {
+.cards article .card-action-button,
+.cards-x article .card-action-button {
   position: absolute;
   bottom: -1.5rem;
   right: 0.5rem;
@@ -460,26 +433,36 @@ main .cards-feature {
   grid-template-columns: 1fr;
 }
 
-main #main-content .cards.cards-feature article > .h3 + picture {
+main #main-content .cards.cards-feature article > .h3 + picture,
+main #main-content .cards-x article > .h3 + picture,
+main #main-content .cards-x article > .h3 + picture img {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-.cards-feature article > .h3 {
+.cards-feature article > .h3,
+.cards-x article > .h3 {
   grid-area: cf-subh;
   background-color: var(--col-secondary-light);
   border-top-left-radius: var(--b-rad);
   border-top-right-radius: var(--b-rad);
   padding: 0.5rem;
+  margin-bottom: 0;
 }
-.cards-feature picture {
+
+.cards-feature picture,
+.cards-x picture {
   grid-area: cf-img;
 }
-.cards-feature footer {
+
+.cards-feature footer,
+.cards-x footer {
   grid-area: cf-footer;
   margin: 0;
 }
-.cards-feature .card-body {
+
+.cards-feature .card-body,
+.cards-x .card-body {
     flex-basis: 66ch;
     padding: 0.5rem;
     grid-area: cf-body;
@@ -504,27 +487,29 @@ main #main-content .cards.cards-feature.cards-reverse article:has(footer) {
   "cf-footer cf-footer";
 }
 
-main #main-content .cards.cards-feature article:has(> .h3):has(footer) {
+main #main-content .cards.cards-feature article:has(> .h3):has(footer),
+main #main-content .cards-x article:has(> .h3):has(footer) {
   grid-template-areas: 
   "cf-subh cf-subh"
   "cf-img cf-body"
   "cf-footer cf-footer";
 }
 
-main #main-content .cards.cards-feature article:has(> h3) {
+main #main-content .cards.cards-feature article:has(> h3),
+main #main-content .cards-x article:has(> h3) {
   grid-template-areas: 
   "cf-subh cf-subh"
   "cf-img cf-body";
 }
 
-main #main-content .cards.cards-feature article:has(footer) {
+main #main-content .cards.cards-feature article:has(footer),
+main #main-content .cards-x article:has(footer) {
   grid-template-areas: 
   "cf-img cf-body"
   "cf-footer cf-footer";
 }
 
 main #main-content .cards.cards-feature.cards-reverse article {
-  /*grid-template-columns: minmax(1fr, 36rem) 1fr;*/
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "cf-body cf-img";
@@ -533,7 +518,6 @@ main #main-content .cards.cards-feature.cards-reverse article {
 main #main-content .cards.cards-feature article {
   display: grid;
   justify-content: space-between;
-  /*grid-template-columns: 1fr minmax(1fr, 36rem);*/
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "cf-img cf-body";
@@ -560,7 +544,8 @@ main #main-content .cards.cards-feature article {
     border-radius: 0 var(--b-rad) var(--b-rad) 0;
 }
 
-main #main-content .cards.cards-feature article:has(footer) picture {
+main #main-content .cards.cards-feature article:has(footer) picture,
+main #main-content .cards-x article:has(footer) picture {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -590,6 +575,7 @@ main #main-content .cards.cards-feature article:has(footer) picture {
   main #main-content .cards.cards-feature article:has(footer) picture {
     border-top-right-radius: var(--b-rad);
   }
+
   main #main-content .cards.cards-feature.cards-reverse article picture,
   main #main-content .cards.cards-feature.cards-reverse article:has(footer) picture {
     border-top-left-radius: var(--b-rad);
@@ -605,22 +591,26 @@ main #main-content .cards.cards-feature article:has(footer) picture {
 
 }
 
-@media (max-width:40rem) {
+@media (max-width:38rem) {
   .cards {
     display: block;
   }
-  .cards-x > * {
-    display: flex;
+  #main-content section.cards-x > * {
+    display: block !important;
     flex-direction: column;
   }
 
-  .cards-x picture,
-  .cards-x > * > a {
-    width: 100%;
+  #main-content section.cards-x picture,
+  #main-content section.cards-x picture img {
+    border-radius: var(--b-rad) var(--b-rad) 0 0;
+  }
+
+  main #main-content .cards-x article picture,
+  main #main-content .cards-x article:has(footer) picture {
+    border-top-right-radius: var(--b-rad);
   }
 
   .card-body {
-    /*min-width: 100%;*/
     margin: auto;
     width: 100%;
   }

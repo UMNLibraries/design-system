@@ -3,9 +3,8 @@
 article ol,
 article ul,
 article dl {
-  margin-top: 0;
-  /* margin-bottom: 0.5rem; */
-  margin-bottom: calc(var(--m-norm) * 1rem);
+  margin: 0 auto calc(var(--m-norm) * 1rem) 0;
+  max-width: 66ch;
 }
 
 ol > ol,
@@ -23,11 +22,12 @@ ul > ol {
 
 /* for list groups */
 .list-group {
-  /*display: flex;
-  flex-direction: column;*/
   list-style: none;
   padding-left: 0;
-  /* margin-bottom: 0; */
+}
+
+.cards ol.list-group, .cards ul.list-group, .cards dl {
+  margin-bottom: 1.3rem;
 }
 
 .list-group li {
@@ -39,9 +39,16 @@ ul > ol {
   border: 1px solid var(--col-bg-medium);
 }
 
-.list-group li > ul {
-  border-top: 1px solid white;
-  margin-top: -1px;
+:not(.card-body) > .list-group li:first-of-type {
+  border-top-left-radius: var(--b-rad);
+}
+
+:not(.card-body) > .list-group li:last-of-type {
+  border-bottom-right-radius: var(--b-rad);
+}
+
+.list-group dl {
+  margin-bottom: 0;
 }
 
 .list-group.list-inline:first-child li:first-child {
@@ -58,13 +65,14 @@ ul > ol {
   border-left: 0;
 }
 
-.list-group.list-links li {
+ul.list-group.list-links li {
   padding: 0;
 }
 
 .list-group.list-links a {
   display: block;
   padding: 0.8rem 1rem;
+  width: 100%;
 }
 
 .list-group li p {
@@ -72,19 +80,53 @@ ul > ol {
 }
 
 /* nested ul */
-.list-group ul li {
-  margin: 0 -1px -1px -0.5rem;
-}
-.list-group.list-links ul {
-  padding: 0;
-}
-
-.list-group.list-links ul li {
-  border-top: 0;
+.list-group li ul {
+  list-style: initial;
+  margin-bottom: 0;
+  padding-left: 1.5rem;
 }
 
-.list-group.list-links ul li a {
-  padding: 0.1rem 0.3rem 0.1rem 2rem;
+.list-group > ul li,
+.card-body ul li {
+  background: transparent;
+  position: relative;
+  display: list-item;
+  padding: 0 1rem;
+  margin: 0 -0.5rem;
+  border: none;
+}
+
+.list-links.link-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.list-group.link-grid a {
+  height: 100%;
+}
+
+li.feature-listitem {
+  background: var(--col-secondary-mid-light);
+  border: 20px solid var(--col-primary);
+  border-image: repeating-linear-gradient(
+    45deg,
+    var(--col-primary-dark),
+    var(--col-primary) 20px,
+    var(--col-secondary) 20px,
+    var(--col-bg-medium) 40px)
+    20;
+}
+
+@media (max-width: 75rem) {
+  .list-links.link-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.link-grid li {
+    background-color: var(--col-bg-medium);
+    margin: 0;
 }
 
 /* faux check list */
@@ -100,12 +142,6 @@ ul > ol {
   margin-right: 0.5rem;
   margin-left: -2rem;
 }
-
-
-/*.list-links li[aria-current] {
-  background-color: var(--col-link);
-  color: #fff;
-} - redundant?? */
 
 li[disabled] {
   color: var(--col-bg-med-dark);
@@ -141,7 +177,23 @@ li[disabled] {
   padding: 0 0.3rem 0.3rem 0;
 }
 
+.cards .dl-horizontal dd + dd {
+  margin-left: 40%;
+}
+
+.dt-50 dt {
+  flex: 0 1 50%;
+}
+
+.dt-50 dd {
+  flex: 1 1 49%;
+}
+
+.dt-50 dd + dd {
+  margin-left: 50%;
+}
+
 .dl-horizontal dd + dt,
 .dl-horizontal dd + dt + dd {
-  border-top: 0.1rem solid var(--col-bg-medium);
+  border-top: 0.1rem solid var(--col-bg-med-dark);
 }

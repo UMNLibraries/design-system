@@ -202,7 +202,7 @@
   <main id="main">
 
     <h1>Images</h1>
-    <p class="lead">Review <a href="https://www.w3.org/WAI/tutorials/images/" aria-describedby="ext-site">image accessibility</a> from the Web Accessibility Initiative.</p>
+    <p class="lead">Review <a href="https://www.w3.org/WAI/tutorials/images/" aria-describedby="ext-site">image accessibility</a> from the Web Accessibility Initiative to learn about the different image purposes and types.</p>
 
     <section id="general">
       <h2>General</h2>
@@ -211,10 +211,10 @@
 
         <p>The following standards are for non-archival web image display. Where displaying archival images, use archival best practices and tools that meet the design system principles.</p>
         <ul>
-          <li>Less than 750px</li>
+          <li>Longest length is 750px or less</li>
           <li>Aspect ratio</li>
           <ul>
-            <li>standard card: 2.3:1</li>
+            <li>standard card: 2.3:1 (750px by 375px)</li>
             <li>horizontal card: 1:1 (180 pixels)</li>
             <li>portraits: 1:1</li>
           </ul>
@@ -231,7 +231,13 @@
 
           <dt><code>loading</code></dt>
           <dd>Optional</dd>
-          <dd>This <a href="https://web.dev/native-lazy-loading" aria-describedby="ext-site">new attribute for native image lazy loading</a> is introduced in Chrome 76</dd>
+          <dd>This attribute allows authors to control the request time, where lazy means the image loads later</dd>
+        </dl>
+
+        <h3>Formats</h3>
+        <dl>
+          <dt>Photos</dt>
+          <dd>Deliver as both webp (primary) and jpg (backup). For the main site, upload jpg, and Drupal will output the correct webp/jpg formats.</dd>
         </dl>
       </article>
     </section>
@@ -260,7 +266,7 @@
 </code>
 </pre>
 
-        <p>Where the image is accompanying a headline, such as a news article brieflet linking to a full article, use the following pattern:</p>
+        <p>Where the image is accompanying a headline, such as a news article card linking to a full article, use the following pattern:</p>
 
         <div class="example">
           <a href="/article-2" class="link-img">
@@ -291,7 +297,7 @@
               <source type="image/webp" srcset="/design-system/img/mississippi.webp" />
               <img src="/design-system/img/mississippi.jpg" alt="1876 Minneapolis map" />
             </picture>
-            <figcaption>A map of Minneapolis from 1867-1877 made under the direction of the Mississippi River Commission and Major C.B. Comstock. It includes railroad track elevations, lake depths, and topographical features. Photo from Borchert Library&rsquo;s <cite><a href="https://www.lib.umn.edu/borchert/county-plat-maps-and-atlases">County plat maps and atlases collection</a></cite>.</figcaption>
+            <figcaption>A map of Minneapolis from 1867 to 1877 made under the direction of the Mississippi River Commission and Major C.B. Comstock. It includes railroad track elevations, lake depths, and topographical features. Photo from Borchert Library&rsquo;s <cite><a href="https://www.lib.umn.edu/borchert/county-plat-maps-and-atlases">County plat maps and atlases collection</a></cite>.</figcaption>
           </figure>
         </div>
 <pre rel="HTML" class="code" translate="no"><code>
@@ -300,7 +306,7 @@
     <span class="nt">&lt;source</span> <span class="na">type=</span><span class="s">"image/webp"</span> <span class="na">srcset=</span><span class="s">"mississippi.webp"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"mississippi.jpg"</span> <span class="na">alt=</span><span class="s">"1876 Minneapolis map"</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/picture&gt;</span>
-  <span class="nt">&lt;figcaption&gt;</span>A map of Minneapolis from 1867-1877 made under the direction of the Mississippi River Commission and Major C.B. Comstock. It includes railroad track elevations, lake depths, and topographical features. Photo from Borchert Library&rsquo;s <span class="nt">&lt;cite&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.lib.umn.edu/borchert/county-plat-maps-and-atlases"</span><span class="nt">&gt;</span>County plat maps and atlases collection<span class="nt">&lt;/a&gt;&lt;/cite&gt;</span><span class="nt">&lt;/figcaption&gt;</span>
+  <span class="nt">&lt;figcaption&gt;</span>A map of Minneapolis from 1867 to 1877 made under the direction of the Mississippi River Commission and Major C.B. Comstock. It includes railroad track elevations, lake depths, and topographical features. Photo from Borchert Library&rsquo;s <span class="nt">&lt;cite&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://www.lib.umn.edu/borchert/county-plat-maps-and-atlases"</span><span class="nt">&gt;</span>County plat maps and atlases collection<span class="nt">&lt;/a&gt;&lt;/cite&gt;</span><span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code></pre>
       </article>
@@ -365,7 +371,7 @@
     <span class="nt">&lt;/tr&gt;</span>
    <span class="nt">&lt;/tbody&gt;</span>
   <span class="nt">&lt;/table&gt;</span>
-  <span class="nt">&lt;figcaption&gt;</span>Display of monthly and total visitors by affiliate type &mdash; student, faculty, staff, and community member &mdash; for the first quarter in 2014<span class="nt">&lt;/figcaption&gt;</span>
+  <span class="nt">&lt;figcaption&gt;</span>Monthly and total visitors by affiliate type &mdash; student, faculty, staff, and community member &mdash; for the first quarter in 2014.<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
 </code></pre>
       </article>
@@ -375,15 +381,15 @@
       <h2>Illustrations</h2>
 
       <article id="svg">
-        <h3 class="h2"><acronym>SVG</acronym></h3>
-        <p>All illustrations should be made with <acronym>SVG</acronym> (scalable vector graphic), avoiding the <acronym>SVG</acronym> wrapper around an image for vector <acronym>SVG</acronym>. <acronym>SVG</acronym> can be referenced in multiple ways:</p>
+        <h3 class="h2"><abbr title="Scalable Vector Graphic">SVG</abbr></h3>
+        <p>All illustrations should be made with <abbr title="Scalable Vector Graphic">SVG</abbr> (scalable vector graphic). Avoiding an <abbr title="Scalable Vector Graphic">SVG</abbr> that is simply an image inside an SVG element; ensure it is a vector <abbr title="Scalable Vector Graphic">SVG</abbr> with paths and other elements used to make shapes. <abbr title="Scalable Vector Graphic">SVG</abbr> can be referenced in multiple ways:</p>
         <dl>
           <dt>External reference</dt>
-          <dd>Calling an <acronym>SVG</acronym> as an external object like a <acronym>JPG</acronym> is the most supported option but also the most limiting for modifications such as changing colors on focus. Because it is a source pointer, it&rsquo;s a resource request requiring a server fetch as well, which may cost in speed.</dd>
+          <dd>Calling an <abbr title="Scalable Vector Graphic">SVG</abbr> as an external object like a JPG is the most supported option but also the most limiting for modifications such as changing colors on focus. Because it is a source pointer, it&rsquo;s a resource request requiring a server fetch as well, which may cost in speed.</dd>
           <dd><code>&lt;img src="cancel.svg" alt="Cancel" /&gt;</code></dd>
 
-          <dt><acronym>SVG</acronym> sprites</dt>
-          <dd>These are most useful for icons that are expected to repeat multiple times per web page. For instance, on a staff directory page where phone and email content has repeating iconography. Add a hidden list of <acronym>SVG</acronym> symbols on the page:
+          <dt><abbr title="Scalable Vector Graphic">SVG</abbr> sprites</dt>
+          <dd>These are most useful for icons that are expected to repeat multiple times per web page. For instance, on a staff directory page where phone and email content has repeating iconography. Add a hidden list of SVG symbols on the page:
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;svg&gt;</span>
@@ -393,7 +399,7 @@
 <span class="nt">&lt;/svg&gt;</span>
 </code>
 </pre>
-            Then within the document content refer to the symbols:
+            Then, within the document content, refer to the symbols:
 <pre rel="HTML" class="code" translate="no">
 <code>
 <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 30 30"</span><span class="nt">&gt;</span>
@@ -402,7 +408,7 @@
 </code>
 </pre>
           </dd>
-          <dd>The <acronym>SVG</acronym> definition list is best inside the <code>&lt;footer role="contentinfo"&gt;</code>, in a <code>&lt;div hidden="hidden"&gt;</code>element that contains several shared hidden assets.</dd>
+          <dd>The <abbr title="Scalable Vector Graphic">SVG</abbr> definition list is best inside the <code>&lt;footer role="contentinfo"&gt;</code>, in a <code>&lt;div hidden="hidden"&gt;</code>element that contains several shared hidden assets.</dd>
 
           <dt>Embedded</dt>
           <dd>
@@ -415,12 +421,12 @@
 </pre>
           </dd>
         </dl>
-        <p>The best approach is to use a combination primarily of <acronym>SVG</acronym> sprites and embedded <acronym>SVG</acronym>.</p>
+        <p>The best approach to illustrations is to use a combination primarily of <abbr title="Scalable Vector Graphic">SVG</abbr> sprites and embedded <abbr title="Scalable Vector Graphic">SVG</abbr>.</p>
       </article>
 
       <article id="icons">
         <h2>Iconography</h2>
-        <p>All icons are <acronym>SVG</acronym> formatted and embedded into the <acronym>HTML</acronym>.  This allows <acronym>CSS</acronym> styling and <acronym>JS</acronym> mutations.</p>
+        <p>All icons are <abbr title="Scalable Vector Graphic">SVG</abbr> formatted and embedded into the <abbr title="HyperText Markup Language">HTML</abbr>.  This allows <abbr title="Cascading StyleSheet">CSS</abbr> styling and <abbr title="JavaScript">JS</abbr> mutations.</p>
         <p>Icons that are used purely to enhance content where the content makes sense without the icon is decorative. Decorative content does not read to screen readers.</p>
         <p>Use only icons identified below. If you need an icon that is not represented below, place the request with the Libraries Web Dev Team.</p>
 
@@ -448,7 +454,7 @@
             <svg class="glyph glyph-angle-circled-right">
               <use xlink:href="#glyph-angle-circled-right-shared"></use>
             </svg>
-            <p>*for main nav links<br />
+            <p>
               <code>[[{"glyph":"angle-circled-right"}]]</code>
             </p>
           </li>

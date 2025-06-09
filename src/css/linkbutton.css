@@ -3,12 +3,18 @@ a {
   color: var(--col-link);
   /*transition: all ease 0.25s;*/
   padding: 0;
+  width: fit-content;
 }
 
 a:hover, a:focus {
   background-color: var(--col-link);
-  color: white;
+  color: var(--col-bg-light);
   text-decoration: none;
+}
+
+p a, li a, dd a, dt a, blockquote a {
+  /*display: inline-block;*/
+  padding: 0 1px;
 }
 
 main a:hover svg,
@@ -47,14 +53,14 @@ body > footer a:focus svg {
 }
 
 
-/*[aria-describedby="ext-site"]::after {
-  content: ' \21F1';
-  content: ' \21D7';
+[aria-describedby="ext-site"]::after {
+    content: ' \21D7';
+    /*content: ' \21F1';*/
 }
 
 .icons [aria-describedby="ext-site"]::after {
     content: '';
-}*/
+}
 
 a:hover code,
 a:focus code,
@@ -65,6 +71,13 @@ a:active code {
 button {
   border-radius: 0;
   -webkit-appearance: none; /* for older Safari browsers */
+  text-decoration: underline;
+  font-family: Tahoma,Verdana,sans-serif; /* Safari overrides without it */
+}
+
+a.btn,
+#views-exposed-form-staff-search-page-1 .btn-secondary {
+  border-radius: var(--b-rad);
 }
 
 button,
@@ -85,7 +98,7 @@ button,
 input[type="submit"] {
   background-color: var(--col-primary);
   border: 1px solid var(--col-primary-dark);
-  color: white;
+  color: var(--col-bg-light);
 }
 
 button:hover,
@@ -185,8 +198,13 @@ input[type="submit"]:active {
 .btn-exit:hover,
 .btn-exit:focus,
 .btn-exit:active {
-  color: #fff;
+  color: var(--col-bg-light);
   background-color: var(--col-bg-med-dark);
+}
+
+a[class*="btn-"]:has(+ a[class*="btn-"]),
+button:has(+ button) {
+  margin-right: 0.5rem;
 }
 
 /* linked image */
@@ -224,12 +242,18 @@ input[type="submit"]:active {
   display: inline-block;
   margin-bottom: calc(var(--m-min) * 1rem);
   border: 1px solid var(--col-bg-med-dark);
+  border-radius: var(--b-rad);
 }
 
 .cards a.link-simple, /*deprecated*/
 .cards a.link-action {
   display: block;
   padding: 1rem;
+  margin-bottom: auto;
+}
+
+@media(max-width: 60rem) {
+  .cards a.link-action {margin-bottom: calc(var(--m-min) * 1rem);}
 }
 
 .link-simple.btn-secondary, /*deprecated*/
@@ -283,4 +307,15 @@ input[type="submit"]:active {
 .link-described:hover .link-description,
 .link-described:focus .link-description {
   color: var(--col-bg-light);
+}
+
+.block-primary .link-described .link-title,
+.block-primary .link-described .link-description {
+  color: var(--col-bg-light);
+}
+
+a[href="#top"] {
+  position: absolute;
+  bottom: 0.1rem;
+  right: 1rem;
 }

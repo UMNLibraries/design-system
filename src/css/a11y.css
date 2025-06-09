@@ -9,8 +9,8 @@
 
 .skip-link:focus {
   right: auto;
-  background-color: #343a40;
-  color: white;
+  background-color: var(--col-text-medium);
+  color: var(--col-bg-light);
   font-weight: 700;
   left: 1.5rem;
   padding: 1rem;
@@ -20,7 +20,8 @@
 }
 
 /*Joe Watkin solution*/
-.visuallyhidden {
+.visuallyhidden, 
+.visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: auto; /* new - was 1px */

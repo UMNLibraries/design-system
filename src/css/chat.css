@@ -1,5 +1,6 @@
 footer .chat {
-  display: none;
+  border-top-left-radius: var(--b-rad);
+  border-top-right-radius: var(--b-rad);
 }
 
 footer a.chat:hover,
@@ -13,12 +14,26 @@ body > footer a.chat:focus svg {
   fill: var(--col-bg-light);
 }
 
-@media (min-width: 50rem) {
-  footer .chat {
-    display: inline-block;
-    position: fixed;
-    bottom: 0;
-    right: 1rem;
-    z-index: 20;
-  }
+footer .chat {
+  display: inline-block;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  z-index: 20;
+  text-decoration: none;
+}
+
+.chat .glyph-chat-empty {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.15rem;
+}
+
+.chat .glyph-link-ext {
+  margin-left: 0.6rem;
+}
+
+footer .chat:focus,
+footer .chat:hover {
+  text-decoration: underline;
 }

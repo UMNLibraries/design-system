@@ -1,14 +1,15 @@
-svg {
-  color: currentColor;
-  fill: currentColor;
-}
-
 /***MEDIA***/
 .glyph {
   height: 1rem;
   width: 1rem;
   color: currentColor;
   fill: currentColor;
+}
+.glyph-black{
+  fill: var(--col-text);
+}
+.glyph-white{
+  fill: var(--col-bg-light);
 }
 
 figure {
@@ -22,9 +23,30 @@ figcaption {
 
 picture source,
 picture img {
-  /*filter: contrast(130%);*/
   width: 100%;
   max-width: 750px;
+  height: auto;
+}
+
+#main-content section figure.img-cover {
+  max-width: calc(100% + 2rem);
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+}
+
+#main-content figure.img-cover picture,
+#main-content figure.img-cover picture > img,
+#main-content figure.img-cover picture > source {
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+figure figcaption {
+  max-width: 66ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* SVG colors */
@@ -32,9 +54,25 @@ picture img {
   fill: var(--col-primary);
 }
 
+.primary-fill {
+  fill: var(--col-primary);
+}
+
+.secondary-fill {
+  fill: var(--col-secondary);
+}
+
+.black-fill {
+  fill: var(--col-text);
+}
+
 .white-stroke {
-  stroke: white;
+  stroke: var(--col-bg-light);
   stroke-width: 0.1;
+}
+
+.white-fill {
+  fill: var(--col-bg-light);
 }
 
 .gold-stroke {
@@ -51,4 +89,27 @@ picture img {
 .glyph-3 {
   height: 3rem;
   width: 3rem;
+}
+
+/* video embeds */
+.media-oembed {
+  position: relative;
+}
+
+.media-oembed::after {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.media-oembed iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0;
 }

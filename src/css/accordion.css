@@ -1,0 +1,9 @@
+details {
+  padding: 0.5rem;
+  border: 1px solid var(--col-text);
+  cursor: pointer;
+}
+
+summary {
+  font-weight: bold;
+}

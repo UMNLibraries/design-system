@@ -4,7 +4,7 @@
   border-left: 0.25rem solid #aaa;
   padding: 1rem;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   width: 100%; /*this is for page-level alerts to span primary and secondary spaces*/
 }
 
@@ -14,6 +14,10 @@
 
 .alert p {
   margin-top: 0;
+}
+
+.alert p:last-of-type {
+  margin-bottom: 0;
 }
 
 .alert svg {
@@ -53,4 +57,9 @@
 
 .alert-danger a {
   color: inherit;
+}
+
+#main-content .alert {
+  margin-bottom: calc(var(--m-min) * 1rem);
+  max-width: 100%;
 }

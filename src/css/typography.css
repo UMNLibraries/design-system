@@ -1,12 +1,11 @@
 /*** TYPOGRAPHY ***/
 body {
-  /*font: 400 calc(1em + 1vw)/1.7 Tahoma, Verdana, sans-serif;*/
   font: 400 1rem/1.5 Tahoma, Verdana, sans-serif;
   text-rendering: optimizeLegibility;
   color: var(--col-text);
 }
 
-h1, h2, h3, h4, h5, h6 {
+main h1, h2,h3, h4, h5, h6 {
   font-family: Georgia, Lucida Bright, serif;
   margin: 0 0 1rem;
   line-height: 1.3;
@@ -17,7 +16,7 @@ article > h2, article > .h2 {
 }
 
 main * {
-  word-spacing: 0.1ch;
+  /*word-spacing: 0.1ch;*/ /* causing the anchor underline gaps in Safari, remove until solution found */
   line-height: calc(1ex / 0.32);
 }
 
@@ -26,27 +25,32 @@ main > section > h2 {
 }
 
 h1, .h1 {
-  /*font-size: calc(( var(--h1-min) * 0.5em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.5em)) / (var(--bp-xlarge) - var(--bp-small))));*/
-  /*font-size: 3rem;*/
   font-size: var(--h1);
-  letter-spacing: -0.05rem;
 }
 
 h2, .h2 {
-  /*font-size: calc(( var(--h1-min) * 0.3em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.3em)) / (var(--bp-xlarge) - var(--bp-small))));*/
-  /*font-size: 2rem;*/
   font-size: var(--h2);
-  letter-spacing: -0.03rem;
+}
+
+.lined {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1em;
+}
+
+.lined::before,
+.lined::after {
+  content: "";
+  align-self: center;
+  border-bottom: 2px solid var(--col-primary);
 }
 
 h3, .h3 {
-  /*font-size: calc(( var(--h1-min) * 0.1em) + (var(--h1-max) - var(--h1-min)) * ((100vw - (var(--bp-small) * 0.1em)) / (var(--bp-xlarge) - var(--bp-small))));*/
-  /*font-size: 1.5rem;*/
   font-size: var(--h3);
 }
 
 h4, .h4 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 h5, .h5, h6, .h6 {
@@ -56,7 +60,6 @@ h5, .h5, h6, .h6 {
 p {
   font-size: var(--base-size);
   margin-top: 0;
-  /*margin-bottom: calc(var(--m-norm) * 1rem);*/
   margin-bottom: calc(1ex / 0.32);
 }
 
@@ -73,7 +76,7 @@ blockquote {
   position: relative;
   padding-left: 2rem;
   border-left: 5px solid var(--col-bg-medium);
-   margin-bottom:calc(var(--m-norm) * 1rem);
+   margin-bottom: calc(var(--m-norm) * 1rem);
 }
 
 blockquote > p:last-of-type {
@@ -106,16 +109,37 @@ hr {
   margin: calc( var(--m-norm) * 1rem) 0;
 }
 
-.lead {
-  font-size: 140%;
-  background-color: var(--col-bg-light);
-  padding: 0.5rem;
-  margin-bottom: calc( var(--m-norm) * 1rem);
-  /*max-width: 70ch;*/
+#main-article > section.lead {
+  margin-bottom: 1rem;
+}
+
+#main-article > section.lead * {
+  max-width: 66ch;
+}
+
+#main-article > section.lead h2 {
+  margin: auto;
+  text-align: center;
+}
+
+#main-article > section.lead > p {
+  margin: 0 auto;
+  font-size: 110%;
+  max-width: 60ch;
 }
 
 .lead p {
   font-size: inherit;
+}
+
+.subtitle,
+.pronouns {
+  font-size: 75%;
+}
+
+.subtitle {
+  display: block;
+	max-width: calc(66ch / 0.75) !important;
 }
 
 /* DEFINITION LISTS */
@@ -210,4 +234,21 @@ article {
 ::selection {
   color: #fff;
   background-color: var(--col-primary);
+}
+
+kbd {
+  display: inline-block;
+  border: solid 1px var(--col-bg-medium);
+  font-family: monospace, sans-serif;
+  border-radius: 2px;
+  padding: 0.25rem;
+}
+
+/* limit widths of textual elements */
+#main-content > section > *:not(.cards),
+#main-content > *:not(section) {
+  max-width: 66ch;
+  margin-left: auto;
+  margin-right: auto;
+  /*display: flow-root;*/ /* aids image floating in text areas - causing too many problems, removing until more research is possible */
 }
