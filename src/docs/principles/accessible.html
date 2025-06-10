@@ -14,7 +14,18 @@
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  @@include('./src/includes/header.html', {"active":"accessible"})
+    <nav aria-label="Content">
+    <ul class="list-group list-links">
+      <li><a href="/design-system/principles/index.html">Overview</a></li>
+      <li><a href="/design-system/principles/accessible.html" aria-current="page">(Universally) Accessible</a></li>
+      <li><a href="/design-system/principles/honest.html">Honest</a></li>
+      <li><a href="/design-system/principles/inclusive.html">Inclusive</a></li>
+      <li><a href="/design-system/principles/mindful.html">Mindful</a></li>
+      <li><a href="/design-system/principles/private.html">Private</a></li>
+      <li><a href="/design-system/principles/simple.html">Simple</a></li>
+      <li><a href="/design-system/principles/sustainable.html">Sustainable</a></li>
+    </ul>
+  </nav>
 
     <nav aria-label="Breadcrumb">
       <ol>
