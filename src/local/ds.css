@@ -175,3 +175,11 @@ nav[aria-label="Libraries"] form {
   margin-right: 0.5rem;
   color: var(--col-text);
 }
+
+main > article,
+section > article {
+    padding: 1rem;
+    background: white;
+    border: 1px solid var(--col-bg-medium);
+    margin-bottom: calc(var(--m-norm) * 1rem);
+}
