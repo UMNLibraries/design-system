@@ -152,21 +152,21 @@
 
   <main id="main">
     <h1>Web forms</h1>
-    <p class="lead">Make forms as simple as possible and only ask what is absolutely needed to complete the task.</p>
+    <p class="lead">Make forms as simple as possible and only ask for what is absolutely needed to complete the task.</p>
 
     <section id="general">
       <h2>General</h2>
 
       <article>
         <h3>Content</h3>
-        <p>Forms are some of the least enjoyable interactions on the web, so being mindful of the precise data needs and minimizing the effort to completion is necessary. Trust is a foundation for forms, so security and clarity are fundamental.</p>
+        <p>Forms are some of the least enjoyable interactions on the web, so be mindful of the precise data needs and minimizing the effort to completion. Trust is a foundation for forms, so security and clarity are fundamental.</p>
         <ul>
           <li>Do not ask for two or more pieces of personally identifiable information (PII).</li>
           <li>The form must be on a secure page (https) sent to a secure location (e.g. a password protected server on an internal network).</li>
           <ul>
-            <li>If the data being requested is critical, contains a lot of PII, or is duplicative of data already available in a database, utilize existing resources or secure databaess so the person doesn&rsquo;t need to manually enter the data.</li>
+            <li>If the data being requested is critical, contains a lot of PII, or is duplicative of data already available in a database, utilize existing resources or secure databases so the person doesn&rsquo;t need to manually enter the data.</li>
           </ul>
-          <li>Offer to auto-fill fields that may be already stored in their browser.</li>
+          <li>Offer to auto-fill fields with data that may be already stored in their browser.</li>
           <li>Ask only for critical necessary data to keep the forms as brief as possible. Some data may not be needed in the initial form submission (it can be collected at a later stage of an interaction).</li>
           <li>Ensure the form speaks with one voice, despite questions from several different people or departments.</li>
           <li>If a field is optional, it may not need to be a part of the form. Consider removing any non-required fields.</li>
@@ -181,7 +181,7 @@
           <li>Upon successful form submission, provide a success message and path out of form or to the next step. Avoid success message page dead ends.</li>
           <li>Form validation requires both HTML and server (or javascript) detection processes. Implement HTML regex patterns and required attributes and provide sufficient error messaging for a person to easily update, but also provide good instructions for data input as well as flexibility.</li>
           <li>Use 50% to 75% of the height of a single input field between adjacent inputs. (Web Form Design, Wroblewski)</li>
-          <li>Design the form to reduce ambiguity while not adding cognitive burden to the person filling it out. For instance, a date is 3 text fields with appropriate attributes to reduce input errors. This removes the requirement for a person to use a specific punctuation pattern.</li>
+          <li>Design the form to reduce ambiguity while not adding cognitive burden to the person filling it out. For instance, a date is 3 separate text fields (day, month, year) with appropriate attributes to reduce input errors. This removes the requirement for a person to use a specific punctuation pattern.</li>
           <li>To prevent spam and other automated attacks, use hidden validation techniques such as Honeypot that do not disrupt the user experience. Avoid CAPTCHA methods.</li>
           <li>Avoid unnecessary or repeated questions.</li>
           <li>Don&rsquo;t force people to answer or choose an option that doesn&rsquo;t fit them.</li>
@@ -217,8 +217,8 @@
       <article id="lang">
         <h3>Language</h3>
         <ul>
-          <li>Use active neutral language</li>
-          <li>Avoid triggering or judgmental verbiage</li>
+          <li>Use active neutral language.</li>
+          <li>Avoid triggering or judgmental language.</li>
           <li>Keep it short. Use bullet points. Remove excess words.</li>
           <li>Give the form a clear concise title. Identify whom the form is for and its purpose at the start.</li>
         </ul>
@@ -226,7 +226,7 @@
 
       <article id="label">
         <h3>Labels</h3>
-        <p>Every input requires an attached label. Four methods are available.</p>
+        <p>Every input requires an attached label. Four methods to attach labels to fields are available.</p>
 
         <h4>Preferred methods</h4>
         <p>These two methods are preferred because they provide the most visibility and clarity for the least amount of code.</p>
@@ -245,7 +245,7 @@
 </code></pre>
 
         <h4>Less ideal though valid methods</h4>
-        <p>These are less than ideal because they hide the text for people with sight who would also benefit from the clarification, or they rely on assistive technology to properly announce the text in a meaningful order while adding code complexity.</p>
+        <p>These are less than ideal because they hide the text for people with sight who would also benefit from the clarification a label can provide, or they rely on assistive technology to properly announce the text in a meaningful order while adding code complexity.</p>
 
         <h5>Screen reader only hidden label</h5>
         <p>Using <code>aria-label</code> is specifically for assistive technology to detect. Using this method is only suggested if the <code>input</code> has clear intent by its context, and even then one assumes people without visual impairment are able to interpret intent correctly.</p>
@@ -262,10 +262,10 @@
 </code></pre>
         <h4>Language notes</h4>
         <ul>
-          <li>Use sentence casing and keep labels to 1 or 2 words</li>
-          <li>Use consistent labels. Check the glossary for standard terms. Standard fields:</li>
+          <li>Use sentence casing and keep labels to 1 or 2 words.</li>
+          <li>Use consistent labels. Check <a href="content/glossary.html">the glossary</a> for standard terms. Standard fields:</li>
           <ul>
-            <li>Name</li>
+            <li>Your name</li>
             <li>Date of birth</li>
             <li>Street address</li>
             <li>City</li>
@@ -280,7 +280,7 @@
 
       <article id="placeholder">
         <h3>Placeholder hints</h3>
-        <p>Never use the placeholder attribute. Placeholder contrast is inefficient, its placement may confuse users, and it disappears, forcing a person to recall.</p>
+        <p>Never use the placeholder attribute. Placeholder contrast is inefficient, its placement may confuse users, and it disappears, forcing a person to recall whatever information it had conveyed.</p>
 
         <p>If additional instruction is needed for an input field, use the following methods.</p>
 
@@ -381,8 +381,7 @@
   <label>Name (required)<input type="text" required aria-required="true" /></label>
   <pre rel="HTML" class="code" translate="no">
   <code>
-  <span class="nt">&lt;p&gt;</span>* All fields marked with an asterisk are <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;label</span> <span class="na">aria-describedby=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>Name <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">required</span> <span class="na">aria-described=</span><span class="s">"true"</span>  <span class="nt">/&gt;&lt;/label&gt;</span>
+  <span class="nt">&lt;label</span> Name (required) <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">required</span> <span class="nt">/&gt;&lt;/label&gt;</span>
   </code>
   </pre>
   </div>
@@ -403,7 +402,7 @@
         <h4>Pattern 3</h4>
   <div class="example">
     <p>* All fields marked with an asterisk are <span id="req-hint">required</span>.</p>
-  <label aria-describedby="req-hint">Name <input type="text" required aria-required="true" /></label>
+  <label aria-describedby="req-hint">Name* <input type="text" required aria-required="true" /></label>
   <pre rel="HTML" class="code" translate="no">
   <code>
   <span class="nt">&lt;p&gt;</span>* All fields marked with an asterisk are <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"req-hint"</span><span class="nt">&gt;</span>required<span class="nt">&lt;/span&gt;</span>.<span class="nt">&lt;/p&gt;</span>
@@ -417,7 +416,7 @@
         <h3>Input types</h3>
         <ul>
           <li>Use <code>&lt;select&gt;</code> for pre-determined lists over 5 items. Use <code>multiple</code> attribute when the list replaces <code>checkbox</code> items.</li>
-          <li>Choose the best input type, avoid using &ldquo;text&rdquo; as a default if better options exist. Available input types in HTML5:
+          <li>Choose the best input type, avoid using &ldquo;text&rdquo; as a default if better options exist. Available input types:
         <dl>
           <dt><code>button</code></dt>
           <dd>Adds button-like functionality to a form.</dd>
@@ -427,33 +426,29 @@
   the same <code>name</code> attribute, e.g. <code>&lt;input type="checkbox" name="set" /&gt; &lt;input type="checkbox" name="set" /&gt;</code>).</dd>
 
           <dt><code>color</code></dt>
-          <dd>Use with caution. As of December 2021, global browser support is 96% (75% full support and additional 21% partial support): IE11 and Opera Mini have no support, as well as fairly older versions of all major browsers.
           <dd>An advanced <code>&lt;select&gt;</code> dropdown with color swatches and can open the <abbr>OS</abbr> or other internal color picker.</dd>
 
           <dt><code>date</code></dt>
-          <dd>Use with caution. As of December 2021, global browser support is 96%. However, 21% is partial support primarily for no support of week or month in Firefox and Safari, and additionally no min, max, or step support in mobile Safari. No support for <abbr>IE</abbr> 11 and Opera Mini.</dd>
           <dd>Provides a browser&rsquo;s internal calendar tool without the need of javascript. Support and consistency is uneven so not recommended. Additional attributes may improve the experience by adding min and max dates in <abbr>ISO</abbr> format.</dd>
 
           <dt><code>datetime</code> and <code>datetime-local</code></dt>
-          <dd>Use with caution. See <code>date</code> support statement.</dd>
           <dd>Combines the built in calendar widget with the time spinner set to <abbr>UTC</abbr> time zone. <code>datetime-local</code>  adds time zone variation. Not recommended due to accessibility and functionality issues.</dd>
 
           <dt><code>email</code></dt>
           <dd>If email is required (<code>&lt;input type="email" required /&gt;</code>), the browser itself may check for valid email formats. Multiple email addresses may be entered. On some mobile devices, a specialized virtual keyboard is available for email addresses.</dd>
 
           <dt><code>file</code></dt>
-          <dd>Use with caution. As of December 2021, the main site has 96% support, lack of support mostly exists in mobile browsers. If file upload is critical to the form and is expected on mobile devices, use other methods.</dd>
+          <dd>Use with caution. As of July 2025, global support is 94% but only 30.3% full support. If file upload is critical to the form and is expected on mobile devices, use other methods.</dd>
           <dd>Provides a &ldquo;Browse...&rdquo; button to search the local device for a file to upload and includes a status statement such as &ldquo;No file selected.&rdquo;.</dd>
 
           <dt><code>hidden</code></dt>
           <dd>To pass necessary parameters the person does not need to see or input. Typical usage is to pass additional search parameters to a search engine.</dd>
 
           <dt><code>month</code></dt>
-          <dd>Do not use. See <code>date</code> support statement.</dd>
           <dd>Opens the built in browser calendar widget but only allows selection of month and year.</dd>
 
           <dt><code>number</code></dt>
-          <dd>Number inputs can be powerful when combining other attributes such as <code>min</code>, <code>max</code>, <code>step</code>, and an initial value. For some browsers, the input field will be accompanied by a number spinner (up and down arrows). Site styles override the spinner feature for most browsers.</dd>
+          <dd>Number inputs can be helpful when combining other attributes such as <code>min</code>, <code>max</code>, <code>step</code>, and an initial value. For some browsers, the input field will be accompanied by a number spinner (up and down arrows). Site styles override the spinner feature for most browsers.</dd>
 
           <dt><code>password</code></dt>
           <dd>The characters in the input field are masked (shown as asterisks or circles).</dd>
@@ -477,27 +472,25 @@
           <dd>Text inputs are the most common type offering a one line input field. For browsers that do not support the newer input types, they will default unsupported types to text types.</dd>
 
           <dt><code>time</code></dt>
-          <dd>Do not use. See <code>date</code> support statement.</dd>
           <dd>Defaults to an input field with a spinner in the 24-hour clock.</dd>
 
           <dt><code>url</code></dt>
           <dd>If URL is required (<code>&lt;input type="url" required /&gt;</code>), the browser itself will check for valid URL formats. On some mobile devices, a specialized virtual keyboard is available for email addresses.</dd>
 
           <dt><code>week</code></dt>
-          <dd>Do not use. See <code>date</code> support statement.</dd>
           <dd>Opens the built in browser calendar widget with an additional week selection column. The result is the year along with the week number (e.g. 2015-W23).</dd>
         </ul>
 
-        <p>Be mindful of what types are supported. Also be mindful of what data <em>should</em> be accepted in fields. For instance, make no assumptions about a person&rsquo;s name &mdash; whether they have a first, last, middle, non-hyphenated, ASCII-only name. Read <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" aria-describedby="ext-site">Kalzumeus&rsquo; article &ldquo;Falsehoods programmers believe about names&rdquo;</a> about some assumptions we make about names.</p>
+        <p>Be mindful of what data <em>should</em> be accepted in fields. For instance, make no assumptions about a person&rsquo;s name &mdash; whether they have a first, last, middle, non-hyphenated, ASCII-only name. Read <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" aria-describedby="ext-site">Kalzumeus&rsquo; article &ldquo;Falsehoods programmers believe about names&rdquo;</a> about some assumptions we make about names.</p>
       </article>
 
       <article>
         <h3>Auto-complete and auto-suggest HTML features</h3>
-        <p>Use autocomplete smartly. Include on every input, even with a basic <code>"on"</code> or <code>"off"</code> value.</p>
+        <p>Autocomplete can help reduce barriers to data entry. Include on fields with data listed below, with a basic <code>"on"</code> for allowing the browser to populate the field if it has saved data, or <code>"off"</code> to disable any autofilling, which can be helpful for fields that can be incorrectly populated (or where autofilling the field is more problematic than helpful).</p>
 
-        <p>Autocomplete is helpful if someone has saved their data to their browser for future use, which may quickly speed up the form process by pre-populating the fields with the browser-saved content. This helps most people but especially those using assistive technology, with motor limitations, with attention concerns, and with cognitive limitations.</p>
+        <p>Autocomplete helps most people but especially those using assistive technology, with motor limitations, with attention concerns, and with cognitive limitations.</p>
 
-        <p>To enable this feature more consistently across browsers, identify the input content type with semantic markup, <code>autocomplete</code>.</p>
+        <p>To enable this feature more consistently across browsers, identify the input content type with semantic markup, <code>autocomplete</code>. e.g. <code>&lt;input type="text" autocomplete="name"&gt;</code>.</p>
 
         <p>Autocomplete may have multiple values, similar to the class attribute. List of available autocomplete values:</p>
         <ul>
@@ -555,7 +548,7 @@
 
       <article>
         <h3>Multi-page forms</h3>
-        <p>For pages with &ldquo;previous&rdquo; and &ldquo;next&rdquo;, use hyperlinks where possible with appropriate hyperlink markup.</p>
+        <p>For multi-page forms use &ldquo;previous&rdquo; and &ldquo;next&rdquo; hyperlinks where possible with semantic hyperlink markup.</p>
         <h3>Paging</h3>
 
         <div class="example">
@@ -755,7 +748,7 @@
 </code></pre>
 
         <h4>File field</h4>
-        <p>Browsers do not allow styling the file field, so to create a similar experience to the default Javascript is required. If preferred, a recommended custom styling option is at <a href="https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" aria-describedby="ext-site">styling and customizing file inputs the smart way</a>.</p>
+        <p>Browsers do not allow styling the file field, so to customize the experience Javascript is required. A recommended custom styling option is at <a href="https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/" aria-describedby="ext-site">styling and customizing file inputs the smart way</a>.</p>
         <div class="example">
           <label for="f1">Reading list</label>
           <p class="alert alert-inline" id="f1-hint">Accepted file types: PDF, DOCX</p>

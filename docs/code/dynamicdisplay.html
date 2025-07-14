@@ -157,9 +157,9 @@
       <p>The Libraries design system does not support dynamic content components. Hiding content with non-semantic HTML that requires inconsistently-supported ARIA is contradictory to the design system&rsquo;s principles.</p>
       <p>This decision will be continually revisited as more content is introduced to the Libraries&rsquo; web assets and as the web evolves and matures.</p>
       <ul>
-        <li>Dynamic content components are unnecessarily difficult to navigate without a mouse. Often, they require special key commands to access, which may or may not work per people&rsquo;s expectations. Links, however, have predictable behavior.</li>
+        <li>Dynamic content components are unnecessarily difficult to navigate without a mouse. Often, they require special key commands to access, which may or may not work per people&rsquo;s expectations.</li>
         <li>Searching within the page will not include hidden content, which is misleading. If folks use a tool such as <code>ctrl + f</code> on the page, the in-page search function will not return any content that isn&rsquo;t visually displayed.</li>
-        <li>Dynamic content components require javascript to function, which also means if the javascript fails to load, the majority of content may be inaccessible. Creating the components as progressive enhancement may resolve this. A better experience is to bypass the potential failures of a javascript-dependent component and create well-sectioned succinct and accessible content.</li>
+        <li>Dynamic content components require javascript to function, which also means if the javascript fails to load, the content may not load. Creating the components as progressive enhancement may resolve this. A better experience is to bypass the potential failures of a javascript-dependent component and create well-sectioned succinct and accessible content.</li>
         <li>Simple elegant code that supports a sustainable web environment is a core principle of the design system. Non-semantic javascript-driven components contradict these principles.</li>
       </ul>
     </article>
@@ -169,13 +169,13 @@
       <p>The Libraries design system does not support tabs.</p>
       <p>Links do not fail. Tabs do.</p>
       <p>Tabs also create an undesirable responsive layout. When the content within the tabs is longer than the space, often the tabs wrap onto multiple lines or labels are truncated. This becomes more pronounced on small screens, where the tabs may fill the visible space and a person may not notice the content updating below the tab interface.</p>
-      <p>Similar to the previous point, tabs create awkward limitations to tabs and tab labels.</p>
+      <p>Similar to the previous point, tabs create awkward limitations to tab size and length.</p>
     </article>
 
     <article id="accordions">
       <h2>Accordions</h2>
       <p>The Libraries design system does not support accordions.</p>
-      <p>The <code>&lt;details&gt;</code> element may be considered once browsers more fully support it. The <code>&lt;details&gt;</code> element generates a simple no-javascript widget to show and hide element contents. Global support for <code>&lt;details&gt;</code> is 97% as of December 2021, so consider use with caution.</p>
+      <p>If accordion-like behavior is deemed essential, the <code>&lt;details&gt;</code> element generates a simple no-javascript widget to show and hide element contents.</p>
       <p>Though <code>&lt;details&gt;</code> is a native element, it still hides content that cannot easily be searched for on the page. For this reason, support continues to be minimal and not offered via the design system.</p>
     </article>
 

@@ -155,9 +155,9 @@
 
     <article id="primary">
       <h2>Primary navigation</h2>
-      <p>Navigation is easily managed with the <code>&lt;nav&gt;</code> element.</p>
+      <p>Navigation has a <code>&lt;nav&gt;</code> element container.</p>
 
-      <p>When more than one <code>&lt;nav&gt;</code> element exists on a page, it must include the <code>aria-label</code> or <code>aria-labelledby</code> attribute to differentiate each <code>&lt;nav&gt;</code> elements. For the main navigation of the site, the value of <code>aria-label</code> is commonly <code>"Main"</code>.</p>
+      <p>When more than one <code>&lt;nav&gt;</code> element exists on a page, include an <code>aria-label</code> or <code>aria-labelledby</code> attribute to differentiate each <code>&lt;nav&gt;</code> element. For the main navigation of the site, the value of <code>aria-label</code> is commonly <code>"Main"</code>, an example is also <code>aria-label="On this page"</code> for a table of contents menu..</p>
       <div class="example">
         <nav role="navigation" aria-label="Main">
           <a href="/" aria-current="page">Home</a>
@@ -176,7 +176,6 @@
 </code>
 </pre>
 </div>
-      <p>When more than one navigation exists on the page, add an aria-label to differentiate the purpose of each navigation, e.g. <code>aria-label="Main"</code> and <code>aria-label="On this page"</code> for a table of contents menu.</p>
     </article>
 
     <article id="bread">
@@ -184,7 +183,7 @@
       <p>All pages except the homepage has breadcrumbs on websites. For single page applications, use breadcrumbs if feasible and adds meaning (improves understanding and the application supports save states).</p>
       <p>Breadcrumbs are hierarchically ordered information architecture, whether representative of a file structure or a virtual structure. Use an ordered list to present it. Breadcrumb navigations are commonly identified with <code>aria-label="Breadcrumb"</code>.</p>
 
-      <div class="example>"
+      <div class="example">
         <nav aria-label="Breadcrumb">
          <ol>
           <li><a href="/">Home</a></li>
@@ -208,7 +207,7 @@
 
     <article id="submenu">
       <h2>Submenus and table of contents</h2>
-      <p>Horizontal menus are used for the primary navigation sections including breadcrumbs. Vertical navigations may be used for section submenus or &ldquo;table of contents&rdquo; lists for longer blocks of content.</p>
+      <p>Horizontal menus are best used for the primary navigation sections including breadcrumbs. Vertical navigations are good for section submenus or &ldquo;table of contents&rdquo; lists for longer blocks of content.</p>
 
       <p>A submenu follows the same pattern as the other navigations. If a navigation structure is flat, basic <code>&lt;a&gt;</code> anchor elements are sufficient. If a navigation has  additional items &ldquo;nested&rdquo; underneath it, use an unordered list <code>&lt;ul&gt;</code> to properly associate the sibling navigation with its parent.</p>
 
@@ -276,7 +275,7 @@
       </nav>
 <pre rel="HTML" class="code" translate="no">
 <code>
-<span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Results"</span><span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">aria-label=</span><span class="s">"Results"</span><span class="nt">&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/1"</span> <span class="na">rel=</span><span class="s">"prev"</span><span class="nt">&gt;</span>Previous<span class="nt">&lt;/a&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/page/3"</span> <span class="na">aria-current=</span><span class="s">"page"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
