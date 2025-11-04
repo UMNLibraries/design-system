@@ -17,6 +17,27 @@
 @import "code.css";
 @import "../css/print.css";
 
+
+/* START EXPERIMENTAL */
+@view-transition {
+  navigation: auto;
+}
+
+header {
+  view-transition-name: --persist-nav;
+}
+
+input[type="radio"]::after {
+  view-transition-name: radio-input;
+}
+
+::view-transition-group(radio-input) {
+  z-index: 1;
+  animation-duration: .5s;
+}
+
+/* END EXPERIMENTAL */
+
 header {
   width: 100%;
   background: var(--col-bg-light);
