@@ -27,7 +27,7 @@ header {
   view-transition-name: --persist-nav;
 }
 
-input[type="radio"]::after {
+input[type="radio"]::before {
   view-transition-name: radio-input;
 }
 
